@@ -10,6 +10,13 @@
 import type { Company } from "../types";
 import rawMarketData from "../data/marketData.json";
 
+export interface HistoryPoint {
+  /** "YYYY-MM-DD" */
+  d: string;
+  /** 收盤價 */
+  c: number;
+}
+
 export interface LiveQuote {
   symbol: string;
   currency: string;
@@ -19,13 +26,16 @@ export interface LiveQuote {
   changePercent: number | null;
   marketCap: number | null;
   trailingPE: number | null;
+  forwardPE: number | null;
   fiftyTwoWeekHigh: number | null;
   fiftyTwoWeekLow: number | null;
+  history: HistoryPoint[];
   error?: string;
 }
 
 interface MarketDataFile {
   fetchedAt: string;
+  historyDays?: number;
   quotes: Record<string, LiveQuote>;
 }
 

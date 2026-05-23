@@ -3,6 +3,7 @@ import { companies, companyById } from "../data/companies";
 import { categoryBySlug } from "../data/categories";
 import { CategoryBadge, ConfidenceBadge, MarketBadge, PositionBadge, ScoreBadge, Tag } from "../components/Badge";
 import { MoatRadar, RiskBars } from "../components/MoatChart";
+import { PriceChart } from "../components/PriceChart";
 import { valuationLabels } from "../lib/utils";
 import {
   formatChangePct,
@@ -218,12 +219,12 @@ export function CompanyDetailPage() {
 function MarketDataSection({ companyId }: { companyId: string }) {
   const q = getQuote(companyId);
 
-  if (!q || q.price == null) {
+  if (!q || (q.price == null && (!q.history || q.history.length === 0))) {
     return (
       <section className="card p-5">
         <h2 className="section-title">市場資料</h2>
         <p className="muted mt-2 text-sm">
-          目前無法從 Yahoo Finance 取得此 ticker 的資料（可能是上櫃小型股或代號需確認）。
+          目前無法從 Yahoo Finance 取得此 ticker 的資料（可能是小型股或代號需確認）。
           {q?.error && <span className="ml-1">錯誤：{q.error}</span>}
         </p>
       </section>
@@ -238,7 +239,7 @@ function MarketDataSection({ companyId }: { companyId: string }) {
         : "text-rose-600 dark:text-rose-400";
 
   return (
-    <section className="card p-5">
+    <section className="card space-y-5 p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="section-title">市場資料</h2>
         <div className="muted text-xs">
@@ -246,28 +247,31 @@ function MarketDataSection({ companyId }: { companyId: string }) {
         </div>
       </div>
 
-      <div className="mt-3 grid grid-cols-2 gap-3 text-sm md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 text-sm md:grid-cols-3 lg:grid-cols-7">
         <Cell label="股價" value={formatPrice(q.price, q.currency)} mono />
         <Cell label="漲跌幅" value={formatChangePct(q.changePercent)} mono valueClass={upColor} />
         <Cell label="市值" value={formatMarketCap(q.marketCap, q.currency)} mono />
-        <Cell label="本益比 P/E" value={formatPE(q.trailingPE)} mono />
-        <Cell
-          label="52 週高"
-          value={formatPrice(q.fiftyTwoWeekHigh, q.currency)}
-          mono
-        />
-        <Cell
-          label="52 週低"
-          value={formatPrice(q.fiftyTwoWeekLow, q.currency)}
-          mono
-        />
+        <Cell label="本益比 P/E (TTM)" value={formatPE(q.trailingPE)} mono />
+        <Cell label="預估本益比 Fwd P/E" value={formatPE(q.forwardPE)} mono />
+        <Cell label="52 週高" value={formatPrice(q.fiftyTwoWeekHigh, q.currency)} mono />
+        <Cell label="52 週低" value={formatPrice(q.fiftyTwoWeekLow, q.currency)} mono />
       </div>
 
-      <p className="muted mt-3 text-xs">
+      {/* 6 個月歷史價折線 */}
+      <div>
+        <div className="mb-2 flex items-baseline justify-between gap-2">
+          <h3 className="text-sm font-semibold">過去 6 個月股價走勢</h3>
+          <span className="muted text-xs">
+            日線收盤，hover 看單日價格
+          </span>
+        </div>
+        <PriceChart data={q.history ?? []} currency={q.currency} />
+      </div>
+
+      <p className="muted text-xs">
         Ticker on Yahoo: <span className="font-mono">{q.symbol}</span> |
         前日收盤：{formatPrice(q.previousClose, q.currency)} |
-        資料來源：Yahoo Finance（透過 GitHub Action 每日抓取，僅供研究參考，
-        非即時報價）
+        資料來源：Yahoo Finance（透過 GitHub Action 每日抓取，僅供研究參考，非即時報價）
       </p>
     </section>
   );
