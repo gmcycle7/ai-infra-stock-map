@@ -17,6 +17,7 @@ import type {
   CategorySlug,
   KpiHorizon,
 } from "../types";
+import { companyLeadershipScore } from "../data/keyPeople";
 
 // 將 0-5 分數轉成 1-100 分（保持線性，避免變形）
 function s100(v: number): number {
@@ -144,8 +145,19 @@ export function deriveKpi(c: Company): InvestmentKpi {
     isBottleneck ? Math.min(ai + 0.5, 5) : ai - 0.5,
   );
   const customerPenetration = s100((ai + moat.customer) / 2);
-  const execRaw =
+  // 若有領導力資料，用領導力分數調整 execution；否則用 confidence 推導
+  const leader = companyLeadershipScore(c.id);
+  const baseExec =
     c.confidenceLevel === "High" ? 4 : c.confidenceLevel === "Medium" ? 3.5 : 3;
+  // 領導力 0-100 → ±0.5 調整（70 以上 +0.3、80 以上 +0.5、低於 50 -0.5）
+  let execAdjust = 0;
+  if (leader.score != null) {
+    if (leader.score >= 80) execAdjust = 0.5;
+    else if (leader.score >= 70) execAdjust = 0.3;
+    else if (leader.score < 50) execAdjust = -0.5;
+    else if (leader.score < 60) execAdjust = -0.2;
+  }
+  const execRaw = Math.max(0, Math.min(5, baseExec + execAdjust));
   const executionQuality = s100(execRaw);
 
   const threeYearScore = r100(
@@ -248,20 +260,52 @@ export function deriveKpi(c: Company): InvestmentKpi {
   // 分類 + 摘要
   // ---------------------------------------------------------------
   const investmentType = classifyInvestmentType(c);
+
+  // 領導力對 KPI 的微調（小幅 ±2-3 分，避免主觀分數主導 KPI）
+  let leadershipAdjustmentApplied = false;
+  const adjustedShortTerm = shortTermScore; // 短期不受領導力影響（事件驅動）
+  let adjustedThreeYear = threeYearScore;
+  let adjustedFiveYear = fiveYearScore;
+  let adjustedTenYear = tenYearScore;
+  let adjustedRisk = riskScore;
+  let leadershipNote: string | undefined;
+
+  if (leader.score != null) {
+    const delta = leader.score - 70; // 70 為基準
+    // 把 delta 映射成小幅 KPI 修正：每 10 分 → 1 分
+    const horizon3 = Math.round(delta / 10);
+    const horizon5 = Math.round(delta / 8);
+    const horizon10 = Math.round(delta / 7); // 越長期，領導力影響越大
+    const riskDelta = Math.round(-delta / 12); // 好領導者 → 略降風險
+
+    adjustedThreeYear = r100(threeYearScore + horizon3);
+    adjustedFiveYear = r100(fiveYearScore + horizon5);
+    adjustedTenYear = r100(tenYearScore + horizon10);
+    adjustedRisk = r100(riskScore + riskDelta);
+    leadershipAdjustmentApplied = true;
+
+    leadershipNote =
+      delta > 0
+        ? `領導力分數 ${leader.score} > 基準 70，3y/5y/10y 各加 ${horizon3}/${horizon5}/${horizon10} 分，風險 ${riskDelta >= 0 ? "+" : ""}${riskDelta}`
+        : delta < 0
+          ? `領導力分數 ${leader.score} < 基準 70，3y/5y/10y 各扣 ${-horizon3}/${-horizon5}/${-horizon10} 分，風險 +${-riskDelta}`
+          : "領導力分數等於基準，未調整";
+  }
+
   const kpiCommentary = generateCommentary(c, {
-    shortTermScore,
-    threeYearScore,
-    fiveYearScore,
-    tenYearScore,
-    riskScore,
+    shortTermScore: adjustedShortTerm,
+    threeYearScore: adjustedThreeYear,
+    fiveYearScore: adjustedFiveYear,
+    tenYearScore: adjustedTenYear,
+    riskScore: adjustedRisk,
     investmentType,
   });
 
   return {
-    shortTermScore,
-    threeYearScore,
-    fiveYearScore,
-    tenYearScore,
+    shortTermScore: adjustedShortTerm,
+    threeYearScore: adjustedThreeYear,
+    fiveYearScore: adjustedFiveYear,
+    tenYearScore: adjustedTenYear,
     aiRevenueExposure,
     revenueMomentum,
     earningsMomentum,
@@ -293,7 +337,10 @@ export function deriveKpi(c: Company): InvestmentKpi {
     geopoliticalRisk,
     technologyDisruptionRisk,
     executionRisk,
-    riskScore,
+    riskScore: adjustedRisk,
+    leadershipScore: leader.score,
+    leadershipAdjustmentApplied,
+    leadershipNote,
     radar,
     investmentType,
     kpiCommentary,

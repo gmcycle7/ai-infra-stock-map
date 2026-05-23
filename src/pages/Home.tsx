@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { Disclaimer } from "../components/Disclaimer";
 import { CategoryCard } from "../components/CategoryCard";
 import { SupplyChainDiagram, StackDiagram } from "../components/SupplyChainDiagram";
+import { WeeklyHighlights } from "../components/WeeklyHighlights";
 import { categories } from "../data/categories";
 import { companies } from "../data/companies";
+import { lastFetchedAt, formatFetchedAt } from "../services/marketData";
 
 export function HomePage() {
   const counts = categories.map((c) => ({
@@ -80,6 +82,15 @@ export function HomePage() {
             <li>• 所有股價、市值欄位皆標示「requires live API」，不放過期數字</li>
           </ul>
         </div>
+      </section>
+
+      {/* Weekly highlights */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="section-title">本週重點</h2>
+          <span className="muted text-xs">資料更新：{formatFetchedAt(lastFetchedAt)}</span>
+        </div>
+        <WeeklyHighlights />
       </section>
 
       {/* Supply chain */}

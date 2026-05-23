@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext";
+import { WatchlistProvider } from "./context/WatchlistContext";
 import { Layout } from "./components/Layout";
 import { HomePage } from "./pages/Home";
 import { CategoriesPage } from "./pages/Categories";
@@ -20,10 +21,13 @@ import { ComparePage } from "./pages/Compare";
 import { KpiValidationPage } from "./pages/KpiValidation";
 import { ScoringRubricPage } from "./pages/ScoringRubric";
 import { HeatmapPage } from "./pages/Heatmap";
+import { LeadershipRubricPage } from "./pages/LeadershipRubric";
+import { WatchlistPage } from "./pages/Watchlist";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
+      <WatchlistProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route element={<Layout />}>
@@ -42,11 +46,14 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/kpi-validation" element={<KpiValidationPage />} />
             <Route path="/scoring-rubric" element={<ScoringRubricPage />} />
+            <Route path="/leadership-rubric" element={<LeadershipRubricPage />} />
             <Route path="/heatmap" element={<HeatmapPage />} />
+            <Route path="/watchlist" element={<WatchlistPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      </WatchlistProvider>
     </ThemeProvider>
   </StrictMode>,
 );

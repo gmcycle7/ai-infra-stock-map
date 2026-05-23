@@ -91,12 +91,45 @@ export interface MarketDataPlaceholder {
   note?: string;            // 一律標示 "requires live API"
 }
 
+// =====================================================================
+// 掌權人 / 領導者評估
+//
+// 6 個維度，每個 0-5：
+//   1. 韌性 resilience   — 能否在逆境（產業低谷 / 巨變）中堅持並調整
+//   2. 執行力 execution  — 把策略落地的紀律與速度
+//   3. 正直 integrity    — 揭露透明、信譽、無重大爭議
+//   4. 願景 vision       — 對產業長期方向的判斷力與布局
+//   5. 資本配置 capitalAllocation — 併購 / 買回 / R&D / 配息的取捨品質
+//   6. 溝通透明 communication     — 法說會 / IR / 對股東的可預期性
+//
+// 嚴格原則：
+//   - 評分高度主觀，僅供「相對比較」用，不可作為買賣依據
+//   - 僅對任期長、公開資訊豐富的領導者打分
+//   - 不確定者留空（不亂打 3 分濫竽充數）
+//   - 信心 = 公開可驗證程度
+// =====================================================================
+
+export interface LeadershipScores {
+  resilience: number;
+  execution: number;
+  integrity: number;
+  vision: number;
+  capitalAllocation: number;
+  communication: number;
+}
+
 export interface KeyPerson {
   role: string;   // "CEO" | "Chairman" | "Founder" | "President" | "CTO" 等
   name: string;   // 英文姓名
   nameZh?: string; // 中文姓名（如有）
   since?: number;  // 上任年份
   note?: string;   // 例如「創辦人」、「TSMC 前任 CEO」
+  /** 一兩句簡介（公開事實為主） */
+  bio?: string;
+  /** 6 維度評分（0-5）；不確定者整個欄位省略 */
+  leadership?: LeadershipScores;
+  /** 信心：對此筆評分的可驗證程度 */
+  leadershipConfidence?: "High" | "Medium" | "Low";
 }
 
 export interface Company {
@@ -239,6 +272,12 @@ export interface InvestmentKpi {
 
   // ---- 合成風險分數 (1-100，越高代表風險越大) ----
   riskScore: number;
+
+  // ---- 領導力分數 (1-100；若無資料則為 null，UI 顯示「資料不足」) ----
+  leadershipScore: number | null;
+  /** 領導力是否影響 KPI 整體調整 */
+  leadershipAdjustmentApplied: boolean;
+  leadershipNote?: string;
 
   // ---- 雷達圖 10 維度（從上面欄位重新組合而成）----
   radar: {

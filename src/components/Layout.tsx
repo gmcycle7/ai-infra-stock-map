@@ -1,11 +1,14 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 import { Disclaimer } from "./Disclaimer";
+import { useWatchlist } from "../context/watchlistContextValue";
+import { lastFetchedAt, formatFetchedAt } from "../services/marketData";
 
 const nav: Array<{ to: string; label: string }> = [
   { to: "/", label: "首頁" },
   { to: "/categories", label: "分類總覽" },
   { to: "/companies", label: "公司列表" },
+  { to: "/watchlist", label: "我的關注" },
   { to: "/compare", label: "兩公司比較" },
   { to: "/heatmap", label: "產業熱力圖" },
   { to: "/kpi-dashboard", label: "投資 KPI 儀表板" },
@@ -15,13 +18,20 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/risk-map", label: "風險地圖" },
   { to: "/moats", label: "技術護城河" },
   { to: "/scoring-rubric", label: "原始評分判準" },
+  { to: "/leadership-rubric", label: "領導力判準" },
   { to: "/kpi-method", label: "KPI 公式" },
   { to: "/glossary", label: "技術名詞解釋" },
 ];
 
 export function Layout() {
+  const { ids } = useWatchlist();
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Global data-freshness banner */}
+      <div className="border-b border-slate-200 bg-slate-100 px-4 py-1 text-center text-[11px] text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+        📊 市場資料更新：<strong>{formatFetchedAt(lastFetchedAt)}</strong>（每日台北 06:00 自動抓 Yahoo Finance）
+        · 僅供研究，不構成投資建議
+      </div>
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-2">
@@ -30,7 +40,17 @@ export function Layout() {
             </span>
             <span className="muted text-xs">台股 × 美股</span>
           </Link>
-          <ThemeToggle />
+          <div className="flex items-center gap-2">
+            {ids.length > 0 && (
+              <Link
+                to="/watchlist"
+                className="inline-flex items-center gap-1 rounded-md border border-amber-300 bg-amber-50 px-2 py-1 text-xs text-amber-700 hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-300"
+              >
+                ★ {ids.length}
+              </Link>
+            )}
+            <ThemeToggle />
+          </div>
         </div>
         <nav className="border-t border-slate-100 dark:border-slate-900">
           <div className="mx-auto flex max-w-7xl flex-wrap gap-x-1 gap-y-1 overflow-x-auto px-2 py-2 text-sm">

@@ -6,8 +6,11 @@ import { CategoryBadge, ConfidenceBadge, MarketBadge, PositionBadge, ScoreBadge,
 import { MoatRadar, RiskBars } from "../components/MoatChart";
 import { PriceChart } from "../components/PriceChart";
 import { KpiPanel } from "../components/KpiPanel";
+import { LeadershipPanel } from "../components/LeadershipPanel";
 import { AnalystTargetBar } from "../components/AnalystTargetBar";
 import { PriceDelta } from "../components/PriceDelta";
+import { WatchlistStar } from "../components/WatchlistStar";
+import { PeerCompare } from "../components/PeerCompare";
 import { getKpi } from "../lib/kpi";
 import { valuationLabels } from "../lib/utils";
 import {
@@ -50,7 +53,10 @@ export function CompanyDetailPage() {
       <header className="card p-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <h1 className="text-2xl font-bold tracking-tight">{co.name}</h1>
+            <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight">
+              <span>{co.name}</span>
+              <WatchlistStar id={co.id} />
+            </h1>
             <div className="muted text-sm">{co.nameEn}</div>
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <span className="rounded-md bg-slate-100 px-2 py-0.5 font-mono text-sm text-slate-700 dark:bg-slate-800 dark:text-slate-300">
@@ -73,7 +79,7 @@ export function CompanyDetailPage() {
           })}
         </div>
 
-        {/* 掌權人 */}
+        {/* 掌權人 — 簡短列表（詳細評分在下方的 LeadershipPanel） */}
         {keyPeopleById[co.id] && keyPeopleById[co.id].length > 0 && (
           <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs dark:border-slate-700 dark:bg-slate-900">
             <div className="muted mb-1 font-semibold uppercase tracking-wide">掌權人 / 創辦人</div>
@@ -92,7 +98,7 @@ export function CompanyDetailPage() {
               ))}
             </ul>
             <p className="muted mt-2 text-[10px]">
-              資料時點：2026-05；任期可能異動，請以最新公告為準。
+              資料時點：2026-05；任期可能異動，請以最新公告為準。詳細評分見下方領導力評估。
             </p>
           </div>
         )}
@@ -212,6 +218,12 @@ export function CompanyDetailPage() {
 
       {/* Investment KPI */}
       <KpiPanel company={co} kpi={getKpi(co)} />
+
+      {/* Leadership assessment */}
+      <LeadershipPanel people={keyPeopleById[co.id] ?? []} />
+
+      {/* Peer compare buttons */}
+      <PeerCompare company={co} />
 
 
       {/* Sources */}

@@ -12,6 +12,7 @@ import { InvestmentTypeBadge } from "./InvestmentTypeBadge";
 import { Sparkline } from "./Sparkline";
 import { windowReturn } from "../lib/priceWindow";
 import { PriceDelta } from "./PriceDelta";
+import { WatchlistStar } from "./WatchlistStar";
 import { getKpi } from "../lib/kpi";
 import { getQuote, formatPrice } from "../services/marketData";
 
@@ -69,9 +70,12 @@ export function CompanyCard({ company }: { company: Company }) {
           <div className="truncate text-base font-semibold tracking-tight">{company.name}</div>
           <div className="muted truncate text-xs">{company.nameEn}</div>
         </div>
-        <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-mono text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-          {company.ticker}
-        </span>
+        <div className="flex flex-shrink-0 items-center gap-1">
+          <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-mono text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+            {company.ticker}
+          </span>
+          <WatchlistStar id={company.id} size="sm" />
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-1.5">

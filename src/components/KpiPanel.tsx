@@ -118,16 +118,46 @@ export function KpiPanel({ company, kpi }: Props) {
         />
       </div>
 
-      {/* 風險分數獨立呈現 */}
-      <div className="rounded-lg border border-rose-200 bg-rose-50/50 p-3 dark:border-rose-900 dark:bg-rose-950/30">
-        <div className="flex items-baseline justify-between">
-          <div className="text-sm font-semibold">整體風險分數（分開呈現，不混進機會分數）</div>
-          <div className={"text-2xl font-bold tabular-nums " + riskTone(kpi.riskScore)}>
-            {kpi.riskScore}
+      {/* 風險分數 + 領導力 並排 */}
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="rounded-lg border border-rose-200 bg-rose-50/50 p-3 dark:border-rose-900 dark:bg-rose-950/30">
+          <div className="flex items-baseline justify-between">
+            <div className="text-sm font-semibold">整體風險分數</div>
+            <div className={"text-2xl font-bold tabular-nums " + riskTone(kpi.riskScore)}>
+              {kpi.riskScore}
+            </div>
+          </div>
+          <div className="muted mt-1 text-xs">
+            風險獨立呈現，不混進機會分數；高機會 + 高風險 = 高 beta。
           </div>
         </div>
-        <div className="muted mt-1 text-xs">
-          風險越高代表「下檔波動可能越大」；高機會 + 高風險 = 高 beta。
+
+        <div className="rounded-lg border border-indigo-200 bg-indigo-50/50 p-3 dark:border-indigo-900 dark:bg-indigo-950/30">
+          <div className="flex items-baseline justify-between">
+            <div className="text-sm font-semibold">領導力分數</div>
+            <div className={"text-2xl font-bold tabular-nums " + (
+              kpi.leadershipScore == null
+                ? "text-slate-400"
+                : kpi.leadershipScore >= 80
+                  ? "text-emerald-600 dark:text-emerald-400"
+                  : kpi.leadershipScore >= 65
+                    ? "text-sky-600 dark:text-sky-400"
+                    : kpi.leadershipScore >= 50
+                      ? "text-amber-600 dark:text-amber-400"
+                      : "text-rose-600 dark:text-rose-400"
+            )}>
+              {kpi.leadershipScore ?? "—"}
+            </div>
+          </div>
+          <div className="muted mt-1 text-xs">
+            {kpi.leadershipAdjustmentApplied && kpi.leadershipNote
+              ? kpi.leadershipNote
+              : kpi.leadershipScore == null
+                ? "領導者資料不足，未調整 KPI"
+                : "已套用至 KPI 微調"}
+            ｜
+            <Link to="/leadership-rubric" className="text-brand-600 hover:underline dark:text-brand-400">看判準</Link>
+          </div>
         </div>
       </div>
 
