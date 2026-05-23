@@ -16,6 +16,7 @@ import { RiskMapPage } from "./pages/RiskMap";
 import { MoatsPage } from "./pages/Moats";
 import { KpiDashboardPage } from "./pages/KpiDashboard";
 import { KpiMethodPage } from "./pages/KpiMethod";
+import { ComparePage } from "./pages/Compare";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -35,6 +36,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/moats" element={<MoatsPage />} />
             <Route path="/kpi-dashboard" element={<KpiDashboardPage />} />
             <Route path="/kpi-method" element={<KpiMethodPage />} />
+            <Route path="/compare" element={<ComparePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

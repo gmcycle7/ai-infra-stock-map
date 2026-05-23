@@ -29,6 +29,15 @@ export interface LiveQuote {
   forwardPE: number | null;
   fiftyTwoWeekHigh: number | null;
   fiftyTwoWeekLow: number | null;
+  /** 分析師目標價 */
+  targetMean: number | null;
+  targetHigh: number | null;
+  targetLow: number | null;
+  targetMedian: number | null;
+  /** 平均建議：1 (Strong Buy) → 5 (Strong Sell) */
+  recommendationMean: number | null;
+  recommendationKey: string | null;
+  numberOfAnalystOpinions: number | null;
   history: HistoryPoint[];
   error?: string;
 }
@@ -118,4 +127,25 @@ export function formatFetchedAt(iso: string): string {
 /** 合併 Company 與最新報價（供 detail 頁使用） */
 export function enrichWithQuote(company: Company): Company & { liveQuote: LiveQuote | null } {
   return { ...company, liveQuote: getQuote(company.id) };
+}
+
+// ---------- 分析師建議格式化 ----------
+export const RECOMMENDATION_LABELS: Record<string, { zh: string; tone: string }> = {
+  strong_buy: { zh: "強力買進", tone: "text-emerald-700 dark:text-emerald-300" },
+  buy: { zh: "買進", tone: "text-emerald-600 dark:text-emerald-400" },
+  hold: { zh: "持有", tone: "text-amber-600 dark:text-amber-400" },
+  sell: { zh: "賣出", tone: "text-rose-600 dark:text-rose-400" },
+  strong_sell: { zh: "強力賣出", tone: "text-rose-700 dark:text-rose-300" },
+  none: { zh: "無評等", tone: "text-slate-500 dark:text-slate-400" },
+};
+
+export function formatRecommendation(key: string | null): { zh: string; tone: string } {
+  if (!key) return RECOMMENDATION_LABELS.none;
+  return RECOMMENDATION_LABELS[key] ?? RECOMMENDATION_LABELS.none;
+}
+
+/** 計算「目前價 → 目標價」的隱含上行空間（%） */
+export function targetUpside(currentPrice: number | null, targetMean: number | null): number | null {
+  if (currentPrice == null || targetMean == null || currentPrice <= 0) return null;
+  return ((targetMean - currentPrice) / currentPrice) * 100;
 }

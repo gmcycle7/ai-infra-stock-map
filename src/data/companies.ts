@@ -84,7 +84,7 @@ export const companies: Company[] = [
       "HGX",
       "GB200 NVL72",
     ],
-    tags: ["GPU", "NIC", "DPU", "Switch", "NVLink"],
+    tags: ["GPU", "NIC", "DPU", "Switch", "NVLink", "CPO"],
     valuationSensitivity: ["nvidiaCycle", "hyperscalerDemand", "capexCycle"],
     moat: { process: 4, ipDesign: 5, ecosystem: 5, customer: 5, manufacturing: 3, switching: 5 },
     risk: {
@@ -276,7 +276,7 @@ export const companies: Company[] = [
       "DSP",
       "Silicon Photonics",
     ],
-    tags: ["Switch ASIC", "Custom ASIC", "SerDes", "Optical DSP", "Retimer"],
+    tags: ["Switch ASIC", "Custom ASIC", "SerDes", "Optical DSP", "Retimer", "CPO", "Silicon Photonics"],
     valuationSensitivity: ["hyperscalerDemand", "capexCycle", "nvidiaCycle"],
     moat: { process: 4, ipDesign: 5, ecosystem: 4, customer: 5, manufacturing: 3, switching: 4 },
     risk: {
@@ -338,7 +338,7 @@ export const companies: Company[] = [
     keyCustomersOrEcosystem:
       "已公開合作客戶包含 AWS（Trainium 2）；光通訊 DSP 廣泛應用於 800G 光模組市場。",
     technicalKeywords: ["PAM4 DSP", "Teralynx", "Custom XPU", "Trainium", "OCTEON"],
-    tags: ["Custom ASIC", "Optical DSP", "Switch ASIC", "Retimer", "DPU"],
+    tags: ["Custom ASIC", "Optical DSP", "Switch ASIC", "Retimer", "DPU", "CPO"],
     valuationSensitivity: ["hyperscalerDemand", "capexCycle", "telecomCycle"],
     moat: { process: 4, ipDesign: 4, ecosystem: 3, customer: 4, manufacturing: 3, switching: 3 },
     risk: {
@@ -819,7 +819,7 @@ export const companies: Company[] = [
     keyCustomersOrEcosystem:
       "Nvidia、AMD、Broadcom、Marvell、Apple、Qualcomm、MediaTek、Alchip、GUC 等皆為其客戶。",
     technicalKeywords: ["N5", "N4P", "N3E", "N2", "CoWoS-S", "CoWoS-L", "SoIC", "InFO"],
-    tags: ["Foundry", "CoWoS", "SoIC", "Advanced Process"],
+    tags: ["Foundry", "CoWoS", "SoIC", "Advanced Process", "Silicon Photonics", "CPO"],
     valuationSensitivity: ["nvidiaCycle", "smartphoneCycle", "hyperscalerDemand", "capexCycle"],
     moat: { process: 5, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 5, switching: 5 },
     risk: {
@@ -1939,7 +1939,7 @@ export const companies: Company[] = [
     keyCustomersOrEcosystem:
       "資料中心客戶包含主要 hyperscaler 與系統業者，具體比重需查證。",
     technicalKeywords: ["EML", "DML", "VCSEL", "800G DR8", "1.6T", "SiC"],
-    tags: ["Optical Module", "Laser", "EML", "VCSEL"],
+    tags: ["Optical Module", "Laser", "EML", "VCSEL", "Silicon Photonics", "CPO"],
     valuationSensitivity: ["hyperscalerDemand", "capexCycle"],
     moat: { process: 4, ipDesign: 3, ecosystem: 4, customer: 4, manufacturing: 4, switching: 3 },
     risk: {
@@ -1991,7 +1991,7 @@ export const companies: Company[] = [
     keyCustomersOrEcosystem:
       "公司公開揭露主要 hyperscaler 為其 800G/1.6T 客戶；具體比重需個別查證。",
     technicalKeywords: ["EML", "DML", "VCSEL", "800G DR8", "1.6T", "Coherent ZR"],
-    tags: ["Optical Module", "Laser", "Coherent"],
+    tags: ["Optical Module", "Laser", "Coherent", "Silicon Photonics", "CPO"],
     valuationSensitivity: ["hyperscalerDemand", "smartphoneCycle", "capexCycle"],
     moat: { process: 4, ipDesign: 3, ecosystem: 4, customer: 4, manufacturing: 4, switching: 3 },
     risk: {
@@ -2040,7 +2040,7 @@ export const companies: Company[] = [
     keyCustomersOrEcosystem:
       "公司公開揭露大客戶包含 Nvidia（透過光元件 / 模組代工）、Cisco 等；具體比重需查證。",
     technicalKeywords: ["Optical contract manufacturing", "Precision optics"],
-    tags: ["Optical CM", "Contract Manufacturing"],
+    tags: ["Optical CM", "Contract Manufacturing", "CPO"],
     valuationSensitivity: ["hyperscalerDemand", "nvidiaCycle"],
     moat: { process: 4, ipDesign: 2, ecosystem: 4, customer: 5, manufacturing: 5, switching: 4 },
     risk: {
@@ -3168,6 +3168,390 @@ export const companies: Company[] = [
     sourceUrls: ["https://www.se.com/", "https://www.se.com/ww/en/about-us/investor-relations/"],
     confidenceLevel: "Medium",
     lastUpdated: STD_DATE,
+  },
+
+  // ============================================================
+  // 補加：第一波被遺漏但很關鍵的公司
+  // ============================================================
+  {
+    id: "aspeed",
+    name: "信驊科技 Aspeed",
+    nameEn: "ASPEED Technology Inc.",
+    ticker: "TWSE: 5274",
+    market: "Taiwan",
+    category: ["ai-server-odm"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Midstream",
+    coreProducts: [
+      "BMC（Baseboard Management Controller）系列 SoC",
+      "AST2600、AST2700 server BMC",
+      "Cupola360 全景視訊處理器",
+    ],
+    whatTheyDo:
+      "全球 server BMC 晶片市占第一的設計公司，幾乎所有 Intel Xeon / AMD EPYC 平台 + AI server 都需要其 BMC SoC 進行遠端管理與監控。",
+    aiRelevance:
+      "每張 AI server 主機板都需要一顆 BMC；AI server 出貨增加直接帶動 ASIC 出貨，且高階 AI server BMC 規格（含 PCIe Gen5、DDR5 介面）會升級。",
+    competitiveAdvantage:
+      "Server BMC 市占接近獨佔（市場估約 70%+），與 Intel / AMD CPU 平台深度綁定；切換成本極高。",
+    competitors: ["Nuvoton（部分）", "OpenBMC 開源方案", "客戶 in-house（少數 hyperscaler）"],
+    risks: [
+      "客戶集中於少數 server OEM/ODM",
+      "Hyperscaler 自研 BMC 風險",
+      "估值偏高",
+    ],
+    keyCustomersOrEcosystem:
+      "幾乎所有伺服器 OEM/ODM（Dell、HPE、Lenovo、鴻海、廣達、緯創、Wiwynn）皆採用；公開資訊指 hyperscaler 亦廣泛採用。",
+    technicalKeywords: ["BMC", "AST2600", "AST2700", "Server management", "IPMI", "Redfish"],
+    tags: ["BMC", "Server SoC", "AI Server"],
+    valuationSensitivity: ["serverDemand", "hyperscalerDemand", "nvidiaCycle"],
+    moat: { process: 3, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 0, switching: 5 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 1,
+      chinaExport: 2,
+      customerConc: 3,
+      capexCycle: 3,
+      valuation: 4,
+      techTransition: 2,
+    },
+    analystView:
+      "AI server 出貨直接受惠的「沉默王者」；近乎獨佔的 server BMC 是高品質的純題材，但估值已反映此優勢。",
+    serdesAngle:
+      "AST2700 開始支援 PCIe Gen5、DDR5、USB 3.2 等高速介面，是 SerDes IP 在 server 周邊管理晶片的具體應用。",
+    sourceUrls: [
+      "https://www.aspeedtech.com/",
+      "https://mops.twse.com.tw/mops/web/t146sb05?TYPEK=sii&step=1&CO_ID=5274",
+    ],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "ibiden",
+    name: "Ibiden 揖斐電",
+    nameEn: "Ibiden Co., Ltd.",
+    ticker: "TYO: 4062",
+    market: "Private",
+    category: ["advanced-packaging"],
+    aiImportanceScore: 5,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "ABF 載板（IC substrate）— 公認的世界第一",
+      "FC-BGA 大尺寸載板",
+      "陶瓷基板、廢氣處理元件（非半導體）",
+    ],
+    whatTheyDo:
+      "日本電子材料公司，是全球最大 ABF 載板供應商，公認的台積電 CoWoS 與 Nvidia / Intel 高階 CPU/GPU 載板的關鍵供應方。",
+    aiRelevance:
+      "Nvidia AI GPU、Intel CPU 都仰賴 ABF 載板；Ibiden 為 TSMC CoWoS-S/L 大尺寸 interposer 載板的核心供應方。",
+    competitiveAdvantage:
+      "ABF 載板良率、可靠度長期領先；與台積電與大客戶綁定深；大尺寸載板技術獨佔性高。",
+    competitors: ["Shinko Electric", "欣興 Unimicron", "南電 Nan Ya PCB"],
+    risks: [
+      "ABF 產能 2022-2023 擴張過快，價格曾承壓",
+      "客戶集中於少數高階 CPU/GPU",
+      "日股市場流動性、匯率波動",
+    ],
+    keyCustomersOrEcosystem:
+      "Intel、Nvidia、AMD 等高階載板長期供應方；TSMC CoWoS 大尺寸載板核心夥伴。",
+    technicalKeywords: ["ABF substrate", "FC-BGA", "Large body BGA", "CoWoS substrate"],
+    tags: ["ABF", "Substrate", "CoWoS"],
+    valuationSensitivity: ["serverDemand", "pcCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 5, switching: 4 },
+    risk: {
+      nvidiaDependency: 3,
+      memoryCycle: 1,
+      chinaExport: 2,
+      customerConc: 3,
+      capexCycle: 5,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "ABF 全球龍頭、CoWoS 載板關鍵節點；非台美投資人主流標的（日股），但供應鏈不可或缺。",
+    sourceUrls: ["https://www.ibiden.com/", "https://www.ibiden.com/ir/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "advantest",
+    name: "Advantest 愛德萬",
+    nameEn: "Advantest Corporation",
+    ticker: "TYO: 6857",
+    market: "Private",
+    category: ["foundry-equipment", "memory-hbm"],
+    aiImportanceScore: 5,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "SoC ATE（測試機）— V93000 系列",
+      "Memory ATE — T5503HS（HBM 專用）等",
+      "光學 / inspection 設備",
+    ],
+    whatTheyDo:
+      "全球領先的半導體測試機（ATE）供應商；公認的 HBM 測試與 AI ASIC（如 Nvidia GPU）測試機主要供應方，與 Teradyne 並列雙巨頭。",
+    aiRelevance:
+      "AI ASIC、HBM 測試需求暴增，Advantest 在 HBM3E / HBM4 stack test 的 V93000 / T5503 是事實標準；Nvidia / TSMC / SK Hynix / Samsung 都採購其設備。",
+    competitiveAdvantage:
+      "HBM 測試機近獨佔；SoC ATE 與 Teradyne 雙寡占；客戶切換成本極高。",
+    competitors: ["Teradyne", "Cohu"],
+    risks: [
+      "客戶 capex 週期",
+      "中國市場限制",
+      "韓國 / 台灣記憶體大廠擴產節奏",
+    ],
+    keyCustomersOrEcosystem:
+      "Nvidia、TSMC、京元電子、SK Hynix、Samsung、Micron 為公開揭露之主要客戶族群。",
+    technicalKeywords: ["ATE", "SoC test", "Memory test", "HBM test", "V93000"],
+    tags: ["ATE", "HBM Test", "Equipment"],
+    valuationSensitivity: ["nvidiaCycle", "memoryCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 5, ecosystem: 5, customer: 5, manufacturing: 4, switching: 5 },
+    risk: {
+      nvidiaDependency: 3,
+      memoryCycle: 4,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 4,
+      valuation: 4,
+      techTransition: 2,
+    },
+    analystView:
+      "HBM 與 AI ASIC 測試的關鍵節點；測試機需求隨 HBM stack 層數與 die 複雜度上升而結構性擴張。日股流動性需注意。",
+    sourceUrls: ["https://www.advantest.com/", "https://www.advantest.com/ir"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "tel",
+    name: "Tokyo Electron 東京威力科創",
+    nameEn: "Tokyo Electron Ltd.",
+    ticker: "TYO: 8035",
+    market: "Private",
+    category: ["foundry-equipment"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "塗佈 / 顯影設備（Coater / Developer）— EUV 配套近獨佔",
+      "蝕刻、沉積（CVD / ALD）",
+      "清洗、wafer bonder",
+    ],
+    whatTheyDo:
+      "全球第三大半導體設備公司，與 ASML、AMAT、Lam、KLA 並列五大；在 EUV 配套的塗佈/顯影設備市占近獨佔。",
+    aiRelevance:
+      "AI 晶片需要先進製程，先進製程需要 EUV，EUV 需要 TEL 的 coater/developer。間接但關鍵的瓶頸。",
+    competitiveAdvantage:
+      "EUV 塗佈/顯影設備近獨佔；wafer bonder（hybrid bonding）在 3D 封裝技術領先。",
+    competitors: ["Applied Materials", "Lam Research", "Screen", "Hitachi High-Tech"],
+    risks: [
+      "中國市場限制",
+      "客戶 capex 週期",
+    ],
+    keyCustomersOrEcosystem:
+      "TSMC、Samsung、Intel、SK Hynix、Micron、Kioxia 為主要客戶。",
+    technicalKeywords: ["EUV coater", "Developer", "Etch", "ALD", "Hybrid bonding"],
+    tags: ["Equipment", "EUV", "Hybrid Bonding"],
+    valuationSensitivity: ["capexCycle", "memoryCycle", "hyperscalerDemand"],
+    moat: { process: 5, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 4, switching: 4 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 4,
+      chinaExport: 4,
+      customerConc: 3,
+      capexCycle: 5,
+      valuation: 3,
+      techTransition: 2,
+    },
+    analystView:
+      "AI capex 結構性受惠；hybrid bonding 設備是長期 3D 封裝題材。日股流動性需注意。",
+    sourceUrls: ["https://www.tel.com/", "https://www.tel.com/ir/"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "disco",
+    name: "Disco 迪斯科",
+    nameEn: "Disco Corporation",
+    ticker: "TYO: 6146",
+    market: "Private",
+    category: ["foundry-equipment", "advanced-packaging"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "Precision dicing 切割設備（near-monopoly）",
+      "Grinding 研磨設備",
+      "Polishing 拋光設備",
+    ],
+    whatTheyDo:
+      "全球精密切割 / 研磨設備市占接近獨佔的日本公司；HBM TSV、chiplet 切割、晶圓薄化等先進封裝製程的關鍵設備供應商。",
+    aiRelevance:
+      "HBM 堆疊需要極薄 die（透過 grinding），且 chiplet / 2.5D 封裝需要精密切割 — Disco 設備是隱性瓶頸。",
+    competitiveAdvantage:
+      "Dicing / grinding 市占近獨佔；客戶切換成本高（製程整合深）。",
+    competitors: ["Accretech", "Lapmaster"],
+    risks: [
+      "客戶 capex 週期",
+      "中國市場限制",
+    ],
+    keyCustomersOrEcosystem:
+      "全球主要 IDM / foundry / OSAT 皆使用其設備。",
+    technicalKeywords: ["Dicing", "Grinding", "Wafer thinning", "HBM stack"],
+    tags: ["Equipment", "Dicing", "Wafer Thinning"],
+    valuationSensitivity: ["memoryCycle", "capexCycle"],
+    moat: { process: 5, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 4, switching: 5 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 4,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 5,
+      valuation: 3,
+      techTransition: 2,
+    },
+    analystView:
+      "HBM 堆疊與 chiplet 趨勢的隱性受惠者；日股流動性需注意。",
+    sourceUrls: ["https://www.disco.co.jp/eg/", "https://www.disco.co.jp/eg/ir/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "shinko",
+    name: "Shinko Electric 新光電工",
+    nameEn: "Shinko Electric Industries Co., Ltd.",
+    ticker: "TYO: 6967",
+    market: "Private",
+    category: ["advanced-packaging"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "ABF 載板 — 與 Ibiden、欣興 並列全球前三",
+      "BGA、CSP、Leadframe",
+    ],
+    whatTheyDo:
+      "日本大型 IC 載板與封裝材料公司，是全球前三大 ABF 載板供應商，與 Ibiden、欣興分食高階 AI / HPC 載板市場。",
+    aiRelevance:
+      "與 Ibiden 共同供應 AI GPU / HPC CPU 之高階 ABF 載板。",
+    competitiveAdvantage: "ABF 技術成熟、客戶結構分散。",
+    competitors: ["Ibiden", "欣興", "南電"],
+    risks: ["ABF 價格週期", "客戶集中"],
+    keyCustomersOrEcosystem: "Intel、Nvidia、AMD 等高階客戶；具體比重需查證。",
+    technicalKeywords: ["ABF substrate", "FC-BGA", "Leadframe"],
+    tags: ["ABF", "Substrate"],
+    valuationSensitivity: ["serverDemand", "pcCycle"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 5, customer: 4, manufacturing: 4, switching: 4 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 1,
+      chinaExport: 2,
+      customerConc: 3,
+      capexCycle: 5,
+      valuation: 2,
+      techTransition: 3,
+    },
+    analystView:
+      "ABF 三巨頭之一；日股流動性需注意，2024 年 JIC 收購案後上市狀態變動，需獨立查證最新交易狀態。",
+    sourceUrls: ["https://www.shinko.co.jp/", "https://www.shinko.co.jp/english/ir/"],
+    confidenceLevel: "Low",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "cadence",
+    name: "Cadence Design Systems",
+    nameEn: "Cadence Design Systems, Inc.",
+    ticker: "NASDAQ: CDNS",
+    market: "US",
+    category: ["high-speed-interface", "ai-compute"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "EDA 工具（Innovus、Genus、Virtuoso、Xcelium、JasperGold）",
+      "高速介面 IP（PCIe、CXL、DDR/HBM、112G/224G PHY、UCIe）",
+      "Palladium / Protium emulation 與 prototyping",
+      "Tensilica AI / DSP IP",
+    ],
+    whatTheyDo:
+      "全球 EDA 雙雄之一（與 Synopsys 並列），同時擁有完整 silicon IP 組合，是 AI ASIC、GPU、CPU 設計的關鍵工具與 IP 供應商。",
+    aiRelevance:
+      "AI ASIC 委外設計潮（如 Alchip、GUC 等）、hyperscaler 自研晶片皆使用 Cadence 工具與 IP；其 emulation 平台（Palladium）是大型 SoC 驗證的事實標準之一。",
+    competitiveAdvantage:
+      "EDA + IP + Emulation 三引擎；客戶切換成本極高。",
+    competitors: ["Synopsys", "Siemens EDA"],
+    risks: ["中國市場業務限制", "客戶 capex 週期", "估值偏高"],
+    keyCustomersOrEcosystem:
+      "所有主要 IC 設計公司、IDM、ASIC 設計服務業者皆為客戶。",
+    technicalKeywords: ["EDA", "IP", "224G PHY", "PCIe", "CXL", "HBM", "UCIe", "Palladium"],
+    tags: ["EDA", "SerDes IP", "HBM PHY", "Emulation"],
+    valuationSensitivity: ["capexCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 5, ecosystem: 5, customer: 5, manufacturing: 0, switching: 5 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 4,
+      customerConc: 2,
+      capexCycle: 2,
+      valuation: 4,
+      techTransition: 2,
+    },
+    analystView:
+      "與 Synopsys 並列「賣鏟子」雙雄；AI ASIC 投入越多越受惠。",
+    serdesAngle:
+      "Cadence 224G PHY 也已在 TSMC N3 矽驗證；與 Synopsys 競爭最高階 SerDes IP 授權。",
+    sourceUrls: ["https://www.cadence.com/", "https://investor.cadence.com/"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
+
+  {
+    id: "camtek",
+    name: "Camtek",
+    nameEn: "Camtek Ltd.",
+    ticker: "NASDAQ: CAMT",
+    market: "US",
+    category: ["foundry-equipment", "advanced-packaging"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "Eagle 系列 inspection / metrology 設備",
+      "HBM bump / TSV inspection",
+      "Advanced packaging 量測",
+    ],
+    whatTheyDo:
+      "以色列檢測設備公司，聚焦先進封裝與 HBM 的 bump / TSV / interposer inspection；公認的 HBM stack 檢測關鍵設備供應商。",
+    aiRelevance:
+      "HBM3E / HBM4 stack 對 bump 與 TSV 檢測需求暴增；Camtek 是少數能對應的供應商。",
+    competitiveAdvantage:
+      "HBM bump inspection 領先；公司公開揭露 HPC / AI 為主要成長動能。",
+    competitors: ["Onto Innovation", "Rudolph", "KLA（部分重疊）"],
+    risks: [
+      "客戶高度集中於少數記憶體 + OSAT 業者",
+      "ASML / KLA 等大廠跨入先進封裝檢測競爭",
+    ],
+    keyCustomersOrEcosystem:
+      "公司公開揭露 HBM 三巨頭與主要 OSAT 為客戶；具體比重請查最新揭露。",
+    technicalKeywords: ["Bump inspection", "TSV", "Advanced packaging metrology", "HBM"],
+    tags: ["Inspection", "HBM", "Advanced Packaging"],
+    valuationSensitivity: ["memoryCycle", "capexCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 4, customer: 4, manufacturing: 3, switching: 4 },
+    risk: {
+      nvidiaDependency: 3,
+      memoryCycle: 4,
+      chinaExport: 3,
+      customerConc: 4,
+      capexCycle: 5,
+      valuation: 4,
+      techTransition: 3,
+    },
+    analystView:
+      "HBM + 先進封裝 inspection 純題材；客戶集中度與估值是觀察重點。",
+    sourceUrls: ["https://www.camtek.com/", "https://www.camtek.com/investors"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
   },
 ];
 

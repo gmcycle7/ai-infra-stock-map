@@ -427,7 +427,8 @@ export type DashboardQuestion =
   | "nvidiaExposure"
   | "networkUpgrade"
   | "hbmCowos"
-  | "powerCooling";
+  | "powerCooling"
+  | "cpoExposure";
 
 export const dashboardQuestions: Record<DashboardQuestion, { zh: string; en: string }> = {
   shortTermCatalyst: { zh: "哪些公司短期催化最強？", en: "Highest short-term catalyst" },
@@ -439,6 +440,7 @@ export const dashboardQuestions: Record<DashboardQuestion, { zh: string; en: str
   networkUpgrade: { zh: "哪些公司最受惠於 800G / 1.6T networking？", en: "Most exposed to 800G/1.6T networking" },
   hbmCowos: { zh: "哪些公司最受惠於 HBM / CoWoS bottleneck？", en: "Most exposed to HBM / CoWoS bottleneck" },
   powerCooling: { zh: "哪些公司最受惠於 AI server power & cooling？", en: "Most exposed to AI server power & cooling" },
+  cpoExposure: { zh: "哪些公司最受惠於 CPO 共同封裝光學轉換？", en: "Most exposed to CPO transition" },
 };
 
 function sortByKpi(
@@ -499,6 +501,15 @@ export function answerQuestion(q: DashboardQuestion, limit = 10) {
             ["power-management", "thermal-cooling"].includes(cc),
           ),
         ({ kpi }) => kpi.threeYearScore + kpi.fiveYearScore * 0.3,
+        limit,
+      );
+    case "cpoExposure":
+      return sortByKpi(
+        ({ company }) =>
+          company.tags.some((t) =>
+            ["CPO", "Silicon Photonics", "Optical DSP", "Optical Module"].includes(t),
+          ),
+        ({ kpi }) => kpi.threeYearScore + kpi.tenYearScore * 0.5,
         limit,
       );
   }

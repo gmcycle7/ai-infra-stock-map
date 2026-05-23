@@ -1,6 +1,10 @@
 import { categories } from "../data/categories";
-import type { Market, SupplyChainPosition } from "../types";
+import type { InvestmentType, Market, SupplyChainPosition } from "../types";
 import { type FilterState, defaultFilter } from "../lib/filter";
+import {
+  investmentTypeDescriptions,
+  investmentTypePalette,
+} from "../lib/investmentType";
 
 interface Props {
   filter: FilterState;
@@ -22,11 +26,25 @@ const POSITIONS: Array<{ v: SupplyChainPosition; label: string }> = [
 
 const SORT_OPTIONS = [
   { v: "scoreDesc", label: "AI 重要性（高→低）" },
+  { v: "shortTermDesc", label: "短期催化分數（高→低）" },
+  { v: "threeYearDesc", label: "三年成長分數（高→低）" },
+  { v: "fiveYearDesc", label: "五年護城河分數（高→低）" },
+  { v: "tenYearDesc", label: "十年結構性分數（高→低）" },
+  { v: "riskAsc", label: "風險分數（低→高）" },
+  { v: "riskDesc", label: "風險分數（高→低）" },
   { v: "scoreAsc", label: "AI 重要性（低→高）" },
   { v: "nameAsc", label: "公司名稱（A→Z）" },
   { v: "marketAsc", label: "市場別" },
   { v: "categoryAsc", label: "分類" },
 ] as const;
+
+const INVESTMENT_TYPES: InvestmentType[] = [
+  "核心平台型",
+  "關鍵瓶頸型",
+  "技術升級受惠型",
+  "週期成長型",
+  "題材波動型",
+];
 
 function toggle<T>(arr: T[], v: T): T[] {
   return arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v];
@@ -132,6 +150,30 @@ export function FilterBar({ filter, setFilter, allTags = [] }: Props) {
           >
             清除篩選
           </button>
+        </div>
+      </div>
+
+      <div>
+        <span className="muted mb-1 block text-xs">投資型態（可複選）</span>
+        <div className="flex flex-wrap gap-1.5">
+          {INVESTMENT_TYPES.map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() =>
+                setFilter({ ...filter, investmentTypes: toggle(filter.investmentTypes, t) })
+              }
+              title={investmentTypeDescriptions[t]}
+              className={
+                "rounded-md border px-2.5 py-1 text-xs transition " +
+                (filter.investmentTypes.includes(t)
+                  ? "border-brand-600 bg-brand-600 text-white"
+                  : investmentTypePalette[t] + " hover:opacity-80")
+              }
+            >
+              {t}
+            </button>
+          ))}
         </div>
       </div>
 

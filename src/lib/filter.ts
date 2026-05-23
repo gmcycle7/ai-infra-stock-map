@@ -1,13 +1,28 @@
-import type { CategorySlug, Company, Market, SupplyChainPosition } from "../types";
+import type { CategorySlug, Company, InvestmentType, Market, SupplyChainPosition } from "../types";
+import { getKpi } from "./kpi";
+
+export type SortKey =
+  | "scoreDesc"
+  | "scoreAsc"
+  | "nameAsc"
+  | "marketAsc"
+  | "categoryAsc"
+  | "shortTermDesc"
+  | "threeYearDesc"
+  | "fiveYearDesc"
+  | "tenYearDesc"
+  | "riskAsc"
+  | "riskDesc";
 
 export interface FilterState {
   search: string;
   markets: Market[];
   categories: CategorySlug[];
   positions: SupplyChainPosition[];
+  investmentTypes: InvestmentType[];
   minScore: number;
   tags: string[];
-  sort: "scoreDesc" | "scoreAsc" | "nameAsc" | "marketAsc" | "categoryAsc";
+  sort: SortKey;
 }
 
 export const defaultFilter: FilterState = {
@@ -15,6 +30,7 @@ export const defaultFilter: FilterState = {
   markets: [],
   categories: [],
   positions: [],
+  investmentTypes: [],
   minScore: 0,
   tags: [],
   sort: "scoreDesc",
@@ -28,6 +44,10 @@ export function applyFilter(companies: Company[], f: FilterState): Company[] {
     if (f.categories.length > 0 && !c.category.some((cc) => f.categories.includes(cc)))
       return false;
     if (f.positions.length > 0 && !f.positions.includes(c.supplyChainPosition)) return false;
+    if (f.investmentTypes.length > 0) {
+      const t = getKpi(c).investmentType;
+      if (!f.investmentTypes.includes(t)) return false;
+    }
     if (f.tags.length > 0 && !c.tags.some((t) => f.tags.includes(t))) return false;
     if (q) {
       const hay =
@@ -52,6 +72,8 @@ export function applyFilter(companies: Company[], f: FilterState): Company[] {
   });
 
   list = list.slice().sort((a, b) => {
+    const ka = getKpi(a);
+    const kb = getKpi(b);
     switch (f.sort) {
       case "scoreDesc":
         return b.aiImportanceScore - a.aiImportanceScore || a.name.localeCompare(b.name);
@@ -66,6 +88,18 @@ export function applyFilter(companies: Company[], f: FilterState): Company[] {
           (a.category[0] ?? "").localeCompare(b.category[0] ?? "") ||
           b.aiImportanceScore - a.aiImportanceScore
         );
+      case "shortTermDesc":
+        return kb.shortTermScore - ka.shortTermScore || a.name.localeCompare(b.name);
+      case "threeYearDesc":
+        return kb.threeYearScore - ka.threeYearScore || a.name.localeCompare(b.name);
+      case "fiveYearDesc":
+        return kb.fiveYearScore - ka.fiveYearScore || a.name.localeCompare(b.name);
+      case "tenYearDesc":
+        return kb.tenYearScore - ka.tenYearScore || a.name.localeCompare(b.name);
+      case "riskAsc":
+        return ka.riskScore - kb.riskScore || a.name.localeCompare(b.name);
+      case "riskDesc":
+        return kb.riskScore - ka.riskScore || a.name.localeCompare(b.name);
       default:
         return 0;
     }

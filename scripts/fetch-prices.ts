@@ -22,8 +22,8 @@ const yahooFinance = new YahooFinance({ suppressNotices: ["yahooSurvey", "ripHis
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT = path.resolve(__dirname, "../src/data/marketData.json");
 
-// 歷史價回看的天數（含週末，每年約 252 個交易日；6 個月約 130 個交易日）
-const HISTORY_DAYS = 180;
+// 歷史價回看的天數（含週末）；2 年資料足以涵蓋 1M/3M/6M/1Y/2Y 區間
+const HISTORY_DAYS = 730;
 
 interface HistoryPoint {
   /** ISO date 字串（"YYYY-MM-DD"） */
@@ -44,7 +44,16 @@ interface Quote {
   forwardPE: number | null;
   fiftyTwoWeekHigh: number | null;
   fiftyTwoWeekLow: number | null;
-  /** 6 個月日線收盤；空陣列代表無資料 */
+  /** 分析師目標價（中位數 / 高 / 低 / 均值） */
+  targetMean: number | null;
+  targetHigh: number | null;
+  targetLow: number | null;
+  targetMedian: number | null;
+  /** 平均建議：1 Strong Buy → 5 Strong Sell */
+  recommendationMean: number | null;
+  recommendationKey: string | null;
+  numberOfAnalystOpinions: number | null;
+  /** 日線收盤；空陣列代表無資料 */
   history: HistoryPoint[];
   error?: string;
 }
@@ -68,6 +77,10 @@ function toYahooSymbol(ticker: string): string | null {
 
   const epa = ticker.match(/EPA:\s*(\S+)/);
   if (epa) return epa[1] + ".PA";
+
+  // 日股 (TYO / TSE)
+  const tyo = ticker.match(/(?:TYO|TSE):\s*(\S+)/);
+  if (tyo) return tyo[1] + ".T";
 
   const us = ticker.match(/(?:NASDAQ|NYSE|AMEX|NYSEARCA):\s*(\S+)/);
   if (us) return us[1];
@@ -98,6 +111,35 @@ async function fetchQuoteOnly(symbol: string) {
   };
 }
 
+async function fetchAnalystTargets(symbol: string) {
+  // financialData 含 targetHigh/Low/Mean/Median、recommendationMean/Key、numberOfAnalystOpinions
+  try {
+    const qs = await yahooFinance.quoteSummary(symbol, {
+      modules: ["financialData"],
+    });
+    const f = qs.financialData;
+    return {
+      targetMean: f?.targetMeanPrice ?? null,
+      targetHigh: f?.targetHighPrice ?? null,
+      targetLow: f?.targetLowPrice ?? null,
+      targetMedian: f?.targetMedianPrice ?? null,
+      recommendationMean: f?.recommendationMean ?? null,
+      recommendationKey: f?.recommendationKey ?? null,
+      numberOfAnalystOpinions: f?.numberOfAnalystOpinions ?? null,
+    };
+  } catch {
+    return {
+      targetMean: null,
+      targetHigh: null,
+      targetLow: null,
+      targetMedian: null,
+      recommendationMean: null,
+      recommendationKey: null,
+      numberOfAnalystOpinions: null,
+    };
+  }
+}
+
 async function fetchChart(symbol: string): Promise<HistoryPoint[]> {
   const period1 = new Date(Date.now() - HISTORY_DAYS * 24 * 60 * 60 * 1000);
   const res = await yahooFinance.chart(symbol, {
@@ -115,7 +157,6 @@ async function fetchChart(symbol: string): Promise<HistoryPoint[]> {
 }
 
 async function fetchOne(symbol: string): Promise<Quote> {
-  // 預設失敗時的回傳值
   const fallback: Quote = {
     symbol,
     currency: "USD",
@@ -128,6 +169,13 @@ async function fetchOne(symbol: string): Promise<Quote> {
     forwardPE: null,
     fiftyTwoWeekHigh: null,
     fiftyTwoWeekLow: null,
+    targetMean: null,
+    targetHigh: null,
+    targetLow: null,
+    targetMedian: null,
+    recommendationMean: null,
+    recommendationKey: null,
+    numberOfAnalystOpinions: null,
     history: [],
   };
 
@@ -136,14 +184,14 @@ async function fetchOne(symbol: string): Promise<Quote> {
     q = await fetchQuoteOnly(symbol);
   } catch (err) {
     fallback.error = err instanceof Error ? err.message : String(err);
-    // 即便 quote 失敗，仍嘗試抓 chart（部分台股 small-cap 會這樣）
   }
+
+  const analyst = await fetchAnalystTargets(symbol);
 
   let history: HistoryPoint[] = [];
   try {
     history = await fetchChart(symbol);
   } catch (err) {
-    // history 失敗不算嚴重錯誤；只記在 error 欄位
     if (!fallback.error) {
       fallback.error = "chart: " + (err instanceof Error ? err.message : String(err));
     }
@@ -161,6 +209,7 @@ async function fetchOne(symbol: string): Promise<Quote> {
     forwardPE: q?.forwardPE ?? null,
     fiftyTwoWeekHigh: q?.fiftyTwoWeekHigh ?? null,
     fiftyTwoWeekLow: q?.fiftyTwoWeekLow ?? null,
+    ...analyst,
     history,
     error: fallback.error,
   };
@@ -185,10 +234,12 @@ async function main() {
       quotes[t.id] = q;
       const priceTxt = q.price != null ? `${q.price.toFixed(2)} ${q.currency}` : "—";
       const fpe = q.forwardPE != null ? q.forwardPE.toFixed(1) : "—";
+      const tgt = q.targetMean != null ? q.targetMean.toFixed(2) : "—";
+      const rec = q.recommendationKey ?? "—";
       const hist = q.history.length;
       const tag = q.error
         ? `⚠ ${q.error.slice(0, 50)}`
-        : `✓ ${priceTxt}  fPE=${fpe}  hist=${hist}`;
+        : `✓ ${priceTxt}  fPE=${fpe}  tgt=${tgt}(${rec})  hist=${hist}`;
       console.log(`  ${t.symbol.padEnd(12)} ${t.name.padEnd(34)} ${tag}`);
       if (q.error) errors.push(`${t.id} (${t.symbol}): ${q.error}`);
     }

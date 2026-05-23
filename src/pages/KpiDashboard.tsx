@@ -9,6 +9,8 @@ import { InvestmentTypeBadge } from "../components/InvestmentTypeBadge";
 import { investmentTypeDescriptions } from "../lib/investmentType";
 import type { InvestmentType } from "../types";
 import { MarketBadge } from "../components/Badge";
+import { Sparkline } from "../components/Sparkline";
+import { getQuote } from "../services/marketData";
 
 const QUESTION_ORDER: DashboardQuestion[] = [
   "shortTermCatalyst",
@@ -20,6 +22,7 @@ const QUESTION_ORDER: DashboardQuestion[] = [
   "networkUpgrade",
   "hbmCowos",
   "powerCooling",
+  "cpoExposure",
 ];
 
 const SCORE_KEY: Record<DashboardQuestion, string> = {
@@ -32,6 +35,7 @@ const SCORE_KEY: Record<DashboardQuestion, string> = {
   networkUpgrade: "threeYearScore",
   hbmCowos: "threeYearScore",
   powerCooling: "threeYearScore",
+  cpoExposure: "tenYearScore",
 };
 
 const SCORE_LABEL: Record<DashboardQuestion, string> = {
@@ -44,6 +48,7 @@ const SCORE_LABEL: Record<DashboardQuestion, string> = {
   networkUpgrade: "三年",
   hbmCowos: "三年",
   powerCooling: "三年",
+  cpoExposure: "十年",
 };
 
 function tone(v: number, risk = false) {
@@ -75,28 +80,47 @@ function RankingCard({ q }: { q: DashboardQuestion }) {
         <span className="muted text-xs font-mono">{dashboardQuestions[q].en}</span>
       </header>
       <ol className="divide-y divide-slate-100 text-sm dark:divide-slate-800">
-        {list.map((item, i) => (
-          <li
-            key={item.company.id}
-            className="grid grid-cols-[1.5rem_1fr_auto_auto] items-baseline gap-2 py-1.5"
-          >
-            <span className="muted text-xs tabular-nums">{i + 1}.</span>
-            <Link
-              to={`/company/${item.company.id}`}
-              className="truncate font-medium hover:underline"
+        {list.map((item, i) => {
+          const quote = getQuote(item.company.id);
+          const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
+          return (
+            <li
+              key={item.company.id}
+              className="grid grid-cols-[1.75rem_1fr_60px_auto_2.5rem] items-center gap-2 py-1.5"
             >
-              {item.company.name}
-            </Link>
-            <MarketBadge market={item.company.market} />
-            <span
-              className={
-                "w-10 text-right font-mono tabular-nums " + tone(item.kpi[scoreKey], isRisk)
-              }
-            >
-              {item.kpi[scoreKey]}
-            </span>
-          </li>
-        ))}
+              <span
+                className={
+                  "text-center text-xs tabular-nums " +
+                  (medal ? "text-base" : "text-slate-400")
+                }
+              >
+                {medal ?? `${i + 1}.`}
+              </span>
+              <Link
+                to={`/company/${item.company.id}`}
+                className="truncate text-sm font-medium hover:underline"
+              >
+                {item.company.name}
+              </Link>
+              <div>
+                {quote?.history && quote.history.length > 0 ? (
+                  <Sparkline data={quote.history} width={60} height={20} windowSize={90} />
+                ) : (
+                  <span className="text-[10px] text-slate-400">—</span>
+                )}
+              </div>
+              <MarketBadge market={item.company.market} />
+              <span
+                className={
+                  "text-right font-mono text-sm font-semibold tabular-nums " +
+                  tone(item.kpi[scoreKey], isRisk)
+                }
+              >
+                {item.kpi[scoreKey]}
+              </span>
+            </li>
+          );
+        })}
       </ol>
       <div className="muted text-[10px]">
         排序依：{SCORE_LABEL[q]} 分數 + 對應產業 / 標籤過濾條件

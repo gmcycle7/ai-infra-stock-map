@@ -124,6 +124,28 @@ export const bottlenecks: BottleneckMapping[] = [
     lastUpdated: "2026-05-24",
   },
   {
+    id: "cpo-transition",
+    nameZh: "CPO 共同封裝光學轉換",
+    nameEn: "Co-Packaged Optics (CPO) Transition",
+    description:
+      "1.6T 世代 / 102.4T switch 對功耗與訊號完整性的需求把可插拔光模組推到極限；CPO 把光引擎搬到 switch ASIC 旁邊，可大幅省功耗但對封裝、熱、可維修性是新挑戰。Nvidia Quantum-X 已示範 CPO 平台，Broadcom 也有路線圖。短期可插拔仍是主力，但 CPO 是中長期關鍵轉換點 — 光元件供應鏈將被重新洗牌。",
+    beneficiaries: [
+      { companyId: "tsmc", reason: "CPO 需要先進矽光子（SiPh）製程與封裝整合" },
+      { companyId: "broadcom", reason: "已宣布 CPO switch 路線圖，整合自家 SerDes + 光引擎" },
+      { companyId: "marvell", reason: "光通訊 DSP / SiPh 同步切入" },
+      { companyId: "coherent", reason: "EML、SiPh、PIC 整合供應 CPO 光源" },
+      { companyId: "lumentum", reason: "EML、SiPh PIC 領先研發" },
+      { companyId: "fabrinet", reason: "CPO 模組製造與封裝代工" },
+      { companyId: "nvidia", reason: "Quantum-X800 平台展示 CPO 商用化" },
+    ],
+    sourceUrls: [
+      "https://www.broadcom.com/products/optical-systems/co-packaged-optics",
+      "https://www.nvidia.com/en-us/networking/products/co-packaged-optics/",
+    ],
+    confidenceLevel: "Medium",
+    lastUpdated: "2026-05-24",
+  },
+  {
     id: "hyperscaler-capex",
     nameZh: "Hyperscaler Capex 循環",
     nameEn: "Hyperscaler Capex Cycle",

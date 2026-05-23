@@ -6,6 +6,7 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/", label: "首頁" },
   { to: "/categories", label: "分類總覽" },
   { to: "/companies", label: "公司列表" },
+  { to: "/compare", label: "兩公司比較" },
   { to: "/kpi-dashboard", label: "投資 KPI 儀表板" },
   { to: "/supply-chain", label: "供應鏈總覽" },
   { to: "/bottlenecks", label: "瓶頸對照" },
