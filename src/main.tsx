@@ -18,7 +18,7 @@ import { MoatsPage } from "./pages/Moats";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />

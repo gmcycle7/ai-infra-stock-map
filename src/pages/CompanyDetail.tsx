@@ -4,6 +4,15 @@ import { categoryBySlug } from "../data/categories";
 import { CategoryBadge, ConfidenceBadge, MarketBadge, PositionBadge, ScoreBadge, Tag } from "../components/Badge";
 import { MoatRadar, RiskBars } from "../components/MoatChart";
 import { valuationLabels } from "../lib/utils";
+import {
+  formatChangePct,
+  formatFetchedAt,
+  formatMarketCap,
+  formatPE,
+  formatPrice,
+  getQuote,
+  lastFetchedAt,
+} from "../services/marketData";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -169,30 +178,9 @@ export function CompanyDetailPage() {
         )}
       </section>
 
-      {/* Market data placeholder */}
-      <section className="card p-5">
-        <h2 className="section-title">市場資料（需即時 API）</h2>
-        <p className="muted mt-1 text-xs">
-          為避免使用過時數字，本網站不硬編價格與市值；以下欄位待串接即時資料源。
-        </p>
-        <div className="mt-3 grid grid-cols-2 gap-3 text-sm md:grid-cols-3">
-          {[
-            ["市值 Market Cap", co.marketData?.marketCap],
-            ["本益比 P/E", co.marketData?.peRatio],
-            ["營收成長率 Rev Growth", co.marketData?.revenueGrowth],
-            ["毛利率 Gross Margin", co.marketData?.grossMargin],
-            ["股價 Price", co.marketData?.stockPrice],
-            ["年初至今報酬 YTD", co.marketData?.ytdReturn],
-          ].map(([label, value]) => (
-            <div key={label} className="rounded-lg border border-dashed border-slate-300 p-3 dark:border-slate-700">
-              <div className="muted text-xs">{label}</div>
-              <div className="font-mono text-xs italic text-slate-500 dark:text-slate-400">
-                {value ?? "requires live API"}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Market data */}
+      <MarketDataSection companyId={co.id} />
+
 
       {/* Sources */}
       <section className="card p-5">
@@ -223,3 +211,90 @@ export function CompanyDetailPage() {
     </div>
   );
 }
+
+// ----------------------------------------------------------------------
+// 市場資料區塊：讀取 src/data/marketData.json（每日自動更新）
+// ----------------------------------------------------------------------
+function MarketDataSection({ companyId }: { companyId: string }) {
+  const q = getQuote(companyId);
+
+  if (!q || q.price == null) {
+    return (
+      <section className="card p-5">
+        <h2 className="section-title">市場資料</h2>
+        <p className="muted mt-2 text-sm">
+          目前無法從 Yahoo Finance 取得此 ticker 的資料（可能是上櫃小型股或代號需確認）。
+          {q?.error && <span className="ml-1">錯誤：{q.error}</span>}
+        </p>
+      </section>
+    );
+  }
+
+  const upColor =
+    q.changePercent == null
+      ? "text-slate-500"
+      : q.changePercent >= 0
+        ? "text-emerald-600 dark:text-emerald-400"
+        : "text-rose-600 dark:text-rose-400";
+
+  return (
+    <section className="card p-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="section-title">市場資料</h2>
+        <div className="muted text-xs">
+          資料更新：{formatFetchedAt(lastFetchedAt)}（每日自動 from Yahoo Finance）
+        </div>
+      </div>
+
+      <div className="mt-3 grid grid-cols-2 gap-3 text-sm md:grid-cols-3 lg:grid-cols-6">
+        <Cell label="股價" value={formatPrice(q.price, q.currency)} mono />
+        <Cell label="漲跌幅" value={formatChangePct(q.changePercent)} mono valueClass={upColor} />
+        <Cell label="市值" value={formatMarketCap(q.marketCap, q.currency)} mono />
+        <Cell label="本益比 P/E" value={formatPE(q.trailingPE)} mono />
+        <Cell
+          label="52 週高"
+          value={formatPrice(q.fiftyTwoWeekHigh, q.currency)}
+          mono
+        />
+        <Cell
+          label="52 週低"
+          value={formatPrice(q.fiftyTwoWeekLow, q.currency)}
+          mono
+        />
+      </div>
+
+      <p className="muted mt-3 text-xs">
+        Ticker on Yahoo: <span className="font-mono">{q.symbol}</span> |
+        前日收盤：{formatPrice(q.previousClose, q.currency)} |
+        資料來源：Yahoo Finance（透過 GitHub Action 每日抓取，僅供研究參考，
+        非即時報價）
+      </p>
+    </section>
+  );
+}
+
+function Cell({
+  label,
+  value,
+  mono = false,
+  valueClass = "",
+}: {
+  label: string;
+  value: string;
+  mono?: boolean;
+  valueClass?: string;
+}) {
+  return (
+    <div className="rounded-lg border border-slate-200 p-3 dark:border-slate-700">
+      <div className="muted text-xs">{label}</div>
+      <div
+        className={
+          (mono ? "font-mono " : "") + "mt-1 text-sm font-semibold " + valueClass
+        }
+      >
+        {value}
+      </div>
+    </div>
+  );
+}
+
