@@ -53,6 +53,24 @@ interface Quote {
   recommendationMean: number | null;
   recommendationKey: string | null;
   numberOfAnalystOpinions: number | null;
+  /** 財務面（來自 financialData + defaultKeyStatistics + summaryDetail） */
+  profitMargin: number | null;          // 淨利率
+  grossMargin: number | null;           // 毛利率
+  operatingMargin: number | null;       // 營業利益率
+  revenueGrowthYoY: number | null;      // 營收 YoY 成長率（最新季）
+  earningsGrowthYoY: number | null;     // EPS YoY 成長率（最新季）
+  returnOnEquity: number | null;        // ROE
+  returnOnAssets: number | null;        // ROA
+  totalDebt: number | null;             // 總負債（原幣）
+  totalCash: number | null;             // 現金 + 短期投資（原幣）
+  freeCashflow: number | null;          // 自由現金流（原幣）
+  pegRatio: number | null;              // PEG
+  priceToBook: number | null;           // P/B
+  beta: number | null;                  // 對市場波動
+  dividendYield: number | null;         // 股息殖利率
+  enterpriseValue: number | null;
+  enterpriseToRevenue: number | null;   // EV / Revenue
+  enterpriseToEbitda: number | null;    // EV / EBITDA
   /** 日線收盤；空陣列代表無資料 */
   history: HistoryPoint[];
   error?: string;
@@ -111,14 +129,17 @@ async function fetchQuoteOnly(symbol: string) {
   };
 }
 
-async function fetchAnalystTargets(symbol: string) {
-  // financialData 含 targetHigh/Low/Mean/Median、recommendationMean/Key、numberOfAnalystOpinions
+async function fetchAnalystAndFinancials(symbol: string) {
+  // 一次抓 financialData + defaultKeyStatistics + summaryDetail（3 模組合 1 call）
   try {
     const qs = await yahooFinance.quoteSummary(symbol, {
-      modules: ["financialData"],
+      modules: ["financialData", "defaultKeyStatistics", "summaryDetail"],
     });
     const f = qs.financialData;
+    const k = qs.defaultKeyStatistics;
+    const s = qs.summaryDetail;
     return {
+      // 分析師
       targetMean: f?.targetMeanPrice ?? null,
       targetHigh: f?.targetHighPrice ?? null,
       targetLow: f?.targetLowPrice ?? null,
@@ -126,6 +147,25 @@ async function fetchAnalystTargets(symbol: string) {
       recommendationMean: f?.recommendationMean ?? null,
       recommendationKey: f?.recommendationKey ?? null,
       numberOfAnalystOpinions: f?.numberOfAnalystOpinions ?? null,
+      // 財務面（多為小數，0.25 = 25%）
+      profitMargin: f?.profitMargins ?? null,
+      grossMargin: f?.grossMargins ?? null,
+      operatingMargin: f?.operatingMargins ?? null,
+      revenueGrowthYoY: f?.revenueGrowth ?? null,
+      earningsGrowthYoY: f?.earningsGrowth ?? null,
+      returnOnEquity: f?.returnOnEquity ?? null,
+      returnOnAssets: f?.returnOnAssets ?? null,
+      totalDebt: f?.totalDebt ?? null,
+      totalCash: f?.totalCash ?? null,
+      freeCashflow: f?.freeCashflow ?? null,
+      // 比率
+      pegRatio: k?.pegRatio ?? null,
+      priceToBook: k?.priceToBook ?? null,
+      beta: k?.beta ?? s?.beta ?? null,
+      dividendYield: s?.dividendYield ?? null,
+      enterpriseValue: k?.enterpriseValue ?? null,
+      enterpriseToRevenue: k?.enterpriseToRevenue ?? null,
+      enterpriseToEbitda: k?.enterpriseToEbitda ?? null,
     };
   } catch {
     return {
@@ -136,6 +176,23 @@ async function fetchAnalystTargets(symbol: string) {
       recommendationMean: null,
       recommendationKey: null,
       numberOfAnalystOpinions: null,
+      profitMargin: null,
+      grossMargin: null,
+      operatingMargin: null,
+      revenueGrowthYoY: null,
+      earningsGrowthYoY: null,
+      returnOnEquity: null,
+      returnOnAssets: null,
+      totalDebt: null,
+      totalCash: null,
+      freeCashflow: null,
+      pegRatio: null,
+      priceToBook: null,
+      beta: null,
+      dividendYield: null,
+      enterpriseValue: null,
+      enterpriseToRevenue: null,
+      enterpriseToEbitda: null,
     };
   }
 }
@@ -157,6 +214,7 @@ async function fetchChart(symbol: string): Promise<HistoryPoint[]> {
 }
 
 async function fetchOne(symbol: string): Promise<Quote> {
+  const baseAnalyst = await fetchAnalystAndFinancials(symbol);
   const fallback: Quote = {
     symbol,
     currency: "USD",
@@ -169,13 +227,7 @@ async function fetchOne(symbol: string): Promise<Quote> {
     forwardPE: null,
     fiftyTwoWeekHigh: null,
     fiftyTwoWeekLow: null,
-    targetMean: null,
-    targetHigh: null,
-    targetLow: null,
-    targetMedian: null,
-    recommendationMean: null,
-    recommendationKey: null,
-    numberOfAnalystOpinions: null,
+    ...baseAnalyst,
     history: [],
   };
 
@@ -185,8 +237,6 @@ async function fetchOne(symbol: string): Promise<Quote> {
   } catch (err) {
     fallback.error = err instanceof Error ? err.message : String(err);
   }
-
-  const analyst = await fetchAnalystTargets(symbol);
 
   let history: HistoryPoint[] = [];
   try {
@@ -209,7 +259,7 @@ async function fetchOne(symbol: string): Promise<Quote> {
     forwardPE: q?.forwardPE ?? null,
     fiftyTwoWeekHigh: q?.fiftyTwoWeekHigh ?? null,
     fiftyTwoWeekLow: q?.fiftyTwoWeekLow ?? null,
-    ...analyst,
+    ...baseAnalyst,
     history,
     error: fallback.error,
   };
@@ -234,12 +284,13 @@ async function main() {
       quotes[t.id] = q;
       const priceTxt = q.price != null ? `${q.price.toFixed(2)} ${q.currency}` : "—";
       const fpe = q.forwardPE != null ? q.forwardPE.toFixed(1) : "—";
-      const tgt = q.targetMean != null ? q.targetMean.toFixed(2) : "—";
+      const gm = q.grossMargin != null ? (q.grossMargin * 100).toFixed(0) + "%" : "—";
+      const rg = q.revenueGrowthYoY != null ? (q.revenueGrowthYoY * 100).toFixed(0) + "%" : "—";
       const rec = q.recommendationKey ?? "—";
       const hist = q.history.length;
       const tag = q.error
         ? `⚠ ${q.error.slice(0, 50)}`
-        : `✓ ${priceTxt}  fPE=${fpe}  tgt=${tgt}(${rec})  hist=${hist}`;
+        : `✓ ${priceTxt}  fPE=${fpe}  GM=${gm}  RevYoY=${rg}  ${rec}  hist=${hist}`;
       console.log(`  ${t.symbol.padEnd(12)} ${t.name.padEnd(34)} ${tag}`);
       if (q.error) errors.push(`${t.id} (${t.symbol}): ${q.error}`);
     }

@@ -12,6 +12,7 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/compare", label: "兩公司比較" },
   { to: "/heatmap", label: "產業熱力圖" },
   { to: "/kpi-dashboard", label: "投資 KPI 儀表板" },
+  { to: "/kpi-tuning", label: "KPI 權重自訂" },
   { to: "/kpi-validation", label: "KPI 驗證" },
   { to: "/supply-chain", label: "供應鏈總覽" },
   { to: "/bottlenecks", label: "瓶頸對照" },

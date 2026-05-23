@@ -38,6 +38,24 @@ export interface LiveQuote {
   recommendationMean: number | null;
   recommendationKey: string | null;
   numberOfAnalystOpinions: number | null;
+  /** 財務面（小數，例如 0.25 = 25%） */
+  profitMargin: number | null;
+  grossMargin: number | null;
+  operatingMargin: number | null;
+  revenueGrowthYoY: number | null;
+  earningsGrowthYoY: number | null;
+  returnOnEquity: number | null;
+  returnOnAssets: number | null;
+  totalDebt: number | null;
+  totalCash: number | null;
+  freeCashflow: number | null;
+  pegRatio: number | null;
+  priceToBook: number | null;
+  beta: number | null;
+  dividendYield: number | null;
+  enterpriseValue: number | null;
+  enterpriseToRevenue: number | null;
+  enterpriseToEbitda: number | null;
   history: HistoryPoint[];
   error?: string;
 }
@@ -148,4 +166,22 @@ export function formatRecommendation(key: string | null): { zh: string; tone: st
 export function targetUpside(currentPrice: number | null, targetMean: number | null): number | null {
   if (currentPrice == null || targetMean == null || currentPrice <= 0) return null;
   return ((targetMean - currentPrice) / currentPrice) * 100;
+}
+
+// =====================================================================
+// 財務指標格式化
+// =====================================================================
+export function formatPercent(v: number | null, digits = 1): string {
+  if (v == null) return "—";
+  return `${(v * 100).toFixed(digits)}%`;
+}
+
+export function formatRatio(v: number | null, digits = 2): string {
+  if (v == null) return "—";
+  return v.toFixed(digits);
+}
+
+export function formatLargeNumber(v: number | null, currency: string): string {
+  if (v == null) return "—";
+  return formatMarketCap(v, currency);
 }

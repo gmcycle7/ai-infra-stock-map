@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import { WatchlistProvider } from "./context/WatchlistContext";
+import { WeightsProvider } from "./context/WeightsContext";
 import { Layout } from "./components/Layout";
 import { HomePage } from "./pages/Home";
 import { CategoriesPage } from "./pages/Categories";
@@ -23,11 +24,13 @@ import { ScoringRubricPage } from "./pages/ScoringRubric";
 import { HeatmapPage } from "./pages/Heatmap";
 import { LeadershipRubricPage } from "./pages/LeadershipRubric";
 import { WatchlistPage } from "./pages/Watchlist";
+import { KpiTuningPage } from "./pages/KpiTuning";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <WatchlistProvider>
+      <WeightsProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route element={<Layout />}>
@@ -49,10 +52,12 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/leadership-rubric" element={<LeadershipRubricPage />} />
             <Route path="/heatmap" element={<HeatmapPage />} />
             <Route path="/watchlist" element={<WatchlistPage />} />
+            <Route path="/kpi-tuning" element={<KpiTuningPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      </WeightsProvider>
       </WatchlistProvider>
     </ThemeProvider>
   </StrictMode>,

@@ -8,6 +8,7 @@ import { PriceChart } from "../components/PriceChart";
 import { KpiPanel } from "../components/KpiPanel";
 import { LeadershipPanel } from "../components/LeadershipPanel";
 import { AnalystTargetBar } from "../components/AnalystTargetBar";
+import { FinancialsPanel } from "../components/FinancialsPanel";
 import { PriceDelta } from "../components/PriceDelta";
 import { WatchlistStar } from "../components/WatchlistStar";
 import { PeerCompare } from "../components/PeerCompare";
@@ -216,6 +217,9 @@ export function CompanyDetailPage() {
       {/* Market data */}
       <MarketDataSection companyId={co.id} />
 
+      {/* Financials */}
+      <FinancialsSectionWrap companyId={co.id} />
+
       {/* Investment KPI */}
       <KpiPanel company={co} kpi={getKpi(co)} />
 
@@ -317,6 +321,12 @@ function MarketDataSection({ companyId }: { companyId: string }) {
       </p>
     </section>
   );
+}
+
+function FinancialsSectionWrap({ companyId }: { companyId: string }) {
+  const q = getQuote(companyId);
+  if (!q) return null;
+  return <FinancialsPanel quote={q} />;
 }
 
 function CellDelta({ label, pct }: { label: string; pct: number | null }) {
