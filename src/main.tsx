@@ -14,6 +14,8 @@ import { SupplyChainPage } from "./pages/SupplyChain";
 import { BottlenecksPage } from "./pages/Bottlenecks";
 import { RiskMapPage } from "./pages/RiskMap";
 import { MoatsPage } from "./pages/Moats";
+import { KpiDashboardPage } from "./pages/KpiDashboard";
+import { KpiMethodPage } from "./pages/KpiMethod";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -31,6 +33,8 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/bottlenecks" element={<BottlenecksPage />} />
             <Route path="/risk-map" element={<RiskMapPage />} />
             <Route path="/moats" element={<MoatsPage />} />
+            <Route path="/kpi-dashboard" element={<KpiDashboardPage />} />
+            <Route path="/kpi-method" element={<KpiMethodPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

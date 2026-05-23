@@ -158,3 +158,99 @@ export interface SupplyChainEdge {
   to: string;
   label?: string; // 例如「驅動 HBM 需求」
 }
+
+// =====================================================================
+// 投資 KPI
+//
+// 嚴格原則：
+//  - 所有分數皆「從現有公司欄位（moat、risk、aiImportanceScore、
+//    valuationSensitivity、category）推導」，不額外捏造財務數字。
+//  - 每個分數 1-100，並提供可解釋的權重公式（見 src/lib/kpi.ts）。
+//  - 機會分數（4 個 horizons）與風險分數「分開呈現」，不合併為單一誤導性數字。
+//  - 本評分僅供研究與技術產業分析參考，不構成投資建議。
+// =====================================================================
+
+export type InvestmentType =
+  | "核心平台型"   // 巨大護城河 + 高 AI 相關性，通常估值偏高
+  | "關鍵瓶頸型"   // HBM / CoWoS / 光通訊 / 散熱 / 電源 — 供給緊張時受惠最深
+  | "週期成長型"   // 記憶體、ODM、設備 — Capex 循環高槓桿
+  | "技術升級受惠型" // 800G/1.6T、SerDes、retimer、AEC — 技術轉換受惠
+  | "題材波動型";  // AI 概念但相關性不確定，題材敏感度高
+
+export type KpiHorizon = "shortTerm" | "threeYear" | "fiveYear" | "tenYear";
+
+export interface InvestmentKpi {
+  // ---- 4 個時間維度的合成分數 (1-100) ----
+  shortTermScore: number;
+  threeYearScore: number;
+  fiveYearScore: number;
+  tenYearScore: number;
+
+  // ---- 短期細項 (1-100) ----
+  aiRevenueExposure: number;
+  revenueMomentum: number;
+  earningsMomentum: number;
+  orderVisibility: number;
+  nearTermCatalyst: number;
+  marketSentiment: number;
+  valuationReratingPotential: number;
+
+  // ---- 3 年細項 ----
+  revenueGrowthPotential: number;
+  marginExpansionPotential: number;
+  supplyChainBottleneckBenefit: number;
+  customerPenetration: number;
+  executionQuality: number;
+
+  // ---- 5 年細項 ----
+  technologyMoat: number;
+  ecosystemLockIn: number;
+  pricingPower: number;
+  marketShareExpansionPotential: number;
+  supplyChainImportance: number;
+  managementExecution: number;
+
+  // ---- 10 年細項 ----
+  structuralDemandExposure: number;
+  irreplaceability: number;
+  platformValue: number;
+  tamExpansion: number;
+  rdStrength: number;
+  balanceSheetResilience: number;
+  technologyTransitionSurvivability: number;
+
+  // ---- 風險細項 ----
+  valuationRisk: number;
+  cyclicalityRisk: number;
+  customerConcentrationRisk: number;
+  geopoliticalRisk: number;
+  technologyDisruptionRisk: number;
+  executionRisk: number;
+
+  // ---- 合成風險分數 (1-100，越高代表風險越大) ----
+  riskScore: number;
+
+  // ---- 雷達圖 10 維度（從上面欄位重新組合而成）----
+  radar: {
+    aiRelevance: number;
+    growthPotential: number;
+    technologyMoat: number;
+    customerQuality: number;
+    pricingPower: number;
+    supplyChainImportance: number;
+    financialResilience: number;
+    valuationRisk: number;
+    cyclicalityRisk: number;
+    disruptionRisk: number;
+  };
+
+  // ---- 分類與說明 ----
+  investmentType: InvestmentType;
+  kpiCommentary: string;
+  kpiConfidenceLevel: ConfidenceLevel;
+  kpiLastUpdated: string;
+  kpiSourceUrls: string[];
+
+  /** 此筆 KPI 是否含未經驗證的財務假設（永遠 true 至串接即時財報前） */
+  needsFinancialVerification: boolean;
+}

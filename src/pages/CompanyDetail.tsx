@@ -4,6 +4,8 @@ import { categoryBySlug } from "../data/categories";
 import { CategoryBadge, ConfidenceBadge, MarketBadge, PositionBadge, ScoreBadge, Tag } from "../components/Badge";
 import { MoatRadar, RiskBars } from "../components/MoatChart";
 import { PriceChart } from "../components/PriceChart";
+import { KpiPanel } from "../components/KpiPanel";
+import { getKpi } from "../lib/kpi";
 import { valuationLabels } from "../lib/utils";
 import {
   formatChangePct,
@@ -181,6 +183,9 @@ export function CompanyDetailPage() {
 
       {/* Market data */}
       <MarketDataSection companyId={co.id} />
+
+      {/* Investment KPI */}
+      <KpiPanel company={co} kpi={getKpi(co)} />
 
 
       {/* Sources */}
