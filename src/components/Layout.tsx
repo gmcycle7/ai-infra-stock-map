@@ -7,12 +7,15 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/categories", label: "分類總覽" },
   { to: "/companies", label: "公司列表" },
   { to: "/compare", label: "兩公司比較" },
+  { to: "/heatmap", label: "產業熱力圖" },
   { to: "/kpi-dashboard", label: "投資 KPI 儀表板" },
+  { to: "/kpi-validation", label: "KPI 驗證" },
   { to: "/supply-chain", label: "供應鏈總覽" },
   { to: "/bottlenecks", label: "瓶頸對照" },
   { to: "/risk-map", label: "風險地圖" },
   { to: "/moats", label: "技術護城河" },
-  { to: "/kpi-method", label: "KPI 評分方法" },
+  { to: "/scoring-rubric", label: "原始評分判準" },
+  { to: "/kpi-method", label: "KPI 公式" },
   { to: "/glossary", label: "技術名詞解釋" },
 ];
 

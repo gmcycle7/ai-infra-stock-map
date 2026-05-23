@@ -17,6 +17,9 @@ import { MoatsPage } from "./pages/Moats";
 import { KpiDashboardPage } from "./pages/KpiDashboard";
 import { KpiMethodPage } from "./pages/KpiMethod";
 import { ComparePage } from "./pages/Compare";
+import { KpiValidationPage } from "./pages/KpiValidation";
+import { ScoringRubricPage } from "./pages/ScoringRubric";
+import { HeatmapPage } from "./pages/Heatmap";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -37,6 +40,9 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/kpi-dashboard" element={<KpiDashboardPage />} />
             <Route path="/kpi-method" element={<KpiMethodPage />} />
             <Route path="/compare" element={<ComparePage />} />
+            <Route path="/kpi-validation" element={<KpiValidationPage />} />
+            <Route path="/scoring-rubric" element={<ScoringRubricPage />} />
+            <Route path="/heatmap" element={<HeatmapPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

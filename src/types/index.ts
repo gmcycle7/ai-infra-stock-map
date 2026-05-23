@@ -91,6 +91,14 @@ export interface MarketDataPlaceholder {
   note?: string;            // 一律標示 "requires live API"
 }
 
+export interface KeyPerson {
+  role: string;   // "CEO" | "Chairman" | "Founder" | "President" | "CTO" 等
+  name: string;   // 英文姓名
+  nameZh?: string; // 中文姓名（如有）
+  since?: number;  // 上任年份
+  note?: string;   // 例如「創辦人」、「TSMC 前任 CEO」
+}
+
 export interface Company {
   id: string;
   name: string;             // 公司名稱（中英）
@@ -98,6 +106,8 @@ export interface Company {
   ticker: string;           // 含交易所，例如 "NASDAQ: NVDA" 或 "TWSE: 2330"
   market: Market;
   category: CategorySlug[]; // 可跨類別
+  /** 主要掌權者 / 創辦人（如可公開查證） */
+  keyPeople?: KeyPerson[];
   aiImportanceScore: 1 | 2 | 3 | 4 | 5;
   supplyChainPosition: SupplyChainPosition;
   coreProducts: string[];   // 主要產品

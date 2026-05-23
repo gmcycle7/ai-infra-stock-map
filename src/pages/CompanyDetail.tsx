@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { companies, companyById } from "../data/companies";
 import { categoryBySlug } from "../data/categories";
+import { keyPeopleById } from "../data/keyPeople";
 import { CategoryBadge, ConfidenceBadge, MarketBadge, PositionBadge, ScoreBadge, Tag } from "../components/Badge";
 import { MoatRadar, RiskBars } from "../components/MoatChart";
 import { PriceChart } from "../components/PriceChart";
@@ -71,6 +72,30 @@ export function CompanyDetailPage() {
             return c ? <CategoryBadge key={slug} label={c.nameZh} color={c.color} /> : null;
           })}
         </div>
+
+        {/* 掌權人 */}
+        {keyPeopleById[co.id] && keyPeopleById[co.id].length > 0 && (
+          <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs dark:border-slate-700 dark:bg-slate-900">
+            <div className="muted mb-1 font-semibold uppercase tracking-wide">掌權人 / 創辦人</div>
+            <ul className="space-y-1">
+              {keyPeopleById[co.id].map((p, i) => (
+                <li key={i} className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="font-mono text-[10px] text-slate-500 dark:text-slate-400">
+                    {p.role}
+                  </span>
+                  <span className="font-semibold">
+                    {p.nameZh ? `${p.nameZh}（${p.name}）` : p.name}
+                  </span>
+                  {p.since && <span className="muted">自 {p.since}</span>}
+                  {p.note && <span className="muted">— {p.note}</span>}
+                </li>
+              ))}
+            </ul>
+            <p className="muted mt-2 text-[10px]">
+              資料時點：2026-05；任期可能異動，請以最新公告為準。
+            </p>
+          </div>
+        )}
       </header>
 
       {/* Facts */}
