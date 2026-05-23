@@ -1,0 +1,40 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./index.css";
+import { ThemeProvider } from "./context/ThemeContext";
+import { Layout } from "./components/Layout";
+import { HomePage } from "./pages/Home";
+import { CategoriesPage } from "./pages/Categories";
+import { CategoryDetailPage } from "./pages/CategoryDetail";
+import { CompaniesPage } from "./pages/Companies";
+import { CompanyDetailPage } from "./pages/CompanyDetail";
+import { GlossaryPage } from "./pages/Glossary";
+import { SupplyChainPage } from "./pages/SupplyChain";
+import { BottlenecksPage } from "./pages/Bottlenecks";
+import { RiskMapPage } from "./pages/RiskMap";
+import { MoatsPage } from "./pages/Moats";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+            <Route path="/category/:slug" element={<CategoryDetailPage />} />
+            <Route path="/companies" element={<CompaniesPage />} />
+            <Route path="/company/:id" element={<CompanyDetailPage />} />
+            <Route path="/glossary" element={<GlossaryPage />} />
+            <Route path="/supply-chain" element={<SupplyChainPage />} />
+            <Route path="/bottlenecks" element={<BottlenecksPage />} />
+            <Route path="/risk-map" element={<RiskMapPage />} />
+            <Route path="/moats" element={<MoatsPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
+  </StrictMode>,
+);
