@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 import { Disclaimer } from "./Disclaimer";
+import { GlobalSearch } from "./GlobalSearch";
 import { useWatchlist } from "../context/watchlistContextValue";
 import { lastFetchedAt, formatFetchedAt } from "../services/marketData";
 
@@ -14,6 +15,7 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/kpi-dashboard", label: "投資 KPI 儀表板" },
   { to: "/kpi-tuning", label: "KPI 權重自訂" },
   { to: "/kpi-validation", label: "KPI 驗證" },
+  { to: "/data-quality", label: "資料品質" },
   { to: "/supply-chain", label: "供應鏈總覽" },
   { to: "/bottlenecks", label: "瓶頸對照" },
   { to: "/risk-map", label: "風險地圖" },
@@ -42,6 +44,7 @@ export function Layout() {
             <span className="muted text-xs">台股 × 美股</span>
           </Link>
           <div className="flex items-center gap-2">
+            <GlobalSearch />
             {ids.length > 0 && (
               <Link
                 to="/watchlist"

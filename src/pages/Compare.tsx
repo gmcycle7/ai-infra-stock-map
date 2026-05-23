@@ -3,21 +3,39 @@ import { Link, useSearchParams } from "react-router-dom";
 import { companies, companyById } from "../data/companies";
 import { categoryBySlug } from "../data/categories";
 import { getKpi } from "../lib/kpi";
-import { getQuote, formatPrice, formatMarketCap, formatPE, lastFetchedAt, formatFetchedAt } from "../services/marketData";
+import {
+  getQuote,
+  formatPrice,
+  formatMarketCap,
+  formatPE,
+  lastFetchedAt,
+  formatFetchedAt,
+} from "../services/marketData";
 import { Sparkline } from "../components/Sparkline";
 import { windowReturn } from "../lib/priceWindow";
 import { PriceDelta } from "../components/PriceDelta";
 import { InvestmentTypeBadge } from "../components/InvestmentTypeBadge";
-import { MarketBadge, PositionBadge, ScoreBadge, ConfidenceBadge, Tag } from "../components/Badge";
+import {
+  MarketBadge,
+  PositionBadge,
+  ScoreBadge,
+  ConfidenceBadge,
+  Tag,
+} from "../components/Badge";
 import { KpiRadar } from "../components/KpiRadar";
+import { CsvButton } from "../components/CsvButton";
+import { toCsv, todayIso } from "../lib/csv";
+import { useWatchlist } from "../context/watchlistContextValue";
 import type { InvestmentKpi } from "../types";
+
+const MAX_COMPARE = 4;
 
 const KPI_ROWS: Array<{ label: string; key: keyof InvestmentKpi; risk?: boolean }> = [
   { label: "短期催化（3-12 月）", key: "shortTermScore" },
   { label: "三年成長", key: "threeYearScore" },
   { label: "五年護城河", key: "fiveYearScore" },
   { label: "十年結構性", key: "tenYearScore" },
-  { label: "整體風險（越高越大）", key: "riskScore", risk: true },
+  { label: "整體風險", key: "riskScore", risk: true },
   { label: "AI 相關性", key: "aiRevenueExposure" },
   { label: "營收成長潛力", key: "revenueGrowthPotential" },
   { label: "毛利率擴張潛力", key: "marginExpansionPotential" },
@@ -65,42 +83,47 @@ function ScoreBar({ value, risk = false }: { value: number; risk?: boolean }) {
   );
 }
 
-function winner(a: number, b: number, risk = false) {
-  // risk: 越低越好；非 risk：越高越好
-  if (a === b) return null;
-  if (risk) return a < b ? "a" : "b";
-  return a > b ? "a" : "b";
+function bestIdx(values: number[], risk = false): number {
+  // 找最佳：非風險 = max；風險 = min
+  let best = 0;
+  for (let i = 1; i < values.length; i++) {
+    if (risk ? values[i] < values[best] : values[i] > values[best]) best = i;
+  }
+  // 若全部相等，回 -1（不標記）
+  if (values.every((v) => v === values[best])) return -1;
+  return best;
 }
 
 function CompanyPicker({
   label,
   value,
   onChange,
-  exclude,
+  excludeIds,
+  optional = false,
 }: {
   label: string;
   value: string;
   onChange: (id: string) => void;
-  exclude?: string;
+  excludeIds: string[];
+  optional?: boolean;
 }) {
-  // 依分類分組
   const grouped = useMemo(() => {
     const map = new Map<string, typeof companies>();
     for (const c of companies) {
-      if (c.id === exclude) continue;
+      if (excludeIds.includes(c.id)) continue;
       const cat = c.category[0];
       const arr = map.get(cat) ?? [];
       arr.push(c);
       map.set(cat, arr);
     }
     return [...map.entries()].sort((x, y) => x[0].localeCompare(y[0]));
-  }, [exclude]);
+  }, [excludeIds]);
 
   return (
-    <label className="block flex-1">
+    <label className="block min-w-0 flex-1">
       <span className="muted mb-1 block text-xs">{label}</span>
       <select className="input" value={value} onChange={(e) => onChange(e.target.value)}>
-        <option value="">— 請選擇 —</option>
+        <option value="">{optional ? "— 留空 —" : "— 請選擇 —"}</option>
         {grouped.map(([cat, list]) => {
           const c = categoryBySlug[cat];
           return (
@@ -125,14 +148,14 @@ function CompanyColumn({ company }: { company: typeof companies[number] }) {
   const r365 = quote?.history ? windowReturn(quote.history, 252) : null;
 
   return (
-    <div className="space-y-4">
-      <header className="card p-4">
+    <div className="space-y-3">
+      <header className="card p-3">
         <Link to={`/company/${company.id}`} className="block">
-          <div className="text-lg font-semibold hover:underline">{company.name}</div>
-          <div className="muted text-xs">{company.nameEn}</div>
-          <div className="mt-1 font-mono text-xs text-slate-500">{company.ticker}</div>
+          <div className="text-sm font-semibold hover:underline truncate">{company.name}</div>
+          <div className="muted truncate text-[10px]">{company.nameEn}</div>
+          <div className="mt-1 font-mono text-[10px] text-slate-500">{company.ticker}</div>
         </Link>
-        <div className="mt-3 flex flex-wrap gap-1.5">
+        <div className="mt-2 flex flex-wrap gap-1">
           <MarketBadge market={company.market} />
           <PositionBadge pos={company.supplyChainPosition} />
           <ScoreBadge score={company.aiImportanceScore} />
@@ -142,52 +165,46 @@ function CompanyColumn({ company }: { company: typeof companies[number] }) {
       </header>
 
       {quote && quote.price != null && (
-        <div className="card flex items-end justify-between gap-3 p-3">
-          <div>
-            <div className="muted text-[10px]">最新價</div>
-            <div className="flex items-baseline gap-2">
-              <span className="font-mono text-base font-semibold">
+        <div className="card flex items-end justify-between gap-2 p-2">
+          <div className="min-w-0">
+            <div className="muted text-[10px]">最新</div>
+            <div className="flex items-baseline gap-1">
+              <span className="font-mono text-xs font-semibold truncate">
                 {formatPrice(quote.price, quote.currency)}
               </span>
-              <PriceDelta pct={quote.changePercent} variant="inline" size="sm" />
+              <PriceDelta pct={quote.changePercent} variant="inline" size="xs" />
             </div>
-            <div className="muted mt-0.5 text-[10px]">
+            <div className="muted mt-0.5 text-[9px]">
               3M <PriceDelta pct={r90} variant="inline" size="xs" /> · 1Y{" "}
               <PriceDelta pct={r365} variant="inline" size="xs" />
             </div>
-            <div className="muted mt-1 text-[10px]">
-              市值 {formatMarketCap(quote.marketCap, quote.currency)} · Fwd P/E{" "}
-              {formatPE(quote.forwardPE)}
+            <div className="muted mt-0.5 text-[9px]">
+              {formatMarketCap(quote.marketCap, quote.currency)}
             </div>
+            <div className="muted text-[9px]">Fwd PE {formatPE(quote.forwardPE)}</div>
           </div>
-          <div className="w-32 flex-shrink-0">
-            <Sparkline data={quote.history ?? []} width={130} height={42} windowSize={252} />
+          <div className="w-20 flex-shrink-0">
+            <Sparkline data={quote.history ?? []} width={80} height={28} windowSize={252} />
           </div>
         </div>
       )}
 
-      <div className="card p-4">
-        <h3 className="mb-2 text-sm font-semibold">10 維度 KPI 雷達</h3>
-        <KpiRadar radar={kpi.radar} size={260} />
+      <div className="card p-3">
+        <KpiRadar radar={kpi.radar} size={220} />
       </div>
 
-      <div className="card space-y-2 p-4 text-sm">
-        <h3 className="text-sm font-semibold">主要產品 / 標籤</h3>
-        <ul className="muted list-disc space-y-0.5 pl-5 text-xs">
-          {company.coreProducts.slice(0, 4).map((p) => <li key={p}>{p}</li>)}
+      <div className="card space-y-1.5 p-3 text-xs">
+        <h3 className="text-[11px] font-semibold uppercase muted">最大優勢</h3>
+        <p className="text-[11px] text-slate-700 dark:text-slate-200 line-clamp-4">
+          {company.competitiveAdvantage}
+        </p>
+        <h3 className="mt-2 text-[11px] font-semibold uppercase muted">主要風險</h3>
+        <ul className="muted list-disc space-y-0.5 pl-4 text-[11px]">
+          {company.risks.slice(0, 2).map((r) => <li key={r} className="line-clamp-2">{r}</li>)}
         </ul>
-        <div className="flex flex-wrap gap-1">
-          {company.tags.slice(0, 8).map((t) => <Tag key={t} label={t} />)}
+        <div className="mt-2 flex flex-wrap gap-1">
+          {company.tags.slice(0, 4).map((t) => <Tag key={t} label={t} />)}
         </div>
-      </div>
-
-      <div className="card p-4 text-xs">
-        <div className="font-semibold">最大優勢</div>
-        <p className="muted mt-1">{company.competitiveAdvantage}</p>
-        <div className="mt-2 font-semibold">主要風險（節錄）</div>
-        <ul className="muted mt-1 list-disc space-y-0.5 pl-5">
-          {company.risks.slice(0, 3).map((r) => <li key={r}>{r}</li>)}
-        </ul>
       </div>
     </div>
   );
@@ -195,139 +212,203 @@ function CompanyColumn({ company }: { company: typeof companies[number] }) {
 
 export function ComparePage() {
   const [params, setParams] = useSearchParams();
-  const [a, setA] = useState(params.get("a") ?? "nvidia");
-  const [b, setB] = useState(params.get("b") ?? "amd");
+  const { ids: watchIds } = useWatchlist();
 
-  const ca = a ? companyById[a] : undefined;
-  const cb = b ? companyById[b] : undefined;
+  // 從 URL 讀（a/b/c/d）
+  const init = ["a", "b", "c", "d"].map((k) => params.get(k) ?? "");
+  while (init.length < MAX_COMPARE) init.push("");
+  const [picks, setPicks] = useState<string[]>(init);
 
-  function update(newA: string, newB: string) {
-    setA(newA);
-    setB(newB);
+  function update(idx: number, id: string) {
+    const next = [...picks];
+    next[idx] = id;
+    setPicks(next);
     const p = new URLSearchParams();
-    if (newA) p.set("a", newA);
-    if (newB) p.set("b", newB);
+    next.forEach((v, i) => {
+      if (v) p.set(["a", "b", "c", "d"][i], v);
+    });
     setParams(p);
   }
+
+  function fromWatchlist() {
+    const newPicks = watchIds.slice(0, MAX_COMPARE);
+    while (newPicks.length < MAX_COMPARE) newPicks.push("");
+    setPicks(newPicks);
+    const p = new URLSearchParams();
+    newPicks.forEach((v, i) => {
+      if (v) p.set(["a", "b", "c", "d"][i], v);
+    });
+    setParams(p);
+  }
+
+  const activeCompanies = picks
+    .map((id) => (id ? companyById[id] : undefined))
+    .filter((c): c is (typeof companies)[number] => !!c);
+
+  const activeCount = activeCompanies.length;
+
+  const csv = useMemo(() => {
+    if (activeCompanies.length < 2) return "";
+    const rows: Array<Record<string, unknown>> = [];
+    for (const row of KPI_ROWS) {
+      const r: Record<string, unknown> = { dimension: row.label };
+      activeCompanies.forEach((c) => {
+        const k = getKpi(c);
+        r[c.name] = k[row.key];
+      });
+      rows.push(r);
+    }
+    return toCsv(rows);
+  }, [activeCompanies]);
 
   return (
     <div className="space-y-5">
       <header className="card p-5">
-        <h1 className="text-xl font-bold tracking-tight md:text-2xl">兩公司比較</h1>
+        <h1 className="text-xl font-bold tracking-tight md:text-2xl">多公司比較</h1>
         <p className="muted mt-1 text-sm">
-          並排比較任兩家公司的 KPI、市場資料、雷達圖、優勢與風險。
-          適合判斷「同業競爭強弱」與「同類股代替性」。
+          並排比較最多 4 家公司的 KPI、市場資料、雷達圖、優勢與風險。
+          每維度會自動標示「← 優」勝者。
         </p>
-        <div className="mt-3 flex flex-col gap-3 md:flex-row">
-          <CompanyPicker label="A 公司" value={a} onChange={(v) => update(v, b)} exclude={b} />
-          <CompanyPicker label="B 公司" value={b} onChange={(v) => update(a, v)} exclude={a} />
+
+        <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4">
+          {picks.map((v, i) => (
+            <CompanyPicker
+              key={i}
+              label={`${["A", "B", "C", "D"][i]} 公司${i >= 2 ? "（可選）" : ""}`}
+              value={v}
+              onChange={(id) => update(i, id)}
+              excludeIds={picks.filter((_, j) => j !== i && picks[j])}
+              optional={i >= 2}
+            />
+          ))}
         </div>
-        <div className="muted mt-2 text-[10px]">
-          常用比較：
+
+        <div className="muted mt-3 flex flex-wrap items-baseline gap-1 text-[11px]">
+          <span>快速：</span>
           {[
-            ["nvidia", "amd", "Nvidia vs AMD"],
-            ["alchip", "guc", "Alchip vs GUC"],
-            ["avc", "auras", "雙鴻 vs 奇鋐"],
-            ["astera", "credo", "Astera vs Credo"],
-            ["coherent", "lumentum", "Coherent vs Lumentum"],
-            ["unimicron", "nanyapcb", "欣興 vs 南電"],
-            ["wiwynn", "quanta", "緯穎 vs 廣達"],
-            ["synopsys", "cadence", "Synopsys vs Cadence"],
-            ["ibiden", "unimicron", "Ibiden vs 欣興"],
-          ].map(([x, y, label]) => (
+            [["nvidia", "amd"], "Nvidia vs AMD"],
+            [["alchip", "guc"], "Alchip vs GUC"],
+            [["avc", "auras"], "雙鴻 vs 奇鋐"],
+            [["astera", "credo", "synopsys", "cadence"], "高速介面 4 強"],
+            [["coherent", "lumentum", "fabrinet", "aaoi"], "光通訊 4 大"],
+            [["unimicron", "nanyapcb", "ibiden", "shinko"], "ABF 載板 4 強"],
+            [["wiwynn", "quanta", "wistron", "inventec"], "AI Server ODM 4 大"],
+            [["delta", "liteon", "acbel", "chicony"], "台廠電源 4 雄"],
+            [["camtek", "onto", "advantest", "kla"], "HBM/設備 4 強"],
+            [["mps", "infineon", "ti", "onsemi"], "電源 IC 4 強"],
+            [["broadcom", "marvell", "synopsys", "cadence"], "EDA + ASIC 4 大"],
+          ].map(([ids, label]) => (
             <button
-              key={label}
+              key={label as string}
               type="button"
-              onClick={() => update(x, y)}
-              className="ml-1 rounded border border-slate-200 px-1.5 py-0.5 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+              onClick={() => {
+                const newPicks = [...(ids as string[])];
+                while (newPicks.length < MAX_COMPARE) newPicks.push("");
+                setPicks(newPicks);
+                const p = new URLSearchParams();
+                (ids as string[]).forEach((v, i) => p.set(["a", "b", "c", "d"][i], v));
+                setParams(p);
+              }}
+              className="rounded border border-slate-200 px-1.5 py-0.5 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
             >
               {label}
             </button>
           ))}
+          {watchIds.length >= 2 && (
+            <button
+              type="button"
+              onClick={fromWatchlist}
+              className="rounded border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-amber-700 hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-300"
+            >
+              ★ 比較我關注的前 {Math.min(MAX_COMPARE, watchIds.length)} 家
+            </button>
+          )}
         </div>
       </header>
 
-      {!ca || !cb ? (
+      {activeCount < 2 ? (
         <div className="card p-6 text-center text-sm text-slate-500 dark:text-slate-400">
-          請選擇兩家公司開始比較。
+          至少選 2 家公司開始比較（最多 4 家）。
         </div>
       ) : (
         <>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <CompanyColumn company={ca} />
-            <CompanyColumn company={cb} />
+          {/* 公司欄位（動態 2-4 列） */}
+          <div
+            className="grid grid-cols-1 gap-3"
+            style={{
+              gridTemplateColumns:
+                activeCount === 2
+                  ? "repeat(2, minmax(0, 1fr))"
+                  : activeCount === 3
+                    ? "repeat(3, minmax(0, 1fr))"
+                    : "repeat(4, minmax(0, 1fr))",
+            }}
+          >
+            {activeCompanies.map((c) => (
+              <CompanyColumn key={c.id} company={c} />
+            ))}
           </div>
 
           {/* 並排 KPI 比較表 */}
           <section className="card p-4">
-            <h2 className="section-title text-base">並排 KPI 比較</h2>
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="section-title text-base">並排 KPI 比較表</h2>
+              <CsvButton
+                filename={`compare-${todayIso()}-${activeCompanies.map((c) => c.id).join("-")}.csv`}
+                csv={csv}
+                label="匯出 CSV"
+                size="sm"
+              />
+            </div>
             <p className="muted mt-1 text-xs">
-              綠色「優」標示哪一邊在該維度勝出（風險維度則是「低 = 優」）。
-              所有分數 0-100，產業邏輯推導，
-              <Link to="/kpi-method" className="ml-1 text-brand-600 hover:underline dark:text-brand-400">看公式</Link>
-              。
+              綠色「優」標示該維度勝者（風險維度則是「低 = 優」）。
+              <Link to="/kpi-method" className="ml-1 text-brand-600 hover:underline dark:text-brand-400">
+                看公式
+              </Link>
             </p>
             <div className="mt-3 overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead className="bg-slate-50 text-left text-xs uppercase text-slate-500 dark:bg-slate-900 dark:text-slate-400">
                   <tr>
-                    <th className="px-3 py-2">維度</th>
-                    <th className="px-3 py-2 text-center">{ca.name}</th>
-                    <th className="px-3 py-2 text-center" />
-                    <th className="px-3 py-2 text-center">{cb.name}</th>
+                    <th className="px-2 py-2">維度</th>
+                    {activeCompanies.map((c) => (
+                      <th key={c.id} className="px-2 py-2 text-center">
+                        <Link to={`/company/${c.id}`} className="hover:underline">
+                          {c.name}
+                        </Link>
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                   {KPI_ROWS.map((row) => {
-                    const ka = getKpi(ca);
-                    const kb = getKpi(cb);
-                    const va = ka[row.key] as number;
-                    const vb = kb[row.key] as number;
-                    const w = winner(va, vb, row.risk);
+                    const values = activeCompanies.map((c) => getKpi(c)[row.key] as number);
+                    const best = bestIdx(values, row.risk);
                     return (
-                      <tr key={row.key}>
-                        <td className="px-3 py-1.5 text-xs text-slate-600 dark:text-slate-300">
+                      <tr key={row.key as string}>
+                        <td className="px-2 py-1.5 text-xs text-slate-600 dark:text-slate-300">
                           {row.label}
                         </td>
-                        <td className="px-3 py-1.5">
-                          <div className="flex items-center gap-2">
-                            <span
-                              className={
-                                "w-8 text-right font-mono text-xs font-semibold tabular-nums " +
-                                scoreTone(va, row.risk)
-                              }
-                            >
-                              {va}
-                            </span>
-                            <ScoreBar value={va} risk={row.risk} />
-                          </div>
-                        </td>
-                        <td className="px-2 py-1.5 text-center text-[10px]">
-                          {w === "a" && (
-                            <span className="rounded bg-emerald-100 px-1.5 py-0.5 font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
-                              ← 優
-                            </span>
-                          )}
-                          {w === "b" && (
-                            <span className="rounded bg-emerald-100 px-1.5 py-0.5 font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
-                              優 →
-                            </span>
-                          )}
-                          {w === null && <span className="muted">—</span>}
-                        </td>
-                        <td className="px-3 py-1.5">
-                          <div className="flex items-center gap-2">
-                            <ScoreBar value={vb} risk={row.risk} />
-                            <span
-                              className={
-                                "w-8 text-left font-mono text-xs font-semibold tabular-nums " +
-                                scoreTone(vb, row.risk)
-                              }
-                            >
-                              {vb}
-                            </span>
-                          </div>
-                        </td>
+                        {values.map((v, i) => (
+                          <td key={i} className="px-2 py-1.5">
+                            <div className="flex items-center gap-1.5">
+                              <span
+                                className={
+                                  "w-8 text-right font-mono text-xs font-semibold tabular-nums " +
+                                  scoreTone(v, row.risk)
+                                }
+                              >
+                                {v}
+                              </span>
+                              <ScoreBar value={v} risk={row.risk} />
+                              {i === best && (
+                                <span className="rounded bg-emerald-100 px-1 text-[9px] font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                                  ★
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                        ))}
                       </tr>
                     );
                   })}
@@ -337,7 +418,7 @@ export function ComparePage() {
           </section>
 
           <div className="muted text-right text-[10px]">
-            市場資料更新：{formatFetchedAt(lastFetchedAt)}
+            資料更新：{formatFetchedAt(lastFetchedAt)}
           </div>
         </>
       )}

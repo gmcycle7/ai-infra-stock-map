@@ -11,6 +11,8 @@ import type { InvestmentType } from "../types";
 import { MarketBadge } from "../components/Badge";
 import { Sparkline } from "../components/Sparkline";
 import { getQuote } from "../services/marketData";
+import { useWatchlist } from "../context/watchlistContextValue";
+import { WatchlistStar } from "../components/WatchlistStar";
 
 const QUESTION_ORDER: DashboardQuestion[] = [
   "shortTermCatalyst",
@@ -64,6 +66,7 @@ function tone(v: number, risk = false) {
 }
 
 function RankingCard({ q }: { q: DashboardQuestion }) {
+  const { has } = useWatchlist();
   const list = answerQuestion(q, 8);
   const scoreKey = SCORE_KEY[q] as
     | "shortTermScore"
@@ -83,10 +86,14 @@ function RankingCard({ q }: { q: DashboardQuestion }) {
         {list.map((item, i) => {
           const quote = getQuote(item.company.id);
           const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
+          const watched = has(item.company.id);
           return (
             <li
               key={item.company.id}
-              className="grid grid-cols-[1.75rem_1fr_60px_auto_2.5rem] items-center gap-2 py-1.5"
+              className={
+                "grid grid-cols-[1.75rem_1fr_60px_auto_2.5rem_1.25rem] items-center gap-2 py-1.5 " +
+                (watched ? "rounded bg-amber-50/50 dark:bg-amber-950/30" : "")
+              }
             >
               <span
                 className={
@@ -98,7 +105,7 @@ function RankingCard({ q }: { q: DashboardQuestion }) {
               </span>
               <Link
                 to={`/company/${item.company.id}`}
-                className="truncate text-sm font-medium hover:underline"
+                className={"truncate text-sm hover:underline " + (watched ? "font-bold" : "font-medium")}
               >
                 {item.company.name}
               </Link>
@@ -118,12 +125,14 @@ function RankingCard({ q }: { q: DashboardQuestion }) {
               >
                 {item.kpi[scoreKey]}
               </span>
+              <WatchlistStar id={item.company.id} size="sm" />
             </li>
           );
         })}
       </ol>
       <div className="muted text-[10px]">
         排序依：{SCORE_LABEL[q]} 分數 + 對應產業 / 標籤過濾條件
+        <span className="ml-1">· 黃底 = 你關注中</span>
       </div>
     </article>
   );

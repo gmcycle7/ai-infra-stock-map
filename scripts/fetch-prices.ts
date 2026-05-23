@@ -100,6 +100,10 @@ function toYahooSymbol(ticker: string): string | null {
   const tyo = ticker.match(/(?:TYO|TSE):\s*(\S+)/);
   if (tyo) return tyo[1] + ".T";
 
+  // 德股 (ETR)
+  const etr = ticker.match(/ETR:\s*(\S+)/);
+  if (etr) return etr[1] + ".DE";
+
   const us = ticker.match(/(?:NASDAQ|NYSE|AMEX|NYSEARCA):\s*(\S+)/);
   if (us) return us[1];
 

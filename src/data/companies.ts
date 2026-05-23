@@ -3553,6 +3553,552 @@ export const companies: Company[] = [
     lastUpdated: STD_DATE,
     marketData: MD_USD,
   },
+
+  // ============================================================
+  // 第二波補加：HBM 量測、PAM4 DSP、SiC 電源、光元件 epi、storage、IP
+  // ============================================================
+  {
+    id: "onto",
+    name: "Onto Innovation",
+    nameEn: "Onto Innovation Inc.",
+    ticker: "NYSE: ONTO",
+    market: "US",
+    category: ["foundry-equipment", "advanced-packaging"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "光學檢測（macro/micro inspection）",
+      "HBM bump / TSV inspection",
+      "Lithography 量測（套刻、薄膜厚度）",
+      "Process control software",
+    ],
+    whatTheyDo:
+      "美國半導體製程控制 / 檢測設備公司，與 Camtek 並列 HBM bump + advanced packaging inspection 領先供應商；2019 由 Rudolph + Nanometrics 合併而成。",
+    aiRelevance:
+      "HBM3E / HBM4 與 chiplet 封裝對 bump、TSV、interposer 檢測需求暴增，Onto 為主要受惠者；公司公開揭露 HPC / AI 為核心成長動能。",
+    competitiveAdvantage:
+      "HBM + advanced packaging inspection 雙寡占之一；與大客戶（記憶體 + OSAT）長期合作。",
+    competitors: ["Camtek", "KLA（部分）", "Hitachi High-Tech"],
+    risks: [
+      "客戶集中於少數 HBM + OSAT 業者",
+      "Camtek 競爭加劇",
+      "估值偏高",
+    ],
+    keyCustomersOrEcosystem:
+      "HBM 三巨頭 + 主要 OSAT 與 logic foundry 為公開揭露之客戶群。",
+    technicalKeywords: ["Bump inspection", "TSV", "Macro inspection", "Process control", "HBM"],
+    tags: ["Inspection", "HBM", "Advanced Packaging"],
+    valuationSensitivity: ["memoryCycle", "capexCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 4, customer: 4, manufacturing: 3, switching: 4 },
+    risk: {
+      nvidiaDependency: 3,
+      memoryCycle: 4,
+      chinaExport: 3,
+      customerConc: 4,
+      capexCycle: 5,
+      valuation: 4,
+      techTransition: 3,
+    },
+    analystView: "與 Camtek 雙寡占 HBM bump 檢測；同樣是 HBM 量擴題材的直接受惠者。",
+    sourceUrls: ["https://ontoinnovation.com/", "https://investors.ontoinnovation.com/"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
+
+  {
+    id: "maxlinear",
+    name: "MaxLinear",
+    nameEn: "MaxLinear, Inc.",
+    ticker: "NASDAQ: MXL",
+    market: "US",
+    category: ["high-speed-interface", "optical-communication"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Midstream",
+    coreProducts: [
+      "高速 SerDes IC（含 PAM4）",
+      "光通訊 DSP",
+      "Ethernet PHY / 廣播解調 IC",
+      "電源管理 IC",
+    ],
+    whatTheyDo:
+      "美國中型 mixed-signal IC 設計公司，產品涵蓋光通訊 PAM4 DSP、Ethernet PHY、廣播解調 IC；近年積極轉型至資料中心應用。",
+    aiRelevance:
+      "PAM4 DSP 與 Ethernet PHY 是 800G 升級的次級競爭者；產品已用於部分光模組與 AEC。",
+    competitiveAdvantage: "Mixed-signal 設計能力多元、價格較具競爭性。",
+    competitors: ["Marvell", "Broadcom", "Credo"],
+    risks: [
+      "在 PAM4 主戰場與 Marvell / Broadcom 競爭吃力",
+      "廣播 / 通訊業務週期下行",
+      "規模偏小、毛利率壓力",
+    ],
+    keyCustomersOrEcosystem:
+      "光模組製造商、企業網路設備客戶；具體 AI 比重需個別查證。",
+    technicalKeywords: ["PAM4 DSP", "Ethernet PHY", "SerDes", "Mixed-signal"],
+    tags: ["Optical DSP", "PHY", "SerDes"],
+    valuationSensitivity: ["hyperscalerDemand", "telecomCycle"],
+    moat: { process: 3, ipDesign: 4, ecosystem: 3, customer: 3, manufacturing: 0, switching: 3 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 1,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 3,
+      valuation: 3,
+      techTransition: 4,
+    },
+    analystView:
+      "在 PAM4 DSP 與 Marvell、Broadcom 同台競爭較吃力；近年股價疲弱，是 turnaround 型題材。",
+    serdesAngle: "光模組客戶採用 MaxLinear DSP 主要是價格與替代來源考量；技術領先未及 Marvell。",
+    sourceUrls: ["https://www.maxlinear.com/", "https://investors.maxlinear.com/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
+
+  {
+    id: "wolfspeed",
+    name: "Wolfspeed",
+    nameEn: "Wolfspeed, Inc.",
+    ticker: "NYSE: WOLF",
+    market: "US",
+    category: ["power-management", "foundry-equipment"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "SiC（碳化矽）晶圓",
+      "SiC MOSFET 元件",
+      "SiC 模組（電動車、工業、資料中心）",
+    ],
+    whatTheyDo:
+      "全球 SiC 材料與元件領導者（前身為 Cree LED）；2024-2025 經歷財務重整，但 SiC 對下一代資料中心高效率電源（800V DC）仍是關鍵材料。",
+    aiRelevance:
+      "AI rack 800V/HVDC 電源轉換需要高效率 power semis，SiC 是其中關鍵；但短期 AI 受惠不如 GaN / Si 直接，需 3-5 年才能看到主流採用。",
+    competitiveAdvantage:
+      "SiC 晶圓 / 元件垂直整合度高；長期專利與技術積累。",
+    competitors: ["Infineon（SiC）", "STMicro（SiC）", "Onsemi（SiC）", "Coherent（SiC 晶圓）"],
+    risks: [
+      "電動車需求下修導致主業疲弱",
+      "財務狀況疲軟（2024 大幅虧損）",
+      "AI 資料中心 SiC 採用時程仍長",
+    ],
+    keyCustomersOrEcosystem:
+      "汽車（電動車）為主要客戶；資料中心 SiC 業務仍在初期。",
+    technicalKeywords: ["SiC", "MOSFET", "HVDC", "Power semiconductor"],
+    tags: ["SiC", "Power", "Wide Bandgap"],
+    valuationSensitivity: ["capexCycle", "smartphoneCycle"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 3, customer: 3, manufacturing: 4, switching: 3 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 5,
+      valuation: 5,
+      techTransition: 4,
+    },
+    analystView:
+      "高 beta turnaround 題材；AI 是長期 optionality，短期主要看電動車 SiC 需求與財務改善。",
+    sourceUrls: ["https://www.wolfspeed.com/", "https://investor.wolfspeed.com/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
+
+  {
+    id: "landmark",
+    name: "聯亞光電 LandMark Optoelectronics",
+    nameEn: "LandMark Optoelectronics Corp.",
+    ticker: "TWSE: 3081",
+    market: "Taiwan",
+    category: ["optical-communication"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "InP / GaAs epi wafer（VCSEL / EML / PIN diode 用基板）",
+      "資料中心光通訊用 epi",
+      "PD / APD 元件",
+    ],
+    whatTheyDo:
+      "台灣化合物半導體 epi wafer 領先廠商；產品供應給雷射 / 光元件廠用於 100G、400G、800G 光模組。",
+    aiRelevance:
+      "800G / 1.6T 光模組需求暴增直接帶動 EML / VCSEL epi 需求；聯亞為 EML epi 主要供應商之一。",
+    competitiveAdvantage:
+      "InP / GaAs epi 製程 know-how；與光元件大廠長期合作。",
+    competitors: ["Sumitomo（日）", "IQE（英）", "Allos Semi（德）"],
+    risks: [
+      "客戶集中於少數光元件業者",
+      "規模較小",
+      "光通訊技術典範轉換（CPO / 矽光子）長期影響需觀察",
+    ],
+    keyCustomersOrEcosystem:
+      "公司公開揭露主要客戶為光元件與光模組製造商；具體比重需查證。",
+    technicalKeywords: ["InP", "GaAs", "EML epi", "VCSEL epi", "PIN diode"],
+    tags: ["Epi Wafer", "EML", "VCSEL", "Silicon Photonics"],
+    valuationSensitivity: ["hyperscalerDemand", "capexCycle"],
+    moat: { process: 4, ipDesign: 3, ecosystem: 3, customer: 4, manufacturing: 3, switching: 3 },
+    risk: {
+      nvidiaDependency: 3,
+      memoryCycle: 1,
+      chinaExport: 3,
+      customerConc: 4,
+      capexCycle: 4,
+      valuation: 4,
+      techTransition: 4,
+    },
+    analystView:
+      "AI 光通訊「上游 epi」純題材；客戶集中度與光通訊技術轉換是兩大變數。",
+    serdesAngle: "EML epi 品質直接影響光模組 BER 與 reach；對 800G/1.6T 模組良率影響大。",
+    sourceUrls: ["https://www.lmoc.com.tw/", "https://mops.twse.com.tw/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "winsemi",
+    name: "穩懋 WIN Semiconductors",
+    nameEn: "WIN Semiconductors Corp.",
+    ticker: "TPEx: 3105",
+    market: "Taiwan",
+    category: ["optical-communication", "foundry-equipment"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "GaAs 化合物半導體晶圓代工",
+      "RF PA、switch、VCSEL 代工",
+      "光通訊 / 5G / Wi-Fi 6E 元件代工",
+    ],
+    whatTheyDo:
+      "全球最大 GaAs 化合物半導體晶圓代工廠；主力為手機 RF PA，但同時為光通訊 VCSEL / DML 提供代工服務。",
+    aiRelevance:
+      "光通訊雷射元件代工是 AI 相關業務（VCSEL for 短距、DML 部分），但主力仍是手機 PA，AI 純度中等。",
+    competitiveAdvantage:
+      "GaAs 代工全球市占第一，技術成熟、規模大。",
+    competitors: ["AWSC 全新光電", "Sumitomo Electric"],
+    risks: [
+      "手機 PA 週期下行",
+      "中國 GaAs 自製比例上升",
+      "AI 光通訊代工比重仍低",
+    ],
+    keyCustomersOrEcosystem:
+      "客戶涵蓋 Skyworks、Qorvo、博通、光元件業者等；具體 AI 比重需查證。",
+    technicalKeywords: ["GaAs", "VCSEL", "DML", "PA", "Compound semi foundry"],
+    tags: ["GaAs", "VCSEL", "Compound Semi"],
+    valuationSensitivity: ["smartphoneCycle", "telecomCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 3, ecosystem: 4, customer: 4, manufacturing: 4, switching: 4 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 4,
+      customerConc: 3,
+      capexCycle: 4,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "AI 純度低，主業為手機 PA；光通訊代工是新成長動能但比重仍小。",
+    sourceUrls: ["https://www.winfoundry.com/", "https://mops.twse.com.tw/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "andes",
+    name: "晶心科 Andes Technology",
+    nameEn: "Andes Technology Corporation",
+    ticker: "TPEx: 6533",
+    market: "Taiwan",
+    category: ["ai-compute", "high-speed-interface"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "RISC-V CPU IP（V5 系列）",
+      "AI 加速器 IP（含 vector extension）",
+      "Audio / 信號處理 DSP IP",
+    ],
+    whatTheyDo:
+      "亞洲最大 RISC-V CPU IP 公司，提供 RISC-V 核心 + 工具鏈授權給 IoT / SoC / AI 加速器設計商；近年積極推出 AI 加速 IP。",
+    aiRelevance:
+      "RISC-V 是 AI ASIC 自研時的開源替代方案；Andes IP 已被多家 AI 新創與汽車晶片公司採用。",
+    competitiveAdvantage:
+      "亞洲 RISC-V IP 領先廠商；中文文件 + 在地支援是中國 / 台灣客戶優勢。",
+    competitors: ["ARM", "SiFive（美國 RISC-V IP）", "MIPS（Imagination）"],
+    risks: [
+      "與 ARM 競爭龐大",
+      "RISC-V 生態仍在發展",
+      "客戶 ramp-up 慢",
+    ],
+    keyCustomersOrEcosystem:
+      "客戶分布廣，包含台、中、日 IC 設計與 AI 新創；具體 AI 客戶身分需查證。",
+    technicalKeywords: ["RISC-V", "CPU IP", "Vector extension", "AI accelerator IP"],
+    tags: ["RISC-V", "IP", "AI Accelerator IP"],
+    valuationSensitivity: ["capexCycle", "smartphoneCycle"],
+    moat: { process: 0, ipDesign: 4, ecosystem: 3, customer: 3, manufacturing: 0, switching: 3 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 4,
+      customerConc: 3,
+      capexCycle: 3,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "AI ASIC 自研潮的長期受惠者，但與 ARM 規模差距大；中國市場是雙面刃。",
+    sourceUrls: ["https://www.andestech.com/", "https://mops.twse.com.tw/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "ememory",
+    name: "力旺 eMemory",
+    nameEn: "eMemory Technology Inc.",
+    ticker: "TPEx: 3529",
+    market: "Taiwan",
+    category: ["high-speed-interface", "foundry-equipment"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "NeoBit、NeoFuse、NeoPUF 嵌入式非揮發記憶體 IP",
+      "Logic NVM IP（在 logic 製程中內嵌記憶體）",
+      "安全與認證 IP（PUF-based）",
+    ],
+    whatTheyDo:
+      "全球領先 logic-process NVM IP 公司，IP 授權收入 + 量產權利金為主要營收；幾乎所有 logic 製程晶片需要安全認證或一次性編程記憶體都會用到。",
+    aiRelevance:
+      "AI ASIC 與 SoC 在生產期需要 NVM 用於 chip ID、authentication、trim；力旺在所有 foundry（含 TSMC）的 logic 製程都有矽驗證。",
+    competitiveAdvantage:
+      "全球 logic NVM IP 市占第一，與 TSMC、UMC、Samsung 等代工廠長期合作；切換成本高。",
+    competitors: ["Synopsys（NVM IP 部分）", "Sidense（被 Synopsys 併購）"],
+    risks: [
+      "市場較小、成長受 IC 出貨量限制",
+      "權利金收入波動",
+    ],
+    keyCustomersOrEcosystem:
+      "客戶為 IC 設計公司（fabless），含 AI ASIC、SoC、MCU 業者。",
+    technicalKeywords: ["NVM IP", "PUF", "OTP", "Logic process NVM"],
+    tags: ["NVM IP", "Security IP", "Logic NVM"],
+    valuationSensitivity: ["smartphoneCycle", "serverDemand"],
+    moat: { process: 0, ipDesign: 4, ecosystem: 4, customer: 5, manufacturing: 0, switching: 5 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 3,
+      customerConc: 2,
+      capexCycle: 2,
+      valuation: 3,
+      techTransition: 2,
+    },
+    analystView:
+      "穩定的 IP 授權商業模式；AI 純度非極高，但 IC 出貨成長間接受惠。",
+    sourceUrls: ["https://www.ememory.com.tw/", "https://mops.twse.com.tw/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "phison",
+    name: "群聯 Phison",
+    nameEn: "Phison Electronics Corp.",
+    ticker: "TPEx: 8299",
+    market: "Taiwan",
+    category: ["memory-hbm", "ai-server-odm"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Midstream",
+    coreProducts: [
+      "SSD controller（消費、企業）",
+      "USB 隨身碟、SD card controller",
+      "aiDAPTIV+（SSD-based 大模型 KV cache 解決方案）",
+    ],
+    whatTheyDo:
+      "全球主要 SSD / 儲存裝置控制 IC 設計公司；近年公開推廣 aiDAPTIV+ — 用 SSD 擴展 GPU 記憶體容量的軟硬整合方案。",
+    aiRelevance:
+      "AI server 對企業級 SSD 容量需求暴增；aiDAPTIV+ 是少數針對「HBM 不夠用」場景的創新解。",
+    competitiveAdvantage:
+      "SSD controller 設計力深；與 Kioxia、Micron、SK Hynix 等 NAND 廠合作緊密。",
+    competitors: ["Silicon Motion 慧榮", "Marvell（部分）", "Samsung in-house"],
+    risks: [
+      "NAND 價格週期",
+      "aiDAPTIV+ 商用化進度",
+      "與品牌客戶議價能力有限",
+    ],
+    keyCustomersOrEcosystem:
+      "客戶涵蓋多家 SSD 品牌與 NAND 廠；aiDAPTIV+ 已有公開合作案例。",
+    technicalKeywords: ["SSD controller", "NAND", "aiDAPTIV+", "Storage"],
+    tags: ["SSD Controller", "Storage", "AI Memory Extension"],
+    valuationSensitivity: ["memoryCycle", "pcCycle", "hyperscalerDemand"],
+    moat: { process: 3, ipDesign: 4, ecosystem: 4, customer: 4, manufacturing: 0, switching: 3 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 4,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 3,
+      valuation: 2,
+      techTransition: 3,
+    },
+    analystView:
+      "傳統 SSD controller 是基本盤；aiDAPTIV+ 是 AI 題材的「優先選擇權」 — 若 hyperscaler 認可可大幅 rerate。",
+    sourceUrls: ["https://www.phison.com/", "https://mops.twse.com.tw/"],
+    confidenceLevel: "Medium",
+    lastUpdated: STD_DATE,
+    marketData: MD_TWD,
+  },
+
+  {
+    id: "onsemi",
+    name: "安森美 onsemi",
+    nameEn: "ON Semiconductor Corp.",
+    ticker: "NASDAQ: ON",
+    market: "US",
+    category: ["power-management"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Midstream",
+    coreProducts: [
+      "SiC MOSFET、SiC 模組",
+      "電源管理 IC",
+      "影像感測器（CIS for auto）",
+      "類比 / 混合訊號 IC",
+    ],
+    whatTheyDo:
+      "美國中大型功率半導體 + 類比 IC 公司；近年聚焦汽車與工業，是 SiC 全球前 3 大供應商。",
+    aiRelevance:
+      "AI 資料中心 800V/HVDC 升級長期需要 SiC，onsemi 是潛在受惠者；但短期 AI 純度低，主力仍為汽車。",
+    competitiveAdvantage:
+      "SiC 垂直整合（自有晶圓 + 模組）；汽車 CIS 領先。",
+    competitors: ["Infineon", "STMicro", "Wolfspeed", "Texas Instruments"],
+    risks: [
+      "汽車週期下行",
+      "中國 SiC 競爭加劇",
+      "AI 資料中心 SiC 採用時程不確定",
+    ],
+    keyCustomersOrEcosystem:
+      "Tesla、福特、現代、福斯等車廠為公開揭露之 SiC 大客戶；資料中心比重仍低。",
+    technicalKeywords: ["SiC", "MOSFET", "CIS", "PMIC"],
+    tags: ["SiC", "Power IC", "Image Sensor"],
+    valuationSensitivity: ["smartphoneCycle", "capexCycle"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 4, customer: 4, manufacturing: 4, switching: 4 },
+    risk: {
+      nvidiaDependency: 1,
+      memoryCycle: 1,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 4,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "AI 是長期 optionality；主軸仍是電動車與 SiC 競爭。",
+    sourceUrls: ["https://www.onsemi.com/", "https://www.onsemi.com/company/investor-relations"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
+
+  {
+    id: "infineon",
+    name: "英飛凌 Infineon",
+    nameEn: "Infineon Technologies AG",
+    ticker: "ETR: IFX",
+    market: "Private",
+    category: ["power-management"],
+    aiImportanceScore: 4,
+    supplyChainPosition: "Midstream",
+    coreProducts: [
+      "電源管理 IC（含資料中心 VRM）",
+      "汽車 MCU、SiC、IGBT",
+      "工業 / 消費電源 IC",
+      "資料中心 HVDC（400/800V）解決方案",
+    ],
+    whatTheyDo:
+      "歐洲最大功率半導體公司，全球功率半導體市占第一；公司公開將「資料中心電源」列為主要成長動能之一。",
+    aiRelevance:
+      "AI rack 從 12V 走向 48V → 進而 800V HVDC，Infineon 在 VRM、power stage、SiC、隔離元件全線布局；是少數能跟 MPS 競爭的數據中心電源供應商。",
+    competitiveAdvantage:
+      "功率半導體市占第一，垂直整合度高（自有晶圓 + 設計）；歐洲總部地緣中立。",
+    competitors: ["MPS", "STMicro", "onsemi", "Texas Instruments", "Renesas"],
+    risks: [
+      "汽車週期下行",
+      "中國市場降溫",
+      "歐元波動",
+    ],
+    keyCustomersOrEcosystem:
+      "汽車（含 Tesla、福斯）、資料中心（Nvidia 平台合作）、工業客戶廣泛。",
+    technicalKeywords: ["VRM", "SiC", "HVDC", "48V", "Power stage"],
+    tags: ["Power IC", "SiC", "VRM", "HVDC"],
+    valuationSensitivity: ["smartphoneCycle", "capexCycle", "hyperscalerDemand"],
+    moat: { process: 4, ipDesign: 4, ecosystem: 5, customer: 5, manufacturing: 5, switching: 4 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 1,
+      chinaExport: 4,
+      customerConc: 2,
+      capexCycle: 4,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "歐股流動性需注意；AI 資料中心電源題材日益清晰，與 MPS 形成兩大選擇。",
+    sourceUrls: ["https://www.infineon.com/", "https://www.infineon.com/cms/en/about-infineon/investor/"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+  },
+
+  {
+    id: "rambus",
+    name: "Rambus",
+    nameEn: "Rambus Inc.",
+    ticker: "NASDAQ: RMBS",
+    market: "US",
+    category: ["memory-hbm", "high-speed-interface"],
+    aiImportanceScore: 3,
+    supplyChainPosition: "Upstream",
+    coreProducts: [
+      "DDR5、HBM、CXL controller IC",
+      "Memory IP（DDR、HBM、GDDR PHY）",
+      "Security IP",
+      "PCIe / CXL 介面 IP",
+    ],
+    whatTheyDo:
+      "美國記憶體 IP + IC 公司，提供 server DRAM 上的 RCD（Registering Clock Driver）、DDR/HBM PHY IP、CXL controller；資料中心 DDR5 + CXL 是核心成長動能。",
+    aiRelevance:
+      "AI server 大量採用 DDR5 RDIMM / MRDIMM，每條都需要 Rambus 等 RCD IC；HBM PHY IP 與 CXL controller 也直接受惠。",
+    competitiveAdvantage:
+      "Server 記憶體 buffer IC 寡占之一；HBM/CXL/DDR PHY IP 矽驗證完整。",
+    competitors: ["Renesas（前 IDT）", "Montage Technology（中）", "Synopsys（IP）"],
+    risks: [
+      "Montage（中）競爭",
+      "客戶集中於少數記憶體 + IC 設計業者",
+      "歷史授權糾紛背景",
+    ],
+    keyCustomersOrEcosystem:
+      "DRAM 廠（Micron、SK Hynix、Samsung）以及大型伺服器 OEM 為主要客戶。",
+    technicalKeywords: ["RCD", "DDR5", "HBM", "CXL", "Memory IP"],
+    tags: ["Memory Controller", "IP", "CXL", "DDR5"],
+    valuationSensitivity: ["serverDemand", "memoryCycle", "hyperscalerDemand"],
+    moat: { process: 3, ipDesign: 5, ecosystem: 4, customer: 4, manufacturing: 0, switching: 4 },
+    risk: {
+      nvidiaDependency: 2,
+      memoryCycle: 3,
+      chinaExport: 3,
+      customerConc: 3,
+      capexCycle: 3,
+      valuation: 3,
+      techTransition: 3,
+    },
+    analystView:
+      "AI server 記憶體子系統的隱性受惠者；MRDIMM 與 CXL 是中期成長題材。",
+    serdesAngle: "DDR5 → DDR6 與 HBM3E → HBM4 都需要 Rambus 級 PHY 設計能力，是 SerDes 在記憶體介面的代表公司之一。",
+    sourceUrls: ["https://www.rambus.com/", "https://investor.rambus.com/"],
+    confidenceLevel: "High",
+    lastUpdated: STD_DATE,
+    marketData: MD_USD,
+  },
 ];
 
 // 依 id 快速查表
