@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-23T19:31:27.843Z",
+  "fetchedAt": "2026-05-23T22:22:22.717Z",
   "historyDays": 730,
   "quotes": {
     "nvidia": {
@@ -12193,7 +12193,7 @@
       "changePercent": 1.4807503,
       "marketCap": 688816521216,
       "trailingPE": 185.1585,
-      "forwardPE": 57.866642,
+      "forwardPE": 57.866177,
       "fiftyTwoWeekHigh": 5950,
       "fiftyTwoWeekLow": 1030,
       "targetMean": 4818.75,
@@ -110449,10 +110449,6 @@
       "enterpriseToEbitda": 21.042,
       "history": [
         {
-          "d": "2024-05-23",
-          "c": 235.75
-        },
-        {
           "d": "2024-05-24",
           "c": 238.2
         },
@@ -137426,10 +137422,6 @@
       "enterpriseToRevenue": 6.715,
       "enterpriseToEbitda": 25.28,
       "history": [
-        {
-          "d": "2024-05-23",
-          "c": 38.07
-        },
         {
           "d": "2024-05-24",
           "c": 38.01
