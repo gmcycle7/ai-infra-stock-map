@@ -9,6 +9,10 @@ import { KpiPanel } from "../components/KpiPanel";
 import { LeadershipPanel } from "../components/LeadershipPanel";
 import { AnalystTargetBar } from "../components/AnalystTargetBar";
 import { FinancialsPanel } from "../components/FinancialsPanel";
+import { InsiderPanel } from "../components/InsiderPanel";
+import { BenchmarkChart } from "../components/BenchmarkChart";
+import { JournalPanel } from "../components/JournalPanel";
+import { defaultBenchmarkFor } from "../services/marketData";
 import { PriceDelta } from "../components/PriceDelta";
 import { WatchlistStar } from "../components/WatchlistStar";
 import { PeerCompare } from "../components/PeerCompare";
@@ -220,6 +224,12 @@ export function CompanyDetailPage() {
       {/* Financials */}
       <FinancialsSectionWrap companyId={co.id} />
 
+      {/* Insider / Institutional / Short */}
+      <InsiderSectionWrap companyId={co.id} />
+
+      {/* Benchmark relative return */}
+      <BenchmarkSectionWrap company={co} />
+
       {/* Investment KPI */}
       <KpiPanel company={co} kpi={getKpi(co)} />
 
@@ -228,6 +238,9 @@ export function CompanyDetailPage() {
 
       {/* Peer compare buttons */}
       <PeerCompare company={co} />
+
+      {/* Decision journal */}
+      <JournalPanel companyId={co.id} companyName={co.name} />
 
 
       {/* Sources */}
@@ -327,6 +340,30 @@ function FinancialsSectionWrap({ companyId }: { companyId: string }) {
   const q = getQuote(companyId);
   if (!q) return null;
   return <FinancialsPanel quote={q} />;
+}
+
+function InsiderSectionWrap({ companyId }: { companyId: string }) {
+  const q = getQuote(companyId);
+  if (!q) return null;
+  return <InsiderPanel quote={q} />;
+}
+
+function BenchmarkSectionWrap({ company }: { company: typeof companyById[string] }) {
+  const q = getQuote(company.id);
+  if (!q || !q.history || q.history.length === 0) return null;
+  return (
+    <section className="card space-y-3 p-5">
+      <h2 className="section-title">相對基準報酬（Alpha）</h2>
+      <p className="muted text-xs">
+        絕對報酬會騙人 — 漲 30% 看似好，若同期 SOXX 漲 40%，其實在落後。下方計算「個股 - 基準」的真實 alpha。
+      </p>
+      <BenchmarkChart
+        stockHistory={q.history}
+        defaultBenchmark={defaultBenchmarkFor(company.market)}
+        stockName={company.name}
+      />
+    </section>
+  );
 }
 
 function CellDelta({ label, pct }: { label: string; pct: number | null }) {

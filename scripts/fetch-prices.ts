@@ -71,6 +71,14 @@ interface Quote {
   enterpriseValue: number | null;
   enterpriseToRevenue: number | null;   // EV / Revenue
   enterpriseToEbitda: number | null;    // EV / EBITDA
+  /** 持股結構 + Short Interest */
+  heldPercentInsiders: number | null;     // 內部人持股比 (小數)
+  heldPercentInstitutions: number | null; // 機構持股比 (小數)
+  shortPercentOfFloat: number | null;     // Short / float
+  shortRatio: number | null;              // Days to cover
+  sharesShort: number | null;             // 絕對 short 股數
+  insiderNetTxnCount: number | null;      // 近 6 個月內部人交易次數（買 - 賣）
+  insiderNetShares: number | null;        // 近 6 個月內部人淨增減股數
   /** 日線收盤；空陣列代表無資料 */
   history: HistoryPoint[];
   error?: string;
@@ -80,7 +88,17 @@ interface MarketDataFile {
   fetchedAt: string;
   historyDays: number;
   quotes: Record<string, Quote>;
+  benchmarks: Record<string, Quote>; // 對照指數
 }
+
+// 對照基準（用於相對報酬計算）
+const BENCHMARK_SYMBOLS: Array<{ id: string; symbol: string; name: string }> = [
+  { id: "soxx", symbol: "SOXX", name: "iShares 半導體 ETF (美)" },
+  { id: "smh", symbol: "SMH", name: "VanEck 半導體 ETF (美)" },
+  { id: "spx", symbol: "^GSPC", name: "S&P 500 (美)" },
+  { id: "tw50", symbol: "0050.TW", name: "元大台灣 50 (台)" },
+  { id: "twii", symbol: "^TWII", name: "加權指數 (台)" },
+];
 
 /** 把公司 ticker 欄位（例如 "TWSE: 2330 / NYSE: TSM"）轉成 yfinance symbol */
 function toYahooSymbol(ticker: string): string | null {
@@ -134,14 +152,52 @@ async function fetchQuoteOnly(symbol: string) {
 }
 
 async function fetchAnalystAndFinancials(symbol: string) {
-  // 一次抓 financialData + defaultKeyStatistics + summaryDetail（3 模組合 1 call）
+  // 一次抓 financialData + defaultKeyStatistics + summaryDetail + insider 相關
   try {
     const qs = await yahooFinance.quoteSummary(symbol, {
-      modules: ["financialData", "defaultKeyStatistics", "summaryDetail"],
+      modules: [
+        "financialData",
+        "defaultKeyStatistics",
+        "summaryDetail",
+        "majorHoldersBreakdown",
+        "insiderTransactions",
+      ],
     });
     const f = qs.financialData;
     const k = qs.defaultKeyStatistics;
     const s = qs.summaryDetail;
+    const mhb = qs.majorHoldersBreakdown;
+    const insiderTxns = qs.insiderTransactions;
+
+    // 計算內部人交易摘要（近 6 個月）
+    let insiderNetTxnCount: number | null = null;
+    let insiderNetShares: number | null = null;
+    if (insiderTxns?.transactions && insiderTxns.transactions.length > 0) {
+      const sixMonthsAgo = Date.now() - 180 * 24 * 60 * 60 * 1000;
+      let buy = 0;
+      let sell = 0;
+      let netShares = 0;
+      for (const t of insiderTxns.transactions) {
+        const ts = t.startDate ? new Date(t.startDate).getTime() : 0;
+        if (ts < sixMonthsAgo) continue;
+        const shares = t.shares ?? 0;
+        const filingText = (t.filerName ?? "") + " " + (t.transactionText ?? "") + " " + ((t.moneyText as string) ?? "");
+        // Yahoo 的欄位欄位名稱不一，用 moneyText 或 ownership 推斷
+        const isPurchase =
+          /purchase|acquir|buy|bought|exercise|grant|award/i.test(filingText);
+        const isSale = /sale|sold|sell|dispose/i.test(filingText);
+        if (isPurchase) {
+          buy++;
+          netShares += shares;
+        } else if (isSale) {
+          sell++;
+          netShares -= shares;
+        }
+      }
+      insiderNetTxnCount = buy - sell;
+      insiderNetShares = netShares;
+    }
+
     return {
       // 分析師
       targetMean: f?.targetMeanPrice ?? null,
@@ -170,6 +226,13 @@ async function fetchAnalystAndFinancials(symbol: string) {
       enterpriseValue: k?.enterpriseValue ?? null,
       enterpriseToRevenue: k?.enterpriseToRevenue ?? null,
       enterpriseToEbitda: k?.enterpriseToEbitda ?? null,
+      heldPercentInsiders: mhb?.insidersPercentHeld ?? k?.heldPercentInsiders ?? null,
+      heldPercentInstitutions: mhb?.institutionsPercentHeld ?? k?.heldPercentInstitutions ?? null,
+      shortPercentOfFloat: k?.shortPercentOfFloat ?? null,
+      shortRatio: k?.shortRatio ?? null,
+      sharesShort: k?.sharesShort ?? null,
+      insiderNetTxnCount,
+      insiderNetShares,
     };
   } catch {
     return {
@@ -197,6 +260,13 @@ async function fetchAnalystAndFinancials(symbol: string) {
       enterpriseValue: null,
       enterpriseToRevenue: null,
       enterpriseToEbitda: null,
+      heldPercentInsiders: null,
+      heldPercentInstitutions: null,
+      shortPercentOfFloat: null,
+      shortRatio: null,
+      sharesShort: null,
+      insiderNetTxnCount: null,
+      insiderNetShares: null,
     };
   }
 }
@@ -300,10 +370,23 @@ async function main() {
     }
   }
 
+  // 抓對照基準
+  console.log(`\n[fetch-prices] 抓取 ${BENCHMARK_SYMBOLS.length} 個基準指數...`);
+  const benchmarks: Record<string, Quote> = {};
+  for (const b of BENCHMARK_SYMBOLS) {
+    const q = await fetchOne(b.symbol);
+    benchmarks[b.id] = q;
+    const tag = q.error
+      ? `⚠ ${q.error.slice(0, 50)}`
+      : `✓ ${q.price?.toFixed(2)} ${q.currency}  hist=${q.history.length}`;
+    console.log(`  ${b.symbol.padEnd(12)} ${b.name.padEnd(34)} ${tag}`);
+  }
+
   const out: MarketDataFile = {
     fetchedAt: new Date().toISOString(),
     historyDays: HISTORY_DAYS,
     quotes,
+    benchmarks,
   };
   await fs.writeFile(OUTPUT, JSON.stringify(out, null, 2) + "\n", "utf8");
   console.log(`\n[fetch-prices] 已寫入 ${OUTPUT}`);

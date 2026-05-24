@@ -56,6 +56,14 @@ export interface LiveQuote {
   enterpriseValue: number | null;
   enterpriseToRevenue: number | null;
   enterpriseToEbitda: number | null;
+  /** 持股結構與 Short Interest */
+  heldPercentInsiders: number | null;
+  heldPercentInstitutions: number | null;
+  shortPercentOfFloat: number | null;
+  shortRatio: number | null;
+  sharesShort: number | null;
+  insiderNetTxnCount: number | null;
+  insiderNetShares: number | null;
   history: HistoryPoint[];
   error?: string;
 }
@@ -64,6 +72,7 @@ interface MarketDataFile {
   fetchedAt: string;
   historyDays?: number;
   quotes: Record<string, LiveQuote>;
+  benchmarks?: Record<string, LiveQuote>;
 }
 
 const market = rawMarketData as MarketDataFile;
@@ -74,6 +83,27 @@ export const lastFetchedAt: string = market.fetchedAt;
 /** 取得指定公司的最新報價（依 company id） */
 export function getQuote(companyId: string): LiveQuote | null {
   return market.quotes[companyId] ?? null;
+}
+
+/** 取得對照基準（SOXX、SMH、SPX、0050、TWII） */
+export function getBenchmark(id: "soxx" | "smh" | "spx" | "tw50" | "twii"): LiveQuote | null {
+  return market.benchmarks?.[id] ?? null;
+}
+
+/** 列出所有對照基準 */
+export const BENCHMARK_LABELS: Record<string, string> = {
+  soxx: "SOXX 美國半導體",
+  smh: "SMH 半導體 ETF",
+  spx: "S&P 500",
+  tw50: "0050 台灣 50",
+  twii: "加權指數",
+};
+
+/** 為公司選擇預設對照基準（美股 → SOXX；台股 → 0050；其他 → SPX） */
+export function defaultBenchmarkFor(market_: "US" | "Taiwan" | "Private"): string {
+  if (market_ === "Taiwan") return "tw50";
+  if (market_ === "US") return "soxx";
+  return "spx";
 }
 
 /** 是否有有效報價（有價格） */

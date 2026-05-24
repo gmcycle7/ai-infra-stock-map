@@ -5,6 +5,7 @@ import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import { WatchlistProvider } from "./context/WatchlistContext";
 import { WeightsProvider } from "./context/WeightsContext";
+import { JournalProvider } from "./context/JournalContext";
 import { Layout } from "./components/Layout";
 import { HomePage } from "./pages/Home";
 
@@ -30,6 +31,9 @@ const LeadershipRubricPage = lazy(() => import("./pages/LeadershipRubric").then(
 const WatchlistPage = lazy(() => import("./pages/Watchlist").then((m) => ({ default: m.WatchlistPage })));
 const KpiTuningPage = lazy(() => import("./pages/KpiTuning").then((m) => ({ default: m.KpiTuningPage })));
 const DataQualityPage = lazy(() => import("./pages/DataQuality").then((m) => ({ default: m.DataQualityPage })));
+const BacktestPage = lazy(() => import("./pages/Backtest").then((m) => ({ default: m.BacktestPage })));
+const JournalPage = lazy(() => import("./pages/Journal").then((m) => ({ default: m.JournalPage })));
+const ChangesPage = lazy(() => import("./pages/Changes").then((m) => ({ default: m.ChangesPage })));
 
 function PageLoading() {
   return (
@@ -44,6 +48,7 @@ createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
       <WatchlistProvider>
         <WeightsProvider>
+          <JournalProvider>
           <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
               <Route element={<Layout />}>
@@ -186,10 +191,35 @@ createRoot(document.getElementById("root")!).render(
                     </Suspense>
                   }
                 />
+                <Route
+                  path="/backtest"
+                  element={
+                    <Suspense fallback={<PageLoading />}>
+                      <BacktestPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/journal"
+                  element={
+                    <Suspense fallback={<PageLoading />}>
+                      <JournalPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/changes"
+                  element={
+                    <Suspense fallback={<PageLoading />}>
+                      <ChangesPage />
+                    </Suspense>
+                  }
+                />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>
             </Routes>
           </BrowserRouter>
+          </JournalProvider>
         </WeightsProvider>
       </WatchlistProvider>
     </ThemeProvider>

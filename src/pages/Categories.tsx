@@ -7,6 +7,7 @@ import { getKpi } from "../lib/kpi";
 import { getQuote } from "../services/marketData";
 import { windowReturn } from "../lib/priceWindow";
 import { colorOf } from "../lib/utils";
+import { categoryCyclePhase } from "../lib/cyclePhase";
 
 function avgRound(arr: number[]): number {
   if (arr.length === 0) return 0;
@@ -31,7 +32,7 @@ function tone(v: number, risk = false) {
 }
 
 export function CategoriesPage() {
-  // 計算每個 category 的彙總 KPI
+  // 計算每個 category 的彙總 KPI + 循環階段
   const summaryRows = categories.map((cat) => {
     const list = companies.filter((c) => c.category.includes(cat.slug));
     const kpis = list.map((c) => getKpi(c));
@@ -43,6 +44,7 @@ export function CategoriesPage() {
         if (r != null) returns.push(r);
       }
     }
+    const cycle = categoryCyclePhase(cat.slug);
     return {
       slug: cat.slug,
       nameZh: cat.nameZh,
@@ -54,6 +56,7 @@ export function CategoriesPage() {
       avg10y: avgRound(kpis.map((k) => k.tenYearScore)),
       avgRisk: avgRound(kpis.map((k) => k.riskScore)),
       avg1yReturn: avgPctRound(returns),
+      cycle,
     };
   });
 
@@ -72,11 +75,12 @@ export function CategoriesPage() {
 
       <Disclaimer subtle />
 
-      {/* 分類 KPI 摘要表 */}
+      {/* 分類 KPI 摘要表 + 循環階段 */}
       <section className="card p-4">
-        <h2 className="section-title text-base">分類整體 KPI（依 3 年成長排序）</h2>
+        <h2 className="section-title text-base">分類整體 KPI + 循環階段（依 3 年成長排序）</h2>
         <p className="muted mt-1 text-xs">
-          每分類取所有公司的「KPI 平均值」與「12M 股價平均報酬」。能力範圍內幫你看「產業強弱」而非個股。
+          循環階段是「該分類所有公司」的 12M 報酬 × forward PE × 營收成長加總判斷。
+          半導體投資失敗 70% 是循環位置錯，不是選股錯。
         </p>
         <div className="mt-3 overflow-x-auto">
           <table className="min-w-full text-sm">
@@ -84,12 +88,14 @@ export function CategoriesPage() {
               <tr>
                 <th className="px-3 py-2">分類</th>
                 <th className="px-3 py-2 text-center">家數</th>
+                <th className="px-3 py-2 text-center">循環階段</th>
                 <th className="px-3 py-2 text-right">短期</th>
                 <th className="px-3 py-2 text-right">3 年</th>
                 <th className="px-3 py-2 text-right">5 年</th>
                 <th className="px-3 py-2 text-right">10 年</th>
                 <th className="px-3 py-2 text-right">風險</th>
-                <th className="px-3 py-2 text-right">12M 報酬 (avg)</th>
+                <th className="px-3 py-2 text-right">12M 報酬</th>
+                <th className="px-3 py-2 text-right">Fwd P/E</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -106,6 +112,11 @@ export function CategoriesPage() {
                       </Link>
                     </td>
                     <td className="px-3 py-1.5 text-center">{row.n}</td>
+                    <td className="px-3 py-1.5 text-center">
+                      <span className={"chip " + row.cycle.tone} title={row.cycle.description}>
+                        {row.cycle.phase}
+                      </span>
+                    </td>
                     <td className={"px-3 py-1.5 text-right font-mono " + tone(row.avgShort)}>{row.avgShort}</td>
                     <td className={"px-3 py-1.5 text-right font-mono font-bold " + tone(row.avg3y)}>{row.avg3y}</td>
                     <td className={"px-3 py-1.5 text-right font-mono " + tone(row.avg5y)}>{row.avg5y}</td>
@@ -127,11 +138,23 @@ export function CategoriesPage() {
                         <span className="text-slate-400">—</span>
                       )}
                     </td>
+                    <td className="px-3 py-1.5 text-right font-mono">
+                      {row.cycle.avgForwardPE != null ? row.cycle.avgForwardPE.toFixed(1) : "—"}
+                    </td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
+        </div>
+        <div className="muted mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs dark:border-slate-700 dark:bg-slate-900">
+          <strong>循環階段對照：</strong>
+          <ul className="mt-1 list-disc space-y-0.5 pl-5">
+            <li><strong className="text-emerald-700 dark:text-emerald-300">底部</strong>：報酬負 + 估值低 — 風險已反映，但需催化</li>
+            <li><strong className="text-sky-700 dark:text-sky-300">復甦</strong>：報酬轉正 + 估值合理 — 風險報酬比最好</li>
+            <li><strong className="text-amber-700 dark:text-amber-300">成熟</strong>：報酬持續 + 估值偏高 — 仍可參與但須注意</li>
+            <li><strong className="text-rose-700 dark:text-rose-300">高峰</strong>：報酬極端 + 估值飽和 — 注意 reversion 風險</li>
+          </ul>
         </div>
       </section>
 
