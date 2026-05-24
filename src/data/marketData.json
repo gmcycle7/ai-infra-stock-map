@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-24T05:35:18.505Z",
+  "fetchedAt": "2026-05-24T22:24:56.110Z",
   "historyDays": 730,
   "quotes": {
     "nvidia": {
@@ -7,8 +7,8 @@
       "currency": "USD",
       "price": 215.33,
       "previousClose": 219.51,
-      "change": -4.17999,
-      "changePercent": -1.90424,
+      "change": -4.1799927,
+      "changePercent": -1.904238,
       "marketCap": 5215507972096,
       "trailingPE": 33.026073,
       "forwardPE": 17.027882,
@@ -2053,8 +2053,8 @@
       "currency": "USD",
       "price": 467.51,
       "previousClose": 449.59,
-      "change": 17.92,
-      "changePercent": 3.98586,
+      "change": 17.920013,
+      "changePercent": 3.9858568,
       "marketCap": 762322092032,
       "trailingPE": 156.35786,
       "forwardPE": 36.07458,
@@ -4099,8 +4099,8 @@
       "currency": "USD",
       "price": 119.84,
       "previousClose": 118.5,
-      "change": 1.34,
-      "changePercent": 1.1308,
+      "change": 1.3399963,
+      "changePercent": 1.1307986,
       "marketCap": 602315816960,
       "trailingPE": null,
       "forwardPE": 77.83233,
@@ -6145,8 +6145,8 @@
       "currency": "USD",
       "price": 414.14,
       "previousClose": 414.57,
-      "change": -0.429993,
-      "changePercent": -0.10372,
+      "change": -0.42999268,
+      "changePercent": -0.10372016,
       "marketCap": 1960815624192,
       "trailingPE": 80.57199,
       "forwardPE": 22.681368,
@@ -8191,8 +8191,8 @@
       "currency": "USD",
       "price": 196.33,
       "previousClose": 190.69,
-      "change": 5.64,
-      "changePercent": 2.95768,
+      "change": 5.6399994,
+      "changePercent": 2.9576797,
       "marketCap": 171897356288,
       "trailingPE": 64.16013,
       "forwardPE": 35.994133,
@@ -10277,10 +10277,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 2820
-        },
-        {
           "d": "2024-05-27",
           "c": 2905
         },
@@ -12250,10 +12246,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 1465
-        },
         {
           "d": "2024-05-27",
           "c": 1495
@@ -14225,10 +14217,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 1195
-        },
-        {
           "d": "2024-05-27",
           "c": 1285
         },
@@ -16159,8 +16147,8 @@
       "currency": "USD",
       "price": 751,
       "previousClose": 762.1,
-      "change": -11.1,
-      "changePercent": -1.4565,
+      "change": -11.099976,
+      "changePercent": -1.4564986,
       "marketCap": 846928216064,
       "trailingPE": 35.457977,
       "forwardPE": 7.309794,
@@ -18245,10 +18233,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 198600
-        },
-        {
           "d": "2024-05-27",
           "c": 201500
         },
@@ -20226,10 +20210,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 75900
-        },
         {
           "d": "2024-05-27",
           "c": 77200
@@ -22209,10 +22189,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 64.4
-        },
-        {
           "d": "2024-05-27",
           "c": 64.8
         },
@@ -24182,10 +24158,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 25.85
-        },
         {
           "d": "2024-05-27",
           "c": 26
@@ -26157,10 +26129,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 867
-        },
-        {
           "d": "2024-05-27",
           "c": 869
         },
@@ -28091,17 +28059,17 @@
       "currency": "USD",
       "price": 1632.9,
       "previousClose": 1592,
-      "change": 40.9,
-      "changePercent": 2.5691,
+      "change": 40.900024,
+      "changePercent": 2.569097,
       "marketCap": 629348499456,
       "trailingPE": 54.339436,
-      "forwardPE": 34.379826,
+      "forwardPE": 34.391678,
       "fiftyTwoWeekHigh": 1653.53,
       "fiftyTwoWeekLow": 683.48,
-      "targetMean": 1659.7076,
-      "targetHigh": 1997.2148,
-      "targetLow": 897.8067,
-      "targetMedian": 1728.0665,
+      "targetMean": 1665.1183,
+      "targetHigh": 2003.7258,
+      "targetLow": 900.7335,
+      "targetMedian": 1733.7001,
       "recommendationMean": 1.45455,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 15,
@@ -30136,9 +30104,9 @@
       "symbol": "AMAT",
       "currency": "USD",
       "price": 432.16,
-      "previousClose": 427.36,
-      "change": 4.80002,
-      "changePercent": 1.12318,
+      "previousClose": 427.36002,
+      "change": 4.799988,
+      "changePercent": 1.1231719,
       "marketCap": 343117496320,
       "trailingPE": 40.65475,
       "forwardPE": 26.799755,
@@ -32182,9 +32150,9 @@
       "symbol": "LRCX",
       "currency": "USD",
       "price": 305.35,
-      "previousClose": 302.24,
-      "change": 3.11002,
-      "changePercent": 1.02899,
+      "previousClose": 302.24002,
+      "change": 3.1099854,
+      "changePercent": 1.0289786,
       "marketCap": 381861855232,
       "trailingPE": 57.83144,
       "forwardPE": 38.498783,
@@ -34229,8 +34197,8 @@
       "currency": "USD",
       "price": 1888.38,
       "previousClose": 1842.18,
-      "change": 46.2,
-      "changePercent": 2.5079,
+      "change": 46.19995,
+      "changePercent": 2.5078957,
       "marketCap": 246674391040,
       "trailingPE": 53.480034,
       "forwardPE": 37.87762,
@@ -36315,10 +36283,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 159.5
-        },
-        {
           "d": "2024-05-27",
           "c": 165.5
         },
@@ -38288,10 +38252,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 88.4
-        },
         {
           "d": "2024-05-27",
           "c": 90.9
@@ -40263,10 +40223,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 189
-        },
-        {
           "d": "2024-05-27",
           "c": 192
         },
@@ -42237,10 +42193,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 186
-        },
-        {
           "d": "2024-05-27",
           "c": 188.5
         },
@@ -44171,8 +44123,8 @@
       "currency": "USD",
       "price": 65.75,
       "previousClose": 65.9,
-      "change": -0.150002,
-      "changePercent": -0.22762,
+      "change": -0.15000153,
+      "changePercent": -0.22761992,
       "marketCap": 16297617408,
       "trailingPE": 37.787357,
       "forwardPE": 26.815392,
@@ -50349,10 +50301,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 512
-        },
-        {
           "d": "2024-05-27",
           "c": 514
         },
@@ -52283,8 +52231,8 @@
       "currency": "USD",
       "price": 306.88,
       "previousClose": 297.84,
-      "change": 9.04001,
-      "changePercent": 3.03519,
+      "change": 9.040009,
+      "changePercent": 3.0351896,
       "marketCap": 52601667584,
       "trailingPE": 208.7619,
       "forwardPE": 72.95047,
@@ -54329,8 +54277,8 @@
       "currency": "USD",
       "price": 218.41,
       "previousClose": 193.39,
-      "change": 25.02,
-      "changePercent": 12.9376,
+      "change": 25.020004,
+      "changePercent": 12.937589,
       "marketCap": 40285712384,
       "trailingPE": 120.66851,
       "forwardPE": 39.597446,
@@ -56374,9 +56322,9 @@
       "symbol": "SNPS",
       "currency": "USD",
       "price": 524.74,
-      "previousClose": 503.98,
-      "change": 20.76,
-      "changePercent": 4.11921,
+      "previousClose": 503.97998,
+      "change": 20.76001,
+      "changePercent": 4.119213,
       "marketCap": 100520255488,
       "trailingPE": 80.60522,
       "forwardPE": 30.767317,
@@ -58506,10 +58454,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 866.6459
-        },
         {
           "d": "2024-05-27",
           "c": 891.6453
@@ -64573,10 +64517,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 1720
-        },
-        {
           "d": "2024-05-27",
           "c": 1645
         },
@@ -66546,10 +66486,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 260.9211
-        },
         {
           "d": "2024-05-27",
           "c": 261.4163
@@ -70527,8 +70463,8 @@
       "currency": "USD",
       "price": 946.9,
       "previousClose": 964.5,
-      "change": -17.6,
-      "changePercent": -1.82478,
+      "change": -17.599976,
+      "changePercent": -1.8247772,
       "marketCap": 73668820992,
       "trailingPE": 166.70775,
       "forwardPE": 52.31298,
@@ -74618,9 +74554,9 @@
       "symbol": "AAOI",
       "currency": "USD",
       "price": 181.49,
-      "previousClose": 176.81,
-      "change": 4.68001,
-      "changePercent": 2.64691,
+      "previousClose": 176.81001,
+      "change": 4.6799927,
+      "changePercent": 2.6469047,
       "marketCap": 14563260416,
       "trailingPE": null,
       "forwardPE": 38.032272,
@@ -76664,9 +76600,9 @@
       "symbol": "SMCI",
       "currency": "USD",
       "price": 35.58,
-      "previousClose": 33.46,
-      "change": 2.12,
-      "changePercent": 6.33593,
+      "previousClose": 33.460003,
+      "change": 2.119999,
+      "changePercent": 6.3359203,
       "marketCap": 21398470656,
       "trailingPE": 18.726316,
       "forwardPE": 11.049587,
@@ -78751,10 +78687,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 115
-        },
-        {
           "d": "2024-05-27",
           "c": 116.5
         },
@@ -80724,10 +80656,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 2740
-        },
         {
           "d": "2024-05-27",
           "c": 2710
@@ -82699,10 +82627,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 286.5
-        },
-        {
           "d": "2024-05-27",
           "c": 293.5
         },
@@ -84673,10 +84597,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 55
-        },
-        {
           "d": "2024-05-27",
           "c": 56
         },
@@ -86646,10 +86566,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 176
-        },
         {
           "d": "2024-05-27",
           "c": 185
@@ -90627,8 +90543,8 @@
       "currency": "USD",
       "price": 1589.81,
       "previousClose": 1561.25,
-      "change": 28.5601,
-      "changePercent": 1.82931,
+      "change": 28.560059,
+      "changePercent": 1.8293072,
       "marketCap": 78107369472,
       "trailingPE": 113.63903,
       "forwardPE": 52.714527,
@@ -94759,10 +94675,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 328
-        },
-        {
           "d": "2024-05-27",
           "c": 346
         },
@@ -96732,10 +96644,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 114.5
-        },
         {
           "d": "2024-05-27",
           "c": 121
@@ -98707,10 +98615,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 36.4
-        },
-        {
           "d": "2024-05-27",
           "c": 37.65
         },
@@ -100680,10 +100584,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 156.5
-        },
         {
           "d": "2024-05-27",
           "c": 157.5
@@ -102655,10 +102555,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 281.5
-        },
-        {
           "d": "2024-05-27",
           "c": 293.5
         },
@@ -104628,10 +104524,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 706
-        },
         {
           "d": "2024-05-27",
           "c": 738
@@ -106741,10 +106633,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 991
-        },
-        {
           "d": "2024-05-27",
           "c": 1005
         },
@@ -108674,9 +108562,9 @@
       "symbol": "TXN",
       "currency": "USD",
       "price": 309.21,
-      "previousClose": 298.39,
-      "change": 10.82,
-      "changePercent": 3.62612,
+      "previousClose": 298.38998,
+      "change": 10.820007,
+      "changePercent": 3.6261294,
       "marketCap": 281409781760,
       "trailingPE": 52.946915,
       "forwardPE": 32.777344,
@@ -110760,10 +110648,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 238.2
-        },
         {
           "d": "2024-05-27",
           "c": 237.65
@@ -112889,10 +112773,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 2840.5
-        },
-        {
           "d": "2024-05-27",
           "c": 3012
         },
@@ -114850,7 +114730,7 @@
       "targetHigh": 39200,
       "targetLow": 23000,
       "targetMedian": 34000,
-      "recommendationMean": 1.80952,
+      "recommendationMean": 1.75,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 20,
       "profitMargin": 0.33258,
@@ -114878,10 +114758,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 5591
-        },
         {
           "d": "2024-05-27",
           "c": 5669
@@ -116869,10 +116745,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 35790
-        },
-        {
           "d": "2024-05-27",
           "c": 35630
         },
@@ -118858,10 +118730,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 61500
-        },
         {
           "d": "2024-05-27",
           "c": 61790
@@ -120855,8 +120723,8 @@
       "currency": "USD",
       "price": 373.59,
       "previousClose": 358.46,
-      "change": 15.13,
-      "changePercent": 4.22084,
+      "change": 15.130005,
+      "changePercent": 4.220835,
       "marketCap": 103042097152,
       "trailingPE": 86.88139,
       "forwardPE": 39.82547,
@@ -122901,8 +122769,8 @@
       "currency": "USD",
       "price": 167.37,
       "previousClose": 160.59,
-      "change": 6.78,
-      "changePercent": 4.22193,
+      "change": 6.779999,
+      "changePercent": 4.221931,
       "marketCap": 7706463744,
       "trailingPE": 172.54639,
       "forwardPE": 36.989235,
@@ -126992,9 +126860,9 @@
       "symbol": "MXL",
       "currency": "USD",
       "price": 99.16,
-      "previousClose": 99.67,
-      "change": -0.509995,
-      "changePercent": -0.511683,
+      "previousClose": 99.670006,
+      "change": -0.51000214,
+      "changePercent": -0.5116907,
       "marketCap": 8879377408,
       "trailingPE": null,
       "forwardPE": 53.078682,
@@ -129827,10 +129695,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 140
-        },
-        {
           "d": "2024-05-27",
           "c": 141.5
         },
@@ -131847,10 +131711,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 2380
-        },
-        {
           "d": "2024-05-27",
           "c": 2290
         },
@@ -133821,10 +133681,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 574
-        },
-        {
           "d": "2024-05-27",
           "c": 592
         },
@@ -135755,8 +135611,8 @@
       "currency": "USD",
       "price": 116.2,
       "previousClose": 109.61,
-      "change": 6.59,
-      "changePercent": 6.01222,
+      "change": 6.5899963,
+      "changePercent": 6.012222,
       "marketCap": 45178929152,
       "trailingPE": 85.44117,
       "forwardPE": 27.334938,
@@ -137841,10 +137697,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 38.01
-        },
-        {
           "d": "2024-05-27",
           "c": 38.06
         },
@@ -139866,9 +139718,9 @@
       "symbol": "RMBS",
       "currency": "USD",
       "price": 142.98,
-      "previousClose": 141.82,
-      "change": 1.15999,
-      "changePercent": 0.81793,
+      "previousClose": 141.81999,
+      "change": 1.1600037,
+      "changePercent": 0.81794083,
       "marketCap": 15461423104,
       "trailingPE": 68.08572,
       "forwardPE": 39.32819,
@@ -141915,8 +141767,8 @@
       "currency": "USD",
       "price": 537.33,
       "previousClose": 524.71,
-      "change": 12.62,
-      "changePercent": 2.40514,
+      "change": 12.619995,
+      "changePercent": 2.405137,
       "marketCap": null,
       "trailingPE": 49.320774,
       "forwardPE": null,
@@ -143961,8 +143813,8 @@
       "currency": "USD",
       "price": 576.32,
       "previousClose": 567.88,
-      "change": 8.44,
-      "changePercent": 1.48623,
+      "change": 8.440002,
+      "changePercent": 1.4862299,
       "marketCap": null,
       "trailingPE": 47.429276,
       "forwardPE": null,
@@ -148093,10 +147945,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-05-24",
-          "c": 42.65
-        },
-        {
           "d": "2024-05-27",
           "c": 43.2375
         },
@@ -150030,9 +149878,9 @@
       "symbol": "^TWII",
       "currency": "TWD",
       "price": 42267.97,
-      "previousClose": 41368.21,
-      "change": 899.7578,
-      "changePercent": 2.174998,
+      "previousClose": 41368.2,
+      "change": 899.76953,
+      "changePercent": 2.1750271,
       "marketCap": null,
       "trailingPE": null,
       "forwardPE": null,
@@ -150070,10 +149918,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-24",
-          "c": 21565.3398
-        },
         {
           "d": "2024-05-27",
           "c": 21803.7695
