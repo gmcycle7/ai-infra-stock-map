@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-05-26T22:36:57.872Z",
+  "fetchedAt": "2026-05-27T22:37:28.363Z",
   "historyDays": 730,
   "quotes": {
     "nvidia": {
       "symbol": "NVDA",
       "currency": "USD",
-      "price": 214.86,
-      "previousClose": 215.33,
-      "change": -0.47000122,
-      "changePercent": -0.21827021,
-      "marketCap": 5204124106752,
-      "trailingPE": 32.953987,
-      "forwardPE": 16.990715,
+      "price": 212.6,
+      "previousClose": 214.86,
+      "change": -2.2599945,
+      "changePercent": -1.0518451,
+      "marketCap": 5149384769536,
+      "trailingPE": 32.557426,
+      "forwardPE": 16.812,
       "fiftyTwoWeekHigh": 236.54,
       "fiftyTwoWeekLow": 132.92,
-      "targetMean": 295.34482,
+      "targetMean": 295.68967,
       "targetHigh": 500,
       "targetLow": 180,
       "targetMedian": 285,
-      "recommendationMean": 1.29032,
+      "recommendationMean": 1.29508,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 58,
       "profitMargin": 0.62966,
@@ -32,12 +32,12 @@
       "totalCash": 53171998720,
       "freeCashflow": 46335873024,
       "pegRatio": 0.66,
-      "priceToBook": 33.19839,
+      "priceToBook": 32.849197,
       "beta": 2.244,
-      "dividendYield": 0.0002,
-      "enterpriseValue": 5170627870720,
-      "enterpriseToRevenue": 20.398,
-      "enterpriseToEbitda": 31.24,
+      "dividendYield": 0.0047,
+      "enterpriseValue": 5159253966848,
+      "enterpriseToRevenue": 20.353,
+      "enterpriseToEbitda": 31.171,
       "heldPercentInsiders": 0.039839998,
       "heldPercentInstitutions": 0.70776004,
       "shortPercentOfFloat": 0.012200001,
@@ -2045,20 +2045,24 @@
         {
           "d": "2026-05-26",
           "c": 214.86
+        },
+        {
+          "d": "2026-05-27",
+          "c": 212.6
         }
       ]
     },
     "amd": {
       "symbol": "AMD",
       "currency": "USD",
-      "price": 503.89,
-      "previousClose": 467.51,
-      "change": 36.380005,
-      "changePercent": 7.7816525,
-      "marketCap": 821643378688,
-      "trailingPE": 168.52509,
-      "forwardPE": 38.881783,
-      "fiftyTwoWeekHigh": 506.96,
+      "price": 495.54,
+      "previousClose": 503.89,
+      "change": -8.350006,
+      "changePercent": -1.6571088,
+      "marketCap": 808027815936,
+      "trailingPE": 164.08609,
+      "forwardPE": 38.23747,
+      "fiftyTwoWeekHigh": 510.21,
       "fiftyTwoWeekLow": 108.62,
       "targetMean": 472.16666,
       "targetHigh": 625,
@@ -2077,15 +2081,15 @@
       "totalDebt": 3871000064,
       "totalCash": 12346999808,
       "freeCashflow": 7173374976,
-      "pegRatio": 1.12,
-      "priceToBook": 12.741549,
+      "pegRatio": 1.21,
+      "priceToBook": 12.530407,
       "beta": 2.399,
       "dividendYield": null,
-      "enterpriseValue": 753846124544,
-      "enterpriseToRevenue": 20.127,
-      "enterpriseToEbitda": 101.46,
+      "enterpriseValue": 813167345664,
+      "enterpriseToRevenue": 21.711,
+      "enterpriseToEbitda": 109.444,
       "heldPercentInsiders": 0.00412,
-      "heldPercentInstitutions": 0.72099,
+      "heldPercentInstitutions": 0.72102,
       "shortPercentOfFloat": 0.0223,
       "shortRatio": 0.9,
       "sharesShort": 36142867,
@@ -4091,28 +4095,32 @@
         {
           "d": "2026-05-26",
           "c": 503.89
+        },
+        {
+          "d": "2026-05-27",
+          "c": 495.54
         }
       ]
     },
     "intel": {
       "symbol": "INTC",
       "currency": "USD",
-      "price": 123.52,
-      "previousClose": 119.84,
-      "change": 3.6800003,
-      "changePercent": 3.0707614,
-      "marketCap": 620811517952,
+      "price": 121.77,
+      "previousClose": 123.52,
+      "change": -1.75,
+      "changePercent": -1.4167746,
+      "marketCap": 612015996928,
       "trailingPE": null,
-      "forwardPE": 80.222374,
+      "forwardPE": 79.0858,
       "fiftyTwoWeekHigh": 132.75,
       "fiftyTwoWeekLow": 18.97,
-      "targetMean": 87.8619,
+      "targetMean": 87.76098,
       "targetHigh": 150,
       "targetLow": 20.4,
-      "targetMedian": 84,
-      "recommendationMean": 2.64583,
+      "targetMedian": 83,
+      "recommendationMean": 2.6875,
       "recommendationKey": "hold",
-      "numberOfAnalystOpinions": 42,
+      "numberOfAnalystOpinions": 41,
       "profitMargin": -0.05904,
       "grossMargin": 0.372,
       "operatingMargin": 0.06879,
@@ -4124,14 +4132,14 @@
       "totalCash": 32789000192,
       "freeCashflow": -8301250048,
       "pegRatio": 1.36,
-      "priceToBook": 5.569734,
+      "priceToBook": 5.4908237,
       "beta": 2.19,
       "dividendYield": null,
-      "enterpriseValue": 628152860672,
-      "enterpriseToRevenue": 11.684,
-      "enterpriseToEbitda": 44.317,
+      "enterpriseValue": 646648496128,
+      "enterpriseToRevenue": 12.028,
+      "enterpriseToEbitda": 45.622,
       "heldPercentInsiders": 0.1472,
-      "heldPercentInstitutions": 0.64002,
+      "heldPercentInstitutions": 0.64,
       "shortPercentOfFloat": 0.0276,
       "shortRatio": 1.04,
       "sharesShort": 138829000,
@@ -6137,21 +6145,25 @@
         {
           "d": "2026-05-26",
           "c": 123.52
+        },
+        {
+          "d": "2026-05-27",
+          "c": 121.77
         }
       ]
     },
     "broadcom": {
       "symbol": "AVGO",
       "currency": "USD",
-      "price": 422.01,
-      "previousClose": 414.14,
-      "change": 7.869995,
-      "changePercent": 1.9003223,
-      "marketCap": 1998077427712,
-      "trailingPE": 82.10312,
-      "forwardPE": 23.112387,
+      "price": 421.86,
+      "previousClose": 422.01,
+      "change": -0.15002441,
+      "changePercent": -0.035549965,
+      "marketCap": 1997367148544,
+      "trailingPE": 81.91456,
+      "forwardPE": 23.056364,
       "fiftyTwoWeekHigh": 442.36,
-      "fiftyTwoWeekLow": 231.13,
+      "fiftyTwoWeekLow": 234.43,
       "targetMean": 480.49054,
       "targetHigh": 630,
       "targetLow": 215.88,
@@ -6169,13 +6181,13 @@
       "totalDebt": 66056998912,
       "totalCash": 14174000128,
       "freeCashflow": 25503750144,
-      "pegRatio": 0.9,
-      "priceToBook": 25.02283,
+      "pegRatio": 0.92,
+      "priceToBook": 25.013933,
       "beta": 1.44,
-      "dividendYield": 0.0063,
-      "enterpriseValue": 2012698509312,
-      "enterpriseToRevenue": 29.476,
-      "enterpriseToEbitda": 54.079,
+      "dividendYield": 0.0062,
+      "enterpriseValue": 2049960312832,
+      "enterpriseToRevenue": 30.022,
+      "enterpriseToEbitda": 55.08,
       "heldPercentInsiders": 0.01949,
       "heldPercentInstitutions": 0.80160004,
       "shortPercentOfFloat": 0.011,
@@ -8183,26 +8195,30 @@
         {
           "d": "2026-05-26",
           "c": 422.01
+        },
+        {
+          "d": "2026-05-27",
+          "c": 421.86
         }
       ]
     },
     "marvell": {
       "symbol": "MRVL",
       "currency": "USD",
-      "price": 208.26,
-      "previousClose": 196.33,
-      "change": 11.929993,
-      "changePercent": 6.0765004,
-      "marketCap": 182342696960,
-      "trailingPE": 68.05882,
-      "forwardPE": 37.64955,
-      "fiftyTwoWeekHigh": 217.45,
+      "price": 198.7,
+      "previousClose": 208.26,
+      "change": -9.559998,
+      "changePercent": -4.590415,
+      "marketCap": 173972406272,
+      "trailingPE": 64.93464,
+      "forwardPE": 35.92128,
+      "fiftyTwoWeekHigh": 218.2599,
       "fiftyTwoWeekLow": 58.61,
-      "targetMean": 151.67664,
-      "targetHigh": 225,
-      "targetLow": 85,
-      "targetMedian": 139.5,
-      "recommendationMean": 1.5,
+      "targetMean": 162.02663,
+      "targetHigh": 300,
+      "targetLow": 105,
+      "targetMedian": 147,
+      "recommendationMean": 1.45455,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 40,
       "profitMargin": 0.32584,
@@ -8216,14 +8232,14 @@
       "totalCash": 2638799872,
       "freeCashflow": 1442787456,
       "pegRatio": 2.3,
-      "priceToBook": 12.332563,
+      "priceToBook": 11.766448,
       "beta": 2.251,
       "dividendYield": 0.0011999999,
-      "enterpriseValue": 173802815488,
-      "enterpriseToRevenue": 21.209,
-      "enterpriseToEbitda": 66.097,
+      "enterpriseValue": 184233213952,
+      "enterpriseToRevenue": 22.482,
+      "enterpriseToEbitda": 70.064,
       "heldPercentInsiders": 0.0074400003,
-      "heldPercentInstitutions": 0.85323995,
+      "heldPercentInstitutions": 0.85372,
       "shortPercentOfFloat": 0.0381,
       "shortRatio": 0.93,
       "sharesShort": 28296571,
@@ -10229,19 +10245,23 @@
         {
           "d": "2026-05-26",
           "c": 208.26
+        },
+        {
+          "d": "2026-05-27",
+          "c": 198.7
         }
       ]
     },
     "alchip": {
       "symbol": "3661.TW",
       "currency": "TWD",
-      "price": 4640,
-      "previousClose": 4900,
-      "change": -260,
-      "changePercent": -5.3061223,
-      "marketCap": 380903751680,
-      "trailingPE": 68.965515,
-      "forwardPE": 26.079956,
+      "price": 4500,
+      "previousClose": 4640,
+      "change": -140,
+      "changePercent": -3.0172412,
+      "marketCap": 369410965504,
+      "trailingPE": 66.666664,
+      "forwardPE": 25.29306,
       "fiftyTwoWeekHigh": 5640,
       "fiftyTwoWeekLow": 2480,
       "targetMean": 5733.2144,
@@ -10262,24 +10282,20 @@
       "totalCash": 39458451456,
       "freeCashflow": -800079488,
       "pegRatio": null,
-      "priceToBook": 8.766924,
+      "priceToBook": 8.502405,
       "beta": 1.167,
-      "dividendYield": 0.007900001,
-      "enterpriseValue": 339204243456,
-      "enterpriseToRevenue": 13.773,
-      "enterpriseToEbitda": 44.316,
+      "dividendYield": 0.0082,
+      "enterpriseValue": 327789477888,
+      "enterpriseToRevenue": 13.31,
+      "enterpriseToEbitda": 42.825,
       "heldPercentInsiders": 0.03619,
-      "heldPercentInstitutions": 0.41826,
+      "heldPercentInstitutions": 0.41791,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 2905
-        },
         {
           "d": "2024-05-28",
           "c": 2935
@@ -12207,19 +12223,23 @@
         {
           "d": "2026-05-26",
           "c": 4640
+        },
+        {
+          "d": "2026-05-27",
+          "c": 4500
         }
       ]
     },
     "guc": {
       "symbol": "3443.TW",
       "currency": "TWD",
-      "price": 5285,
-      "previousClose": 5310,
-      "change": -25,
-      "changePercent": -0.4708098,
-      "marketCap": 708248141824,
-      "trailingPE": 188.68262,
-      "forwardPE": 59.49859,
+      "price": 5100,
+      "previousClose": 5285,
+      "change": -185,
+      "changePercent": -3.500473,
+      "marketCap": 683456069632,
+      "trailingPE": 181.81819,
+      "forwardPE": 57.415855,
       "fiftyTwoWeekHigh": 5950,
       "fiftyTwoWeekLow": 1030,
       "targetMean": 4818.75,
@@ -12240,24 +12260,20 @@
       "totalCash": 9761644544,
       "freeCashflow": -1009509888,
       "pegRatio": 0.5,
-      "priceToBook": 48.563763,
+      "priceToBook": 46.863804,
       "beta": 1.653,
-      "dividendYield": 0.0038,
-      "enterpriseValue": 698782777344,
-      "enterpriseToRevenue": 18.12,
-      "enterpriseToEbitda": 132.546,
+      "dividendYield": 0.0039,
+      "enterpriseValue": 673990770688,
+      "enterpriseToRevenue": 17.477,
+      "enterpriseToEbitda": 127.843,
       "heldPercentInsiders": 0.40276,
-      "heldPercentInstitutions": 0.31505,
+      "heldPercentInstitutions": 0.31517,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 1495
-        },
         {
           "d": "2024-05-28",
           "c": 1530
@@ -14185,25 +14201,29 @@
         {
           "d": "2026-05-26",
           "c": 5285
+        },
+        {
+          "d": "2026-05-27",
+          "c": 5100
         }
       ]
     },
     "mediatek": {
       "symbol": "2454.TW",
       "currency": "TWD",
-      "price": 4265,
-      "previousClose": 4245,
-      "change": 20,
-      "changePercent": 0.47114253,
-      "marketCap": 6807409917952,
-      "trailingPE": 64.51369,
-      "forwardPE": 36.08144,
-      "fiftyTwoWeekHigh": 4440,
+      "price": 4640,
+      "previousClose": 4265,
+      "change": 375,
+      "changePercent": 8.792498,
+      "marketCap": 7405951254528,
+      "trailingPE": 70.420395,
+      "forwardPE": 39.253902,
+      "fiftyTwoWeekHigh": 4690,
       "fiftyTwoWeekLow": 1130,
-      "targetMean": 3589.3914,
+      "targetMean": 3680.6956,
       "targetHigh": 5922,
       "targetLow": 1751,
-      "targetMedian": 3400,
+      "targetMedian": 3500,
       "recommendationMean": 1.43478,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 23,
@@ -14217,25 +14237,21 @@
       "totalDebt": 26086395904,
       "totalCash": 194710732800,
       "freeCashflow": 73559375872,
-      "pegRatio": 1.88,
-      "priceToBook": 17.442335,
+      "pegRatio": 2.07,
+      "priceToBook": 18.975952,
       "beta": 1.626,
-      "dividendYield": 0.0125,
-      "enterpriseValue": 6646951051264,
-      "enterpriseToRevenue": 11.232,
-      "enterpriseToEbitda": 56.309,
+      "dividendYield": 0.0115,
+      "enterpriseValue": 7245492387840,
+      "enterpriseToRevenue": 12.243,
+      "enterpriseToEbitda": 61.38,
       "heldPercentInsiders": 0.081,
-      "heldPercentInstitutions": 0.45763,
+      "heldPercentInstitutions": 0.45663,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 1285
-        },
         {
           "d": "2024-05-28",
           "c": 1310
@@ -16163,23 +16179,27 @@
         {
           "d": "2026-05-26",
           "c": 4265
+        },
+        {
+          "d": "2026-05-27",
+          "c": 4640
         }
       ]
     },
     "micron": {
       "symbol": "MU",
       "currency": "USD",
-      "price": 895.88,
-      "previousClose": 751,
-      "change": 144.88,
-      "changePercent": 19.291613,
-      "marketCap": 1010314379264,
-      "trailingPE": 42.298393,
-      "forwardPE": 8.616474,
-      "fiftyTwoWeekHigh": 916.75,
+      "price": 928.41,
+      "previousClose": 895.88,
+      "change": 32.52997,
+      "changePercent": 3.6310632,
+      "marketCap": 1046999531520,
+      "trailingPE": 43.73104,
+      "forwardPE": 8.861931,
+      "fiftyTwoWeekHigh": 956.16,
       "fiftyTwoWeekLow": 92.22,
-      "targetMean": 613.225,
-      "targetHigh": 1100,
+      "targetMean": 652.975,
+      "targetHigh": 1625,
       "targetLow": 249,
       "targetMedian": 550,
       "recommendationMean": 1.47727,
@@ -16195,15 +16215,15 @@
       "totalDebt": 10798000128,
       "totalCash": 14588999680,
       "freeCashflow": 2893499904,
-      "pegRatio": 0.26,
-      "priceToBook": 13.94648,
+      "pegRatio": 0.31,
+      "priceToBook": 14.452885,
       "beta": 1.919,
-      "dividendYield": 0.0008,
-      "enterpriseValue": 843137286144,
-      "enterpriseToRevenue": 14.507,
-      "enterpriseToEbitda": 22.909,
+      "dividendYield": 0.0007,
+      "enterpriseValue": 1006523383808,
+      "enterpriseToRevenue": 17.318,
+      "enterpriseToEbitda": 27.349,
       "heldPercentInsiders": 0.00265,
-      "heldPercentInstitutions": 0.81276,
+      "heldPercentInstitutions": 0.81278,
       "shortPercentOfFloat": 0.033099998,
       "shortRatio": 0.84,
       "sharesShort": 37273548,
@@ -18209,20 +18229,24 @@
         {
           "d": "2026-05-26",
           "c": 895.88
+        },
+        {
+          "d": "2026-05-27",
+          "c": 928.41
         }
       ]
     },
     "skhynix": {
       "symbol": "000660.KS",
       "currency": "KRW",
-      "price": 2052000,
-      "previousClose": 1941000,
-      "change": 111000,
-      "changePercent": 5.718702,
-      "marketCap": 1456622320746496,
+      "price": 2243000,
+      "previousClose": 2052000,
+      "change": 191000,
+      "changePercent": 9.307993,
+      "marketCap": 1592204506169344,
       "trailingPE": null,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 1995000,
+      "fiftyTwoWeekHigh": 2087000,
       "fiftyTwoWeekLow": 0,
       "targetMean": 2076603.1,
       "targetHigh": 4000000,
@@ -18241,25 +18265,21 @@
       "totalDebt": 21832415576064,
       "totalCash": 54361531088896,
       "freeCashflow": 47644768468992,
-      "pegRatio": 2.74,
+      "pegRatio": 2.9,
       "priceToBook": null,
       "beta": 2.027,
-      "dividendYield": 0.0015,
-      "enterpriseValue": 1420985098043392,
-      "enterpriseToRevenue": 8.508,
-      "enterpriseToEbitda": 11.222,
+      "dividendYield": 0.0013,
+      "enterpriseValue": 1556269856980992,
+      "enterpriseToRevenue": 9.318,
+      "enterpriseToEbitda": 12.29,
       "heldPercentInsiders": 0.20716,
-      "heldPercentInstitutions": 0.44966,
+      "heldPercentInstitutions": 0.44974998,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 201500
-        },
         {
           "d": "2024-05-28",
           "c": 202500
@@ -20191,22 +20211,26 @@
         {
           "d": "2026-05-26",
           "c": 2052000
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2243000
         }
       ]
     },
     "samsung": {
       "symbol": "005930.KS",
       "currency": "KRW",
-      "price": 299000,
-      "previousClose": 292500,
-      "change": 6500,
-      "changePercent": 2.2222223,
-      "marketCap": 1963402423435264,
+      "price": 307000,
+      "previousClose": 299000,
+      "change": 8000,
+      "changePercent": 2.6755853,
+      "marketCap": 2015934973739008,
       "trailingPE": null,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 300500,
+      "fiftyTwoWeekHigh": 302000,
       "fiftyTwoWeekLow": 0,
-      "targetMean": 350505.9,
+      "targetMean": 361046.47,
       "targetHigh": 590000,
       "targetLow": 205000,
       "targetMedian": 340000,
@@ -20226,22 +20250,18 @@
       "pegRatio": 0.17,
       "priceToBook": null,
       "beta": 1.327,
-      "dividendYield": 0.005,
-      "enterpriseValue": 1865436769550336,
-      "enterpriseToRevenue": 4.804,
-      "enterpriseToEbitda": 13.265,
+      "dividendYield": 0.0047999998,
+      "enterpriseValue": 1918196282032128,
+      "enterpriseToRevenue": 4.939,
+      "enterpriseToEbitda": 13.64,
       "heldPercentInsiders": 0.0967,
-      "heldPercentInstitutions": 0.48654,
+      "heldPercentInstitutions": 0.4864,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 77200
-        },
         {
           "d": "2024-05-28",
           "c": 77600
@@ -22173,19 +22193,23 @@
         {
           "d": "2026-05-26",
           "c": 299000
+        },
+        {
+          "d": "2026-05-27",
+          "c": 307000
         }
       ]
     },
     "nanya": {
       "symbol": "2408.TW",
       "currency": "TWD",
-      "price": 303.5,
-      "previousClose": 296,
-      "change": 7.5,
-      "changePercent": 2.5337837,
-      "marketCap": 940433539072,
-      "trailingPE": 145.21532,
-      "forwardPE": 5.6379137,
+      "price": 312,
+      "previousClose": 303.5,
+      "change": 8.5,
+      "changePercent": 2.800659,
+      "marketCap": 966771867648,
+      "trailingPE": 149.2823,
+      "forwardPE": 5.7958126,
       "fiftyTwoWeekHigh": 353,
       "fiftyTwoWeekLow": 40.2,
       "targetMean": 321.0909,
@@ -22206,24 +22230,20 @@
       "totalCash": 86281011200,
       "freeCashflow": 34812899328,
       "pegRatio": null,
-      "priceToBook": 5.125131,
+      "priceToBook": 5.2686687,
       "beta": 1.692,
-      "dividendYield": 0.0044,
-      "enterpriseValue": 924698279936,
-      "enterpriseToRevenue": 8.524,
-      "enterpriseToEbitda": 18.042,
+      "dividendYield": 0.0043,
+      "enterpriseValue": 902838419456,
+      "enterpriseToRevenue": 8.322,
+      "enterpriseToEbitda": 17.616,
       "heldPercentInsiders": 0.54453,
-      "heldPercentInstitutions": 0.07778,
+      "heldPercentInstitutions": 0.07779,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 64.8
-        },
         {
           "d": "2024-05-28",
           "c": 66.5
@@ -24151,27 +24171,31 @@
         {
           "d": "2026-05-26",
           "c": 303.5
+        },
+        {
+          "d": "2026-05-27",
+          "c": 312
         }
       ]
     },
     "winbond": {
       "symbol": "2344.TW",
       "currency": "TWD",
-      "price": 141,
-      "previousClose": 128.5,
-      "change": 12.5,
-      "changePercent": 9.727626,
-      "marketCap": 634500022272,
-      "trailingPE": 162.06897,
-      "forwardPE": 6.1781325,
-      "fiftyTwoWeekHigh": 141,
+      "price": 155,
+      "previousClose": 141,
+      "change": 14,
+      "changePercent": 9.929078,
+      "marketCap": 697500041216,
+      "trailingPE": 176.13637,
+      "forwardPE": 6.7915645,
+      "fiftyTwoWeekHigh": 155,
       "fiftyTwoWeekLow": 16.5,
-      "targetMean": 146,
+      "targetMean": 152.66667,
       "targetHigh": 200,
       "targetLow": 100,
-      "targetMedian": 141,
-      "recommendationMean": 1.83333,
-      "recommendationKey": "buy",
+      "targetMedian": 159,
+      "recommendationMean": null,
+      "recommendationKey": "none",
       "numberOfAnalystOpinions": 6,
       "profitMargin": 0.14087,
       "grossMargin": 0.43179,
@@ -24180,28 +24204,24 @@
       "earningsGrowthYoY": null,
       "returnOnEquity": 0.12928,
       "returnOnAssets": 0.057919998,
-      "totalDebt": 77390667776,
-      "totalCash": 37853024256,
-      "freeCashflow": -11806590976,
+      "totalDebt": 76229615616,
+      "totalCash": 37834711040,
+      "freeCashflow": -10663853056,
       "pegRatio": null,
-      "priceToBook": 6.1126285,
+      "priceToBook": 5.9794765,
       "beta": 1.602,
-      "dividendYield": 0.0034999999,
-      "enterpriseValue": 758839050240,
-      "enterpriseToRevenue": 7.048,
-      "enterpriseToEbitda": 24.499,
+      "dividendYield": 0.0032,
+      "enterpriseValue": 742137462784,
+      "enterpriseToRevenue": 6.893,
+      "enterpriseToEbitda": 23.956,
       "heldPercentInsiders": 0.31503,
-      "heldPercentInstitutions": 0.16439,
+      "heldPercentInstitutions": 0.16442,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 26
-        },
         {
           "d": "2024-05-28",
           "c": 26.45
@@ -26129,19 +26149,23 @@
         {
           "d": "2026-05-26",
           "c": 141
+        },
+        {
+          "d": "2026-05-27",
+          "c": 155
         }
       ]
     },
     "tsmc": {
       "symbol": "2330.TW",
       "currency": "TWD",
-      "price": 2270,
-      "previousClose": 2310,
-      "change": -40,
-      "changePercent": -1.7316017,
-      "marketCap": 58866477826048,
-      "trailingPE": 30.863358,
-      "forwardPE": 18.509712,
+      "price": 2300,
+      "previousClose": 2270,
+      "change": 30,
+      "changePercent": 1.3215859,
+      "marketCap": 59644449914880,
+      "trailingPE": 31.25,
+      "forwardPE": 18.759914,
       "fiftyTwoWeekHigh": 2345,
       "fiftyTwoWeekLow": 946,
       "targetMean": 2589.5757,
@@ -26161,25 +26185,21 @@
       "totalDebt": 1094369804288,
       "totalCash": 3383596154880,
       "freeCashflow": 719158444032,
-      "pegRatio": 1.11,
-      "priceToBook": 9.992693,
+      "pegRatio": 1.12,
+      "priceToBook": 10.124755,
       "beta": 1.264,
-      "dividendYield": 0.0106,
-      "enterpriseValue": 56618683203584,
-      "enterpriseToRevenue": 13.796,
-      "enterpriseToEbitda": 19.824,
+      "dividendYield": 0.0104,
+      "enterpriseValue": 57396655292416,
+      "enterpriseToRevenue": 13.986,
+      "enterpriseToEbitda": 20.097,
       "heldPercentInsiders": 0.00022,
-      "heldPercentInstitutions": 0.433,
+      "heldPercentInstitutions": 0.43295,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 869
-        },
         {
           "d": "2024-05-28",
           "c": 865
@@ -28107,25 +28127,29 @@
         {
           "d": "2026-05-26",
           "c": 2270
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2300
         }
       ]
     },
     "asml": {
       "symbol": "ASML",
       "currency": "USD",
-      "price": 1632.03,
-      "previousClose": 1632.9,
-      "change": -0.8699951,
-      "changePercent": -0.053279143,
-      "marketCap": 629013217280,
-      "trailingPE": 54.310486,
-      "forwardPE": 34.25997,
+      "price": 1597.87,
+      "previousClose": 1632.03,
+      "change": -34.160034,
+      "changePercent": -2.093101,
+      "marketCap": 615847297024,
+      "trailingPE": 53.20912,
+      "forwardPE": 33.559883,
       "fiftyTwoWeekHigh": 1653.53,
       "fiftyTwoWeekLow": 683.48,
-      "targetMean": 1664.1495,
-      "targetHigh": 2002.56,
-      "targetLow": 900.20953,
-      "targetMedian": 1732.6915,
+      "targetMean": 1663.5687,
+      "targetHigh": 2001.8611,
+      "targetLow": 899.8953,
+      "targetMedian": 1732.0867,
       "recommendationMean": 1.45455,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 15,
@@ -28140,12 +28164,12 @@
       "totalCash": 8376300032,
       "freeCashflow": 8243274752,
       "pegRatio": 2.45,
-      "priceToBook": 1445.4092,
+      "priceToBook": 1415.1553,
       "beta": 1.373,
       "dividendYield": 0.0054,
-      "enterpriseValue": 623648964608,
-      "enterpriseToRevenue": 18.51,
-      "enterpriseToEbitda": 49.089,
+      "enterpriseValue": 623313682432,
+      "enterpriseToRevenue": 18.5,
+      "enterpriseToEbitda": 49.063,
       "heldPercentInsiders": 0.00013,
       "heldPercentInstitutions": 0.19548,
       "shortPercentOfFloat": 0.0019,
@@ -30153,22 +30177,26 @@
         {
           "d": "2026-05-26",
           "c": 1632.03
+        },
+        {
+          "d": "2026-05-27",
+          "c": 1597.87
         }
       ]
     },
     "amat": {
       "symbol": "AMAT",
       "currency": "USD",
-      "price": 454.89,
-      "previousClose": 432.16,
-      "change": 22.730011,
-      "changePercent": 5.259629,
-      "marketCap": 361164210176,
-      "trailingPE": 42.79304,
-      "forwardPE": 28.209322,
-      "fiftyTwoWeekHigh": 456.77,
+      "price": 448.25,
+      "previousClose": 454.89,
+      "change": -6.6400146,
+      "changePercent": -1.4596967,
+      "marketCap": 355892297728,
+      "trailingPE": 42.128757,
+      "forwardPE": 27.721638,
+      "fiftyTwoWeekHigh": 462.4,
       "fiftyTwoWeekLow": 153.47,
-      "targetMean": 509.62857,
+      "targetMean": 510.77142,
       "targetHigh": 575,
       "targetLow": 358,
       "targetMedian": 520,
@@ -30185,20 +30213,20 @@
       "totalDebt": 7267999744,
       "totalCash": 8240999936,
       "freeCashflow": 3040375040,
-      "pegRatio": 1.47,
-      "priceToBook": 15.105599,
+      "pegRatio": 1.54,
+      "priceToBook": 14.885103,
       "beta": 1.654,
-      "dividendYield": 0.0049,
-      "enterpriseValue": 342144516096,
-      "enterpriseToRevenue": 11.788,
-      "enterpriseToEbitda": 36.889,
+      "dividendYield": 0.0047,
+      "enterpriseValue": 360191197184,
+      "enterpriseToRevenue": 12.41,
+      "enterpriseToEbitda": 38.835,
       "heldPercentInsiders": 0.00306,
-      "heldPercentInstitutions": 0.85116,
+      "heldPercentInstitutions": 0.8511,
       "shortPercentOfFloat": 0.0201,
       "shortRatio": 2.77,
       "sharesShort": 15898806,
-      "insiderNetTxnCount": 12,
-      "insiderNetShares": 357216,
+      "insiderNetTxnCount": 11,
+      "insiderNetShares": 356948,
       "history": [
         {
           "d": "2024-05-28",
@@ -32199,20 +32227,24 @@
         {
           "d": "2026-05-26",
           "c": 454.89
+        },
+        {
+          "d": "2026-05-27",
+          "c": 448.25
         }
       ]
     },
     "lam": {
       "symbol": "LRCX",
       "currency": "USD",
-      "price": 322.68,
-      "previousClose": 305.35,
-      "change": 17.329987,
-      "changePercent": 5.67545,
-      "marketCap": 403534249984,
-      "trailingPE": 61.113632,
-      "forwardPE": 40.68376,
-      "fiftyTwoWeekHigh": 323.98,
+      "price": 318.93,
+      "previousClose": 322.68,
+      "change": -3.75,
+      "changePercent": -1.1621422,
+      "marketCap": 398844592128,
+      "trailingPE": 60.289223,
+      "forwardPE": 40.210957,
+      "fiftyTwoWeekHigh": 333.33,
       "fiftyTwoWeekLow": 79.49,
       "targetMean": 312.125,
       "targetHigh": 385,
@@ -32231,15 +32263,15 @@
       "totalDebt": 3734479104,
       "totalCash": 4750936064,
       "freeCashflow": 4352341504,
-      "pegRatio": 1.78,
-      "priceToBook": 38.123817,
+      "pegRatio": 1.88,
+      "priceToBook": 37.680767,
       "beta": 1.819,
-      "dividendYield": 0.0034,
-      "enterpriseValue": 380845391872,
-      "enterpriseToRevenue": 17.565,
-      "enterpriseToEbitda": 48.529,
+      "dividendYield": 0.0032,
+      "enterpriseValue": 402517786624,
+      "enterpriseToRevenue": 18.565,
+      "enterpriseToEbitda": 51.291,
       "heldPercentInsiders": 0.0027599998,
-      "heldPercentInstitutions": 0.88136,
+      "heldPercentInstitutions": 0.88128996,
       "shortPercentOfFloat": 0.0255,
       "shortRatio": 3.06,
       "sharesShort": 28556454,
@@ -34245,20 +34277,24 @@
         {
           "d": "2026-05-26",
           "c": 322.68
+        },
+        {
+          "d": "2026-05-27",
+          "c": 318.93
         }
       ]
     },
     "kla": {
       "symbol": "KLAC",
       "currency": "USD",
-      "price": 2011.39,
-      "previousClose": 1888.38,
-      "change": 123.01001,
-      "changePercent": 6.5140495,
-      "marketCap": 262742884352,
-      "trailingPE": 56.96375,
-      "forwardPE": 40.344986,
-      "fiftyTwoWeekHigh": 2022.8099,
+      "price": 1957.19,
+      "previousClose": 2011.39,
+      "change": -54.200073,
+      "changePercent": -2.6946576,
+      "marketCap": 255662866432,
+      "trailingPE": 55.28785,
+      "forwardPE": 39.257828,
+      "fiftyTwoWeekHigh": 2060.08,
       "fiftyTwoWeekLow": 740.44,
       "targetMean": 1855.138,
       "targetHigh": 2100,
@@ -34277,15 +34313,15 @@
       "totalDebt": 6145359872,
       "totalCash": 4957938176,
       "freeCashflow": 2890187008,
-      "pegRatio": 1.98,
-      "priceToBook": 45.092365,
+      "pegRatio": 2.11,
+      "priceToBook": 43.87728,
       "beta": 1.501,
-      "dividendYield": 0.0049,
-      "enterpriseValue": 247861821440,
-      "enterpriseToRevenue": 18.926,
-      "enterpriseToEbitda": 42.368,
+      "dividendYield": 0.0046,
+      "enterpriseValue": 263930314752,
+      "enterpriseToRevenue": 20.152,
+      "enterpriseToEbitda": 45.115,
       "heldPercentInsiders": 0.00097000005,
-      "heldPercentInstitutions": 0.93768,
+      "heldPercentInstitutions": 0.93763,
       "shortPercentOfFloat": 0.0272,
       "shortRatio": 3.46,
       "sharesShort": 3184475,
@@ -36291,20 +36327,24 @@
         {
           "d": "2026-05-26",
           "c": 2011.39
+        },
+        {
+          "d": "2026-05-27",
+          "c": 1957.1899
         }
       ]
     },
     "ase": {
       "symbol": "3711.TW",
       "currency": "TWD",
-      "price": 611,
-      "previousClose": 617,
-      "change": -6,
-      "changePercent": -0.97244734,
-      "marketCap": 2681001738240,
-      "trailingPE": 59.901962,
-      "forwardPE": 26.245436,
-      "fiftyTwoWeekHigh": 636,
+      "price": 642,
+      "previousClose": 611,
+      "change": 31,
+      "changePercent": 5.07365,
+      "marketCap": 2817026424832,
+      "trailingPE": 62.879528,
+      "forwardPE": 27.577036,
+      "fiftyTwoWeekHigh": 669,
       "fiftyTwoWeekLow": 133,
       "targetMean": 536.5294,
       "targetHigh": 660,
@@ -36324,24 +36364,20 @@
       "totalCash": 112093282304,
       "freeCashflow": -66127527936,
       "pegRatio": 0.99,
-      "priceToBook": 7.6474414,
+      "priceToBook": 8.035446,
       "beta": 1.404,
-      "dividendYield": 0.0087,
-      "enterpriseValue": 2855748501504,
-      "enterpriseToRevenue": 4.257,
-      "enterpriseToEbitda": 22.712,
+      "dividendYield": 0.0082,
+      "enterpriseValue": 2991790227456,
+      "enterpriseToRevenue": 4.459,
+      "enterpriseToEbitda": 23.794,
       "heldPercentInsiders": 0.24256,
-      "heldPercentInstitutions": 0.35479,
+      "heldPercentInstitutions": 0.35457,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 165.5
-        },
         {
           "d": "2024-05-28",
           "c": 164
@@ -38269,19 +38305,23 @@
         {
           "d": "2026-05-26",
           "c": 611
+        },
+        {
+          "d": "2026-05-27",
+          "c": 642
         }
       ]
     },
     "kyec": {
       "symbol": "2449.TW",
       "currency": "TWD",
-      "price": 338.5,
-      "previousClose": 317,
-      "change": 21.5,
-      "changePercent": 6.7823343,
-      "marketCap": 413899161600,
-      "trailingPE": 52.076923,
-      "forwardPE": 22.305353,
+      "price": 315.5,
+      "previousClose": 338.5,
+      "change": -23,
+      "changePercent": -6.794682,
+      "marketCap": 385776025600,
+      "trailingPE": 48.53846,
+      "forwardPE": 20.789774,
       "fiftyTwoWeekHigh": 364.5,
       "fiftyTwoWeekLow": 92,
       "targetMean": 357.6,
@@ -38302,24 +38342,20 @@
       "totalCash": 14441729024,
       "freeCashflow": -19405438976,
       "pegRatio": null,
-      "priceToBook": 7.604349,
+      "priceToBook": 7.087658,
       "beta": 0.915,
-      "dividendYield": 0.0117999995,
-      "enterpriseValue": 438202466304,
-      "enterpriseToRevenue": 11.59,
-      "enterpriseToEbitda": 24.176,
+      "dividendYield": 0.0127,
+      "enterpriseValue": 410079330304,
+      "enterpriseToRevenue": 10.846,
+      "enterpriseToEbitda": 22.625,
       "heldPercentInsiders": 0.09264,
-      "heldPercentInstitutions": 0.46515,
+      "heldPercentInstitutions": 0.46523,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 90.9
-        },
         {
           "d": "2024-05-28",
           "c": 90
@@ -40247,20 +40283,24 @@
         {
           "d": "2026-05-26",
           "c": 338.5
+        },
+        {
+          "d": "2026-05-27",
+          "c": 315.5
         }
       ]
     },
     "unimicron": {
       "symbol": "3037.TW",
       "currency": "TWD",
-      "price": 1085,
-      "previousClose": 990,
-      "change": 95,
-      "changePercent": 9.59596,
-      "marketCap": 1708353388544,
+      "price": 1080,
+      "previousClose": 1085,
+      "change": -5,
+      "changePercent": -0.4608295,
+      "marketCap": 1700480811008,
       "trailingPE": 249.99998,
-      "forwardPE": 36.823673,
-      "fiftyTwoWeekHigh": 1085,
+      "forwardPE": 36.65398,
+      "fiftyTwoWeekHigh": 1110,
       "fiftyTwoWeekLow": 98.1,
       "targetMean": 942.58826,
       "targetHigh": 1350,
@@ -40280,24 +40320,20 @@
       "totalCash": 60196823040,
       "freeCashflow": -336875136,
       "pegRatio": 1.45,
-      "priceToBook": 15.199271,
+      "priceToBook": 15.129229,
       "beta": 2.155,
       "dividendYield": 0.0014,
-      "enterpriseValue": 1724833464320,
-      "enterpriseToRevenue": 12.445,
-      "enterpriseToEbitda": 64.832,
+      "enterpriseValue": 1716891680768,
+      "enterpriseToRevenue": 12.388,
+      "enterpriseToEbitda": 64.534,
       "heldPercentInsiders": 0.16528,
-      "heldPercentInstitutions": 0.36905998,
+      "heldPercentInstitutions": 0.36851,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 192
-        },
         {
           "d": "2024-05-28",
           "c": 192
@@ -42225,19 +42261,23 @@
         {
           "d": "2026-05-26",
           "c": 1085
+        },
+        {
+          "d": "2026-05-27",
+          "c": 1080
         }
       ]
     },
     "nanyapcb": {
       "symbol": "8046.TW",
       "currency": "TWD",
-      "price": 922,
-      "previousClose": 884,
-      "change": 38,
-      "changePercent": 4.2986426,
-      "marketCap": 595764576256,
-      "trailingPE": 303.2895,
-      "forwardPE": 32.936275,
+      "price": 905,
+      "previousClose": 922,
+      "change": -17,
+      "changePercent": -1.8438177,
+      "marketCap": 584779759616,
+      "trailingPE": 302.6756,
+      "forwardPE": 32.32899,
       "fiftyTwoWeekHigh": 1035,
       "fiftyTwoWeekLow": 97.8,
       "targetMean": 897.4545,
@@ -42251,31 +42291,27 @@
       "grossMargin": 0.1163,
       "operatingMargin": 0.120979995,
       "revenueGrowthYoY": 0.321,
-      "earningsGrowthYoY": 5.344,
+      "earningsGrowthYoY": 5.329,
       "returnOnEquity": 0.06628,
       "returnOnAssets": 0.03314,
       "totalDebt": 1176912000,
       "totalCash": 9795092480,
       "freeCashflow": 3972760320,
       "pegRatio": 11.28,
-      "priceToBook": 12.916965,
-      "beta": null,
+      "priceToBook": 12.520233,
+      "beta": 2.191,
       "dividendYield": 0.0022,
-      "enterpriseValue": 585743007744,
-      "enterpriseToRevenue": 13.656,
-      "enterpriseToEbitda": 58.301,
+      "enterpriseValue": 576161579008,
+      "enterpriseToRevenue": 13.433,
+      "enterpriseToEbitda": 57.35,
       "heldPercentInsiders": 0.65475,
-      "heldPercentInstitutions": 0.07447,
+      "heldPercentInstitutions": 0.074499995,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 188.5
-        },
         {
           "d": "2024-05-28",
           "c": 202
@@ -44203,19 +44239,23 @@
         {
           "d": "2026-05-26",
           "c": 922
+        },
+        {
+          "d": "2026-05-27",
+          "c": 905
         }
       ]
     },
     "amkor": {
       "symbol": "AMKR",
       "currency": "USD",
-      "price": 73.46,
-      "previousClose": 65.75,
-      "change": 7.709999,
-      "changePercent": 11.726234,
-      "marketCap": 18208714752,
-      "trailingPE": 42.21839,
-      "forwardPE": 29.959827,
+      "price": 72.19,
+      "previousClose": 73.46,
+      "change": -1.2699966,
+      "changePercent": -1.7288275,
+      "marketCap": 17893916672,
+      "trailingPE": 41.488506,
+      "forwardPE": 29.441874,
       "fiftyTwoWeekHigh": 79.23,
       "fiftyTwoWeekLow": 17.79,
       "targetMean": 75.5,
@@ -44236,12 +44276,12 @@
       "totalCash": 1848499968,
       "freeCashflow": -47146500,
       "pegRatio": 0.76,
-      "priceToBook": 4.0157437,
+      "priceToBook": 3.9463186,
       "beta": 2.306,
-      "dividendYield": 0.0050999997,
-      "enterpriseValue": 16102232064,
-      "enterpriseToRevenue": 2.277,
-      "enterpriseToEbitda": 13.473,
+      "dividendYield": 0.0045,
+      "enterpriseValue": 18013329408,
+      "enterpriseToRevenue": 2.547,
+      "enterpriseToEbitda": 15.072,
       "heldPercentInsiders": 0.49805,
       "heldPercentInstitutions": 0.51129,
       "shortPercentOfFloat": 0.1205,
@@ -46249,22 +46289,26 @@
         {
           "d": "2026-05-26",
           "c": 73.46
+        },
+        {
+          "d": "2026-05-27",
+          "c": 72.19
         }
       ]
     },
     "cisco": {
       "symbol": "CSCO",
       "currency": "USD",
-      "price": 118.33,
-      "previousClose": 120.41,
-      "change": -2.0800018,
-      "changePercent": -1.7274327,
-      "marketCap": 466389958656,
-      "trailingPE": 39.443333,
-      "forwardPE": 24.816181,
+      "price": 119.67,
+      "previousClose": 118.33,
+      "change": 1.3399963,
+      "changePercent": 1.1324232,
+      "marketCap": 471671472128,
+      "trailingPE": 39.757473,
+      "forwardPE": 25.075329,
       "fiftyTwoWeekHigh": 120.79,
       "fiftyTwoWeekLow": 62.3,
-      "targetMean": 124.45364,
+      "targetMean": 125.40818,
       "targetHigh": 150,
       "targetLow": 84.98,
       "targetMedian": 125,
@@ -46281,15 +46325,15 @@
       "totalDebt": 33001000960,
       "totalCash": 16640000000,
       "freeCashflow": 9288375296,
-      "pegRatio": 1.67,
-      "priceToBook": 9.570527,
+      "pegRatio": 1.64,
+      "priceToBook": 9.678906,
       "beta": 0.912,
-      "dividendYield": 0.0139999995,
-      "enterpriseValue": 490949148672,
-      "enterpriseToRevenue": 8.082,
-      "enterpriseToEbitda": 28.867,
+      "dividendYield": 0.014199999,
+      "enterpriseValue": 482750955520,
+      "enterpriseToRevenue": 7.947,
+      "enterpriseToEbitda": 28.385,
       "heldPercentInsiders": 0.00054000004,
-      "heldPercentInstitutions": 0.82796997,
+      "heldPercentInstitutions": 0.82795995,
       "shortPercentOfFloat": 0.0156,
       "shortRatio": 3.4,
       "sharesShort": 61427135,
@@ -48295,19 +48339,23 @@
         {
           "d": "2026-05-26",
           "c": 118.33
+        },
+        {
+          "d": "2026-05-27",
+          "c": 119.67
         }
       ]
     },
     "arista": {
       "symbol": "ANET",
       "currency": "USD",
-      "price": 158.01,
-      "previousClose": 154.03,
-      "change": 3.98,
-      "changePercent": 2.58391,
-      "marketCap": 198961348608,
-      "trailingPE": 54.298965,
-      "forwardPE": 35.511612,
+      "price": 154.31,
+      "previousClose": 158.01,
+      "change": -3.7,
+      "changePercent": -2.34162,
+      "marketCap": 194302427136,
+      "trailingPE": 53.02749,
+      "forwardPE": 34.680065,
       "fiftyTwoWeekHigh": 179.8,
       "fiftyTwoWeekLow": 83.858,
       "targetMean": 188.19922,
@@ -48328,19 +48376,19 @@
       "totalCash": 12353200128,
       "freeCashflow": 4362237440,
       "pegRatio": 1.98,
-      "priceToBook": 14.752123,
+      "priceToBook": 14.406684,
       "beta": 1.673,
       "dividendYield": null,
-      "enterpriseValue": 181601779712,
-      "enterpriseToRevenue": 18.703,
-      "enterpriseToEbitda": 42.859,
+      "enterpriseValue": 186613399552,
+      "enterpriseToRevenue": 19.219,
+      "enterpriseToEbitda": 44.042,
       "heldPercentInsiders": 0.17271,
-      "heldPercentInstitutions": 0.72816,
+      "heldPercentInstitutions": 0.72817004,
       "shortPercentOfFloat": 0.0176,
       "shortRatio": 2.62,
       "sharesShort": 18382389,
-      "insiderNetTxnCount": -17,
-      "insiderNetShares": -1483700,
+      "insiderNetTxnCount": -18,
+      "insiderNetShares": -1484122,
       "history": [
         {
           "d": "2024-05-28",
@@ -50341,6 +50389,10 @@
         {
           "d": "2026-05-26",
           "c": 158.01
+        },
+        {
+          "d": "2026-05-27",
+          "c": 154.31
         }
       ]
     },
@@ -50348,9 +50400,9 @@
       "symbol": "2345.TW",
       "currency": "TWD",
       "price": 2620,
-      "previousClose": 2540,
-      "change": 80,
-      "changePercent": 3.1496062,
+      "previousClose": 2620,
+      "change": 0,
+      "changePercent": 0,
       "marketCap": 1464339005440,
       "trailingPE": 55.863537,
       "forwardPE": 26.404535,
@@ -50381,17 +50433,13 @@
       "enterpriseToRevenue": 5.149,
       "enterpriseToEbitda": 37.623,
       "heldPercentInsiders": 0.11614,
-      "heldPercentInstitutions": 0.47294998,
+      "heldPercentInstitutions": 0.47269002,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 514
-        },
         {
           "d": "2024-05-28",
           "c": 502
@@ -52319,28 +52367,32 @@
         {
           "d": "2026-05-26",
           "c": 2620
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2620
         }
       ]
     },
     "astera": {
       "symbol": "ALAB",
       "currency": "USD",
-      "price": 318.72,
-      "previousClose": 306.88,
-      "change": 11.839996,
-      "changePercent": 3.8581843,
-      "marketCap": 54631137280,
-      "trailingPE": 216.81633,
-      "forwardPE": 75.76504,
-      "fiftyTwoWeekHigh": 321.99,
+      "price": 325.33,
+      "previousClose": 318.72,
+      "change": 6.6099854,
+      "changePercent": 2.073916,
+      "marketCap": 55764140032,
+      "trailingPE": 221.31291,
+      "forwardPE": 77.336334,
+      "fiftyTwoWeekHigh": 326.9699,
       "fiftyTwoWeekLow": 84.78,
-      "targetMean": 244.09956,
+      "targetMean": 244.96773,
       "targetHigh": 297,
       "targetLow": 155,
-      "targetMedian": 255,
-      "recommendationMean": 1.80769,
+      "targetMedian": 257.5,
+      "recommendationMean": 1.88462,
       "recommendationKey": "buy",
-      "numberOfAnalystOpinions": 23,
+      "numberOfAnalystOpinions": 22,
       "profitMargin": 0.26724002,
       "grossMargin": 0.75988996,
       "operatingMargin": 0.20052,
@@ -52352,19 +52404,19 @@
       "totalCash": 1184473984,
       "freeCashflow": 240004880,
       "pegRatio": null,
-      "priceToBook": 36.542076,
+      "priceToBook": 37.29993,
       "beta": 3.363,
       "dividendYield": null,
-      "enterpriseValue": 51459043328,
-      "enterpriseToRevenue": 51.385,
-      "enterpriseToEbitda": 220.49,
+      "enterpriseValue": 53488513024,
+      "enterpriseToRevenue": 53.411,
+      "enterpriseToEbitda": 229.186,
       "heldPercentInsiders": 0.10873,
       "heldPercentInstitutions": 0.82784,
       "shortPercentOfFloat": 0.1008,
       "shortRatio": 2.29,
       "sharesShort": 13125304,
-      "insiderNetTxnCount": -19,
-      "insiderNetShares": -2160773,
+      "insiderNetTxnCount": -21,
+      "insiderNetShares": -2561569,
       "history": [
         {
           "d": "2024-05-28",
@@ -54365,19 +54417,23 @@
         {
           "d": "2026-05-26",
           "c": 318.72
+        },
+        {
+          "d": "2026-05-27",
+          "c": 325.33
         }
       ]
     },
     "credo": {
       "symbol": "CRDO",
       "currency": "USD",
-      "price": 221.64,
-      "previousClose": 218.41,
-      "change": 3.2299957,
-      "changePercent": 1.4788681,
-      "marketCap": 40881483776,
-      "trailingPE": 122.45304,
-      "forwardPE": 40.18304,
+      "price": 221.23,
+      "previousClose": 221.64,
+      "change": -0.41000366,
+      "changePercent": -0.18498631,
+      "marketCap": 40805859328,
+      "trailingPE": 121.55494,
+      "forwardPE": 40.108707,
       "fiftyTwoWeekHigh": 233.7,
       "fiftyTwoWeekLow": 59.21,
       "targetMean": 209.08556,
@@ -54398,12 +54454,12 @@
       "totalCash": 1301464064,
       "freeCashflow": 172241120,
       "pegRatio": null,
-      "priceToBook": 22.084496,
+      "priceToBook": 22.043642,
       "beta": 3.176,
       "dividendYield": null,
-      "enterpriseValue": 39000522752,
-      "enterpriseToRevenue": 36.513,
-      "enterpriseToEbitda": 111.347,
+      "enterpriseValue": 39596298240,
+      "enterpriseToRevenue": 37.07,
+      "enterpriseToEbitda": 113.048,
       "heldPercentInsiders": 0.10909,
       "heldPercentInstitutions": 0.76603997,
       "shortPercentOfFloat": 0.057800002,
@@ -56411,25 +56467,29 @@
         {
           "d": "2026-05-26",
           "c": 221.64
+        },
+        {
+          "d": "2026-05-27",
+          "c": 221.23
         }
       ]
     },
     "synopsys": {
       "symbol": "SNPS",
       "currency": "USD",
-      "price": 534.56,
-      "previousClose": 524.74,
-      "change": 9.820007,
-      "changePercent": 1.8714044,
-      "marketCap": 102401400832,
-      "trailingPE": 82.11367,
-      "forwardPE": 31.343098,
+      "price": 525.92,
+      "previousClose": 534.56,
+      "change": -8.640015,
+      "changePercent": -1.6162853,
+      "marketCap": 100746297344,
+      "trailingPE": 80.662575,
+      "forwardPE": 30.824448,
       "fiftyTwoWeekHigh": 651.73,
       "fiftyTwoWeekLow": 376.18,
-      "targetMean": 539.6865,
+      "targetMean": 544.9942,
       "targetHigh": 650,
       "targetLow": 403.85,
-      "targetMedian": 540,
+      "targetMedian": 550,
       "recommendationMean": 1.76,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 26,
@@ -56443,15 +56503,15 @@
       "totalDebt": 10868556800,
       "totalCash": 2203482112,
       "freeCashflow": 3096222464,
-      "pegRatio": 3.46,
-      "priceToBook": 3.3500872,
+      "pegRatio": 3.53,
+      "priceToBook": 3.2959402,
       "beta": 1.245,
       "dividendYield": null,
-      "enterpriseValue": 109184507904,
-      "enterpriseToRevenue": 13.635,
-      "enterpriseToEbitda": 67.604,
+      "enterpriseValue": 111065645056,
+      "enterpriseToRevenue": 13.87,
+      "enterpriseToEbitda": 68.769,
       "heldPercentInsiders": 0.029830001,
-      "heldPercentInstitutions": 0.90856004,
+      "heldPercentInstitutions": 0.90855,
       "shortPercentOfFloat": 0.0254,
       "shortRatio": 2.91,
       "sharesShort": 4849368,
@@ -58457,6 +58517,10 @@
         {
           "d": "2026-05-26",
           "c": 534.56
+        },
+        {
+          "d": "2026-05-27",
+          "c": 525.92
         }
       ]
     },
@@ -58509,13 +58573,13 @@
     "m31": {
       "symbol": "6643.TWO",
       "currency": "TWD",
-      "price": 616,
-      "previousClose": 606,
-      "change": 10,
-      "changePercent": 1.6501651,
-      "marketCap": 25923225600,
-      "trailingPE": 362.35294,
-      "forwardPE": 50.958534,
+      "price": 598,
+      "previousClose": 616,
+      "change": -18,
+      "changePercent": -2.922078,
+      "marketCap": 25165729792,
+      "trailingPE": 360.24097,
+      "forwardPE": 49.469486,
       "fiftyTwoWeekHigh": 730,
       "fiftyTwoWeekLow": 371,
       "targetMean": 541.6667,
@@ -58536,12 +58600,12 @@
       "totalCash": 443088000,
       "freeCashflow": -97017000,
       "pegRatio": null,
-      "priceToBook": 16.834282,
+      "priceToBook": 16.342371,
       "beta": 0.593,
-      "dividendYield": 0.0032,
-      "enterpriseValue": 29906388992,
-      "enterpriseToRevenue": 17.164,
-      "enterpriseToEbitda": 390.122,
+      "dividendYield": 0.0033000002,
+      "enterpriseValue": 24565442560,
+      "enterpriseToRevenue": 14.099,
+      "enterpriseToEbitda": 316.92,
       "heldPercentInsiders": 0.39181,
       "heldPercentInstitutions": 0.08422,
       "shortPercentOfFloat": null,
@@ -58550,10 +58614,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 891.6453
-        },
         {
           "d": "2024-05-28",
           "c": 941.6442
@@ -60481,27 +60541,31 @@
         {
           "d": "2026-05-26",
           "c": 616
+        },
+        {
+          "d": "2026-05-27",
+          "c": 598
         }
       ]
     },
     "amphenol": {
       "symbol": "APH",
       "currency": "USD",
-      "price": 139.56,
-      "previousClose": 132.06,
-      "change": 7.5,
-      "changePercent": 5.67924,
-      "marketCap": 171691524096,
-      "trailingPE": 39.988537,
-      "forwardPE": 24.799158,
+      "price": 140.24,
+      "previousClose": 139.56,
+      "change": 0.680008,
+      "changePercent": 0.487251,
+      "marketCap": 172528091136,
+      "trailingPE": 40.29885,
+      "forwardPE": 24.919992,
       "fiftyTwoWeekHigh": 167.04,
-      "fiftyTwoWeekLow": 86.75,
+      "fiftyTwoWeekLow": 87.84,
       "targetMean": 181.72221,
       "targetHigh": 215,
       "targetLow": 135,
       "targetMedian": 180,
-      "recommendationMean": 1.5,
-      "recommendationKey": "strong_buy",
+      "recommendationMean": null,
+      "recommendationKey": "none",
       "numberOfAnalystOpinions": 18,
       "profitMargin": 0.17239,
       "grossMargin": 0.37919998,
@@ -60514,14 +60578,14 @@
       "totalCash": 4583099904,
       "freeCashflow": 3563725056,
       "pegRatio": 1.13,
-      "priceToBook": 12.274406,
+      "priceToBook": 12.334213,
       "beta": 1.297,
-      "dividendYield": 0.0076,
-      "enterpriseValue": 176745267200,
-      "enterpriseToRevenue": 6.823,
-      "enterpriseToEbitda": 21.63,
+      "dividendYield": 0.0072000003,
+      "enterpriseValue": 186808582144,
+      "enterpriseToRevenue": 7.212,
+      "enterpriseToEbitda": 22.862,
       "heldPercentInsiders": 0.00482,
-      "heldPercentInstitutions": 0.97945,
+      "heldPercentInstitutions": 0.97938,
       "shortPercentOfFloat": 0.0117999995,
       "shortRatio": 1.7,
       "sharesShort": 12881938,
@@ -62527,19 +62591,23 @@
         {
           "d": "2026-05-26",
           "c": 139.56
+        },
+        {
+          "d": "2026-05-27",
+          "c": 140.24
         }
       ]
     },
     "te": {
       "symbol": "TEL",
       "currency": "USD",
-      "price": 208.6,
-      "previousClose": 202.78,
-      "change": 5.82001,
-      "changePercent": 2.87011,
-      "marketCap": 60889468928,
-      "trailingPE": 21.307457,
-      "forwardPE": 16.511003,
+      "price": 208.75,
+      "previousClose": 208.6,
+      "change": 0.149994,
+      "changePercent": 0.071905,
+      "marketCap": 60933251072,
+      "trailingPE": 21.344582,
+      "forwardPE": 16.522875,
       "fiftyTwoWeekHigh": 252.56,
       "fiftyTwoWeekLow": 158.09,
       "targetMean": 264.73685,
@@ -62560,14 +62628,14 @@
       "totalCash": 1110000000,
       "freeCashflow": 2322249984,
       "pegRatio": 1.05,
-      "priceToBook": 4.717643,
+      "priceToBook": 4.721035,
       "beta": 1.177,
-      "dividendYield": 0.014400001,
-      "enterpriseValue": 64089628672,
-      "enterpriseToRevenue": 3.428,
-      "enterpriseToEbitda": 13.547,
+      "dividendYield": 0.0139999995,
+      "enterpriseValue": 65788465152,
+      "enterpriseToRevenue": 3.519,
+      "enterpriseToEbitda": 13.906,
       "heldPercentInsiders": 0.00159,
-      "heldPercentInstitutions": 0.96759003,
+      "heldPercentInstitutions": 0.96752,
       "shortPercentOfFloat": 0.028900001,
       "shortRatio": 2.88,
       "sharesShort": 7334684,
@@ -64573,19 +64641,23 @@
         {
           "d": "2026-05-26",
           "c": 208.6
+        },
+        {
+          "d": "2026-05-27",
+          "c": 208.75
         }
       ]
     },
     "lotes": {
       "symbol": "3533.TW",
       "currency": "TWD",
-      "price": 2640,
-      "previousClose": 2585,
-      "change": 55,
-      "changePercent": 2.1276596,
-      "marketCap": 296267907072,
-      "trailingPE": 37.687363,
-      "forwardPE": 20.321774,
+      "price": 2625,
+      "previousClose": 2640,
+      "change": -15,
+      "changePercent": -0.5681818,
+      "marketCap": 294584549376,
+      "trailingPE": 37.45185,
+      "forwardPE": 20.206308,
       "fiftyTwoWeekHigh": 2955,
       "fiftyTwoWeekLow": 1140,
       "targetMean": 2892.7144,
@@ -64606,24 +64678,20 @@
       "totalCash": 14539919360,
       "freeCashflow": 838505280,
       "pegRatio": null,
-      "priceToBook": 7.0658894,
+      "priceToBook": 7.025742,
       "beta": 0.225,
-      "dividendYield": 0.015800001,
-      "enterpriseValue": 284743172096,
-      "enterpriseToRevenue": 8.056,
-      "enterpriseToEbitda": 21.623,
+      "dividendYield": 0.0159,
+      "enterpriseValue": 283059847168,
+      "enterpriseToRevenue": 8.008,
+      "enterpriseToEbitda": 21.495,
       "heldPercentInsiders": 0.25923002,
-      "heldPercentInstitutions": 0.46201,
+      "heldPercentInstitutions": 0.46195,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 1645
-        },
         {
           "d": "2024-05-28",
           "c": 1660
@@ -66551,22 +66619,26 @@
         {
           "d": "2026-05-26",
           "c": 2640
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2625
         }
       ]
     },
     "bizlink": {
       "symbol": "3665.TW",
       "currency": "TWD",
-      "price": 2265,
-      "previousClose": 2385,
-      "change": -120,
-      "changePercent": -5.0314465,
-      "marketCap": 441853968384,
-      "trailingPE": 48.951805,
-      "forwardPE": 21.204733,
+      "price": 2115,
+      "previousClose": 2265,
+      "change": -150,
+      "changePercent": -6.622516,
+      "marketCap": 412592111616,
+      "trailingPE": 45.552444,
+      "forwardPE": 19.800446,
       "fiftyTwoWeekHigh": 3010,
       "fiftyTwoWeekLow": 605.0202,
-      "targetMean": 3032.75,
+      "targetMean": 3053.5833,
       "targetHigh": 3870,
       "targetLow": 1650,
       "targetMedian": 3215,
@@ -66584,24 +66656,20 @@
       "totalCash": 19373268992,
       "freeCashflow": 3060830976,
       "pegRatio": null,
-      "priceToBook": 9.483495,
+      "priceToBook": 8.855449,
       "beta": 0.789,
-      "dividendYield": 0.0046,
-      "enterpriseValue": 440485249024,
-      "enterpriseToRevenue": 5.797,
-      "enterpriseToEbitda": 29.025,
+      "dividendYield": 0.005,
+      "enterpriseValue": 411193376768,
+      "enterpriseToRevenue": 5.411,
+      "enterpriseToEbitda": 27.095,
       "heldPercentInsiders": 0.08611,
-      "heldPercentInstitutions": 0.56243,
+      "heldPercentInstitutions": 0.56149,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 261.4163
-        },
         {
           "d": "2024-05-28",
           "c": 263.3967
@@ -68529,19 +68597,23 @@
         {
           "d": "2026-05-26",
           "c": 2265
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2115
         }
       ]
     },
     "coherent": {
       "symbol": "COHR",
       "currency": "USD",
-      "price": 381.35,
-      "previousClose": 377.57,
-      "change": 3.78,
-      "changePercent": 1.00114,
-      "marketCap": 74607058944,
-      "trailingPE": 180.7346,
-      "forwardPE": 47.10537,
+      "price": 380.18,
+      "previousClose": 381.35,
+      "change": -1.17001,
+      "changePercent": -0.306808,
+      "marketCap": 74378158080,
+      "trailingPE": 181.0381,
+      "forwardPE": 46.960846,
       "fiftyTwoWeekHigh": 413,
       "fiftyTwoWeekLow": 73.66,
       "targetMean": 380.61707,
@@ -68562,14 +68634,14 @@
       "totalCash": 2423729920,
       "freeCashflow": -197631744,
       "pegRatio": 0.92,
-      "priceToBook": 6.9843044,
+      "priceToBook": 6.962876,
       "beta": 2.053,
       "dividendYield": null,
-      "enterpriseValue": 75207622656,
-      "enterpriseToRevenue": 11.391,
-      "enterpriseToEbitda": 57.247,
+      "enterpriseValue": 75947139072,
+      "enterpriseToRevenue": 11.504,
+      "enterpriseToEbitda": 57.81,
       "heldPercentInsiders": 0.045289997,
-      "heldPercentInstitutions": 0.89309996,
+      "heldPercentInstitutions": 0.89311,
       "shortPercentOfFloat": 0.045900002,
       "shortRatio": 1.32,
       "sharesShort": 7665383,
@@ -70575,19 +70647,23 @@
         {
           "d": "2026-05-26",
           "c": 381.35
+        },
+        {
+          "d": "2026-05-27",
+          "c": 380.18
         }
       ]
     },
     "lumentum": {
       "symbol": "LITE",
       "currency": "USD",
-      "price": 910.81,
-      "previousClose": 946.9,
-      "change": -36.090027,
-      "changePercent": -3.8113873,
-      "marketCap": 70861021184,
-      "trailingPE": 160.35388,
-      "forwardPE": 50.319134,
+      "price": 902.31,
+      "previousClose": 910.81,
+      "change": -8.5,
+      "changePercent": -0.9332352,
+      "marketCap": 70199713792,
+      "trailingPE": 159.70088,
+      "forwardPE": 49.849537,
       "fiftyTwoWeekHigh": 1085.68,
       "fiftyTwoWeekLow": 71.04,
       "targetMean": 1104.6777,
@@ -70608,14 +70684,14 @@
       "totalCash": 3172300032,
       "freeCashflow": 93350000,
       "pegRatio": 0.63,
-      "priceToBook": 76.81622,
+      "priceToBook": 76.09935,
       "beta": 1.533,
       "dividendYield": null,
-      "enterpriseValue": 68034129920,
-      "enterpriseToRevenue": 27.341,
-      "enterpriseToEbitda": 133.715,
+      "enterpriseValue": 65446477824,
+      "enterpriseToRevenue": 26.301,
+      "enterpriseToEbitda": 128.629,
       "heldPercentInsiders": 0.00772,
-      "heldPercentInstitutions": 1.02817,
+      "heldPercentInstitutions": 1.02823,
       "shortPercentOfFloat": 0.1342,
       "shortRatio": 1.62,
       "sharesShort": 9431673,
@@ -72621,19 +72697,23 @@
         {
           "d": "2026-05-26",
           "c": 910.81
+        },
+        {
+          "d": "2026-05-27",
+          "c": 902.31
         }
       ]
     },
     "fabrinet": {
       "symbol": "FN",
       "currency": "USD",
-      "price": 680.77,
-      "previousClose": 703.86,
-      "change": -23.09,
-      "changePercent": -3.28048,
-      "marketCap": 24391813120,
-      "trailingPE": 58.636524,
-      "forwardPE": 39.42418,
+      "price": 686.9,
+      "previousClose": 680.77,
+      "change": 6.13,
+      "changePercent": 0.900452,
+      "marketCap": 24611448832,
+      "trailingPE": 59.012028,
+      "forwardPE": 39.779175,
       "fiftyTwoWeekHigh": 748.89,
       "fiftyTwoWeekLow": 224.66,
       "targetMean": 749.1111,
@@ -72654,14 +72734,14 @@
       "totalCash": 945235968,
       "freeCashflow": -79178376,
       "pegRatio": null,
-      "priceToBook": 10.583289,
+      "priceToBook": 10.678586,
       "beta": 1.217,
       "dividendYield": null,
-      "enterpriseValue": 24278308864,
-      "enterpriseToRevenue": 5.733,
-      "enterpriseToEbitda": 50.61,
+      "enterpriseValue": 23451000832,
+      "enterpriseToRevenue": 5.537,
+      "enterpriseToEbitda": 48.886,
       "heldPercentInsiders": 0.00242,
-      "heldPercentInstitutions": 1.13298,
+      "heldPercentInstitutions": 1.13299,
       "shortPercentOfFloat": 0.078600004,
       "shortRatio": 3.16,
       "sharesShort": 2126674,
@@ -74667,19 +74747,23 @@
         {
           "d": "2026-05-26",
           "c": 680.77
+        },
+        {
+          "d": "2026-05-27",
+          "c": 686.9
         }
       ]
     },
     "aaoi": {
       "symbol": "AAOI",
       "currency": "USD",
-      "price": 177.62,
-      "previousClose": 181.49,
-      "change": -3.8700104,
-      "changePercent": -2.1323545,
-      "marketCap": 14252720128,
+      "price": 179.83,
+      "previousClose": 177.62,
+      "change": 2.2100067,
+      "changePercent": 1.2442331,
+      "marketCap": 14430057472,
       "trailingPE": null,
-      "forwardPE": 37.22129,
+      "forwardPE": 37.68441,
       "fiftyTwoWeekHigh": 233.67,
       "fiftyTwoWeekLow": 15.06,
       "targetMean": 151.3,
@@ -74700,14 +74784,14 @@
       "totalCash": 439704992,
       "freeCashflow": -445583264,
       "pegRatio": 0.78,
-      "priceToBook": 12.682613,
+      "priceToBook": 12.840414,
       "beta": 3.759,
       "dividendYield": null,
-      "enterpriseValue": 14403977216,
-      "enterpriseToRevenue": 28.41,
-      "enterpriseToEbitda": -524.62,
+      "enterpriseValue": 14093436928,
+      "enterpriseToRevenue": 27.798,
+      "enterpriseToEbitda": -513.31,
       "heldPercentInsiders": 0.1087,
-      "heldPercentInstitutions": 0.68383,
+      "heldPercentInstitutions": 0.68382,
       "shortPercentOfFloat": 0.1314,
       "shortRatio": 0.84,
       "sharesShort": 10132671,
@@ -76713,19 +76797,23 @@
         {
           "d": "2026-05-26",
           "c": 177.62
+        },
+        {
+          "d": "2026-05-27",
+          "c": 179.83
         }
       ]
     },
     "supermicro": {
       "symbol": "SMCI",
       "currency": "USD",
-      "price": 37.1,
-      "previousClose": 35.58,
-      "change": 1.5199966,
-      "changePercent": 4.2720532,
-      "marketCap": 22312626176,
-      "trailingPE": 19.526316,
-      "forwardPE": 11.521631,
+      "price": 38.19,
+      "previousClose": 37.1,
+      "change": 1.0900002,
+      "changePercent": 2.938006,
+      "marketCap": 22968172544,
+      "trailingPE": 20.1,
+      "forwardPE": 11.860137,
       "fiftyTwoWeekHigh": 62.36,
       "fiftyTwoWeekLow": 19.48,
       "targetMean": 37.125,
@@ -76746,14 +76834,14 @@
       "totalCash": 1305032960,
       "freeCashflow": -7448383488,
       "pegRatio": 0.91,
-      "priceToBook": 2.9451456,
+      "priceToBook": 3.0316741,
       "beta": 1.684,
       "dividendYield": null,
-      "enterpriseValue": 29244753920,
-      "enterpriseToRevenue": 0.868,
-      "enterpriseToEbitda": 18.525,
+      "enterpriseValue": 30158909440,
+      "enterpriseToRevenue": 0.895,
+      "enterpriseToEbitda": 19.104,
       "heldPercentInsiders": 0.13838,
-      "heldPercentInstitutions": 0.58479,
+      "heldPercentInstitutions": 0.5848,
       "shortPercentOfFloat": 0.17940001,
       "shortRatio": 2.65,
       "sharesShort": 80579790,
@@ -78759,19 +78847,23 @@
         {
           "d": "2026-05-26",
           "c": 37.1
+        },
+        {
+          "d": "2026-05-27",
+          "c": 38.19
         }
       ]
     },
     "wistron": {
       "symbol": "3231.TW",
       "currency": "TWD",
-      "price": 146,
-      "previousClose": 149,
-      "change": -3,
-      "changePercent": -2.0134227,
-      "marketCap": 464340123648,
-      "trailingPE": 17.380953,
-      "forwardPE": 8.362751,
+      "price": 145,
+      "previousClose": 146,
+      "change": -1,
+      "changePercent": -0.6849315,
+      "marketCap": 461159727104,
+      "trailingPE": 17.261906,
+      "forwardPE": 8.305471,
       "fiftyTwoWeekHigh": 161,
       "fiftyTwoWeekLow": 109,
       "targetMean": 203.06667,
@@ -78792,24 +78884,20 @@
       "totalCash": 106712416256,
       "freeCashflow": -281941082112,
       "pegRatio": 0.9,
-      "priceToBook": 2.441553,
+      "priceToBook": 2.4248302,
       "beta": 0.784,
-      "dividendYield": 0.025999999,
-      "enterpriseValue": 903094075392,
-      "enterpriseToRevenue": 0.336,
-      "enterpriseToEbitda": 8.67,
+      "dividendYield": 0.026199998,
+      "enterpriseValue": 899913678848,
+      "enterpriseToRevenue": 0.335,
+      "enterpriseToEbitda": 8.64,
       "heldPercentInsiders": 0.054330003,
-      "heldPercentInstitutions": 0.35889,
+      "heldPercentInstitutions": 0.35911998,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 116.5
-        },
         {
           "d": "2024-05-28",
           "c": 119
@@ -80737,21 +80825,25 @@
         {
           "d": "2026-05-26",
           "c": 146
+        },
+        {
+          "d": "2026-05-27",
+          "c": 145
         }
       ]
     },
     "wiwynn": {
       "symbol": "6669.TW",
       "currency": "TWD",
-      "price": 5280,
-      "previousClose": 5610,
-      "change": -330,
-      "changePercent": -5.882353,
-      "marketCap": 981239332864,
-      "trailingPE": 19.881016,
-      "forwardPE": 11.657741,
+      "price": 5075,
+      "previousClose": 5280,
+      "change": -205,
+      "changePercent": -3.8825758,
+      "marketCap": 943142010880,
+      "trailingPE": 19.120638,
+      "forwardPE": 11.20512,
       "fiftyTwoWeekHigh": 5880,
-      "fiftyTwoWeekLow": 2310,
+      "fiftyTwoWeekLow": 2355,
       "targetMean": 6681,
       "targetHigh": 8500,
       "targetLow": 5000,
@@ -80770,24 +80862,20 @@
       "totalCash": 70996230144,
       "freeCashflow": -22136248320,
       "pegRatio": null,
-      "priceToBook": 7.000638,
+      "priceToBook": 6.7288327,
       "beta": 0.954,
-      "dividendYield": 0.0275,
-      "enterpriseValue": 1017240748032,
-      "enterpriseToRevenue": 0.963,
-      "enterpriseToEbitda": 14.231,
+      "dividendYield": 0.0286,
+      "enterpriseValue": 979143360512,
+      "enterpriseToRevenue": 0.927,
+      "enterpriseToEbitda": 13.698,
       "heldPercentInsiders": 0.44262,
-      "heldPercentInstitutions": 0.2784,
+      "heldPercentInstitutions": 0.27844998,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 2710
-        },
         {
           "d": "2024-05-28",
           "c": 2685
@@ -82715,19 +82803,23 @@
         {
           "d": "2026-05-26",
           "c": 5280
+        },
+        {
+          "d": "2026-05-27",
+          "c": 5075
         }
       ]
     },
     "quanta": {
       "symbol": "2382.TW",
       "currency": "TWD",
-      "price": 316.5,
+      "price": 312,
       "previousClose": 316.5,
-      "change": 0,
-      "changePercent": 0,
-      "marketCap": 1219954999296,
-      "trailingPE": 16.746033,
-      "forwardPE": 11.209905,
+      "change": -4.5,
+      "changePercent": -1.4218009,
+      "marketCap": 1202609717248,
+      "trailingPE": 16.499207,
+      "forwardPE": 11.050523,
       "fiftyTwoWeekHigh": 352.5,
       "fiftyTwoWeekLow": 252.5,
       "targetMean": 387.5263,
@@ -82748,24 +82840,20 @@
       "totalCash": 268589678592,
       "freeCashflow": -98190827520,
       "pegRatio": 1.02,
-      "priceToBook": 5.8798394,
+      "priceToBook": 5.79624,
       "beta": 0.666,
-      "dividendYield": 0.041100003,
-      "enterpriseValue": 1455368306688,
-      "enterpriseToRevenue": 0.595,
-      "enterpriseToEbitda": 15.065,
+      "dividendYield": 0.0417,
+      "enterpriseValue": 1438022893568,
+      "enterpriseToRevenue": 0.588,
+      "enterpriseToEbitda": 14.885,
       "heldPercentInsiders": 0.31611001,
-      "heldPercentInstitutions": 0.28059998,
+      "heldPercentInstitutions": 0.2804,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 293.5
-        },
         {
           "d": "2024-05-28",
           "c": 289.5
@@ -84693,19 +84781,23 @@
         {
           "d": "2026-05-26",
           "c": 316.5
+        },
+        {
+          "d": "2026-05-27",
+          "c": 312
         }
       ]
     },
     "inventec": {
       "symbol": "2356.TW",
       "currency": "TWD",
-      "price": 62.6,
-      "previousClose": 65.4,
-      "change": -2.800003,
-      "changePercent": -4.28135,
-      "marketCap": 224575930368,
-      "trailingPE": 25.975101,
-      "forwardPE": 18.093636,
+      "price": 62,
+      "previousClose": 62.6,
+      "change": -0.5999985,
+      "changePercent": -0.958464,
+      "marketCap": 222423449600,
+      "trailingPE": 25.726141,
+      "forwardPE": 17.920216,
       "fiftyTwoWeekHigh": 69.5,
       "fiftyTwoWeekLow": 38.55,
       "targetMean": 49.375,
@@ -84726,24 +84818,20 @@
       "totalCash": 47982026752,
       "freeCashflow": 5544877056,
       "pegRatio": 0.73,
-      "priceToBook": 3.0575361,
+      "priceToBook": 3.028231,
       "beta": 0.68,
-      "dividendYield": 0.0272,
-      "enterpriseValue": 267322130432,
-      "enterpriseToRevenue": 0.364,
-      "enterpriseToEbitda": 15.989,
+      "dividendYield": 0.0274,
+      "enterpriseValue": 265169649664,
+      "enterpriseToRevenue": 0.361,
+      "enterpriseToEbitda": 15.861,
       "heldPercentInsiders": 0.29483,
-      "heldPercentInstitutions": 0.2217,
+      "heldPercentInstitutions": 0.22177,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 56
-        },
         {
           "d": "2024-05-28",
           "c": 56.4
@@ -86671,20 +86759,24 @@
         {
           "d": "2026-05-26",
           "c": 62.6
+        },
+        {
+          "d": "2026-05-27",
+          "c": 62
         }
       ]
     },
     "foxconn": {
       "symbol": "2317.TW",
       "currency": "TWD",
-      "price": 259,
-      "previousClose": 261,
-      "change": -2,
-      "changePercent": -0.7662835,
-      "marketCap": 3626497212416,
-      "trailingPE": 19.342793,
-      "forwardPE": 12.091294,
-      "fiftyTwoWeekHigh": 265,
+      "price": 264,
+      "previousClose": 259,
+      "change": 5,
+      "changePercent": 1.9305018,
+      "marketCap": 3696506961920,
+      "trailingPE": 19.716206,
+      "forwardPE": 12.324717,
+      "fiftyTwoWeekHigh": 269,
       "fiftyTwoWeekLow": 151,
       "targetMean": 312.77777,
       "targetHigh": 400,
@@ -86703,25 +86795,21 @@
       "totalDebt": 1324930564096,
       "totalCash": 1578088923136,
       "freeCashflow": 37193236480,
-      "pegRatio": 1.11,
-      "priceToBook": 2.0408967,
+      "pegRatio": 1.15,
+      "priceToBook": 2.0802963,
       "beta": 0.721,
-      "dividendYield": 0.0224,
-      "enterpriseValue": 3588361551872,
-      "enterpriseToRevenue": 0.418,
-      "enterpriseToEbitda": 9.549,
+      "dividendYield": 0.022,
+      "enterpriseValue": 3658490052608,
+      "enterpriseToRevenue": 0.426,
+      "enterpriseToEbitda": 9.735,
       "heldPercentInsiders": 0.1311,
-      "heldPercentInstitutions": 0.28985,
+      "heldPercentInstitutions": 0.29007,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 185
-        },
         {
           "d": "2024-05-28",
           "c": 185.5
@@ -88649,19 +88737,23 @@
         {
           "d": "2026-05-26",
           "c": 259
+        },
+        {
+          "d": "2026-05-27",
+          "c": 264
         }
       ]
     },
     "vertiv": {
       "symbol": "VRT",
       "currency": "USD",
-      "price": 323.91,
-      "previousClose": 327.46,
-      "change": -3.54999,
-      "changePercent": -1.0841,
-      "marketCap": 124416679936,
-      "trailingPE": 80.9775,
-      "forwardPE": 36.654713,
+      "price": 319.78,
+      "previousClose": 323.91,
+      "change": -4.13,
+      "changePercent": -1.27505,
+      "marketCap": 122830315520,
+      "trailingPE": 80.34673,
+      "forwardPE": 36.187347,
       "fiftyTwoWeekHigh": 379.935,
       "fiftyTwoWeekLow": 104.71,
       "targetMean": 377.20834,
@@ -88681,13 +88773,13 @@
       "totalDebt": 3264900096,
       "totalCash": 2500499968,
       "freeCashflow": 1964749952,
-      "pegRatio": 1.64,
-      "priceToBook": 31.438416,
+      "pegRatio": 1.62,
+      "priceToBook": 31.03756,
       "beta": 2.099,
       "dividendYield": 0.0008,
-      "enterpriseValue": 126544674816,
-      "enterpriseToRevenue": 11.67,
-      "enterpriseToEbitda": 53.103,
+      "enterpriseValue": 125181083648,
+      "enterpriseToRevenue": 11.544,
+      "enterpriseToEbitda": 52.531,
       "heldPercentInsiders": 0.00234,
       "heldPercentInstitutions": 0.8568,
       "shortPercentOfFloat": 0.0309,
@@ -90695,20 +90787,24 @@
         {
           "d": "2026-05-26",
           "c": 323.91
+        },
+        {
+          "d": "2026-05-27",
+          "c": 319.78
         }
       ]
     },
     "mps": {
       "symbol": "MPWR",
       "currency": "USD",
-      "price": 1662.98,
-      "previousClose": 1589.81,
-      "change": 73.16992,
-      "changePercent": 4.6024313,
-      "marketCap": 81702207488,
-      "trailingPE": 118.869194,
-      "forwardPE": 55.14068,
-      "fiftyTwoWeekHigh": 1714.0898,
+      "price": 1620.17,
+      "previousClose": 1662.98,
+      "change": -42.809937,
+      "changePercent": -2.5742905,
+      "marketCap": 79598952448,
+      "trailingPE": 115.974945,
+      "forwardPE": 53.7212,
+      "fiftyTwoWeekHigh": 1714.09,
       "fiftyTwoWeekLow": 643.36,
       "targetMean": 1797.1428,
       "targetHigh": 2000,
@@ -90727,15 +90823,15 @@
       "totalDebt": 19968000,
       "totalCash": 1367108992,
       "freeCashflow": 491719136,
-      "pegRatio": 2.09,
-      "priceToBook": 22.21691,
+      "pegRatio": 2.18,
+      "priceToBook": 21.644981,
       "beta": 1.742,
-      "dividendYield": 0.005,
-      "enterpriseValue": 76760227840,
-      "enterpriseToRevenue": 25.958,
-      "enterpriseToEbitda": 89.548,
+      "dividendYield": 0.0047999998,
+      "enterpriseValue": 80355065856,
+      "enterpriseToRevenue": 27.174,
+      "enterpriseToEbitda": 93.741,
       "heldPercentInsiders": 0.037,
-      "heldPercentInstitutions": 1.00872,
+      "heldPercentInstitutions": 1.00867,
       "shortPercentOfFloat": 0.0471,
       "shortRatio": 2.87,
       "sharesShort": 1720835,
@@ -92741,23 +92837,27 @@
         {
           "d": "2026-05-26",
           "c": 1662.98
+        },
+        {
+          "d": "2026-05-27",
+          "c": 1620.17
         }
       ]
     },
     "eaton": {
       "symbol": "ETN",
       "currency": "USD",
-      "price": 403.13,
-      "previousClose": 391.35,
-      "change": 11.78,
-      "changePercent": 3.01009,
-      "marketCap": 156535373824,
-      "trailingPE": 39.48384,
-      "forwardPE": 25.641663,
+      "price": 406.37,
+      "previousClose": 403.13,
+      "change": 3.23999,
+      "changePercent": 0.803709,
+      "marketCap": 157793468416,
+      "trailingPE": 39.68457,
+      "forwardPE": 25.847746,
       "fiftyTwoWeekHigh": 435.43,
       "fiftyTwoWeekLow": 311.9,
-      "targetMean": 450.80704,
-      "targetHigh": 515,
+      "targetMean": 451.73297,
+      "targetHigh": 534,
       "targetLow": 321,
       "targetMedian": 471,
       "recommendationMean": 1.72414,
@@ -92773,13 +92873,13 @@
       "totalDebt": 21833000960,
       "totalCash": 751000000,
       "freeCashflow": 2646500096,
-      "pegRatio": 2.95,
-      "priceToBook": 7.9375052,
+      "pegRatio": 3.04,
+      "priceToBook": 8.0013,
       "beta": 1.24,
-      "dividendYield": 0.0112,
-      "enterpriseValue": 173087211520,
-      "enterpriseToRevenue": 6.069,
-      "enterpriseToEbitda": 27.288,
+      "dividendYield": 0.0109,
+      "enterpriseValue": 178919473152,
+      "enterpriseToRevenue": 6.273,
+      "enterpriseToEbitda": 28.207,
       "heldPercentInsiders": 0.00054000004,
       "heldPercentInstitutions": 0.88011,
       "shortPercentOfFloat": 0.020599999,
@@ -94787,21 +94887,25 @@
         {
           "d": "2026-05-26",
           "c": 403.13
+        },
+        {
+          "d": "2026-05-27",
+          "c": 406.37
         }
       ]
     },
     "delta": {
       "symbol": "2308.TW",
       "currency": "TWD",
-      "price": 2350,
-      "previousClose": 2290,
-      "change": 60,
-      "changePercent": 2.6200874,
-      "marketCap": 6104226988032,
-      "trailingPE": 102.04081,
-      "forwardPE": 36.42419,
-      "fiftyTwoWeekHigh": 2410,
-      "fiftyTwoWeekLow": 365,
+      "price": 2520,
+      "previousClose": 2350,
+      "change": 170,
+      "changePercent": 7.234043,
+      "marketCap": 6545809604608,
+      "trailingPE": 108.71441,
+      "forwardPE": 39.05913,
+      "fiftyTwoWeekHigh": 2585,
+      "fiftyTwoWeekLow": 366,
       "targetMean": 2519.6316,
       "targetHigh": 3030,
       "targetLow": 770,
@@ -94819,25 +94923,21 @@
       "totalDebt": 69202780160,
       "totalCash": 164034822144,
       "freeCashflow": 32521963520,
-      "pegRatio": 3.31,
-      "priceToBook": 20.378431,
+      "pegRatio": 3.71,
+      "priceToBook": 21.852615,
       "beta": 1.428,
-      "dividendYield": 0.003,
-      "enterpriseValue": 6067110543360,
-      "enterpriseToRevenue": 10.191,
-      "enterpriseToEbitda": 48.063,
+      "dividendYield": 0.0028,
+      "enterpriseValue": 6508692635648,
+      "enterpriseToRevenue": 10.933,
+      "enterpriseToEbitda": 51.562,
       "heldPercentInsiders": 0.25931,
-      "heldPercentInstitutions": 0.38301998,
+      "heldPercentInstitutions": 0.38377997,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 346
-        },
         {
           "d": "2024-05-28",
           "c": 346.5
@@ -96765,20 +96865,24 @@
         {
           "d": "2026-05-26",
           "c": 2350
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2520
         }
       ]
     },
     "liteon": {
       "symbol": "2301.TW",
       "currency": "TWD",
-      "price": 239.5,
-      "previousClose": 227.5,
-      "change": 12,
-      "changePercent": 5.2747254,
-      "marketCap": 543610404864,
-      "trailingPE": 36.34294,
-      "forwardPE": 20.039661,
-      "fiftyTwoWeekHigh": 246,
+      "price": 246,
+      "previousClose": 239.5,
+      "change": 6.5,
+      "changePercent": 2.7139874,
+      "marketCap": 558363901952,
+      "trailingPE": 37.329285,
+      "forwardPE": 20.583536,
+      "fiftyTwoWeekHigh": 262,
       "fiftyTwoWeekLow": 100,
       "targetMean": 207.77779,
       "targetHigh": 285,
@@ -96798,24 +96902,20 @@
       "totalCash": 71133159424,
       "freeCashflow": -3553091328,
       "pegRatio": 0.86,
-      "priceToBook": 6.168229,
+      "priceToBook": 6.335634,
       "beta": 0.897,
-      "dividendYield": 0.0313,
-      "enterpriseValue": 490226319360,
-      "enterpriseToRevenue": 2.832,
-      "enterpriseToEbitda": 24.264,
+      "dividendYield": 0.0305,
+      "enterpriseValue": 504975491072,
+      "enterpriseToRevenue": 2.918,
+      "enterpriseToEbitda": 24.994,
       "heldPercentInsiders": 0.13856,
-      "heldPercentInstitutions": 0.39661998,
+      "heldPercentInstitutions": 0.39720002,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 121
-        },
         {
           "d": "2024-05-28",
           "c": 116.5
@@ -98743,19 +98843,23 @@
         {
           "d": "2026-05-26",
           "c": 239.5
+        },
+        {
+          "d": "2026-05-27",
+          "c": 246
         }
       ]
     },
     "acbel": {
       "symbol": "6282.TW",
       "currency": "TWD",
-      "price": 62.4,
-      "previousClose": 63.1,
-      "change": -0.69999695,
-      "changePercent": -1.1093454,
-      "marketCap": 53416468480,
-      "trailingPE": 416,
-      "forwardPE": 44.57143,
+      "price": 59.4,
+      "previousClose": 62.4,
+      "change": -3,
+      "changePercent": -4.807692,
+      "marketCap": 50848370688,
+      "trailingPE": 396,
+      "forwardPE": 42.428574,
       "fiftyTwoWeekHigh": 65.9,
       "fiftyTwoWeekLow": 24.5,
       "targetMean": null,
@@ -98776,24 +98880,20 @@
       "totalCash": 9947479040,
       "freeCashflow": 6475515392,
       "pegRatio": null,
-      "priceToBook": 2.3739777,
+      "priceToBook": 2.259844,
       "beta": 0.84,
-      "dividendYield": 0.008,
-      "enterpriseValue": 54522916864,
-      "enterpriseToRevenue": 1.643,
-      "enterpriseToEbitda": 23.563,
+      "dividendYield": 0.0084,
+      "enterpriseValue": 51954827264,
+      "enterpriseToRevenue": 1.565,
+      "enterpriseToEbitda": 22.453,
       "heldPercentInsiders": 0.23002,
-      "heldPercentInstitutions": 0.07617,
+      "heldPercentInstitutions": 0.07616,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 37.65
-        },
         {
           "d": "2024-05-28",
           "c": 38.1
@@ -100721,19 +100821,23 @@
         {
           "d": "2026-05-26",
           "c": 62.4
+        },
+        {
+          "d": "2026-05-27",
+          "c": 59.4
         }
       ]
     },
     "chicony": {
       "symbol": "6412.TW",
       "currency": "TWD",
-      "price": 102,
-      "previousClose": 104,
+      "price": 100,
+      "previousClose": 102,
       "change": -2,
-      "changePercent": -1.923077,
-      "marketCap": 40878448640,
-      "trailingPE": 19.805824,
-      "forwardPE": 12.809243,
+      "changePercent": -1.9607844,
+      "marketCap": 40076910592,
+      "trailingPE": 19.417475,
+      "forwardPE": 12.558082,
       "fiftyTwoWeekHigh": 131,
       "fiftyTwoWeekLow": 72.2,
       "targetMean": 111,
@@ -100754,12 +100858,12 @@
       "totalCash": 6843689984,
       "freeCashflow": -754229376,
       "pegRatio": null,
-      "priceToBook": 2.8471737,
+      "priceToBook": 2.7913468,
       "beta": 0.511,
-      "dividendYield": 0.0363,
-      "enterpriseValue": 39575216128,
-      "enterpriseToRevenue": 1.171,
-      "enterpriseToEbitda": 12.754,
+      "dividendYield": 0.037,
+      "enterpriseValue": 38766804992,
+      "enterpriseToRevenue": 1.147,
+      "enterpriseToEbitda": 12.494,
       "heldPercentInsiders": 0.67621005,
       "heldPercentInstitutions": 0.11638,
       "shortPercentOfFloat": null,
@@ -100768,10 +100872,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 157.5
-        },
         {
           "d": "2024-05-28",
           "c": 154
@@ -102699,20 +102799,24 @@
         {
           "d": "2026-05-26",
           "c": 102
+        },
+        {
+          "d": "2026-05-27",
+          "c": 100
         }
       ]
     },
     "chroma": {
       "symbol": "2360.TW",
       "currency": "TWD",
-      "price": 2500,
-      "previousClose": 2460,
-      "change": 40,
-      "changePercent": 1.6260161,
-      "marketCap": 1058977939456,
-      "trailingPE": 90.90909,
-      "forwardPE": 43.097134,
-      "fiftyTwoWeekHigh": 2590,
+      "price": 2625,
+      "previousClose": 2500,
+      "change": 125,
+      "changePercent": 5,
+      "marketCap": 1111926767616,
+      "trailingPE": 95.454544,
+      "forwardPE": 45.25199,
+      "fiftyTwoWeekHigh": 2680,
       "fiftyTwoWeekLow": 330,
       "targetMean": 2389,
       "targetHigh": 4000,
@@ -102732,24 +102836,20 @@
       "totalCash": 9124031488,
       "freeCashflow": 4698382848,
       "pegRatio": 7.21,
-      "priceToBook": 38.190098,
+      "priceToBook": 40.0996,
       "beta": 1.223,
-      "dividendYield": 0.0036000002,
-      "enterpriseValue": 1054814175232,
-      "enterpriseToRevenue": 31.671,
-      "enterpriseToEbitda": 84.388,
+      "dividendYield": 0.0034,
+      "enterpriseValue": 1107772571648,
+      "enterpriseToRevenue": 33.261,
+      "enterpriseToEbitda": 88.625,
       "heldPercentInsiders": 0.14425,
-      "heldPercentInstitutions": 0.46802,
+      "heldPercentInstitutions": 0.46773997,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 293.5
-        },
         {
           "d": "2024-05-28",
           "c": 295
@@ -104677,21 +104777,25 @@
         {
           "d": "2026-05-26",
           "c": 2500
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2625
         }
       ]
     },
     "avc": {
       "symbol": "3017.TW",
       "currency": "TWD",
-      "price": 2725,
-      "previousClose": 2575,
-      "change": 150,
-      "changePercent": 5.825243,
-      "marketCap": 1069679706112,
-      "trailingPE": 56.500103,
-      "forwardPE": 20.153877,
+      "price": 2700,
+      "previousClose": 2725,
+      "change": -25,
+      "changePercent": -0.9174312,
+      "marketCap": 1059866148864,
+      "trailingPE": 55.86592,
+      "forwardPE": 19.968979,
       "fiftyTwoWeekHigh": 3010,
-      "fiftyTwoWeekLow": 601,
+      "fiftyTwoWeekLow": 608,
       "targetMean": 3402.4285,
       "targetHigh": 3650,
       "targetLow": 3130,
@@ -104710,24 +104814,20 @@
       "totalCash": 67880247296,
       "freeCashflow": 37729456128,
       "pegRatio": null,
-      "priceToBook": 23.661907,
+      "priceToBook": 23.444826,
       "beta": 0.73,
-      "dividendYield": 0.0036000002,
-      "enterpriseValue": 1034200678400,
-      "enterpriseToRevenue": 6.255,
-      "enterpriseToEbitda": 27.116,
+      "dividendYield": 0.0037,
+      "enterpriseValue": 1024396165120,
+      "enterpriseToRevenue": 6.196,
+      "enterpriseToEbitda": 26.859,
       "heldPercentInsiders": 0.18667999,
-      "heldPercentInstitutions": 0.4447,
+      "heldPercentInstitutions": 0.44476002,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 738
-        },
         {
           "d": "2024-05-28",
           "c": 783
@@ -106655,6 +106755,10 @@
         {
           "d": "2026-05-26",
           "c": 2725
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2700
         }
       ]
     },
@@ -106800,9 +106904,9 @@
       "symbol": "3653.TW",
       "currency": "TWD",
       "price": 3670,
-      "previousClose": 3770,
-      "change": -100,
-      "changePercent": -2.65252,
+      "previousClose": 3670,
+      "change": 0,
+      "changePercent": 0,
       "marketCap": 538509377536,
       "trailingPE": 102.029465,
       "forwardPE": 31.142012,
@@ -106833,17 +106937,13 @@
       "enterpriseToRevenue": 25.369,
       "enterpriseToEbitda": 73.963,
       "heldPercentInsiders": 0.37741002,
-      "heldPercentInstitutions": 0.3781,
+      "heldPercentInstitutions": 0.37832,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 1005
-        },
         {
           "d": "2024-05-28",
           "c": 1040
@@ -108771,28 +108871,32 @@
         {
           "d": "2026-05-26",
           "c": 3670
+        },
+        {
+          "d": "2026-05-27",
+          "c": 3670
         }
       ]
     },
     "ti": {
       "symbol": "TXN",
       "currency": "USD",
-      "price": 324.89,
-      "previousClose": 309.21,
-      "change": 15.680023,
-      "changePercent": 5.0709953,
-      "marketCap": 295680049152,
-      "trailingPE": 55.63185,
-      "forwardPE": 34.43948,
-      "fiftyTwoWeekHigh": 326.42,
+      "price": 317.45,
+      "previousClose": 324.89,
+      "change": -7.4400024,
+      "changePercent": -2.2900066,
+      "marketCap": 288908967936,
+      "trailingPE": 54.26496,
+      "forwardPE": 33.650814,
+      "fiftyTwoWeekHigh": 331.51,
       "fiftyTwoWeekLow": 152.73,
-      "targetMean": 285.34375,
-      "targetHigh": 340,
+      "targetMean": 290.33334,
+      "targetHigh": 400,
       "targetLow": 200,
-      "targetMedian": 297.5,
+      "targetMedian": 300,
       "recommendationMean": 2.24324,
       "recommendationKey": "buy",
-      "numberOfAnalystOpinions": 32,
+      "numberOfAnalystOpinions": 33,
       "profitMargin": 0.29108,
       "grossMargin": 0.57322,
       "operatingMargin": 0.37824002,
@@ -108803,15 +108907,15 @@
       "totalDebt": 14049999872,
       "totalCash": 5103000064,
       "freeCashflow": 1068249984,
-      "pegRatio": 1.48,
-      "priceToBook": 17.621632,
+      "pegRatio": 1.55,
+      "priceToBook": 17.218094,
       "beta": 1.298,
-      "dividendYield": 0.0184,
-      "enterpriseValue": 290356789248,
-      "enterpriseToRevenue": 15.748,
-      "enterpriseToEbitda": 33.509,
+      "dividendYield": 0.0175,
+      "enterpriseValue": 304627056640,
+      "enterpriseToRevenue": 16.522,
+      "enterpriseToEbitda": 35.156,
       "heldPercentInsiders": 0.0028,
-      "heldPercentInstitutions": 0.92526,
+      "heldPercentInstitutions": 0.92533,
       "shortPercentOfFloat": 0.0191,
       "shortRatio": 2.02,
       "sharesShort": 15590886,
@@ -110817,19 +110921,23 @@
         {
           "d": "2026-05-26",
           "c": 324.89
+        },
+        {
+          "d": "2026-05-27",
+          "c": 317.45
         }
       ]
     },
     "schneider": {
       "symbol": "SU.PA",
       "currency": "EUR",
-      "price": 273.2,
-      "previousClose": 277.3,
-      "change": -4.0999756,
-      "changePercent": -1.4785343,
-      "marketCap": 153715785728,
-      "trailingPE": 34.192745,
-      "forwardPE": 23.748632,
+      "price": 268.95,
+      "previousClose": 273.2,
+      "change": -4.25,
+      "changePercent": -1.5556368,
+      "marketCap": 151324524544,
+      "trailingPE": 33.70301,
+      "forwardPE": 23.37919,
       "fiftyTwoWeekHigh": 287.9,
       "fiftyTwoWeekLow": 208.8,
       "targetMean": 300.54544,
@@ -110849,25 +110957,21 @@
       "totalDebt": 19908999168,
       "totalCash": 4633999872,
       "freeCashflow": 3984000000,
-      "pegRatio": 1.95,
-      "priceToBook": 6.347289,
+      "pegRatio": 1.98,
+      "priceToBook": 6.248548,
       "beta": 1.145,
-      "dividendYield": 0.0150999995,
-      "enterpriseValue": 171435409408,
-      "enterpriseToRevenue": 4.27,
-      "enterpriseToEbitda": 21.627,
+      "dividendYield": 0.0154,
+      "enterpriseValue": 166740852736,
+      "enterpriseToRevenue": 4.153,
+      "enterpriseToEbitda": 21.035,
       "heldPercentInsiders": 0.03477,
-      "heldPercentInstitutions": 0.52814,
+      "heldPercentInstitutions": 0.52793,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 237.65
-        },
         {
           "d": "2024-05-28",
           "c": 232.7
@@ -112899,6 +113003,10 @@
         {
           "d": "2026-05-25",
           "c": 277.3
+        },
+        {
+          "d": "2026-05-26",
+          "c": 273.2
         }
       ]
     },
@@ -112951,15 +113059,15 @@
     "ibiden": {
       "symbol": "4062.T",
       "currency": "JPY",
-      "price": 20965,
-      "previousClose": 20930,
-      "change": 35,
-      "changePercent": 0.16722408,
-      "marketCap": 5854382784512,
-      "trailingPE": 97.08715,
-      "forwardPE": 67.85668,
+      "price": 20425,
+      "previousClose": 20965,
+      "change": -540,
+      "changePercent": -2.5757215,
+      "marketCap": 5703590215680,
+      "trailingPE": 95.239204,
+      "forwardPE": 66.10889,
       "fiftyTwoWeekHigh": 22330,
-      "fiftyTwoWeekLow": 2662,
+      "fiftyTwoWeekLow": 2853,
       "targetMean": 11552.941,
       "targetHigh": 21000,
       "targetLow": 6300,
@@ -112978,24 +113086,20 @@
       "totalCash": 295680999424,
       "freeCashflow": -47514124288,
       "pegRatio": 0.46,
-      "priceToBook": 10.64298,
+      "priceToBook": 10.368847,
       "beta": 1.556,
-      "dividendYield": 0.0019,
-      "enterpriseValue": 5758577541120,
-      "enterpriseToRevenue": 13.836,
-      "enterpriseToEbitda": 46.293,
+      "dividendYield": 0.002,
+      "enterpriseValue": 5607784972288,
+      "enterpriseToRevenue": 13.474,
+      "enterpriseToEbitda": 45.08,
       "heldPercentInsiders": 0.105900005,
-      "heldPercentInstitutions": 0.70545995,
+      "heldPercentInstitutions": 0.70415,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 3012
-        },
         {
           "d": "2024-05-28",
           "c": 3135
@@ -114939,21 +115043,25 @@
         {
           "d": "2026-05-26",
           "c": 20965
+        },
+        {
+          "d": "2026-05-27",
+          "c": 20425
         }
       ]
     },
     "advantest": {
       "symbol": "6857.T",
       "currency": "JPY",
-      "price": 26075,
-      "previousClose": 27755,
-      "change": -1680,
-      "changePercent": -6.0529633,
-      "marketCap": 18914440380416,
-      "trailingPE": 50.761173,
-      "forwardPE": 109.68326,
+      "price": 27130,
+      "previousClose": 26075,
+      "change": 1055,
+      "changePercent": 4.046021,
+      "marketCap": 19679722602496,
+      "trailingPE": 52.814983,
+      "forwardPE": 114.12106,
       "fiftyTwoWeekHigh": 32400,
-      "fiftyTwoWeekLow": 7010,
+      "fiftyTwoWeekLow": 7083,
       "targetMean": 32695,
       "targetHigh": 39200,
       "targetLow": 23000,
@@ -114972,24 +115080,20 @@
       "totalCash": 339966001152,
       "freeCashflow": 240920756224,
       "pegRatio": 2.07,
-      "priceToBook": 23.774292,
+      "priceToBook": 24.736204,
       "beta": 1.199,
-      "dividendYield": 0.0023,
-      "enterpriseValue": 18598049349632,
-      "enterpriseToRevenue": 16.479,
-      "enterpriseToEbitda": 35.443,
+      "dividendYield": 0.0022,
+      "enterpriseValue": 19363469983744,
+      "enterpriseToRevenue": 17.157,
+      "enterpriseToEbitda": 36.902,
       "heldPercentInsiders": 0.00279,
-      "heldPercentInstitutions": 0.66041,
+      "heldPercentInstitutions": 0.6603,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 5669
-        },
         {
           "d": "2024-05-28",
           "c": 5617
@@ -116933,20 +117037,24 @@
         {
           "d": "2026-05-26",
           "c": 26075
+        },
+        {
+          "d": "2026-05-27",
+          "c": 27130
         }
       ]
     },
     "tel": {
       "symbol": "8035.T",
       "currency": "JPY",
-      "price": 51420,
-      "previousClose": 52180,
-      "change": -760,
-      "changePercent": -1.4564967,
-      "marketCap": 23489538949120,
-      "trailingPE": 41.15213,
-      "forwardPE": 40.1656,
-      "fiftyTwoWeekHigh": 53870,
+      "price": 52500,
+      "previousClose": 51420,
+      "change": 1080,
+      "changePercent": 2.1003501,
+      "marketCap": 23982902345728,
+      "trailingPE": 42.016808,
+      "forwardPE": 41.00922,
+      "fiftyTwoWeekHigh": 54700,
       "fiftyTwoWeekLow": 19870,
       "targetMean": 53381.816,
       "targetHigh": 70000,
@@ -116966,24 +117074,20 @@
       "totalCash": 506250002432,
       "freeCashflow": 229109252096,
       "pegRatio": 1.95,
-      "priceToBook": 11.298762,
+      "priceToBook": 11.536076,
       "beta": 1.366,
-      "dividendYield": 0.0139999995,
-      "enterpriseValue": 22882121940992,
-      "enterpriseToRevenue": 9.364,
-      "enterpriseToEbitda": 32.398,
+      "dividendYield": 0.0138,
+      "enterpriseValue": 23373358825472,
+      "enterpriseToRevenue": 9.565,
+      "enterpriseToEbitda": 33.093,
       "heldPercentInsiders": 0.03229,
-      "heldPercentInstitutions": 0.58926,
+      "heldPercentInstitutions": 0.58919996,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 35630
-        },
         {
           "d": "2024-05-28",
           "c": 35500
@@ -118927,25 +119031,29 @@
         {
           "d": "2026-05-26",
           "c": 51420
+        },
+        {
+          "d": "2026-05-27",
+          "c": 52500
         }
       ]
     },
     "disco": {
       "symbol": "6146.T",
       "currency": "JPY",
-      "price": 66910,
-      "previousClose": 69780,
-      "change": -2870,
-      "changePercent": -4.1129265,
-      "marketCap": 7257193971712,
-      "trailingPE": 53.475807,
-      "forwardPE": 49.16455,
+      "price": 67630,
+      "previousClose": 66910,
+      "change": 720,
+      "changePercent": 1.0760723,
+      "marketCap": 7335286669312,
+      "trailingPE": 54.053837,
+      "forwardPE": 49.693596,
       "fiftyTwoWeekHigh": 81000,
       "fiftyTwoWeekLow": 31890,
-      "targetMean": 77375,
+      "targetMean": 77400,
       "targetHigh": 100000,
       "targetLow": 48000,
-      "targetMedian": 76250,
+      "targetMedian": 76500,
       "recommendationMean": 2.04762,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 20,
@@ -118959,25 +119067,21 @@
       "totalDebt": 0,
       "totalCash": 284575006720,
       "freeCashflow": null,
-      "pegRatio": 2.09,
-      "priceToBook": 12.347269,
+      "pegRatio": 2.12,
+      "priceToBook": 12.480134,
       "beta": 1.07,
       "dividendYield": 0.0075,
-      "enterpriseValue": 6972985311232,
-      "enterpriseToRevenue": 15.961,
-      "enterpriseToEbitda": 35.069,
+      "enterpriseValue": 7051078008832,
+      "enterpriseToRevenue": 16.139,
+      "enterpriseToEbitda": 35.462,
       "heldPercentInsiders": 0.19458,
-      "heldPercentInstitutions": 0.41771,
+      "heldPercentInstitutions": 0.4184,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 61790
-        },
         {
           "d": "2024-05-28",
           "c": 62240
@@ -120921,6 +121025,10 @@
         {
           "d": "2026-05-26",
           "c": 66910
+        },
+        {
+          "d": "2026-05-27",
+          "c": 67630
         }
       ]
     },
@@ -120973,16 +121081,16 @@
     "cadence": {
       "symbol": "CDNS",
       "currency": "USD",
-      "price": 381.75,
-      "previousClose": 373.59,
-      "change": 8.160004,
-      "changePercent": 2.1842136,
-      "marketCap": 105292759040,
-      "trailingPE": 88.77907,
-      "forwardPE": 40.695343,
-      "fiftyTwoWeekHigh": 383.24,
+      "price": 374.05,
+      "previousClose": 381.75,
+      "change": -7.700012,
+      "changePercent": -2.0170302,
+      "marketCap": 103168974848,
+      "trailingPE": 87.39485,
+      "forwardPE": 39.85615,
+      "fiftyTwoWeekHigh": 383.8,
       "fiftyTwoWeekLow": 262.75,
-      "targetMean": 379.5473,
+      "targetMean": 382.40347,
       "targetHigh": 425,
       "targetLow": 275,
       "targetMedian": 387.5,
@@ -121000,14 +121108,14 @@
       "totalCash": 1546153984,
       "freeCashflow": 1499152256,
       "pegRatio": 3.55,
-      "priceToBook": 16.047333,
+      "priceToBook": 15.723654,
       "beta": 1.131,
       "dividendYield": null,
-      "enterpriseValue": 104579301376,
-      "enterpriseToRevenue": 18.916,
-      "enterpriseToEbitda": 51.92,
+      "enterpriseValue": 106829955072,
+      "enterpriseToRevenue": 19.323,
+      "enterpriseToEbitda": 53.038,
       "heldPercentInsiders": 0.0032300001,
-      "heldPercentInstitutions": 0.90999,
+      "heldPercentInstitutions": 0.90995,
       "shortPercentOfFloat": 0.023,
       "shortRatio": 2.57,
       "sharesShort": 6320973,
@@ -123013,19 +123121,23 @@
         {
           "d": "2026-05-26",
           "c": 381.75
+        },
+        {
+          "d": "2026-05-27",
+          "c": 374.05
         }
       ]
     },
     "camtek": {
       "symbol": "CAMT",
       "currency": "USD",
-      "price": 174.73,
-      "previousClose": 167.37,
-      "change": 7.3600006,
-      "changePercent": 4.3974433,
-      "marketCap": 8045350912,
-      "trailingPE": 180.13402,
-      "forwardPE": 38.615814,
+      "price": 169.62,
+      "previousClose": 174.73,
+      "change": -5.1100006,
+      "changePercent": -2.9245126,
+      "marketCap": 7810063872,
+      "trailingPE": 173.08162,
+      "forwardPE": 37.486492,
       "fiftyTwoWeekHigh": 215.99,
       "fiftyTwoWeekLow": 64.9,
       "targetMean": 187.25,
@@ -123045,13 +123157,13 @@
       "totalDebt": 487811008,
       "totalCash": 670260992,
       "freeCashflow": null,
-      "pegRatio": 3.44,
-      "priceToBook": 11.787762,
+      "pegRatio": 3.59,
+      "priceToBook": 11.4430275,
       "beta": 1.625,
       "dividendYield": null,
-      "enterpriseValue": 7524014080,
-      "enterpriseToRevenue": 15.075,
-      "enterpriseToEbitda": 54.314,
+      "enterpriseValue": 7862901248,
+      "enterpriseToRevenue": 15.754,
+      "enterpriseToEbitda": 56.76,
       "heldPercentInsiders": 0.38007,
       "heldPercentInstitutions": 0.51441,
       "shortPercentOfFloat": 0.103599995,
@@ -125059,27 +125171,31 @@
         {
           "d": "2026-05-26",
           "c": 174.73
+        },
+        {
+          "d": "2026-05-27",
+          "c": 169.62
         }
       ]
     },
     "onto": {
       "symbol": "ONTO",
       "currency": "USD",
-      "price": 274.17,
-      "previousClose": 262.25,
-      "change": 11.92,
-      "changePercent": 4.54529,
-      "marketCap": 13638195200,
-      "trailingPE": 127.52093,
-      "forwardPE": 28.864346,
+      "price": 266.89,
+      "previousClose": 274.17,
+      "change": -7.28,
+      "changePercent": -2.65529,
+      "marketCap": 13276061696,
+      "trailingPE": 124.71495,
+      "forwardPE": 28.097914,
       "fiftyTwoWeekHigh": 316,
       "fiftyTwoWeekLow": 89.4,
       "targetMean": 352.14285,
       "targetHigh": 370,
       "targetLow": 330,
       "targetMedian": 350,
-      "recommendationMean": null,
-      "recommendationKey": "none",
+      "recommendationMean": 1.14286,
+      "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 7,
       "profitMargin": 0.10325,
       "grossMargin": 0.54186,
@@ -125091,15 +125207,15 @@
       "totalDebt": 0,
       "totalCash": 654163968,
       "freeCashflow": 197242256,
-      "pegRatio": 1.22,
-      "priceToBook": 6.486928,
+      "pegRatio": 1.28,
+      "priceToBook": 6.3146815,
       "beta": 1.696,
       "dividendYield": null,
-      "enterpriseValue": 12391086080,
-      "enterpriseToRevenue": 12.023,
-      "enterpriseToEbitda": 46.423,
+      "enterpriseValue": 12984030208,
+      "enterpriseToRevenue": 12.598,
+      "enterpriseToEbitda": 48.644,
       "heldPercentInsiders": 0.00596,
-      "heldPercentInstitutions": 1.00292,
+      "heldPercentInstitutions": 1.0026699,
       "shortPercentOfFloat": 0.0256,
       "shortRatio": 1.17,
       "sharesShort": 1007074,
@@ -127105,19 +127221,23 @@
         {
           "d": "2026-05-26",
           "c": 274.17
+        },
+        {
+          "d": "2026-05-27",
+          "c": 266.89
         }
       ]
     },
     "maxlinear": {
       "symbol": "MXL",
       "currency": "USD",
-      "price": 96.12,
-      "previousClose": 99.16,
-      "change": -3.040001,
-      "changePercent": -3.0657532,
-      "marketCap": 8607158272,
+      "price": 101.1,
+      "previousClose": 96.12,
+      "change": 4.9799957,
+      "changePercent": 5.181019,
+      "marketCap": 9053095936,
       "trailingPE": null,
-      "forwardPE": 51.45142,
+      "forwardPE": 54.11713,
       "fiftyTwoWeekHigh": 106.28,
       "fiftyTwoWeekLow": 10.96,
       "targetMean": 49.45455,
@@ -127138,14 +127258,14 @@
       "totalCash": 61077000,
       "freeCashflow": 22663750,
       "pegRatio": 0.39,
-      "priceToBook": 18.947369,
+      "priceToBook": 19.929035,
       "beta": 3.964,
       "dividendYield": null,
-      "enterpriseValue": 8969477120,
-      "enterpriseToRevenue": 17.625,
-      "enterpriseToEbitda": -241.745,
+      "enterpriseValue": 8697257984,
+      "enterpriseToRevenue": 17.09,
+      "enterpriseToEbitda": -234.408,
       "heldPercentInsiders": 0.0582,
-      "heldPercentInstitutions": 0.875,
+      "heldPercentInstitutions": 0.87448,
       "shortPercentOfFloat": 0.0612,
       "shortRatio": 0.77,
       "sharesShort": 3896301,
@@ -129151,19 +129271,23 @@
         {
           "d": "2026-05-26",
           "c": 96.12
+        },
+        {
+          "d": "2026-05-27",
+          "c": 101.1
         }
       ]
     },
     "wolfspeed": {
       "symbol": "WOLF",
       "currency": "USD",
-      "price": 73.5,
-      "previousClose": 69.89,
-      "change": 3.61,
-      "changePercent": 5.16526,
-      "marketCap": 3552922368,
+      "price": 63.26,
+      "previousClose": 73.5,
+      "change": -10.24,
+      "changePercent": -13.932,
+      "marketCap": 3057930240,
       "trailingPE": null,
-      "forwardPE": -14.685314,
+      "forwardPE": -12.63936,
       "fiftyTwoWeekHigh": 80.82,
       "fiftyTwoWeekLow": 8.05,
       "targetMean": 40,
@@ -129184,12 +129308,12 @@
       "totalCash": 1164800000,
       "freeCashflow": 76737504,
       "pegRatio": null,
-      "priceToBook": 3.2058272,
+      "priceToBook": 2.7591922,
       "beta": null,
       "dividendYield": null,
-      "enterpriseValue": 4044118272,
-      "enterpriseToRevenue": 5.676,
-      "enterpriseToEbitda": -14.803,
+      "enterpriseValue": 4218622464,
+      "enterpriseToRevenue": 5.921,
+      "enterpriseToEbitda": -15.442,
       "heldPercentInsiders": 0.00273,
       "heldPercentInstitutions": 1.25283,
       "shortPercentOfFloat": null,
@@ -129857,6 +129981,10 @@
         {
           "d": "2026-05-26",
           "c": 73.5
+        },
+        {
+          "d": "2026-05-27",
+          "c": 63.26
         }
       ]
     },
@@ -129909,21 +130037,21 @@
     "winsemi": {
       "symbol": "3105.TWO",
       "currency": "TWD",
-      "price": 562,
-      "previousClose": 543,
-      "change": 19,
-      "changePercent": 3.4990792,
-      "marketCap": 238254489600,
-      "trailingPE": 141.91919,
-      "forwardPE": 57.974545,
+      "price": 560,
+      "previousClose": 562,
+      "change": -2,
+      "changePercent": -0.3558719,
+      "marketCap": 237406617600,
+      "trailingPE": 140.35088,
+      "forwardPE": 57.76823,
       "fiftyTwoWeekHigh": 637,
       "fiftyTwoWeekLow": 79.4,
       "targetMean": 387.07693,
       "targetHigh": 640,
       "targetLow": 90,
       "targetMedian": 336,
-      "recommendationMean": 3,
-      "recommendationKey": "hold",
+      "recommendationMean": null,
+      "recommendationKey": "none",
       "numberOfAnalystOpinions": 13,
       "profitMargin": 0.12528,
       "grossMargin": 0.26284,
@@ -129935,13 +130063,13 @@
       "totalDebt": 12713849856,
       "totalCash": 6583396864,
       "freeCashflow": 2481770752,
-      "pegRatio": 2.26,
-      "priceToBook": 7.3243837,
+      "pegRatio": 2.39,
+      "priceToBook": 7.2983184,
       "beta": null,
-      "dividendYield": 0.0018000001,
-      "enterpriseValue": 306211848192,
-      "enterpriseToRevenue": 17.346,
-      "enterpriseToEbitda": 63.031,
+      "dividendYield": 0.0036000002,
+      "enterpriseValue": 305145282560,
+      "enterpriseToRevenue": 17.286,
+      "enterpriseToEbitda": 62.812,
       "heldPercentInsiders": 0.16712,
       "heldPercentInstitutions": 0.20271,
       "shortPercentOfFloat": null,
@@ -129950,10 +130078,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 141.5
-        },
         {
           "d": "2024-05-28",
           "c": 143.5
@@ -131881,6 +132005,10 @@
         {
           "d": "2026-05-26",
           "c": 562
+        },
+        {
+          "d": "2026-05-27",
+          "c": 560
         }
       ]
     },
@@ -131933,13 +132061,13 @@
     "ememory": {
       "symbol": "3529.TWO",
       "currency": "TWD",
-      "price": 3485,
-      "previousClose": 3710,
-      "change": -225,
-      "changePercent": -6.06469,
-      "marketCap": 260284203008,
-      "trailingPE": 136.989,
-      "forwardPE": 64.68374,
+      "price": 3295,
+      "previousClose": 3485,
+      "change": -190,
+      "changePercent": -5.451937,
+      "marketCap": 246093660160,
+      "trailingPE": 129.52043,
+      "forwardPE": 61.157223,
       "fiftyTwoWeekHigh": 4785,
       "fiftyTwoWeekLow": 1490,
       "targetMean": 4558.3335,
@@ -131960,24 +132088,20 @@
       "totalCash": 4126775040,
       "freeCashflow": 1380079616,
       "pegRatio": null,
-      "priceToBook": 58.635483,
+      "priceToBook": 55.438713,
       "beta": 1.213,
-      "dividendYield": 0.0063,
-      "enterpriseValue": 256220790784,
-      "enterpriseToRevenue": 63.558,
-      "enterpriseToEbitda": 104.18,
+      "dividendYield": 0.0067000003,
+      "enterpriseValue": 242030264320,
+      "enterpriseToRevenue": 60.038,
+      "enterpriseToEbitda": 98.41,
       "heldPercentInsiders": 0.09706,
-      "heldPercentInstitutions": 0.54405,
+      "heldPercentInstitutions": 0.54979,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 2290
-        },
         {
           "d": "2024-05-28",
           "c": 2330
@@ -133905,19 +134029,23 @@
         {
           "d": "2026-05-26",
           "c": 3485
+        },
+        {
+          "d": "2026-05-27",
+          "c": 3295
         }
       ]
     },
     "phison": {
       "symbol": "8299.TWO",
       "currency": "TWD",
-      "price": 2505,
-      "previousClose": 2480,
-      "change": 25,
-      "changePercent": 1.0080645,
-      "marketCap": 553820422144,
-      "trailingPE": 62.89229,
-      "forwardPE": 15.770664,
+      "price": 2480,
+      "previousClose": 2505,
+      "change": -25,
+      "changePercent": -0.99800396,
+      "marketCap": 548293279744,
+      "trailingPE": 62.5,
+      "forwardPE": 15.613273,
       "fiftyTwoWeekHigh": 2880,
       "fiftyTwoWeekLow": 463,
       "targetMean": 2875.6365,
@@ -133938,24 +134066,20 @@
       "totalCash": 22561738752,
       "freeCashflow": -19829260288,
       "pegRatio": null,
-      "priceToBook": 7.472125,
+      "priceToBook": 7.397553,
       "beta": 1.571,
-      "dividendYield": 0.0125,
-      "enterpriseValue": 553460826112,
-      "enterpriseToRevenue": 5.546,
-      "enterpriseToEbitda": 24.363,
+      "dividendYield": 0.0126,
+      "enterpriseValue": 547933650944,
+      "enterpriseToRevenue": 5.491,
+      "enterpriseToEbitda": 24.119,
       "heldPercentInsiders": 0.16601999,
-      "heldPercentInstitutions": 0.25046,
+      "heldPercentInstitutions": 0.25013,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 592
-        },
         {
           "d": "2024-05-28",
           "c": 622
@@ -135883,23 +136007,27 @@
         {
           "d": "2026-05-26",
           "c": 2505
+        },
+        {
+          "d": "2026-05-27",
+          "c": 2480
         }
       ]
     },
     "onsemi": {
       "symbol": "ON",
       "currency": "USD",
-      "price": 127,
-      "previousClose": 116.2,
-      "change": 10.800003,
-      "changePercent": 9.294323,
-      "marketCap": 49378004992,
-      "trailingPE": 93.382355,
-      "forwardPE": 29.875536,
+      "price": 124.89,
+      "previousClose": 127,
+      "change": -2.1100006,
+      "changePercent": -1.6614178,
+      "marketCap": 48557629440,
+      "trailingPE": 91.83088,
+      "forwardPE": 29.379177,
       "fiftyTwoWeekHigh": 129.13,
       "fiftyTwoWeekLow": 41.49,
-      "targetMean": 103.96552,
-      "targetHigh": 130,
+      "targetMean": 104.75862,
+      "targetHigh": 138,
       "targetLow": 68,
       "targetMedian": 101,
       "recommendationMean": 2.18182,
@@ -135915,15 +136043,15 @@
       "totalDebt": 3245799936,
       "totalCash": 2403599872,
       "freeCashflow": 1282174976,
-      "pegRatio": 0.38,
-      "priceToBook": 6.8158646,
+      "pegRatio": 0.42,
+      "priceToBook": 6.7026243,
       "beta": 1.938,
       "dividendYield": null,
-      "enterpriseValue": 46400450560,
-      "enterpriseToRevenue": 7.653,
-      "enterpriseToEbitda": 22.659,
+      "enterpriseValue": 50633007104,
+      "enterpriseToRevenue": 8.351,
+      "enterpriseToEbitda": 24.726,
       "heldPercentInsiders": 0.00337,
-      "heldPercentInstitutions": 1.08865,
+      "heldPercentInstitutions": 1.08867,
       "shortPercentOfFloat": 0.102,
       "shortRatio": 2.88,
       "sharesShort": 29179952,
@@ -137929,27 +138057,31 @@
         {
           "d": "2026-05-26",
           "c": 127
+        },
+        {
+          "d": "2026-05-27",
+          "c": 124.89
         }
       ]
     },
     "infineon": {
       "symbol": "IFX.DE",
       "currency": "EUR",
-      "price": 77.55,
-      "previousClose": 76.73,
-      "change": 0.8199997,
-      "changePercent": 1.068682,
-      "marketCap": 100776198144,
-      "trailingPE": 94.57317,
-      "forwardPE": 30.178034,
-      "fiftyTwoWeekHigh": 78.06,
+      "price": 76.73,
+      "previousClose": 77.55,
+      "change": -0.8199997,
+      "changePercent": -1.0573819,
+      "marketCap": 99710615552,
+      "trailingPE": 93.57317,
+      "forwardPE": 29.858936,
+      "fiftyTwoWeekHigh": 79.87,
       "fiftyTwoWeekLow": 30.82,
-      "targetMean": 66.04167,
-      "targetHigh": 80,
+      "targetMean": 67.16667,
+      "targetHigh": 95,
       "targetLow": 47,
       "targetMedian": 70,
-      "recommendationMean": 1.5,
-      "recommendationKey": "strong_buy",
+      "recommendationMean": 1.58333,
+      "recommendationKey": "buy",
       "numberOfAnalystOpinions": 24,
       "profitMargin": 0.072340004,
       "grossMargin": 0.41162,
@@ -137961,25 +138093,21 @@
       "totalDebt": 8294000128,
       "totalCash": 2152999936,
       "freeCashflow": 1356125056,
-      "pegRatio": 1.05,
-      "priceToBook": 6.0004644,
+      "pegRatio": 1.1,
+      "priceToBook": 5.937017,
       "beta": 1.903,
-      "dividendYield": 0.0046,
+      "dividendYield": 0.0045,
       "enterpriseValue": 105851609088,
       "enterpriseToRevenue": 6.999,
       "enterpriseToEbitda": 26.351,
       "heldPercentInsiders": 0,
-      "heldPercentInstitutions": 0.56103003,
+      "heldPercentInstitutions": 0.56044996,
       "shortPercentOfFloat": null,
       "shortRatio": null,
       "sharesShort": null,
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 38.06
-        },
         {
           "d": "2024-05-28",
           "c": 38.285
@@ -139995,19 +140123,23 @@
         {
           "d": "2026-05-25",
           "c": 76.73
+        },
+        {
+          "d": "2026-05-26",
+          "c": 77.55
         }
       ]
     },
     "rambus": {
       "symbol": "RMBS",
       "currency": "USD",
-      "price": 157.23,
-      "previousClose": 142.98,
-      "change": 14.25,
-      "changePercent": 9.96643,
-      "marketCap": 17002375168,
-      "trailingPE": 74.87143,
-      "forwardPE": 43.247807,
+      "price": 148.66,
+      "previousClose": 157.23,
+      "change": -8.569992,
+      "changePercent": -5.4506087,
+      "marketCap": 16075641856,
+      "trailingPE": 70.45498,
+      "forwardPE": 40.890537,
       "fiftyTwoWeekHigh": 161.8,
       "fiftyTwoWeekLow": 52.12,
       "targetMean": 145.25,
@@ -140028,19 +140160,19 @@
       "totalCash": 786139008,
       "freeCashflow": 249791120,
       "pegRatio": 3.8,
-      "priceToBook": 12.203508,
+      "priceToBook": 11.538342,
       "beta": 1.789,
       "dividendYield": null,
-      "enterpriseValue": 14698688512,
-      "enterpriseToRevenue": 20.382,
-      "enterpriseToEbitda": 48.629,
+      "enterpriseValue": 16239640576,
+      "enterpriseToRevenue": 22.519,
+      "enterpriseToEbitda": 53.727,
       "heldPercentInsiders": 0.00816,
-      "heldPercentInstitutions": 0.99237996,
+      "heldPercentInstitutions": 0.99219,
       "shortPercentOfFloat": 0.0863,
       "shortRatio": 2.49,
       "sharesShort": 6878263,
-      "insiderNetTxnCount": 8,
-      "insiderNetShares": 383120,
+      "insiderNetTxnCount": 7,
+      "insiderNetShares": 345206,
       "history": [
         {
           "d": "2024-05-28",
@@ -142041,6 +142173,10 @@
         {
           "d": "2026-05-26",
           "c": 157.23
+        },
+        {
+          "d": "2026-05-27",
+          "c": 148.66
         }
       ]
     }
@@ -142049,14 +142185,14 @@
     "soxx": {
       "symbol": "SOXX",
       "currency": "USD",
-      "price": 570.09,
-      "previousClose": 537.33,
-      "change": 32.76001,
-      "changePercent": 6.0968137,
+      "price": 563.98,
+      "previousClose": 570.09,
+      "change": -6.1100464,
+      "changePercent": -1.0717688,
       "marketCap": null,
-      "trailingPE": 52.32777,
+      "trailingPE": 51.766937,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 572.94,
+      "fiftyTwoWeekHigh": 584.5,
       "fiftyTwoWeekLow": 201.12,
       "targetMean": null,
       "targetHigh": null,
@@ -144089,20 +144225,24 @@
         {
           "d": "2026-05-26",
           "c": 570.09
+        },
+        {
+          "d": "2026-05-27",
+          "c": 563.98
         }
       ]
     },
     "smh": {
       "symbol": "SMH",
       "currency": "USD",
-      "price": 602.14,
-      "previousClose": 576.32,
-      "change": 25.820007,
-      "changePercent": 4.480151,
+      "price": 595.5,
+      "previousClose": 602.14,
+      "change": -6.6400146,
+      "changePercent": -1.102736,
       "marketCap": null,
-      "trailingPE": 49.55418,
+      "trailingPE": 49.00773,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 603.96,
+      "fiftyTwoWeekHigh": 612.3,
       "fiftyTwoWeekLow": 235.37,
       "targetMean": null,
       "targetHigh": null,
@@ -146135,16 +146275,20 @@
         {
           "d": "2026-05-26",
           "c": 602.14
+        },
+        {
+          "d": "2026-05-27",
+          "c": 595.5
         }
       ]
     },
     "spx": {
       "symbol": "^GSPC",
       "currency": "USD",
-      "price": 7519.12,
-      "previousClose": 7473.47,
-      "change": 45.649902,
-      "changePercent": 0.610826,
+      "price": 7520.36,
+      "previousClose": 7519.12,
+      "change": 1.2397461,
+      "changePercent": 0.016487915,
       "marketCap": null,
       "trailingPE": null,
       "forwardPE": null,
@@ -148181,20 +148325,24 @@
         {
           "d": "2026-05-26",
           "c": 7519.1201
+        },
+        {
+          "d": "2026-05-27",
+          "c": 7520.3599
         }
       ]
     },
     "tw50": {
       "symbol": "0050.TW",
       "currency": "TWD",
-      "price": 100.1,
-      "previousClose": 100.8,
-      "change": -0.7000046,
-      "changePercent": -0.69444895,
+      "price": 102.55,
+      "previousClose": 100.1,
+      "change": 2.4500046,
+      "changePercent": 2.447557,
       "marketCap": null,
-      "trailingPE": 32.754547,
+      "trailingPE": 33.556232,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 101.8,
+      "fiftyTwoWeekHigh": 103.9,
       "fiftyTwoWeekLow": 43.8125,
       "targetMean": null,
       "targetHigh": null,
@@ -148228,10 +148376,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 43.2375
-        },
         {
           "d": "2024-05-28",
           "c": 43.3
@@ -150159,20 +150303,24 @@
         {
           "d": "2026-05-25",
           "c": 100.8
+        },
+        {
+          "d": "2026-05-26",
+          "c": 100.1
         }
       ]
     },
     "twii": {
       "symbol": "^TWII",
       "currency": "TWD",
-      "price": 43525.37,
-      "previousClose": 43644.4,
-      "change": -119.02734,
-      "changePercent": -0.27272078,
+      "price": 44256.8,
+      "previousClose": 43525.37,
+      "change": 731.4297,
+      "changePercent": 1.6804675,
       "marketCap": null,
       "trailingPE": null,
       "forwardPE": null,
-      "fiftyTwoWeekHigh": 44097.63,
+      "fiftyTwoWeekHigh": 44818.25,
       "fiftyTwoWeekLow": 20940.98,
       "targetMean": null,
       "targetHigh": null,
@@ -150206,10 +150354,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-05-27",
-          "c": 21803.7695
-        },
         {
           "d": "2024-05-28",
           "c": 21858.4102
@@ -152137,6 +152281,10 @@
         {
           "d": "2026-05-25",
           "c": 43644.3984
+        },
+        {
+          "d": "2026-05-26",
+          "c": 43525.3711
         }
       ]
     }
