@@ -94,13 +94,18 @@ export interface MarketDataPlaceholder {
 // =====================================================================
 // 掌權人 / 領導者評估
 //
-// 6 個維度，每個 0-5：
-//   1. 韌性 resilience   — 能否在逆境（產業低谷 / 巨變）中堅持並調整
-//   2. 執行力 execution  — 把策略落地的紀律與速度
-//   3. 正直 integrity    — 揭露透明、信譽、無重大爭議
-//   4. 願景 vision       — 對產業長期方向的判斷力與布局
-//   5. 資本配置 capitalAllocation — 併購 / 買回 / R&D / 配息的取捨品質
-//   6. 溝通透明 communication     — 法說會 / IR / 對股東的可預期性
+// 10 個維度，每個 0-5；加權合成 0-100 分（權重總和 = 100%）
+//
+//   1. strategicJudgement    戰略判斷力          15%
+//   2. execution             執行力              15%
+//   3. capitalAllocation     資本配置能力        15%
+//   4. technicalProductInsight 技術 / 產品理解力 10%
+//   5. talentOrganization    組織與人才能力      10%
+//   6. integrityGovernance   正直與治理          10%
+//   7. customerEcosystem     客戶與生態系經營     8%
+//   8. resilience            逆風韌性             7%
+//   9. financialDiscipline   財務紀律             5%
+//  10. communication         溝通與市場信任       5%
 //
 // 嚴格原則：
 //   - 評分高度主觀，僅供「相對比較」用，不可作為買賣依據
@@ -110,13 +115,45 @@ export interface MarketDataPlaceholder {
 // =====================================================================
 
 export interface LeadershipScores {
-  resilience: number;
+  strategicJudgement: number;
   execution: number;
-  integrity: number;
-  vision: number;
   capitalAllocation: number;
+  technicalProductInsight: number;
+  talentOrganization: number;
+  integrityGovernance: number;
+  customerEcosystem: number;
+  resilience: number;
+  financialDiscipline: number;
   communication: number;
 }
+
+/** 領導力 10 維度權重（總和 1.0） */
+export const LEADERSHIP_WEIGHTS: Record<keyof LeadershipScores, number> = {
+  strategicJudgement: 0.15,
+  execution: 0.15,
+  capitalAllocation: 0.15,
+  technicalProductInsight: 0.10,
+  talentOrganization: 0.10,
+  integrityGovernance: 0.10,
+  customerEcosystem: 0.08,
+  resilience: 0.07,
+  financialDiscipline: 0.05,
+  communication: 0.05,
+};
+
+/** 中文標籤對應 */
+export const LEADERSHIP_LABELS: Record<keyof LeadershipScores, string> = {
+  strategicJudgement: "戰略判斷力",
+  execution: "執行力",
+  capitalAllocation: "資本配置能力",
+  technicalProductInsight: "技術 / 產品理解力",
+  talentOrganization: "組織與人才能力",
+  integrityGovernance: "正直與治理",
+  customerEcosystem: "客戶與生態系經營",
+  resilience: "逆風韌性",
+  financialDiscipline: "財務紀律",
+  communication: "溝通與市場信任",
+};
 
 export interface KeyPerson {
   role: string;   // "CEO" | "Chairman" | "Founder" | "President" | "CTO" 等
