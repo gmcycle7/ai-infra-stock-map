@@ -34,6 +34,7 @@ const DataQualityPage = lazy(() => import("./pages/DataQuality").then((m) => ({ 
 const BacktestPage = lazy(() => import("./pages/Backtest").then((m) => ({ default: m.BacktestPage })));
 const JournalPage = lazy(() => import("./pages/Journal").then((m) => ({ default: m.JournalPage })));
 const ChangesPage = lazy(() => import("./pages/Changes").then((m) => ({ default: m.ChangesPage })));
+const UpdateDataPage = lazy(() => import("./pages/UpdateData").then((m) => ({ default: m.UpdateDataPage })));
 
 function PageLoading() {
   return (
@@ -212,6 +213,14 @@ createRoot(document.getElementById("root")!).render(
                   element={
                     <Suspense fallback={<PageLoading />}>
                       <ChangesPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/update-data"
+                  element={
+                    <Suspense fallback={<PageLoading />}>
+                      <UpdateDataPage />
                     </Suspense>
                   }
                 />

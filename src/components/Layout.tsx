@@ -3,7 +3,11 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Disclaimer } from "./Disclaimer";
 import { GlobalSearch } from "./GlobalSearch";
 import { useWatchlist } from "../context/watchlistContextValue";
-import { lastFetchedAt, formatFetchedAt } from "../services/marketData";
+import {
+  lastFetchedAt,
+  formatFetchedAt,
+  formatRelativeTime,
+} from "../services/marketData";
 
 const nav: Array<{ to: string; label: string }> = [
   { to: "/", label: "首頁" },
@@ -19,6 +23,7 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/kpi-tuning", label: "KPI 權重自訂" },
   { to: "/kpi-validation", label: "KPI 驗證" },
   { to: "/data-quality", label: "資料品質" },
+  { to: "/update-data", label: "更新資料" },
   { to: "/supply-chain", label: "供應鏈總覽" },
   { to: "/bottlenecks", label: "瓶頸對照" },
   { to: "/risk-map", label: "風險地圖" },
@@ -31,11 +36,19 @@ const nav: Array<{ to: string; label: string }> = [
 
 export function Layout() {
   const { ids } = useWatchlist();
+  const freshness = formatRelativeTime(lastFetchedAt);
   return (
     <div className="flex min-h-screen flex-col">
       {/* Global data-freshness banner */}
       <div className="border-b border-slate-200 bg-slate-100 px-4 py-1 text-center text-[11px] text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
-        📊 市場資料更新：<strong>{formatFetchedAt(lastFetchedAt)}</strong>（每日台北 06:00 自動抓 Yahoo Finance）
+        📊 市場資料：<strong>{formatFetchedAt(lastFetchedAt)}</strong>
+        （<span className={freshness.tone}>{freshness.label}</span>）·
+        <Link
+          to="/update-data"
+          className="ml-1 font-semibold text-brand-600 hover:underline dark:text-brand-400"
+        >
+          🔄 立即更新
+        </Link>
         · 僅供研究，不構成投資建議
       </div>
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">

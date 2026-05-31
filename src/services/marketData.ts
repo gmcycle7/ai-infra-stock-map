@@ -172,6 +172,24 @@ export function formatFetchedAt(iso: string): string {
   }
 }
 
+/** 相對時間：剛剛 / N 小時前 / N 天前 */
+export function formatRelativeTime(iso: string): { label: string; tone: string; days: number } {
+  try {
+    const ms = Date.now() - new Date(iso).getTime();
+    if (ms < 0) return { label: "未來", tone: "text-slate-500", days: 0 };
+    const minutes = Math.floor(ms / (60 * 1000));
+    const hours = Math.floor(ms / (60 * 60 * 1000));
+    const days = Math.floor(ms / (24 * 60 * 60 * 1000));
+    if (minutes < 60) return { label: minutes <= 1 ? "剛剛" : `${minutes} 分鐘前`, tone: "text-emerald-600 dark:text-emerald-400", days: 0 };
+    if (hours < 24) return { label: `${hours} 小時前`, tone: "text-emerald-600 dark:text-emerald-400", days: 0 };
+    if (days < 3) return { label: `${days} 天前`, tone: "text-sky-600 dark:text-sky-400", days };
+    if (days < 7) return { label: `${days} 天前`, tone: "text-amber-600 dark:text-amber-400", days };
+    return { label: `${days} 天前 ⚠️`, tone: "text-rose-600 dark:text-rose-400", days };
+  } catch {
+    return { label: "?", tone: "text-slate-500", days: 0 };
+  }
+}
+
 /** 合併 Company 與最新報價（供 detail 頁使用） */
 export function enrichWithQuote(company: Company): Company & { liveQuote: LiveQuote | null } {
   return { ...company, liveQuote: getQuote(company.id) };
