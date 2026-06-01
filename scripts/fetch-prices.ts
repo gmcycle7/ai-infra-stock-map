@@ -39,6 +39,8 @@ interface Quote {
   previousClose: number | null;
   change: number | null;
   changePercent: number | null;
+  /** 若 price 來自即時 quote，為 null；若 fallback 為歷史收盤，為該日期 "YYYY-MM-DD" */
+  priceAsOf: string | null;
   marketCap: number | null;
   trailingPE: number | null;
   forwardPE: number | null;
@@ -296,6 +298,7 @@ async function fetchOne(symbol: string): Promise<Quote> {
     previousClose: null,
     change: null,
     changePercent: null,
+    priceAsOf: null,
     marketCap: null,
     trailingPE: null,
     forwardPE: null,
@@ -321,13 +324,32 @@ async function fetchOne(symbol: string): Promise<Quote> {
     }
   }
 
+  // 若即時 quote 失敗（price 為 null），用最近一天歷史收盤作為 fallback
+  let price = q?.price ?? null;
+  let previousClose = q?.previousClose ?? null;
+  let change = q?.change ?? null;
+  let changePercent = q?.changePercent ?? null;
+  let priceAsOf: string | null = null;
+  if (price == null && history.length > 0) {
+    const last = history[history.length - 1];
+    price = last.c;
+    priceAsOf = last.d;
+    if (history.length >= 2) {
+      const prev = history[history.length - 2];
+      previousClose = prev.c;
+      change = last.c - prev.c;
+      changePercent = prev.c > 0 ? (change / prev.c) * 100 : null;
+    }
+  }
+
   return {
     symbol,
     currency: q?.currency ?? fallback.currency,
-    price: q?.price ?? null,
-    previousClose: q?.previousClose ?? null,
-    change: q?.change ?? null,
-    changePercent: q?.changePercent ?? null,
+    price,
+    previousClose,
+    change,
+    changePercent,
+    priceAsOf,
     marketCap: q?.marketCap ?? null,
     trailingPE: q?.trailingPE ?? null,
     forwardPE: q?.forwardPE ?? null,
@@ -356,7 +378,9 @@ async function main() {
     );
     for (const { t, q } of results) {
       quotes[t.id] = q;
-      const priceTxt = q.price != null ? `${q.price.toFixed(2)} ${q.currency}` : "—";
+      const priceTxt = q.price != null
+        ? `${q.price.toFixed(2)} ${q.currency}${q.priceAsOf ? ` (as of ${q.priceAsOf})` : ""}`
+        : "—";
       const fpe = q.forwardPE != null ? q.forwardPE.toFixed(1) : "—";
       const gm = q.grossMargin != null ? (q.grossMargin * 100).toFixed(0) + "%" : "—";
       const rg = q.revenueGrowthYoY != null ? (q.revenueGrowthYoY * 100).toFixed(0) + "%" : "—";

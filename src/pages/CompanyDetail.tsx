@@ -301,7 +301,16 @@ function MarketDataSection({ companyId }: { companyId: string }) {
       </div>
 
       <div className="grid grid-cols-2 gap-3 text-sm md:grid-cols-3 lg:grid-cols-7">
-        <Cell label="股價" value={formatPrice(q.price, q.currency)} mono />
+        <Cell
+          label="股價"
+          value={formatPrice(q.price, q.currency)}
+          mono
+          hint={
+            q.priceAsOf
+              ? `歷史收盤備援｜${q.priceAsOf}`
+              : undefined
+          }
+        />
         <CellDelta label="漲跌幅" pct={q.changePercent} />
         <Cell label="市值" value={formatMarketCap(q.marketCap, q.currency)} mono />
         <Cell label="本益比 P/E (TTM)" value={formatPE(q.trailingPE)} mono />
@@ -309,6 +318,11 @@ function MarketDataSection({ companyId }: { companyId: string }) {
         <Cell label="52 週高" value={formatPrice(q.fiftyTwoWeekHigh, q.currency)} mono />
         <Cell label="52 週低" value={formatPrice(q.fiftyTwoWeekLow, q.currency)} mono />
       </div>
+      {q.priceAsOf && (
+        <div className="rounded-lg border border-amber-200 bg-amber-50/50 px-3 py-2 text-[11px] text-amber-700 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-300">
+          ⏱ 即時 quote 取不到，已自動使用最近一日歷史收盤（{q.priceAsOf}）作為股價。
+        </div>
+      )}
 
       {/* 歷史價折線（含 1M/3M/6M/1Y/2Y/All 區間切換） */}
       <div>
@@ -380,11 +394,13 @@ function Cell({
   value,
   mono = false,
   valueClass = "",
+  hint,
 }: {
   label: string;
   value: string;
   mono?: boolean;
   valueClass?: string;
+  hint?: string;
 }) {
   return (
     <div className="rounded-lg border border-slate-200 p-3 dark:border-slate-700">
@@ -396,6 +412,11 @@ function Cell({
       >
         {value}
       </div>
+      {hint && (
+        <div className="muted mt-0.5 text-[10px] text-amber-600 dark:text-amber-400">
+          {hint}
+        </div>
+      )}
     </div>
   );
 }

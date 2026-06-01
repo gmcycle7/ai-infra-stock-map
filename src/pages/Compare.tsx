@@ -167,7 +167,17 @@ function CompanyColumn({ company }: { company: typeof companies[number] }) {
       {quote && quote.price != null && (
         <div className="card flex items-end justify-between gap-2 p-2">
           <div className="min-w-0">
-            <div className="muted text-[10px]">最新</div>
+            <div className="muted text-[10px]">
+              最新
+              {quote.priceAsOf && (
+                <span
+                  className="ml-1 text-amber-600 dark:text-amber-400"
+                  title={`資料截至 ${quote.priceAsOf}（即時 quote 不可用，使用歷史收盤備援）`}
+                >
+                  ⏱
+                </span>
+              )}
+            </div>
             <div className="flex items-baseline gap-1">
               <span className="font-mono text-xs font-semibold truncate">
                 {formatPrice(quote.price, quote.currency)}

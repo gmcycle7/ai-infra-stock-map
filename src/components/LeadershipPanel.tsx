@@ -104,7 +104,7 @@ export function LeadershipPanel({ people }: Props) {
               {DIM_ORDER.map((d) => {
                 const v = p.leadership![d];
                 const weight = LEADERSHIP_WEIGHTS[d];
-                const hasReason = v < 4 && p.leadershipReasons?.[d];
+                const hasReason = v < 5 && p.leadershipReasons?.[d];
                 return (
                   <div
                     key={d}
@@ -121,7 +121,7 @@ export function LeadershipPanel({ people }: Props) {
                     >
                       {v}
                     </div>
-                    {v < 4 && (
+                    {v < 5 && (
                       <div className="muted mt-1 text-[8px] leading-tight">⚠</div>
                     )}
                   </div>
@@ -129,15 +129,15 @@ export function LeadershipPanel({ people }: Props) {
               })}
             </div>
 
-            {/* 低分維度的一句話解釋（< 4 分） */}
+            {/* 非滿分維度的一句話解釋（< 5 分） */}
             {p.leadershipReasons && Object.keys(p.leadershipReasons).length > 0 && (
-              <div className="mt-3 rounded-lg border border-rose-200 bg-rose-50/40 p-3 dark:border-rose-800 dark:bg-rose-950/30">
-                <div className="text-[10px] font-semibold uppercase tracking-wide text-rose-700 dark:text-rose-300">
-                  低分維度說明（&lt; 4 分）
+              <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50/40 p-3 dark:border-amber-800 dark:bg-amber-950/30">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                  非滿分維度說明（&lt; 5 分）
                 </div>
                 <ul className="mt-2 space-y-1 text-[11px]">
                   {DIM_ORDER.filter(
-                    (d) => p.leadership![d] < 4 && p.leadershipReasons?.[d],
+                    (d) => p.leadership![d] < 5 && p.leadershipReasons?.[d],
                   ).map((d) => (
                     <li key={d} className="flex items-baseline gap-2">
                       <span

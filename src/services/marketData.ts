@@ -24,6 +24,8 @@ export interface LiveQuote {
   previousClose: number | null;
   change: number | null;
   changePercent: number | null;
+  /** 若價格為當下即時 quote，為 null/未設；若 fallback 為歷史收盤，為該日期 "YYYY-MM-DD" */
+  priceAsOf?: string | null;
   marketCap: number | null;
   trailingPE: number | null;
   forwardPE: number | null;
@@ -77,6 +79,35 @@ interface MarketDataFile {
 
 const market = rawMarketData as MarketDataFile;
 
+/**
+ * 取不到即時 price 時，從 history 取最後一日收盤作 fallback。
+ * 同時補上 previousClose / change / changePercent / priceAsOf。
+ * 已存在 price 的不動。
+ */
+function applyHistoryFallback(q: LiveQuote): LiveQuote {
+  if (q.price != null) return q;
+  if (!q.history || q.history.length === 0) return q;
+  const last = q.history[q.history.length - 1];
+  const prev = q.history.length >= 2 ? q.history[q.history.length - 2] : null;
+  const change = prev ? last.c - prev.c : null;
+  return {
+    ...q,
+    price: last.c,
+    priceAsOf: last.d,
+    previousClose: prev ? prev.c : q.previousClose,
+    change: change,
+    changePercent: prev && prev.c > 0 ? (change! / prev.c) * 100 : q.changePercent,
+  };
+}
+for (const id in market.quotes) {
+  market.quotes[id] = applyHistoryFallback(market.quotes[id]);
+}
+if (market.benchmarks) {
+  for (const id in market.benchmarks) {
+    market.benchmarks[id] = applyHistoryFallback(market.benchmarks[id]);
+  }
+}
+
 /** 最近一次抓取時間（ISO 8601 字串） */
 export const lastFetchedAt: string = market.fetchedAt;
 
@@ -106,10 +137,19 @@ export function defaultBenchmarkFor(market_: "US" | "Taiwan" | "Private"): strin
   return "spx";
 }
 
-/** 是否有有效報價（有價格） */
+/** 是否有有效報價（有價格 — fallback 歷史收盤也算） */
 export function hasValidQuote(companyId: string): boolean {
   const q = market.quotes[companyId];
-  return !!q && q.price != null && !q.error;
+  return !!q && q.price != null;
+}
+
+/**
+ * 把 priceAsOf 欄位轉成可顯示的提示字串。
+ * 回傳 null 表示不需要提示（即時 quote 沒有 fallback）。
+ */
+export function priceAsOfHint(priceAsOf: string | null | undefined): string | null {
+  if (!priceAsOf) return null;
+  return `資料截至 ${priceAsOf}（歷史收盤備援）`;
 }
 
 /** 把市值（數字）格式化為易讀字串，依幣別 */
