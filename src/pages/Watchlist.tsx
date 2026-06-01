@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useWatchlist } from "../context/watchlistContextValue";
 import { companies } from "../data/companies";
 import { categoryBySlug } from "../data/categories";
 import { CompanyCard } from "../components/CompanyCard";
+import { WatchlistStar } from "../components/WatchlistStar";
 import { getKpi } from "../lib/kpi";
 import { getQuote, formatRatio } from "../services/marketData";
 import { windowReturn } from "../lib/priceWindow";
-import type { Company } from "../types";
+import {
+  keyPeopleById,
+  leaderCompositeScore,
+} from "../data/keyPeople";
+import { LEADERSHIP_LABELS } from "../types";
+import type { Company, LeadershipScores } from "../types";
 
 function calcPortfolioStats(picks: Company[]) {
   if (picks.length === 0) return null;
@@ -395,6 +401,9 @@ export function WatchlistPage() {
             </section>
           )}
 
+          {/* 領導力篩選 */}
+          <LeadershipFilter list={list} />
+
           {/* 公司卡片列表 */}
           <section>
             <h2 className="section-title text-base">關注公司列表</h2>
@@ -412,6 +421,250 @@ export function WatchlistPage() {
         小提醒：這個分析以「等權重」為前提（每家公司影響力相同）。實際組合若有不同權重，
         想做更精確模擬請到「📈 回測這個組合」頁面。
       </p>
+    </div>
+  );
+}
+
+// =====================================================================
+// 領導力篩選：過濾出組合中掌權人分數過低的公司
+// =====================================================================
+interface LeaderRow {
+  company: Company;
+  leaderName: string;
+  compositeScore: number | null;        // null = 無打分
+  weakestDim: keyof LeadershipScores | null;
+  weakestValue: number | null;
+}
+
+function buildLeaderRows(list: Company[]): LeaderRow[] {
+  const rows: LeaderRow[] = [];
+  for (const c of list) {
+    const leaders = keyPeopleById[c.id] ?? [];
+    const scored = leaders.filter((p) => p.leadership);
+    if (scored.length === 0) {
+      rows.push({
+        company: c,
+        leaderName: leaders[0]
+          ? leaders[0].nameZh
+            ? `${leaders[0].nameZh}（${leaders[0].name}）`
+            : leaders[0].name
+          : "（無資料）",
+        compositeScore: null,
+        weakestDim: null,
+        weakestValue: null,
+      });
+      continue;
+    }
+
+    // 取分數最低的領導者（最弱環節）
+    const sorted = [...scored].sort(
+      (a, b) => leaderCompositeScore(a.leadership!) - leaderCompositeScore(b.leadership!),
+    );
+    const worst = sorted[0];
+    const composite = leaderCompositeScore(worst.leadership!);
+
+    // 找該領導者分數最低的維度（指出弱點）
+    let weakestDim: keyof LeadershipScores | null = null;
+    let weakestValue = 6;
+    for (const key of Object.keys(worst.leadership!) as Array<keyof LeadershipScores>) {
+      const v = worst.leadership![key];
+      if (v < weakestValue) {
+        weakestValue = v;
+        weakestDim = key;
+      }
+    }
+
+    rows.push({
+      company: c,
+      leaderName: worst.nameZh ? `${worst.nameZh}（${worst.name}）` : worst.name,
+      compositeScore: composite,
+      weakestDim,
+      weakestValue,
+    });
+  }
+  return rows;
+}
+
+function LeadershipFilter({ list }: { list: Company[] }) {
+  const [threshold, setThreshold] = useState(65);
+  const [includeUnscored, setIncludeUnscored] = useState(false);
+
+  const rows = useMemo(() => buildLeaderRows(list), [list]);
+  const scoredRows = rows.filter((r) => r.compositeScore != null);
+  const unscoredRows = rows.filter((r) => r.compositeScore == null);
+
+  const belowThreshold = scoredRows.filter(
+    (r) => r.compositeScore != null && r.compositeScore < threshold,
+  );
+  const flagged = includeUnscored
+    ? [...belowThreshold, ...unscoredRows]
+    : belowThreshold;
+
+  // 排序：分數低 → 高，無分數放最後
+  flagged.sort((a, b) => {
+    if (a.compositeScore == null) return 1;
+    if (b.compositeScore == null) return -1;
+    return a.compositeScore - b.compositeScore;
+  });
+
+  // 計算分布
+  const distribution = {
+    excellent: scoredRows.filter((r) => (r.compositeScore ?? 0) >= 80).length,
+    good: scoredRows.filter((r) => (r.compositeScore ?? 0) >= 65 && (r.compositeScore ?? 0) < 80).length,
+    fair: scoredRows.filter((r) => (r.compositeScore ?? 0) >= 50 && (r.compositeScore ?? 0) < 65).length,
+    weak: scoredRows.filter((r) => (r.compositeScore ?? 0) < 50).length,
+    unscored: unscoredRows.length,
+  };
+
+  return (
+    <section className="card space-y-4 p-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="section-title text-base">領導力篩選</h2>
+        <span className="muted text-xs">
+          找出組合中掌權人分數過低的公司
+        </span>
+      </div>
+
+      {/* 分布概覽 */}
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+        <DistBox label="優秀 ≥80" count={distribution.excellent} tone="bg-emerald-500 text-white" />
+        <DistBox label="穩健 65-79" count={distribution.good} tone="bg-sky-500 text-white" />
+        <DistBox label="中等 50-64" count={distribution.fair} tone="bg-amber-500 text-white" />
+        <DistBox label="偏弱 <50" count={distribution.weak} tone="bg-rose-500 text-white" />
+        <DistBox label="無資料" count={distribution.unscored} tone="bg-slate-400 text-white" />
+      </div>
+
+      {/* 控制列 */}
+      <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900">
+        <div className="flex flex-wrap items-center gap-4">
+          <label className="flex flex-1 items-center gap-3 min-w-[14rem]">
+            <span className="muted text-xs whitespace-nowrap">
+              閾值：低於 <strong className="text-base font-bold text-brand-700 dark:text-brand-300 tabular-nums">{threshold}</strong> 分視為「過低」
+            </span>
+            <input
+              type="range"
+              min={30}
+              max={90}
+              step={5}
+              value={threshold}
+              onChange={(e) => setThreshold(Number(e.target.value))}
+              className="flex-1 accent-brand-600"
+            />
+          </label>
+          <label className="flex items-center gap-1.5 text-xs">
+            <input
+              type="checkbox"
+              checked={includeUnscored}
+              onChange={(e) => setIncludeUnscored(e.target.checked)}
+            />
+            <span>同時列出「無打分資料」者</span>
+          </label>
+        </div>
+      </div>
+
+      {/* 篩選結果 */}
+      {flagged.length === 0 ? (
+        <div className="rounded-lg border border-emerald-300 bg-emerald-50/40 p-4 text-sm dark:border-emerald-700 dark:bg-emerald-950/30">
+          <strong className="text-emerald-800 dark:text-emerald-200">
+            ✓ 組合中沒有公司的領導力低於 {threshold} 分
+          </strong>
+          <p className="muted mt-1 text-xs">
+            這代表你關注的公司大多數有相對穩健的掌權人。
+            若想看更嚴格的標準，把閾值拉高試試。
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-2">
+          <div className="text-sm">
+            <strong>{flagged.length}</strong> 家公司觸發警示
+            {flagged.length === scoredRows.length + (includeUnscored ? unscoredRows.length : 0) && (
+              <span className="muted ml-2">（閾值已包含全部組合）</span>
+            )}
+          </div>
+          <ul className="space-y-1.5 text-sm">
+            {flagged.map((row) => (
+              <li
+                key={row.company.id}
+                className="grid grid-cols-[1fr_auto_auto_auto] items-baseline gap-3 rounded-md border border-slate-200 bg-white p-2.5 dark:border-slate-700 dark:bg-slate-900"
+              >
+                <div className="min-w-0">
+                  <Link
+                    to={`/company/${row.company.id}`}
+                    className="font-medium hover:underline"
+                  >
+                    {row.company.name}
+                  </Link>
+                  <span className="muted ml-2 font-mono text-[10px]">
+                    {row.company.ticker}
+                  </span>
+                  <div className="muted text-[11px]">
+                    掌權人：{row.leaderName}
+                    {row.weakestDim && row.weakestValue != null && (
+                      <span className="ml-2 text-rose-600 dark:text-rose-400">
+                        · 最弱：{LEADERSHIP_LABELS[row.weakestDim]} {row.weakestValue}/5
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <span
+                  className={
+                    "font-mono text-lg font-bold tabular-nums " +
+                    (row.compositeScore == null
+                      ? "text-slate-400"
+                      : row.compositeScore >= 65
+                        ? "text-sky-600 dark:text-sky-400"
+                        : row.compositeScore >= 50
+                          ? "text-amber-600 dark:text-amber-400"
+                          : "text-rose-600 dark:text-rose-400")
+                  }
+                >
+                  {row.compositeScore ?? "—"}
+                </span>
+                <Link
+                  to={`/company/${row.company.id}#leadership`}
+                  className="text-[11px] text-brand-600 hover:underline dark:text-brand-400"
+                  title="到該公司詳細頁的領導力區塊"
+                >
+                  詳細 →
+                </Link>
+                <WatchlistStar id={row.company.id} size="sm" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="muted rounded-lg border border-amber-200 bg-amber-50/40 p-3 text-[11px] dark:border-amber-900 dark:bg-amber-950/30">
+        <strong>怎麼讀：</strong>
+        若公司有多位掌權人（例如鴻海有 Terry Gou + Young Liu），取「<strong>分數最低</strong>」者作為篩選基準（最弱環節）。
+        <strong className="ml-1">無打分資料</strong>不一定代表領導者不好，多為任期短或公開資訊有限 — 是否包含可自由切換。
+        <strong className="ml-1">最弱維度</strong>標示出該領導者在 10 維度中得分最低的一項，幫你定位該注意什麼。
+        詳細評分判準見 <Link to="/leadership-rubric" className="text-brand-600 hover:underline dark:text-brand-400">領導力評分判準</Link>。
+      </div>
+    </section>
+  );
+}
+
+function DistBox({
+  label,
+  count,
+  tone,
+}: {
+  label: string;
+  count: number;
+  tone: string;
+}) {
+  return (
+    <div className="rounded-lg border border-slate-200 p-2 text-center dark:border-slate-700">
+      <div className="muted text-[10px]">{label}</div>
+      <div
+        className={
+          "mx-auto mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold tabular-nums " +
+          tone
+        }
+      >
+        {count}
+      </div>
     </div>
   );
 }
