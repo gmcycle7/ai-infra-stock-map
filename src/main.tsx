@@ -35,6 +35,7 @@ const BacktestPage = lazy(() => import("./pages/Backtest").then((m) => ({ defaul
 const JournalPage = lazy(() => import("./pages/Journal").then((m) => ({ default: m.JournalPage })));
 const ChangesPage = lazy(() => import("./pages/Changes").then((m) => ({ default: m.ChangesPage })));
 const UpdateDataPage = lazy(() => import("./pages/UpdateData").then((m) => ({ default: m.UpdateDataPage })));
+const OptimizePage = lazy(() => import("./pages/Optimize").then((m) => ({ default: m.OptimizePage })));
 
 function PageLoading() {
   return (
@@ -221,6 +222,14 @@ createRoot(document.getElementById("root")!).render(
                   element={
                     <Suspense fallback={<PageLoading />}>
                       <UpdateDataPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/optimize"
+                  element={
+                    <Suspense fallback={<PageLoading />}>
+                      <OptimizePage />
                     </Suspense>
                   }
                 />

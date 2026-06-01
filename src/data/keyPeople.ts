@@ -82,6 +82,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2006,
       bio: "20 年穩定執掌 Broadcom（原 Avago）；以連環併購 + 嚴格成本控制建立半導體 + 軟體巨人。風格集權；併購整合手法被質疑壓榨被併公司文化。",
       leadership: L(5, 5, 5, 4, 3, 3, 4, 5, 5, 3),
+      leadershipReasons: {
+        talentOrganization: "以激進裁員與成本壓縮聞名，併購後常大規模裁員，留才文化偏負面",
+        integrityGovernance: "Symantec 整合與 VMware 收購後的價格策略引發部分客戶與監管質疑",
+        communication: "法說會風格簡短直接，對股東透明但媒體與客戶溝通較少",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -102,6 +107,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "沈翔霖",
       bio: "Alchip 創辦人，深耕高效能 ASIC 設計服務多年；與多家北美 hyperscaler 建立深度合作。",
       leadership: L(4, 4, 3, 5, 4, 4, 4, 4, 3, 3),
+      leadershipReasons: {
+        capitalAllocation: "公司主要靠 NRE + 量產費，無大型併購紀錄；資金多用於擴充設計能量",
+        financialDiscipline: "高度仰賴單一專案 ramp-up，現金流隨客戶 milestone 波動",
+        communication: "法說會多以技術導向回應，市場期望溝通較不主動",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -112,6 +122,12 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "戴尚義",
       bio: "GUC 總經理，台積電生態系內 ASIC 設計服務龍頭；與台積電製程與封裝節奏深度同步。",
       leadership: L(3, 4, 3, 4, 4, 4, 5, 4, 3, 3),
+      leadershipReasons: {
+        strategicJudgement: "策略路線高度跟隨台積電節奏，自主前瞻判斷空間有限",
+        capitalAllocation: "資本配置多由母公司台積電牽動，獨立投資決策能見度低",
+        financialDiscipline: "毛利受客戶價格議價影響大，紀律雖佳但缺差異化",
+        communication: "與台積電綁定使對外溝通內容受限，較少獨立指引",
+      },
       leadershipConfidence: "Medium",
     },
     { role: "Note", name: "TSMC 持股近 35%", note: "策略上與台積電緊密綁定" },
@@ -166,6 +182,14 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "李在鎔",
       bio: "三星集團實質掌權者；曾因賄賂案被判刑但後特赦；近年積極推進 HBM 認證與 Foundry 競爭力。",
       leadership: L(4, 3, 4, 3, 3, 2, 3, 4, 4, 2),
+      leadershipReasons: {
+        execution: "HBM 與 Foundry 接連落後台積電 / SK Hynix，執行節奏被質疑",
+        technicalProductInsight: "本身是法商背景，技術細節仰賴下屬高階主管",
+        talentOrganization: "三星半導體部門近年高階主管離職傳聞不少",
+        integrityGovernance: "2017 賄賂案被定罪後特赦；治理透明度長期被批評",
+        customerEcosystem: "與 hyperscaler 之 HBM 認證進度落後，生態系話語權削弱",
+        communication: "韓國企業文化封閉，對外溝通仰賴 IR；本人公開發言罕見",
+      },
       leadershipConfidence: "Medium",
     },
     {
@@ -174,6 +198,14 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "全永鉉",
       bio: "2024 接任半導體部門負責人，主要任務是追上 SK Hynix 在 HBM 的領先。",
       leadership: L(4, 3, 3, 4, 3, 4, 3, 4, 3, 3),
+      leadershipReasons: {
+        execution: "任期僅 1 年多，HBM 追趕進度仍待證明",
+        capitalAllocation: "重大投資決策多由集團層級決定，自主性有限",
+        talentOrganization: "新上任，組織重整效果尚未顯現",
+        customerEcosystem: "Nvidia 對 Samsung HBM3E 認證仍未拿下 12-Hi 主流訂單",
+        financialDiscipline: "三星 DS 部門 2024 利潤承壓，紀律有待觀察",
+        communication: "新任，市場熟悉度低",
+      },
       leadershipConfidence: "Low",
     },
   ],
@@ -184,6 +216,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "李培瑛",
       bio: "長期執掌南亞科，帶領公司走過多次記憶體大循環。",
       leadership: L(3, 4, 3, 4, 4, 4, 3, 5, 4, 4),
+      leadershipReasons: {
+        strategicJudgement: "在 HBM 主戰場未布局，戰略仍困在標準型 DRAM 紅海",
+        capitalAllocation: "DRAM 設備折舊高，資本配置自由度受限",
+        customerEcosystem: "客戶為 PC / consumer 通路，無 hyperscaler 直接綁定",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -194,6 +231,12 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "焦佑鈞",
       bio: "華邦電董事長，長期經營利基記憶體與 NOR Flash；華新麗華集團成員。",
       leadership: L(3, 4, 3, 4, 4, 4, 3, 5, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "聚焦利基 DRAM/NOR Flash，避開主流戰場是穩健但無突破",
+        capitalAllocation: "新廠投資（高雄 25 廠）後折舊壓力高，資本紀律受質疑",
+        customerEcosystem: "客戶分散於 IoT / 工控 / 汽車，無 hyperscaler 級綁定",
+        communication: "法說會頻率穩定但策略前瞻溝通較少",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -225,6 +268,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "2024 接掌 ASML，前任 Peter Wennink 任內把公司推上 EUV 獨佔；內部出身，延續性高。",
       leadership: L(4, 4, 3, 5, 4, 4, 5, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "ASML 主要靠 R&D 與大型訂單 ramp，無大型併購足跡",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -265,6 +311,17 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "前 Spectrum Brands、Cohu 主管，2024 接任 Advantest；任期尚短。",
       leadership: L(3, 3, 3, 3, 3, 4, 3, 3, 3, 3),
+      leadershipReasons: {
+        strategicJudgement: "任期短，尚無公開戰略前瞻可評",
+        execution: "尚未經歷完整循環，執行紀錄待累積",
+        capitalAllocation: "新任，無重大資本配置決策可佐證",
+        technicalProductInsight: "非工程出身，技術深度仰賴日本團隊",
+        talentOrganization: "外部空降，與日本總部文化整合尚在過程中",
+        customerEcosystem: "新任，與大客戶直接關係待建立",
+        resilience: "尚未經歷大循環",
+        financialDiscipline: "新任，紀律待證明",
+        communication: "市場熟悉度低，公開發言不多",
+      },
       leadershipConfidence: "Low",
     },
   ],
@@ -276,6 +333,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2016,
       bio: "10 年穩定執掌 Tokyo Electron；任內 EUV 配套設備市占持續鞏固。",
       leadership: L(4, 4, 4, 4, 4, 5, 4, 4, 4, 3),
+      leadershipReasons: {
+        communication: "日系 IR 風格保守，對外英文溝通較少；策略指引內斂",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -286,6 +346,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "関家 一馬",
       bio: "Disco 創辦家族成員；公司以高自由度文化與精密技術領先聞名。",
       leadership: L(4, 5, 4, 5, 5, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        communication: "日系小型企業，IR 訊息頻率低，市場關注主要來自設備數據",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -299,6 +362,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       note: "1984 創辦 ASE 集團",
       bio: "ASE 集團創辦人，把日月光從中小封裝廠帶到全球 OSAT 龍頭；連續多次併購（環電、矽品）建立規模。",
       leadership: L(4, 5, 4, 4, 4, 4, 4, 5, 4, 3),
+      leadershipReasons: {
+        communication: "本人公開發言罕見，集團溝通仰賴 CFO 與 IR；風格低調",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -309,6 +375,12 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "李金恭",
       bio: "京元電子董事長，長期經營測試代工事業。",
       leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 3, 3),
+      leadershipReasons: {
+        strategicJudgement: "客戶集中於 Nvidia 鏈，缺乏主動戰略多元化判斷",
+        capitalAllocation: "中國蘇州廠出脫後資本配置策略仍在重整",
+        financialDiscipline: "毛利率受 AI 客戶議價影響，紀律佳但波動大",
+        communication: "法說會頻率穩定但策略前瞻溝通較少",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -319,6 +391,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "曾子章",
       bio: "欣興電子董事長，聯電轉投資出身；長期經營 ABF 載板事業，AI 浪潮中受惠最深。",
       leadership: L(4, 4, 3, 4, 4, 4, 4, 5, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "2021-2022 ABF 大幅擴產後遭遇庫存週期，配置時點被質疑",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -329,6 +404,16 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "吳嘉昭",
       bio: "南電董事長，台塑集團出身。",
       leadership: L(3, 3, 3, 3, 3, 4, 3, 4, 3, 3),
+      leadershipReasons: {
+        strategicJudgement: "ABF 戰略跟隨欣興，自主前瞻判斷較少；公開資訊有限",
+        execution: "AI 訂單比重低於欣興，執行節奏被質疑",
+        capitalAllocation: "台塑集團決策層級高，資本配置自由度受限",
+        technicalProductInsight: "化工背景，半導體載板技術深度仰賴下屬",
+        talentOrganization: "傳統台塑集團文化，吸引外部人才較難",
+        customerEcosystem: "客戶為傳統 CPU 廠，hyperscaler 直接綁定弱於欣興",
+        financialDiscipline: "高 capex 投資後折舊壓力大，紀律有待證明",
+        communication: "台塑集團發言保守，市場前瞻指引少",
+      },
       leadershipConfidence: "Low",
     },
   ],
@@ -342,6 +427,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "河島 浩二",
       bio: "Ibiden 總裁，主導 ABF 載板全球領先地位的維護與擴產投資。",
       leadership: L(4, 4, 4, 4, 4, 5, 4, 4, 4, 3),
+      leadershipReasons: {
+        communication: "日系企業 IR 風格保守，英文溝通與市場前瞻指引較少",
+      },
       leadershipConfidence: "Low",
     },
   ],
@@ -357,6 +445,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2015,
       bio: "10 年執掌 Cisco；任內推動軟體與安全轉型，但在資料中心 switch 與 hyperscaler 競爭中市占受到 Arista、白牌挑戰。",
       leadership: L(3, 4, 3, 3, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        strategicJudgement: "hyperscaler 市場長期被 Arista / 白牌吃下，轉型雲端安全節奏被批落後",
+        capitalAllocation: "Splunk 280 億美元收購規模大，整合成效尚待證明",
+        technicalProductInsight: "業務背景，技術前瞻仰賴 CTO 與工程主管",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -379,6 +472,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       name: "Jitendra Mohan",
       bio: "Astera Labs 共同創辦人，前 Texas Instruments connectivity 主管；專注 AI 資料中心 connectivity，公司上市後成長迅速。",
       leadership: L(4, 4, 3, 5, 4, 4, 4, 4, 3, 4),
+      leadershipReasons: {
+        capitalAllocation: "上市未久（2024 IPO），尚無大型併購或紀律性買回紀錄",
+        financialDiscipline: "高估值（PE > 200）下毛利率與成長預期需持續驗證",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -388,6 +485,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       name: "Bill Brennan",
       bio: "Credo Technology CEO，主導 AEC 與高速 SerDes 產品線。",
       leadership: L(4, 4, 3, 5, 4, 4, 4, 4, 3, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模仍小，無大型併購；資金多用於 R&D 與產能擴張",
+        financialDiscipline: "客戶極度集中（單一大客戶占大半營收），波動風險高",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -398,6 +499,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "Synopsys 內部出身，2024 接任 CEO；任期尚短。",
       leadership: L(4, 4, 3, 5, 4, 4, 5, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "Ansys 350 億美元收購為公司史上最大案，整合與綜效尚待證明",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -433,6 +537,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2017,
       bio: "TE Connectivity CEO，內部出身，主導汽車與工業客戶結構。",
       leadership: L(3, 4, 4, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        strategicJudgement: "車用與工業為主軸，AI 資料中心比重低於 Amphenol；前瞻押注較被動",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -451,6 +558,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "前 Lattice Semiconductor CEO，2024 接掌 Coherent；任務是整合 II-VI / Finisar 併購與聚焦 AI 光通訊。",
       leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "前任 II-VI / Finisar 大型併購後負債高，新任 CEO 正在去槓桿，自由度有限",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -461,6 +571,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "前 Synaptics CEO，2024 接掌 Lumentum；任務是把公司聚焦在資料中心光通訊，淡化 3D sensing。",
       leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "Cloud Light 收購後現金水位較緊；3D sensing 業務拖累需處理",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -481,6 +594,16 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "林威廷",
       bio: "Applied Optoelectronics 創辦人，長期經營光通訊；公司歷經多次轉型與財務波動。",
       leadership: L(3, 3, 2, 4, 3, 3, 3, 4, 2, 3),
+      leadershipReasons: {
+        strategicJudgement: "業務在資料中心 / CATV / 電信間多次搖擺，戰略一致性低",
+        execution: "多次下修財測與目標延遲，執行可預測性不佳",
+        capitalAllocation: "頻繁增資稀釋股東；2024 多次發新股引發投資人不滿",
+        talentOrganization: "高階主管異動頻繁，組織穩定度低",
+        integrityGovernance: "曾被 SEC 調查（後撤銷），治理結構簡單但有過爭議",
+        customerEcosystem: "與 Microsoft / Amazon 等大客戶關係波動，訂單能見度低",
+        financialDiscipline: "毛利率持續壓力，自由現金流多年為負",
+        communication: "預測屢屢失準，市場信任度低",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -494,6 +617,12 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 1993,
       bio: "1993 創辦 Supermicro 至今；以早期支援 Nvidia 平台與客製化彈性聞名。2024 因會計揭露爭議引發股價劇烈波動，治理仍受質疑。",
       leadership: L(4, 4, 3, 5, 4, 2, 4, 5, 2, 2),
+      leadershipReasons: {
+        capitalAllocation: "資本支出激進、存貨大幅膨脹後又需減記，配置紀律不佳",
+        integrityGovernance: "2024 延遲提交 10-K 引發 Hindenburg 做空報告與 DOJ 調查，治理重大瑕疵",
+        financialDiscipline: "毛利率劇烈波動、現金流不穩；應收帳款與存貨佔比高",
+        communication: "對交易市場資訊揭露屢有延遲與更正，市場信任度低",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -514,6 +643,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "洪麗甯",
       bio: "緯穎科技 CEO，緯創分割後專注 hyperscaler 直供；公司在 AI server 浪潮中快速擴張。",
       leadership: L(4, 5, 3, 4, 4, 4, 5, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "ODM Direct 模式下 capex 自由度有限，資本多隨客戶訂單擴張",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -535,6 +667,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "卓桐華",
       bio: "英業達董事長，長期經營伺服器與消費性電子代工。",
       leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "AI server 跟進但非領先佈局，多年無突破性戰略動作",
+        capitalAllocation: "ODM 模式資本配置自由度低，多隨客戶訂單擴張",
+        communication: "法說會中規中矩，前瞻指引相對保守",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -546,6 +683,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 1974,
       bio: "1974 創辦鴻海，從連接器小廠帶到全球最大 EMS；以強執行力與工廠管理聞名。2019 卸下董事長但仍是大股東與精神領袖。",
       leadership: L(4, 5, 4, 4, 4, 3, 4, 5, 4, 3),
+      leadershipReasons: {
+        integrityGovernance: "鴻海在中國勞工待遇與 iPhone 廠勞動爭議多次受監督；個人 2024 政治介入引發爭議",
+        communication: "個性直率，發言常引發股價波動；近年退出後溝通仍偶爾影響市場",
+      },
       leadershipConfidence: "High",
     },
     {
@@ -565,6 +706,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "林任韋",
       bio: "信驊科技創辦團隊成員，主導 server BMC 市占擴張到近獨佔。",
       leadership: L(4, 5, 3, 5, 4, 4, 5, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模仍小且現金充裕但無大型併購；資金多以股息回饋股東",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -617,6 +761,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "海英俊",
       bio: "台達電董事長，金融背景出身；任內主導國際化與電動車事業布局。",
       leadership: L(4, 4, 4, 3, 4, 5, 4, 4, 5, 4),
+      leadershipReasons: {
+        technicalProductInsight: "金融背景，產品與技術深度仰賴工程團隊與創辦人鄭崇華",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -627,6 +774,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "宋恭源",
       bio: "光寶集團創辦人，1975 創辦光寶；主導多次集團整併與聚焦。",
       leadership: L(4, 4, 4, 4, 4, 4, 4, 5, 4, 3),
+      leadershipReasons: {
+        communication: "創辦人風格低調，本人公開發言少；溝通仰賴 IR 與專業經理人",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -638,6 +788,12 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       note: "金仁寶集團",
       bio: "金仁寶集團總裁，長期經營電子組件與電源產品。",
       leadership: L(3, 4, 4, 3, 4, 4, 3, 4, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "AI server 電源戰略跟進為主，無前瞻獨立判斷",
+        technicalProductInsight: "管理風格偏業務 / 集團整合，產品技術仰賴下屬",
+        customerEcosystem: "客戶結構仍多元，hyperscaler 直接綁定弱於台達 / Lite-On",
+        communication: "集團發言保守，前瞻指引較少",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -649,6 +805,13 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       note: "群光集團",
       bio: "群光集團董事長，長期經營電源與輸入裝置。",
       leadership: L(3, 4, 3, 3, 4, 4, 3, 4, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "NB 電源為基本盤，AI server 電源切入較晚",
+        capitalAllocation: "集團多元事業使配置自由度受限",
+        technicalProductInsight: "業務 / 集團背景，產品深度仰賴技術主管",
+        customerEcosystem: "NB OEM 客戶為主，hyperscaler 直接綁定弱",
+        communication: "集團風格低調，前瞻指引較少",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -669,6 +832,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2023,
       bio: "TI 內部出身，2023 接任 CEO；任內持續類比 IC 自有 12 吋產能擴張。",
       leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        strategicJudgement: "繼承前任 Rich Templeton 大規模 12 吋投資策略，自主前瞻判斷未明",
+        capitalAllocation: "巨額 capex 計畫已啟動，紀律有待 ROIC 驗證；近期下修股息成長",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -684,6 +851,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "林育申",
       bio: "雙鴻科技董事長，主導公司從筆電散熱轉型成 AI server 液冷主力供應商。",
       leadership: L(4, 5, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模快速擴張，無大型併購；多次現金增資擴產引發稀釋",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -694,6 +864,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       nameZh: "沈慶行",
       bio: "奇鋐科技董事長，與雙鴻分食 AI 液冷大單。",
       leadership: L(4, 5, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模快速擴張，多次增資擴產；資本配置紀律待驗證",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -710,6 +883,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2015,
       bio: "Camtek 共同創辦人之一；專注 HBM bump 與先進封裝檢測。",
       leadership: L(4, 4, 3, 5, 4, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        capitalAllocation: "公司規模小，現金多用於 R&D，無大型併購紀錄",
+        communication: "以色列總部，市場溝通頻率與深度低於美系公司",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -736,6 +913,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2015,
       bio: "2015 接任 Google CEO，2019 升任 Alphabet CEO；主導 TPU 與 Gemini 開發，但近年內部 AI 戰略執行被質疑。",
       leadership: L(4, 3, 4, 4, 4, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        execution: "ChatGPT 推出後 Bard 倉促應戰、Gemini 影像生成事件引發品牌信任問題",
+        communication: "重大產品 launch 多次出現公關危機（Gemini 翻車事件），公開溝通有待加強",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -756,6 +937,10 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2004,
       bio: "2004 創辦 Facebook；近年大舉投入 AI（MTIA、Llama）與 Reality Labs。可控股權結構讓他高度自主。",
       leadership: L(5, 5, 3, 5, 4, 3, 4, 5, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "Reality Labs 累計虧損超過 600 億美元，metaverse 押注報酬尚未顯現",
+        integrityGovernance: "Cambridge Analytica 隱私事件 + 多國反托拉斯訴訟；超級投票權結構長期被批評",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -766,6 +951,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 1977,
       bio: "1977 共同創辦 Oracle，現仍主導戰略；近年積極推 OCI 與 Nvidia 戰略合作，承接 OpenAI / xAI 大訂單。",
       leadership: L(5, 4, 5, 4, 4, 3, 5, 5, 5, 4),
+      leadershipReasons: {
+        integrityGovernance: "長期高薪酬爭議、與 Larry Page / Trump 的政商關係常引話題；Oracle 數次被指軟體稽核策略過於激進",
+      },
       leadershipConfidence: "High",
     },
     {
@@ -774,6 +962,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2014,
       bio: "10+ 年穩定執掌 Oracle 營運；以財務紀律與成本管控聞名。",
       leadership: L(4, 5, 5, 3, 4, 4, 4, 5, 5, 4),
+      leadershipReasons: {
+        technicalProductInsight: "法律 + 財務背景，技術細節仰賴 Larry Ellison 與 CTO",
+      },
       leadershipConfidence: "High",
     },
   ],
@@ -825,6 +1016,11 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       name: "Irving Tan",
       bio: "Western Digital CEO，主導 2025 分拆 NAND（SanDisk）後的純 HDD 業務聚焦。",
       leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "上任未久，分拆後純 HDD 策略仍待驗證",
+        capitalAllocation: "公司負債仍高，分拆 SanDisk 後資本紀律有待觀察",
+        communication: "新任，市場熟悉度尚在建立",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -834,11 +1030,25 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       name: "Dave Mosley",
       bio: "Seagate CEO，工程背景；主導 HAMR 技術領先量產。",
       leadership: L(4, 4, 4, 5, 4, 4, 4, 5, 4, 3),
+      leadershipReasons: {
+        communication: "技術背景，公開發言較少；HAMR 量產時程多次延後溝通不夠透明",
+      },
       leadershipConfidence: "Medium",
     },
   ],
   sndk: [
-    { role: "CEO", name: "David Goeckeler", bio: "SanDisk 2025 分拆後 CEO；前 WDC CEO。", leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 4, 3), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "David Goeckeler",
+      bio: "SanDisk 2025 分拆後 CEO；前 WDC CEO。",
+      leadership: L(3, 4, 3, 4, 4, 4, 4, 4, 4, 3),
+      leadershipReasons: {
+        strategicJudgement: "新獨立公司戰略尚在建構；前 WDC 時期 NAND 業務曾承擔大幅虧損",
+        capitalAllocation: "分拆後新公司負債結構與資本配置仍在重整",
+        communication: "新公司、新組織，市場溝通管道與信任仍在建立",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
 
   // REIT / Power / Construction
@@ -849,6 +1059,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2024,
       bio: "2024 接任 Equinix CEO；前 Oracle 高階主管。",
       leadership: L(4, 4, 4, 3, 4, 4, 5, 4, 4, 4),
+      leadershipReasons: {
+        technicalProductInsight: "業務 / SaaS 背景，資料中心工程技術細節仰賴 COO 與運營團隊",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -859,6 +1072,9 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2022,
       bio: "Digital Realty CEO，前 CFO；主導擴張 wholesale AI 資料中心。",
       leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        technicalProductInsight: "財務背景，資料中心工程細節仰賴專業團隊",
+      },
       leadershipConfidence: "Medium",
     },
   ],
@@ -866,13 +1082,33 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "President / CEO", name: "Lal Karsanbhai", since: 2021, leadership: L(4, 4, 4, 4, 4, 5, 4, 4, 4, 4), leadershipConfidence: "Medium" },
   ],
   eme: [
-    { role: "CEO", name: "Tony Guzzi", since: 2011, bio: "EMCOR CEO 多年；資本配置紀律出色。", leadership: L(4, 5, 5, 3, 4, 5, 5, 5, 5, 4), leadershipConfidence: "High" },
+    {
+      role: "CEO",
+      name: "Tony Guzzi",
+      since: 2011,
+      bio: "EMCOR CEO 多年；資本配置紀律出色。",
+      leadership: L(4, 5, 5, 3, 4, 5, 5, 5, 5, 4),
+      leadershipReasons: {
+        technicalProductInsight: "工程承包業務本質非單一產品，CEO 對細部技術仰賴專案團隊",
+      },
+      leadershipConfidence: "High",
+    },
   ],
   pwr: [
     { role: "President / CEO", name: "Duke Austin", since: 2016, bio: "Quanta Services CEO；任內公司股價大漲。", leadership: L(4, 5, 4, 4, 4, 5, 5, 5, 5, 4), leadershipConfidence: "High" },
   ],
   mtz: [
-    { role: "CEO", name: "Jose Mas", since: 2007, bio: "MasTec 創辦家族 CEO，超過 15 年執掌。", leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "Jose Mas",
+      since: 2007,
+      bio: "MasTec 創辦家族 CEO，超過 15 年執掌。",
+      leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        technicalProductInsight: "業務 / 家族背景，技術細節仰賴專案經理",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   gev: [
     { role: "CEO", name: "Scott Strazik", since: 2024, bio: "GE Vernova 分拆後首任 CEO；前 GE 電力 CEO。", leadership: L(5, 4, 4, 5, 4, 4, 5, 4, 4, 4), leadershipConfidence: "High" },
@@ -881,7 +1117,16 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "CEO", name: "Morten Wierod", since: 2024, bio: "ABB 內部出身，2024 接任 CEO。", leadership: L(4, 4, 4, 4, 4, 5, 4, 4, 4, 4), leadershipConfidence: "Medium" },
   ],
   hubb: [
-    { role: "CEO", name: "Gerben Bakker", since: 2020, leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "Gerben Bakker",
+      since: 2020,
+      leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        technicalProductInsight: "電力產品線分散，CEO 對單一技術深度仰賴部門主管",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   cat: [
     { role: "Chairman / CEO", name: "Jim Umpleby", since: 2017, bio: "Caterpillar 內部出身 30+ 年；資本配置紀律佳。", leadership: L(4, 5, 5, 4, 4, 5, 4, 5, 5, 4), leadershipConfidence: "High" },
@@ -890,13 +1135,36 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "Chair / CEO", name: "Jennifer Rumsey", since: 2022, bio: "Cummins 工程背景 CEO；任內加強氫能策略。", leadership: L(4, 4, 4, 5, 4, 5, 4, 5, 4, 4), leadershipConfidence: "Medium" },
   ],
   gnrc: [
-    { role: "President / CEO", name: "Aaron Jagdfeld", since: 2008, leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
+    {
+      role: "President / CEO",
+      name: "Aaron Jagdfeld",
+      since: 2008,
+      leadership: L(4, 4, 4, 3, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        technicalProductInsight: "業務背景，發電機機械工程細節仰賴工程主管",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   rok: [
     { role: "Chair / CEO", name: "Blake Moret", since: 2016, leadership: L(4, 4, 4, 4, 4, 5, 4, 4, 4, 4), leadershipConfidence: "High" },
   ],
   flnc: [
-    { role: "CEO", name: "Julian Nebreda", since: 2022, leadership: L(3, 3, 3, 4, 4, 4, 3, 4, 3, 3), leadershipConfidence: "Low" },
+    {
+      role: "CEO",
+      name: "Julian Nebreda",
+      since: 2022,
+      leadership: L(3, 3, 3, 4, 4, 4, 3, 4, 3, 3),
+      leadershipReasons: {
+        strategicJudgement: "AES 與 Siemens 合資結構限制戰略獨立性",
+        execution: "公司獲利波動大，多次下修財測",
+        capitalAllocation: "現金水位緊，多次發股稀釋；中國電池廠價格戰使其資本配置困難",
+        customerEcosystem: "客戶集中於少數電力公司，談判槓桿有限",
+        financialDiscipline: "毛利率受成本壓力，紀律受市場質疑",
+        communication: "市場期望管理不佳，盈餘多次失預期",
+      },
+      leadershipConfidence: "Low",
+    },
   ],
 
   // Networking
@@ -904,7 +1172,17 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "CEO", name: "Gary Smith", since: 2001, bio: "Ciena CEO 超過 20 年；coherent 光通訊技術領先。", leadership: L(4, 4, 4, 5, 4, 5, 4, 5, 4, 4), leadershipConfidence: "High" },
   ],
   net: [
-    { role: "Co-founder / CEO", name: "Matthew Prince", since: 2009, bio: "Cloudflare 共同創辦人；以技術 + 開發者社群驅動成長。", leadership: L(5, 4, 4, 5, 4, 5, 5, 4, 3, 5), leadershipConfidence: "High" },
+    {
+      role: "Co-founder / CEO",
+      name: "Matthew Prince",
+      since: 2009,
+      bio: "Cloudflare 共同創辦人；以技術 + 開發者社群驅動成長。",
+      leadership: L(5, 4, 4, 5, 4, 5, 5, 4, 3, 5),
+      leadershipReasons: {
+        financialDiscipline: "公司至今 GAAP 仍接近損益兩平，成長為先導致紀律相對寬鬆",
+      },
+      leadershipConfidence: "High",
+    },
   ],
 
   // 半導體
@@ -915,7 +1193,21 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "President / CEO", name: "Jean-Marc Chery", since: 2018, leadership: L(4, 4, 4, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "High" },
   ],
   amba: [
-    { role: "President / CEO", name: "Fermi Wang", bio: "Ambarella 創辦人，工程背景。", leadership: L(4, 4, 3, 5, 3, 4, 3, 3, 3, 3), leadershipConfidence: "Medium" },
+    {
+      role: "President / CEO",
+      name: "Fermi Wang",
+      bio: "Ambarella 創辦人，工程背景。",
+      leadership: L(4, 4, 3, 5, 3, 4, 3, 3, 3, 3),
+      leadershipReasons: {
+        capitalAllocation: "公司規模小、現金有限；R&D 比重高但無大型併購",
+        talentOrganization: "公司規模小，吸引一流人才能力受限於股價波動",
+        customerEcosystem: "車載 ADAS 客戶 ramp 慢，與 Mobileye / Qualcomm 競爭吃力",
+        resilience: "公司歷經多次車載 / 安防業務轉型，仍處 ramp-up 階段",
+        financialDiscipline: "車載業務 ramp 慢，自由現金流多季為負",
+        communication: "公司規模小，IR 頻率有限；市場熟悉度低",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   form: [
     { role: "CEO", name: "Mike Slessor", since: 2014, leadership: L(4, 4, 4, 5, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
@@ -924,7 +1216,16 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
     { role: "President / CEO", name: "Gregory Smith", since: 2024, leadership: L(4, 4, 4, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
   ],
   klic: [
-    { role: "President / CEO", name: "Fusen Chen", since: 2020, leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
+    {
+      role: "President / CEO",
+      name: "Fusen Chen",
+      since: 2020,
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模中等，capex 受設備循環影響，無大型併購紀錄",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   glw: [
     { role: "Chair / CEO", name: "Wendell Weeks", since: 2005, bio: "Corning CEO 20 年；長期 R&D 投資文化。", leadership: L(5, 4, 4, 5, 5, 5, 5, 5, 4, 4), leadershipConfidence: "High" },
@@ -932,33 +1233,104 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
 
   // 軟體
   snow: [
-    { role: "CEO", name: "Sridhar Ramaswamy", since: 2024, bio: "前 Google 廣告主管，2024 接任 Snowflake CEO；推動 AI 平台 Cortex。", leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 3, 4), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "Sridhar Ramaswamy",
+      since: 2024,
+      bio: "前 Google 廣告主管，2024 接任 Snowflake CEO；推動 AI 平台 Cortex。",
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 3, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司估值高（PS > 15），股票回購 + 收購並行；資本紀律待證明",
+        financialDiscipline: "高估值下成長放緩議題使財務紀律壓力上升；GAAP 仍虧損",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
   mdb: [
-    { role: "President / CEO", name: "Dev Ittycheria", since: 2014, leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "High" },
+    {
+      role: "President / CEO",
+      name: "Dev Ittycheria",
+      since: 2014,
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "公司規模中等，無大型併購；資本多投入 R&D 與業務擴張",
+      },
+      leadershipConfidence: "High",
+    },
   ],
   ddog: [
     { role: "Co-founder / CEO", name: "Olivier Pomel", since: 2010, bio: "Datadog 共同創辦人；以開發者導向設計建立 observability 平台。", leadership: L(4, 5, 4, 5, 4, 5, 4, 4, 4, 4), leadershipConfidence: "High" },
   ],
   pltr: [
-    { role: "Co-founder / CEO", name: "Alex Karp", since: 2003, bio: "Palantir 共同創辦人；風格強烈、對政府客戶經營深；AIP 銷售模式創新。", leadership: L(5, 4, 4, 5, 4, 3, 5, 5, 3, 4), leadershipConfidence: "High" },
+    {
+      role: "Co-founder / CEO",
+      name: "Alex Karp",
+      since: 2003,
+      bio: "Palantir 共同創辦人；風格強烈、對政府客戶經營深；AIP 銷售模式創新。",
+      leadership: L(5, 4, 4, 5, 4, 3, 5, 5, 3, 4),
+      leadershipReasons: {
+        integrityGovernance: "雙重股權結構讓創辦人擁有過大控制權；對國防業務多次發表爭議性公開言論",
+        financialDiscipline: "高估值（PE > 200）下毛利率與成長預期需持續驗證；員工股票薪酬比重高",
+      },
+      leadershipConfidence: "High",
+    },
   ],
 
   // 網安
   crwd: [
-    { role: "Co-founder / CEO", name: "George Kurtz", since: 2011, bio: "CrowdStrike 共同創辦人；2024 outage 後信任修復是觀察重點。", leadership: L(5, 4, 4, 5, 4, 3, 4, 4, 4, 3), leadershipConfidence: "High" },
+    {
+      role: "Co-founder / CEO",
+      name: "George Kurtz",
+      since: 2011,
+      bio: "CrowdStrike 共同創辦人；2024 outage 後信任修復是觀察重點。",
+      leadership: L(5, 4, 4, 5, 4, 3, 4, 4, 4, 3),
+      leadershipReasons: {
+        integrityGovernance: "2024 全球 outage 影響 850 萬台 Windows、引發航空 / 醫療 / 金融大規模中斷",
+        communication: "outage 後初期溝通被批反應過慢；後期客戶補償方案被部分客戶質疑不足",
+      },
+      leadershipConfidence: "High",
+    },
   ],
   panw: [
     { role: "CEO", name: "Nikesh Arora", since: 2018, bio: "前 Google + SoftBank 主管，加入 Palo Alto 後主導平台化轉型。", leadership: L(5, 5, 5, 4, 5, 4, 5, 4, 5, 5), leadershipConfidence: "High" },
   ],
   zs: [
-    { role: "Founder / CEO", name: "Jay Chaudhry", since: 2008, bio: "Zscaler 創辦人；連續創業家，主導 Zero Trust 雲端安全。", leadership: L(5, 4, 4, 5, 4, 4, 4, 4, 3, 4), leadershipConfidence: "High" },
+    {
+      role: "Founder / CEO",
+      name: "Jay Chaudhry",
+      since: 2008,
+      bio: "Zscaler 創辦人；連續創業家，主導 Zero Trust 雲端安全。",
+      leadership: L(5, 4, 4, 5, 4, 4, 4, 4, 3, 4),
+      leadershipReasons: {
+        financialDiscipline: "成長為先的純 SaaS 模式下 GAAP 仍虧損，紀律壓力較高",
+      },
+      leadershipConfidence: "High",
+    },
   ],
   okta: [
-    { role: "Co-founder / CEO", name: "Todd McKinnon", since: 2009, bio: "前 Salesforce engineering，2009 共同創辦 Okta。", leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "High" },
+    {
+      role: "Co-founder / CEO",
+      name: "Todd McKinnon",
+      since: 2009,
+      bio: "前 Salesforce engineering，2009 共同創辦 Okta。",
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "Auth0 65 億美元收購整合後仍未充分綜效，資本配置成效一般",
+      },
+      leadershipConfidence: "High",
+    },
   ],
   cybr: [
-    { role: "CEO", name: "Matt Cohen", since: 2023, leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "Matt Cohen",
+      since: 2023,
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 4, 4),
+      leadershipReasons: {
+        capitalAllocation: "Venafi 15 億美元收購整合進度待觀察",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
 
   // 其他
@@ -969,11 +1341,28 @@ export const keyPeopleById: Record<string, KeyPerson[]> = {
       since: 2008,
       bio: "Tesla CEO 兼控股股東；FSD、Dojo、Optimus 全押注 AI 與自動化。風格極端、執行極快但充滿政治與管治爭議。",
       leadership: L(5, 5, 3, 5, 4, 2, 4, 5, 2, 3),
+      leadershipReasons: {
+        capitalAllocation: "資金分散於 Tesla / SpaceX / xAI / X 等多個事業；55 億美元 xAI 認購 Tesla 案具關係人交易爭議",
+        integrityGovernance: "2018 「funding secured」案被 SEC 罰款 + 強制 tweet 預審；公司治理被多次股東訴訟挑戰",
+        financialDiscipline: "車廠毛利率隨價格戰急縮；FSD / Robotaxi 商業化推遲多次",
+        communication: "公開承諾（Robotaxi、$25K 車款）多次延期；個人推文影響股價導致監管糾紛",
+      },
       leadershipConfidence: "High",
     },
   ],
   sym: [
-    { role: "CEO", name: "Rick Cohen", bio: "Symbotic CEO，亦為 C&S Wholesale 創辦人。", leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 3, 3), leadershipConfidence: "Medium" },
+    {
+      role: "CEO",
+      name: "Rick Cohen",
+      bio: "Symbotic CEO，亦為 C&S Wholesale 創辦人。",
+      leadership: L(4, 4, 3, 4, 4, 4, 4, 4, 3, 3),
+      leadershipReasons: {
+        capitalAllocation: "C&S 既是 CEO 創辦的公司也是主要客戶，存在關聯人交易疑慮",
+        financialDiscipline: "高 R&D 與佣金支出使 GAAP 仍虧損，毛利率波動大",
+        communication: "對 Walmart 訂單時程多次調整，市場信心波動",
+      },
+      leadershipConfidence: "Medium",
+    },
   ],
 };
 

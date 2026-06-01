@@ -127,6 +127,9 @@ export interface LeadershipScores {
   communication: number;
 }
 
+/** 對「低於 4 分」維度的一句話解釋（key 為對應維度） */
+export type LeadershipReasons = Partial<Record<keyof LeadershipScores, string>>;
+
 /** 領導力 10 維度權重（總和 1.0） */
 export const LEADERSHIP_WEIGHTS: Record<keyof LeadershipScores, number> = {
   strategicJudgement: 0.15,
@@ -163,8 +166,10 @@ export interface KeyPerson {
   note?: string;   // 例如「創辦人」、「TSMC 前任 CEO」
   /** 一兩句簡介（公開事實為主） */
   bio?: string;
-  /** 6 維度評分（0-5）；不確定者整個欄位省略 */
+  /** 10 維度評分（0-5）；不確定者整個欄位省略 */
   leadership?: LeadershipScores;
+  /** 對「低於 4 分」維度的一句話解釋 */
+  leadershipReasons?: LeadershipReasons;
   /** 信心：對此筆評分的可驗證程度 */
   leadershipConfidence?: "High" | "Medium" | "Low";
 }

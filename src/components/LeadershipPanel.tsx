@@ -104,11 +104,12 @@ export function LeadershipPanel({ people }: Props) {
               {DIM_ORDER.map((d) => {
                 const v = p.leadership![d];
                 const weight = LEADERSHIP_WEIGHTS[d];
+                const hasReason = v < 4 && p.leadershipReasons?.[d];
                 return (
                   <div
                     key={d}
                     className="rounded-md border border-slate-200 p-2 text-center dark:border-slate-700"
-                    title={`${LEADERSHIP_LABELS[d]}（權重 ${(weight * 100).toFixed(0)}%）`}
+                    title={`${LEADERSHIP_LABELS[d]}（權重 ${(weight * 100).toFixed(0)}%）${hasReason ? "\n— " + p.leadershipReasons![d] : ""}`}
                   >
                     <div className="muted text-[9px] leading-tight">{LEADERSHIP_LABELS[d]}</div>
                     <div className="muted text-[8px] mt-0.5">{(weight * 100).toFixed(0)}%</div>
@@ -120,10 +121,42 @@ export function LeadershipPanel({ people }: Props) {
                     >
                       {v}
                     </div>
+                    {v < 4 && (
+                      <div className="muted mt-1 text-[8px] leading-tight">⚠</div>
+                    )}
                   </div>
                 );
               })}
             </div>
+
+            {/* 低分維度的一句話解釋（< 4 分） */}
+            {p.leadershipReasons && Object.keys(p.leadershipReasons).length > 0 && (
+              <div className="mt-3 rounded-lg border border-rose-200 bg-rose-50/40 p-3 dark:border-rose-800 dark:bg-rose-950/30">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-rose-700 dark:text-rose-300">
+                  低分維度說明（&lt; 4 分）
+                </div>
+                <ul className="mt-2 space-y-1 text-[11px]">
+                  {DIM_ORDER.filter(
+                    (d) => p.leadership![d] < 4 && p.leadershipReasons?.[d],
+                  ).map((d) => (
+                    <li key={d} className="flex items-baseline gap-2">
+                      <span
+                        className={
+                          "shrink-0 inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold " +
+                          tone(p.leadership![d])
+                        }
+                      >
+                        {p.leadership![d]}
+                      </span>
+                      <span className="font-semibold text-slate-800 dark:text-slate-100">
+                        {LEADERSHIP_LABELS[d]}：
+                      </span>
+                      <span className="muted">{p.leadershipReasons![d]}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {p.leadershipConfidence && (
               <div className="muted mt-2 text-[10px]">

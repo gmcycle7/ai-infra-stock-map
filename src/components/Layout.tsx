@@ -15,6 +15,7 @@ const nav: Array<{ to: string; label: string }> = [
   { to: "/companies", label: "公司列表" },
   { to: "/watchlist", label: "我的關注組合" },
   { to: "/backtest", label: "組合回測" },
+  { to: "/optimize", label: "組合最佳化" },
   { to: "/compare", label: "多公司比較" },
   { to: "/heatmap", label: "產業熱力圖" },
   { to: "/changes", label: "變動快訊" },

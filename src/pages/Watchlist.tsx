@@ -438,6 +438,19 @@ interface LeaderRow {
 
 function buildLeaderRows(list: Company[]): LeaderRow[] {
   const rows: LeaderRow[] = [];
+  const DIM_KEYS: Array<keyof LeadershipScores> = [
+    "strategicJudgement",
+    "execution",
+    "capitalAllocation",
+    "technicalProductInsight",
+    "talentOrganization",
+    "integrityGovernance",
+    "customerEcosystem",
+    "resilience",
+    "financialDiscipline",
+    "communication",
+  ];
+
   for (const c of list) {
     const leaders = keyPeopleById[c.id] ?? [];
     const scored = leaders.filter((p) => p.leadership);
@@ -456,30 +469,41 @@ function buildLeaderRows(list: Company[]): LeaderRow[] {
       continue;
     }
 
-    // 取分數最低的領導者（最弱環節）
-    const sorted = [...scored].sort(
-      (a, b) => leaderCompositeScore(a.leadership!) - leaderCompositeScore(b.leadership!),
+    // 多位掌權人時取平均
+    const totalComposite = scored.reduce(
+      (s, p) => s + leaderCompositeScore(p.leadership!),
+      0,
     );
-    const worst = sorted[0];
-    const composite = leaderCompositeScore(worst.leadership!);
+    const avgComposite = Math.round(totalComposite / scored.length);
 
-    // 找該領導者分數最低的維度（指出弱點）
+    // 各維度也取平均，找出最弱的維度
     let weakestDim: keyof LeadershipScores | null = null;
     let weakestValue = 6;
-    for (const key of Object.keys(worst.leadership!) as Array<keyof LeadershipScores>) {
-      const v = worst.leadership![key];
-      if (v < weakestValue) {
-        weakestValue = v;
+    for (const key of DIM_KEYS) {
+      const sum = scored.reduce((s, p) => s + (p.leadership![key] ?? 0), 0);
+      const avg = sum / scored.length;
+      if (avg < weakestValue) {
+        weakestValue = avg;
         weakestDim = key;
       }
     }
 
+    // 顯示名稱：1 位列名字、2+ 列「N 位平均」
+    const leaderName =
+      scored.length === 1
+        ? scored[0].nameZh
+          ? `${scored[0].nameZh}（${scored[0].name}）`
+          : scored[0].name
+        : `${scored.length} 位平均：${scored
+            .map((p) => p.nameZh ?? p.name)
+            .join(" + ")}`;
+
     rows.push({
       company: c,
-      leaderName: worst.nameZh ? `${worst.nameZh}（${worst.name}）` : worst.name,
-      compositeScore: composite,
+      leaderName,
+      compositeScore: avgComposite,
       weakestDim,
-      weakestValue,
+      weakestValue: weakestValue === 6 ? null : Number(weakestValue.toFixed(1)),
     });
   }
   return rows;
@@ -601,7 +625,8 @@ function LeadershipFilter({ list }: { list: Company[] }) {
                     掌權人：{row.leaderName}
                     {row.weakestDim && row.weakestValue != null && (
                       <span className="ml-2 text-rose-600 dark:text-rose-400">
-                        · 最弱：{LEADERSHIP_LABELS[row.weakestDim]} {row.weakestValue}/5
+                        · 最弱：{LEADERSHIP_LABELS[row.weakestDim]}{" "}
+                        {row.weakestValue.toFixed(1)}/5
                       </span>
                     )}
                   </div>
@@ -636,9 +661,9 @@ function LeadershipFilter({ list }: { list: Company[] }) {
 
       <div className="muted rounded-lg border border-amber-200 bg-amber-50/40 p-3 text-[11px] dark:border-amber-900 dark:bg-amber-950/30">
         <strong>怎麼讀：</strong>
-        若公司有多位掌權人（例如鴻海有 Terry Gou + Young Liu），取「<strong>分數最低</strong>」者作為篩選基準（最弱環節）。
+        若公司有多位掌權人（例如鴻海有 Terry Gou + Young Liu），取所有打分者的<strong>平均</strong>作為篩選分數。
         <strong className="ml-1">無打分資料</strong>不一定代表領導者不好，多為任期短或公開資訊有限 — 是否包含可自由切換。
-        <strong className="ml-1">最弱維度</strong>標示出該領導者在 10 維度中得分最低的一項，幫你定位該注意什麼。
+        <strong className="ml-1">最弱維度</strong>標示出 10 維度平均後分數最低的一項，幫你定位該注意什麼。
         詳細評分判準見 <Link to="/leadership-rubric" className="text-brand-600 hover:underline dark:text-brand-400">領導力評分判準</Link>。
       </div>
     </section>
