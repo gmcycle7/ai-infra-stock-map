@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-08T22:33:14.643Z",
+  "fetchedAt": "2026-08-09T22:34:47.432Z",
   "historyDays": 730,
   "quotes": {
     "nvidia": {
@@ -7,8 +7,8 @@
       "currency": "USD",
       "price": 223.96,
       "previousClose": 218.99,
-      "change": 4.97,
-      "changePercent": 2.26951,
+      "change": 4.970001,
+      "changePercent": 2.2695105,
       "priceAsOf": null,
       "marketCap": 5424535306240,
       "trailingPE": 34.244648,
@@ -32,7 +32,7 @@
       "totalDebt": 12814000128,
       "totalCash": 53171998720,
       "freeCashflow": 46335873024,
-      "pegRatio": 0.6,
+      "pegRatio": 0.62,
       "priceToBook": 27.75217,
       "beta": 2.215,
       "dividendYield": 0.0045,
@@ -47,10 +47,6 @@
       "insiderNetTxnCount": 8,
       "insiderNetShares": -1210892,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 104.97
-        },
         {
           "d": "2024-08-09",
           "c": 104.75
@@ -2058,18 +2054,18 @@
       "currency": "USD",
       "price": 483.36,
       "previousClose": 489.28,
-      "change": -5.92001,
-      "changePercent": -1.20994,
+      "change": -5.9200134,
+      "changePercent": -1.2099439,
       "priceAsOf": null,
       "marketCap": 789073100800,
       "trailingPE": 123.306114,
       "forwardPE": 31.265461,
       "fiftyTwoWeekHigh": 584.73,
       "fiftyTwoWeekLow": 149.22,
-      "targetMean": 608.2261,
+      "targetMean": 613.3348,
       "targetHigh": 1250,
       "targetLow": 365,
-      "targetMedian": 605,
+      "targetMedian": 615,
       "recommendationMean": 1.4902,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 46,
@@ -2083,7 +2079,7 @@
       "totalDebt": 4276000000,
       "totalCash": 13111000064,
       "freeCashflow": 8841499648,
-      "pegRatio": 1.13,
+      "pegRatio": 1.04,
       "priceToBook": 11.734601,
       "beta": 2.489,
       "dividendYield": null,
@@ -2098,10 +2094,6 @@
       "insiderNetTxnCount": -12,
       "insiderNetShares": -609821,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 136.32
-        },
         {
           "d": "2024-08-09",
           "c": 134.27
@@ -4108,9 +4100,9 @@
       "symbol": "INTC",
       "currency": "USD",
       "price": 101.65,
-      "previousClose": 99.81,
-      "change": 1.84,
-      "changePercent": 1.84351,
+      "previousClose": 99.810005,
+      "change": 1.8399963,
+      "changePercent": 1.8434988,
       "priceAsOf": null,
       "marketCap": 512722567168,
       "trailingPE": null,
@@ -4149,10 +4141,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -61280,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 20.49
-        },
         {
           "d": "2024-08-09",
           "c": 19.71
@@ -6160,12 +6148,12 @@
       "currency": "USD",
       "price": 427.76,
       "previousClose": 420.565,
-      "change": 7.19501,
-      "changePercent": 1.7108,
+      "change": 7.1950073,
+      "changePercent": 1.7107956,
       "priceAsOf": null,
       "marketCap": 2035102646272,
       "trailingPE": 71.41236,
-      "forwardPE": 21.94546,
+      "forwardPE": 21.901974,
       "fiftyTwoWeekHigh": 495,
       "fiftyTwoWeekLow": 281.87,
       "targetMean": 527.88446,
@@ -6185,7 +6173,7 @@
       "totalDebt": 64907001856,
       "totalCash": 19627999232,
       "freeCashflow": 27212249088,
-      "pegRatio": 0.47,
+      "pegRatio": 0.48,
       "priceToBook": 23.209984,
       "beta": 1.473,
       "dividendYield": 0.0061000003,
@@ -6200,10 +6188,6 @@
       "insiderNetTxnCount": -3,
       "insiderNetShares": -496229,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 145.74
-        },
         {
           "d": "2024-08-09",
           "c": 148.26
@@ -8210,9 +8194,9 @@
       "symbol": "MRVL",
       "currency": "USD",
       "price": 218.72,
-      "previousClose": 210.54,
-      "change": 8.18001,
-      "changePercent": 3.88525,
+      "previousClose": 210.54001,
+      "change": 8.179993,
+      "changePercent": 3.885244,
       "priceAsOf": null,
       "marketCap": 196310925312,
       "trailingPE": 75.16151,
@@ -8236,7 +8220,7 @@
       "totalDebt": 5277199872,
       "totalCash": 3843599872,
       "freeCashflow": 2269700096,
-      "pegRatio": 1.19,
+      "pegRatio": 1.24,
       "priceToBook": 10.513363,
       "beta": 2.246,
       "dividendYield": 0.0011,
@@ -8251,10 +8235,6 @@
       "insiderNetTxnCount": -18,
       "insiderNetShares": -283554,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 61.16
-        },
         {
           "d": "2024-08-09",
           "c": 60.56
@@ -10303,10 +10283,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 2240
-        },
-        {
           "d": "2024-08-12",
           "c": 2255
         },
@@ -12285,10 +12261,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 1035
-        },
         {
           "d": "2024-08-12",
           "c": 1060
@@ -14269,10 +14241,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 1125
-        },
-        {
           "d": "2024-08-12",
           "c": 1175
         },
@@ -16210,16 +16178,16 @@
       "symbol": "MU",
       "currency": "USD",
       "price": 877.57,
-      "previousClose": 881.47,
-      "change": -3.89996,
-      "changePercent": -0.442439,
+      "previousClose": 881.47003,
+      "change": -3.9000244,
+      "changePercent": -0.44244552,
       "priceAsOf": null,
-      "marketCap": null,
+      "marketCap": 991121571840,
       "trailingPE": 19.841059,
       "forwardPE": 5.659457,
       "fiftyTwoWeekHigh": 1255,
       "fiftyTwoWeekLow": 113.46,
-      "targetMean": 1507.7906,
+      "targetMean": 1501.9767,
       "targetHigh": 2200,
       "targetLow": 361,
       "targetMedian": 1550,
@@ -16251,10 +16219,6 @@
       "insiderNetTxnCount": -13,
       "insiderNetShares": -282407,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 92.07
-        },
         {
           "d": "2024-08-09",
           "c": 93.08
@@ -18269,7 +18233,7 @@
       "trailingPE": null,
       "forwardPE": null,
       "fiftyTwoWeekHigh": 2987000,
-      "fiftyTwoWeekLow": 245000,
+      "fiftyTwoWeekLow": 0,
       "targetMean": 3164331.8,
       "targetHigh": 5300000,
       "targetLow": 1200000,
@@ -18287,7 +18251,7 @@
       "totalDebt": 18585999114240,
       "totalCash": 87958002597888,
       "freeCashflow": null,
-      "pegRatio": 0.21,
+      "pegRatio": 0.2,
       "priceToBook": null,
       "beta": 2.413,
       "dividendYield": 0.0011,
@@ -18302,10 +18266,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 171500
-        },
         {
           "d": "2024-08-12",
           "c": 177000
@@ -20244,7 +20204,7 @@
       "trailingPE": null,
       "forwardPE": null,
       "fiftyTwoWeekHigh": 374500,
-      "fiftyTwoWeekLow": 67500,
+      "fiftyTwoWeekLow": 0,
       "targetMean": 471908.2,
       "targetHigh": 725000,
       "targetLow": 210000,
@@ -20277,10 +20237,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 74700
-        },
         {
           "d": "2024-08-12",
           "c": 75500
@@ -22217,7 +22173,7 @@
       "priceAsOf": null,
       "marketCap": 1416072921088,
       "trailingPE": 42.1976,
-      "forwardPE": 5.1557007,
+      "forwardPE": 4.7740493,
       "fiftyTwoWeekHigh": 505,
       "fiftyTwoWeekLow": 43.8,
       "targetMean": 548.1667,
@@ -22252,10 +22208,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 51
-        },
         {
           "d": "2024-08-12",
           "c": 53
@@ -24236,10 +24188,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 22.9
-        },
-        {
           "d": "2024-08-12",
           "c": 23.35
         },
@@ -26203,7 +26151,7 @@
       "totalDebt": 982447030272,
       "totalCash": 3518013112320,
       "freeCashflow": 739057991680,
-      "pegRatio": 0.88,
+      "pegRatio": 0.89,
       "priceToBook": 9.55441,
       "beta": 1.258,
       "dividendYield": 0.0101,
@@ -26218,10 +26166,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 934
-        },
         {
           "d": "2024-08-12",
           "c": 940
@@ -28161,18 +28105,18 @@
       "currency": "USD",
       "price": 1740.99,
       "previousClose": 1704.37,
-      "change": 36.62,
-      "changePercent": 2.14859,
+      "change": 36.619995,
+      "changePercent": 2.1485941,
       "priceAsOf": null,
       "marketCap": 668714270720,
       "trailingPE": 59.17709,
-      "forwardPE": 29.378746,
+      "forwardPE": 29.289024,
       "fiftyTwoWeekHigh": 1999.96,
       "fiftyTwoWeekLow": 716.2,
-      "targetMean": 2178.0366,
-      "targetHigh": 2874.6052,
-      "targetLow": 894.4849,
-      "targetMedian": 2323.9333,
+      "targetMean": 2177.533,
+      "targetHigh": 2873.9404,
+      "targetLow": 894.2781,
+      "targetMedian": 2323.396,
       "recommendationMean": 1.38636,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 15,
@@ -28186,8 +28130,8 @@
       "totalDebt": 1984400000,
       "totalCash": 7581499904,
       "freeCashflow": 8437675008,
-      "pegRatio": 2.06,
-      "priceToBook": 1479.3135,
+      "pegRatio": 2.09,
+      "priceToBook": 1472.6074,
       "beta": 1.365,
       "dividendYield": 0.0052,
       "enterpriseValue": 37145196625920,
@@ -28201,10 +28145,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 876.65
-        },
         {
           "d": "2024-08-09",
           "c": 860.55
@@ -30211,13 +30151,13 @@
       "symbol": "AMAT",
       "currency": "USD",
       "price": 539.14,
-      "previousClose": 527.48,
-      "change": 11.66,
-      "changePercent": 2.21052,
+      "previousClose": 527.48004,
+      "change": 11.659973,
+      "changePercent": 2.210505,
       "priceAsOf": null,
       "marketCap": 428055298048,
       "trailingPE": 50.76648,
-      "forwardPE": 31.619184,
+      "forwardPE": 31.551332,
       "fiftyTwoWeekHigh": 739.67,
       "fiftyTwoWeekLow": 154.47,
       "targetMean": 629.0571,
@@ -30237,7 +30177,7 @@
       "totalDebt": 7267999744,
       "totalCash": 8240999936,
       "freeCashflow": 3040375040,
-      "pegRatio": 1.21,
+      "pegRatio": 1.23,
       "priceToBook": 17.903301,
       "beta": 1.618,
       "dividendYield": 0.0039,
@@ -30252,10 +30192,6 @@
       "insiderNetTxnCount": -5,
       "insiderNetShares": -283422,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 190.55
-        },
         {
           "d": "2024-08-09",
           "c": 191.18
@@ -32262,9 +32198,9 @@
       "symbol": "LRCX",
       "currency": "USD",
       "price": 311.35,
-      "previousClose": 305.77,
-      "change": 5.58002,
-      "changePercent": 1.82491,
+      "previousClose": 305.77002,
+      "change": 5.5799866,
+      "changePercent": 1.8248966,
       "priceAsOf": null,
       "marketCap": 389585403904,
       "trailingPE": 54.053818,
@@ -32280,21 +32216,21 @@
       "numberOfAnalystOpinions": 31,
       "profitMargin": 0.31272,
       "grossMargin": 0.50469,
-      "operatingMargin": 0.37433997,
+      "operatingMargin": 0.37390998,
       "revenueGrowthYoY": 0.3,
-      "earningsGrowthYoY": 0.347,
+      "earningsGrowthYoY": 0.348,
       "returnOnEquity": 0.65066004,
       "returnOnAssets": 0.22840999,
-      "totalDebt": 3734563072,
+      "totalDebt": 4121564928,
       "totalCash": 5579170816,
-      "freeCashflow": 3278951936,
-      "pegRatio": 1.43,
+      "freeCashflow": 3090484480,
+      "pegRatio": 1.45,
       "priceToBook": 36.78521,
       "beta": 1.865,
       "dividendYield": 0.0033000002,
-      "enterpriseValue": 387740794880,
-      "enterpriseToRevenue": 16.689,
-      "enterpriseToEbitda": 44.871,
+      "enterpriseValue": 388141187072,
+      "enterpriseToRevenue": 16.707,
+      "enterpriseToEbitda": 44.917,
       "heldPercentInsiders": 0.00275,
       "heldPercentInstitutions": 0.87482,
       "shortPercentOfFloat": 0.026400002,
@@ -32303,10 +32239,6 @@
       "insiderNetTxnCount": 0,
       "insiderNetShares": 11802,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 79.913
-        },
         {
           "d": "2024-08-09",
           "c": 80.79
@@ -34314,8 +34246,8 @@
       "currency": "USD",
       "price": 198.11,
       "previousClose": 193.22,
-      "change": 4.89,
-      "changePercent": 2.53079,
+      "change": 4.8899994,
+      "changePercent": 2.5307937,
       "priceAsOf": null,
       "marketCap": 258839986176,
       "trailingPE": 53.980927,
@@ -34339,8 +34271,8 @@
       "totalDebt": 6151712768,
       "totalCash": 4902408192,
       "freeCashflow": 2624587520,
-      "pegRatio": 1.85,
-      "priceToBook": 44.409325,
+      "pegRatio": 1.89,
+      "priceToBook": 40.763374,
       "beta": 1.458,
       "dividendYield": 0.0046,
       "enterpriseValue": 260089282560,
@@ -34354,10 +34286,6 @@
       "insiderNetTxnCount": -11,
       "insiderNetShares": -76326,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 75.229
-        },
         {
           "d": "2024-08-09",
           "c": 74.678
@@ -36373,7 +36301,7 @@
       "forwardPE": 20.783993,
       "fiftyTwoWeekHigh": 729,
       "fiftyTwoWeekLow": 143,
-      "targetMean": 692.7368,
+      "targetMean": 684.2105,
       "targetHigh": 840,
       "targetLow": 350,
       "targetMedian": 700,
@@ -36405,10 +36333,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 145.5
-        },
         {
           "d": "2024-08-12",
           "c": 148.5
@@ -38353,7 +38277,7 @@
       "priceAsOf": null,
       "marketCap": 310699491328,
       "trailingPE": 34.72023,
-      "forwardPE": 16.740545,
+      "forwardPE": 16.837336,
       "fiftyTwoWeekHigh": 350,
       "fiftyTwoWeekLow": 120.95238,
       "targetMean": 350.34354,
@@ -38388,10 +38312,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 108.0952
-        },
         {
           "d": "2024-08-12",
           "c": 112.8571
@@ -40372,10 +40292,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 148
-        },
-        {
           "d": "2024-08-12",
           "c": 158
         },
@@ -42322,7 +42238,7 @@
       "forwardPE": 29.483538,
       "fiftyTwoWeekHigh": 1415,
       "fiftyTwoWeekLow": 167,
-      "targetMean": 1522.8334,
+      "targetMean": 1550.5,
       "targetHigh": 2500,
       "targetLow": 875,
       "targetMedian": 1465,
@@ -42354,10 +42270,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 141.5
-        },
         {
           "d": "2024-08-12",
           "c": 147.5
@@ -44297,10 +44209,10 @@
       "currency": "USD",
       "price": 55.27,
       "previousClose": 54.16,
-      "change": 1.11,
-      "changePercent": 2.04948,
+      "change": 1.1100006,
+      "changePercent": 2.049484,
       "priceAsOf": null,
-      "marketCap": 13731969024,
+      "marketCap": 13699913728,
       "trailingPE": 24.784754,
       "forwardPE": 19.584429,
       "fiftyTwoWeekHigh": 96.68,
@@ -44337,10 +44249,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -19083232,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 30.39
-        },
         {
           "d": "2024-08-09",
           "c": 31.75
@@ -46348,8 +46256,8 @@
       "currency": "USD",
       "price": 121.43,
       "previousClose": 120.88,
-      "change": 0.550003,
-      "changePercent": 0.454999,
+      "change": 0.55000305,
+      "changePercent": 0.45499924,
       "priceAsOf": null,
       "marketCap": 478608392192,
       "trailingPE": 40.476665,
@@ -46388,10 +46296,6 @@
       "insiderNetTxnCount": -10,
       "insiderNetShares": -113279,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 45.83
-        },
         {
           "d": "2024-08-09",
           "c": 45.47
@@ -48407,9 +48311,9 @@
       "forwardPE": 36.688168,
       "fiftyTwoWeekHigh": 214.89,
       "fiftyTwoWeekLow": 114.52,
-      "targetMean": 238.63,
+      "targetMean": 240.03741,
       "targetHigh": 289,
-      "targetLow": 182,
+      "targetLow": 185,
       "targetMedian": 245,
       "recommendationMean": 1.26667,
       "recommendationKey": "strong_buy",
@@ -48424,7 +48328,7 @@
       "totalDebt": 0,
       "totalCash": 13343299584,
       "freeCashflow": 3891512576,
-      "pegRatio": 2.52,
+      "pegRatio": 1.78,
       "priceToBook": 16.080286,
       "beta": 1.615,
       "dividendYield": null,
@@ -48439,10 +48343,6 @@
       "insiderNetTxnCount": -26,
       "insiderNetShares": -3493046,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 83.625
-        },
         {
           "d": "2024-08-09",
           "c": 83.9525
@@ -50477,7 +50377,7 @@
       "freeCashflow": 3502497792,
       "pegRatio": null,
       "priceToBook": 17.92869,
-      "beta": null,
+      "beta": 0.549,
       "dividendYield": 0.0068,
       "enterpriseValue": 1203381600256,
       "enterpriseToRevenue": 3.874,
@@ -50490,10 +50390,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 493
-        },
         {
           "d": "2024-08-12",
           "c": 509
@@ -52433,8 +52329,8 @@
       "currency": "USD",
       "price": 334.17,
       "previousClose": 331.5,
-      "change": 2.67001,
-      "changePercent": 0.805434,
+      "change": 2.6700134,
+      "changePercent": 0.8054339,
       "priceAsOf": null,
       "marketCap": 57973518336,
       "trailingPE": 163.80884,
@@ -52473,10 +52369,6 @@
       "insiderNetTxnCount": -24,
       "insiderNetShares": -2677274,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 41.01
-        },
         {
           "d": "2024-08-09",
           "c": 40.91
@@ -54484,8 +54376,8 @@
       "currency": "USD",
       "price": 249.89,
       "previousClose": 230.43,
-      "change": 19.46,
-      "changePercent": 8.44508,
+      "change": 19.460007,
+      "changePercent": 8.445084,
       "priceAsOf": null,
       "marketCap": 46598963200,
       "trailingPE": 99.956,
@@ -54524,10 +54416,6 @@
       "insiderNetTxnCount": -33,
       "insiderNetShares": -554902,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 26.87
-        },
         {
           "d": "2024-08-09",
           "c": 27.47
@@ -56534,9 +56422,9 @@
       "symbol": "SNPS",
       "currency": "USD",
       "price": 415.99,
-      "previousClose": 405.98,
-      "change": 10.01,
-      "changePercent": 2.46563,
+      "previousClose": 405.97998,
+      "change": 10.01001,
+      "changePercent": 2.4656413,
       "priceAsOf": null,
       "marketCap": 79653486592,
       "trailingPE": 95.19222,
@@ -56560,7 +56448,7 @@
       "totalDebt": 10841960448,
       "totalCash": 2484438016,
       "freeCashflow": 3538958592,
-      "pegRatio": 2.18,
+      "pegRatio": 2.23,
       "priceToBook": 2.612986,
       "beta": 1.213,
       "dividendYield": null,
@@ -56575,10 +56463,6 @@
       "insiderNetTxnCount": 9,
       "insiderNetShares": 5547,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 515.03
-        },
         {
           "d": "2024-08-09",
           "c": 524.73
@@ -58674,10 +58558,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 885
-        },
-        {
           "d": "2024-08-12",
           "c": 860
         },
@@ -60641,7 +60521,7 @@
       "totalDebt": 18811299840,
       "totalCash": 5419100160,
       "freeCashflow": 3818374912,
-      "pegRatio": 1.2,
+      "pegRatio": 1.18,
       "priceToBook": 13.461171,
       "beta": 1.251,
       "dividendYield": 0.0058999998,
@@ -60656,10 +60536,6 @@
       "insiderNetTxnCount": 3,
       "insiderNetShares": 4656,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 62.37
-        },
         {
           "d": "2024-08-09",
           "c": 62.62
@@ -62670,7 +62546,7 @@
       "change": 1.25,
       "changePercent": 0.581179,
       "priceAsOf": null,
-      "marketCap": 62630395904,
+      "marketCap": 62722867200,
       "trailingPE": 169.00781,
       "forwardPE": 16.76188,
       "fiftyTwoWeekHigh": 252.56,
@@ -62692,7 +62568,7 @@
       "totalDebt": 5817999872,
       "totalCash": 1239000064,
       "freeCashflow": 2336875008,
-      "pegRatio": 0.94,
+      "pegRatio": 0.93,
       "priceToBook": 4.7352524,
       "beta": 1.162,
       "dividendYield": 0.0138,
@@ -62707,10 +62583,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -7990,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 143.46
-        },
         {
           "d": "2024-08-09",
           "c": 143.99
@@ -64759,10 +64631,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 1470
-        },
-        {
           "d": "2024-08-12",
           "c": 1490
         },
@@ -66742,10 +66610,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 379.7467
-        },
-        {
           "d": "2024-08-12",
           "c": 382.2223
         },
@@ -68724,10 +68588,6 @@
       "insiderNetTxnCount": 5,
       "insiderNetShares": -16327,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 61.98
-        },
         {
           "d": "2024-08-09",
           "c": 63.34
@@ -70735,8 +70595,8 @@
       "currency": "USD",
       "price": 890.17,
       "previousClose": 838.06,
-      "change": 52.11,
-      "changePercent": 6.21793,
+      "change": 52.109985,
+      "changePercent": 6.2179303,
       "priceAsOf": null,
       "marketCap": 69255225344,
       "trailingPE": 156.17018,
@@ -70775,10 +70635,6 @@
       "insiderNetTxnCount": -7,
       "insiderNetShares": -91812,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 43.34
-        },
         {
           "d": "2024-08-09",
           "c": 43.25
@@ -72789,7 +72645,7 @@
       "change": 18.43,
       "changePercent": 3.38818,
       "priceAsOf": null,
-      "marketCap": null,
+      "marketCap": 20149929984,
       "trailingPE": 48.31443,
       "forwardPE": 32.468983,
       "fiftyTwoWeekHigh": 748.89,
@@ -72826,10 +72682,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -4350,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 205.88
-        },
         {
           "d": "2024-08-09",
           "c": 208.34
@@ -74837,18 +74689,18 @@
       "currency": "USD",
       "price": 135.63,
       "previousClose": 124.22,
-      "change": 11.41,
-      "changePercent": 9.18532,
+      "change": 11.410004,
+      "changePercent": 9.185319,
       "priceAsOf": null,
       "marketCap": 11470126080,
       "trailingPE": null,
-      "forwardPE": 29.471968,
+      "forwardPE": 29.142675,
       "fiftyTwoWeekHigh": 233.67,
       "fiftyTwoWeekLow": 18.5,
-      "targetMean": 150.3,
+      "targetMean": 158,
       "targetHigh": 220,
-      "targetLow": 57.5,
-      "targetMedian": 160,
+      "targetLow": 109,
+      "targetMedian": 151,
       "recommendationMean": 2.33333,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 5,
@@ -74877,10 +74729,6 @@
       "insiderNetTxnCount": -23,
       "insiderNetShares": 718358,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 8.57
-        },
         {
           "d": "2024-08-09",
           "c": 7.74
@@ -76889,7 +76737,7 @@
       "price": 31.13,
       "previousClose": 29.38,
       "change": 1.75,
-      "changePercent": 5.95643,
+      "changePercent": 5.956433,
       "priceAsOf": null,
       "marketCap": 20137156608,
       "trailingPE": 16.38421,
@@ -76928,10 +76776,6 @@
       "insiderNetTxnCount": 2,
       "insiderNetShares": 41960,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 50.994
-        },
         {
           "d": "2024-08-09",
           "c": 50.876
@@ -78980,10 +78824,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 97.3
-        },
-        {
           "d": "2024-08-12",
           "c": 102.5
         },
@@ -80927,10 +80767,10 @@
       "priceAsOf": null,
       "marketCap": 3400886386688,
       "trailingPE": 21.18644,
-      "forwardPE": 12.023858,
+      "forwardPE": 11.85134,
       "fiftyTwoWeekHigh": 6400,
       "fiftyTwoWeekLow": 2745,
-      "targetMean": 7568.8823,
+      "targetMean": 7729.4707,
       "targetHigh": 10000,
       "targetLow": 5400,
       "targetMedian": 7500,
@@ -80962,10 +80802,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 1875
-        },
         {
           "d": "2024-08-12",
           "c": 1965
@@ -82946,10 +82782,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 250
-        },
-        {
           "d": "2024-08-12",
           "c": 267
         },
@@ -84929,10 +84761,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 46.15
-        },
-        {
           "d": "2024-08-12",
           "c": 48.3
         },
@@ -86896,7 +86724,7 @@
       "totalDebt": 1324930564096,
       "totalCash": 1578088923136,
       "freeCashflow": 37193236480,
-      "pegRatio": 1.17,
+      "pegRatio": 1.15,
       "priceToBook": 2.0487766,
       "beta": 0.878,
       "dividendYield": 0.0276,
@@ -86911,10 +86739,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 168.5
-        },
         {
           "d": "2024-08-12",
           "c": 176
@@ -88879,7 +88703,7 @@
       "totalDebt": 3338200064,
       "totalCash": 3110599936,
       "freeCashflow": 2696537600,
-      "pegRatio": 1.29,
+      "pegRatio": 1.28,
       "priceToBook": 24.638205,
       "beta": 2.077,
       "dividendYield": 0.00090000004,
@@ -88894,10 +88718,6 @@
       "insiderNetTxnCount": 24,
       "insiderNetShares": -233584,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 71.06
-        },
         {
           "d": "2024-08-09",
           "c": 71.46
@@ -90904,9 +90724,9 @@
       "symbol": "MPWR",
       "currency": "USD",
       "price": 1401.54,
-      "previousClose": 1359.08,
-      "change": 42.4601,
-      "changePercent": 3.12418,
+      "previousClose": 1359.0801,
+      "change": 42.45996,
+      "changePercent": 3.1241693,
       "priceAsOf": null,
       "marketCap": 68875878400,
       "trailingPE": 85.45976,
@@ -90930,7 +90750,7 @@
       "totalDebt": 18934000,
       "totalCash": 1413761024,
       "freeCashflow": 444316128,
-      "pegRatio": 1.35,
+      "pegRatio": 1.4,
       "priceToBook": 17.680809,
       "beta": 1.686,
       "dividendYield": 0.0057,
@@ -90942,13 +90762,9 @@
       "shortPercentOfFloat": 0.0673,
       "shortRatio": 2.06,
       "sharesShort": 2456955,
-      "insiderNetTxnCount": -26,
-      "insiderNetShares": -227105,
+      "insiderNetTxnCount": -25,
+      "insiderNetShares": -193105,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 843.52
-        },
         {
           "d": "2024-08-09",
           "c": 823
@@ -92959,7 +92775,7 @@
       "change": 1.59,
       "changePercent": 0.355632,
       "priceAsOf": null,
-      "marketCap": 174267301888,
+      "marketCap": 174222442496,
       "trailingPE": 45.643948,
       "forwardPE": 28.004206,
       "fiftyTwoWeekHigh": 457.78,
@@ -92981,7 +92797,7 @@
       "totalDebt": 21326000128,
       "totalCash": 695000000,
       "freeCashflow": 3106125056,
-      "pegRatio": 3.22,
+      "pegRatio": 3.23,
       "priceToBook": 8.604138,
       "beta": 1.177,
       "dividendYield": 0.0098,
@@ -92996,10 +92812,6 @@
       "insiderNetTxnCount": 0,
       "insiderNetShares": 3031,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 287.48
-        },
         {
           "d": "2024-08-09",
           "c": 291.64
@@ -95012,7 +94824,7 @@
       "priceAsOf": null,
       "marketCap": 4285946658816,
       "trailingPE": 60.975613,
-      "forwardPE": 25.603346,
+      "forwardPE": 25.488289,
       "fiftyTwoWeekHigh": 2585,
       "fiftyTwoWeekLow": 619,
       "targetMean": 2440.0908,
@@ -95047,10 +94859,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 387.5
-        },
         {
           "d": "2024-08-12",
           "c": 399
@@ -96993,7 +96801,7 @@
       "change": -5.5,
       "changePercent": -2.178218,
       "priceAsOf": null,
-      "marketCap": 560468590592,
+      "marketCap": 560633675776,
       "trailingPE": 36.646885,
       "forwardPE": 17.589724,
       "fiftyTwoWeekHigh": 268.5,
@@ -97030,10 +96838,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 104
-        },
         {
           "d": "2024-08-12",
           "c": 105
@@ -99014,10 +98818,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 34.25
-        },
-        {
           "d": "2024-08-12",
           "c": 35.3
         },
@@ -100983,7 +100783,7 @@
       "freeCashflow": 61720752,
       "pegRatio": null,
       "priceToBook": 2.1642864,
-      "beta": null,
+      "beta": 0.682,
       "dividendYield": 0.0473,
       "enterpriseValue": 29240956928,
       "enterpriseToRevenue": 0.883,
@@ -100996,10 +100796,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 128.5
-        },
         {
           "d": "2024-08-12",
           "c": 129
@@ -102956,21 +102752,21 @@
       "numberOfAnalystOpinions": 16,
       "profitMargin": 0.41117,
       "grossMargin": 0.61074,
-      "operatingMargin": 0.38746,
+      "operatingMargin": 0.38741,
       "revenueGrowthYoY": 1.096,
       "earningsGrowthYoY": 1.63,
-      "returnOnEquity": null,
-      "returnOnAssets": null,
-      "totalDebt": 3978298112,
-      "totalCash": 9124031488,
-      "freeCashflow": null,
+      "returnOnEquity": 0.58219004,
+      "returnOnAssets": 0.17795,
+      "totalDebt": 4452589056,
+      "totalCash": 13659487232,
+      "freeCashflow": 6319524864,
       "pegRatio": 7.21,
       "priceToBook": 31.010359,
       "beta": 1.326,
       "dividendYield": 0.0095999995,
-      "enterpriseValue": 855690641408,
-      "enterpriseToRevenue": 21.191,
-      "enterpriseToEbitda": 55.036,
+      "enterpriseValue": 851402817536,
+      "enterpriseToRevenue": 21.085,
+      "enterpriseToEbitda": 54.608,
       "heldPercentInsiders": 0.15213001,
       "heldPercentInstitutions": 0.46308997,
       "shortPercentOfFloat": null,
@@ -102979,10 +102775,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 292
-        },
         {
           "d": "2024-08-12",
           "c": 297
@@ -104962,10 +104754,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 568
-        },
         {
           "d": "2024-08-12",
           "c": 585
@@ -107087,10 +106875,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 1080
-        },
-        {
           "d": "2024-08-12",
           "c": 1075
         },
@@ -109029,8 +108813,8 @@
       "currency": "USD",
       "price": 286.08,
       "previousClose": 278.4,
-      "change": 7.67999,
-      "changePercent": 2.75862,
+      "change": 7.6799927,
+      "changePercent": 2.758618,
       "priceAsOf": null,
       "marketCap": 261261885440,
       "trailingPE": 43.477203,
@@ -109054,7 +108838,7 @@
       "totalDebt": 14051999744,
       "totalCash": 7000999936,
       "freeCashflow": 3545250048,
-      "pegRatio": 1.23,
+      "pegRatio": 1.26,
       "priceToBook": 14.504892,
       "beta": 1.325,
       "dividendYield": 0.0199,
@@ -109066,13 +108850,9 @@
       "shortPercentOfFloat": 0.019199999,
       "shortRatio": 1.61,
       "sharesShort": 15763842,
-      "insiderNetTxnCount": -2,
-      "insiderNetShares": -57106,
+      "insiderNetTxnCount": -3,
+      "insiderNetShares": -121638,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 193.3
-        },
         {
           "d": "2024-08-09",
           "c": 192.21
@@ -111121,10 +110901,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 210.45
-        },
-        {
           "d": "2024-08-12",
           "c": 211.25
         },
@@ -113133,10 +112909,6 @@
           "c": 284.6
         },
         {
-          "d": "2026-07-31",
-          "c": 289.6
-        },
-        {
           "d": "2026-08-03",
           "c": 290.1
         },
@@ -113250,10 +113022,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 2221.5
-        },
         {
           "d": "2024-08-13",
           "c": 2399
@@ -115226,7 +114994,7 @@
       "totalDebt": 108165996544,
       "totalCash": 413124001792,
       "freeCashflow": 349875765248,
-      "pegRatio": 1.52,
+      "pegRatio": 1.48,
       "priceToBook": 22.351372,
       "beta": 1.185,
       "dividendYield": 0.0019,
@@ -115241,10 +115009,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 5792
-        },
         {
           "d": "2024-08-13",
           "c": 6237
@@ -117200,10 +116964,10 @@
       "forwardPE": 42.571476,
       "fiftyTwoWeekHigh": 81260,
       "fiftyTwoWeekLow": 19870,
-      "targetMean": 72931.82,
+      "targetMean": 73845.45,
       "targetHigh": 99000,
       "targetLow": 42300,
-      "targetMedian": 76000,
+      "targetMedian": 77650,
       "recommendationMean": 1.63636,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 22,
@@ -117217,7 +116981,7 @@
       "totalDebt": 0,
       "totalCash": 409607995392,
       "freeCashflow": 297172500480,
-      "pegRatio": 1.52,
+      "pegRatio": 1.5,
       "priceToBook": 11.563063,
       "beta": 1.334,
       "dividendYield": 0.0137,
@@ -117232,10 +116996,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 25810
-        },
         {
           "d": "2024-08-13",
           "c": 27400
@@ -119208,7 +118968,7 @@
       "totalDebt": 0,
       "totalCash": 283891990528,
       "freeCashflow": null,
-      "pegRatio": 1.84,
+      "pegRatio": 1.74,
       "priceToBook": 10.888341,
       "beta": 1.014,
       "dividendYield": 0.0094,
@@ -119223,10 +118983,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 41330
-        },
         {
           "d": "2024-08-13",
           "c": 42950
@@ -121220,11 +120976,11 @@
       "symbol": "CDNS",
       "currency": "USD",
       "price": 339.24,
-      "previousClose": 338.42,
-      "change": 0.819977,
-      "changePercent": 0.242296,
+      "previousClose": 338.41998,
+      "change": 0.8200073,
+      "changePercent": 0.24230464,
       "priceAsOf": null,
-      "marketCap": 93424312320,
+      "marketCap": 93567819776,
       "trailingPE": 67.57769,
       "forwardPE": 35.570488,
       "fiftyTwoWeekHigh": 416.69,
@@ -121246,7 +121002,7 @@
       "totalDebt": 2651358976,
       "totalCash": 1531835008,
       "freeCashflow": 1609676544,
-      "pegRatio": 3.06,
+      "pegRatio": 3.07,
       "priceToBook": 13.623001,
       "beta": 1.142,
       "dividendYield": null,
@@ -121261,10 +121017,6 @@
       "insiderNetTxnCount": 11,
       "insiderNetShares": 336366,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 268.68
-        },
         {
           "d": "2024-08-09",
           "c": 270.13
@@ -123271,9 +123023,9 @@
       "symbol": "CAMT",
       "currency": "USD",
       "price": 155.35,
-      "previousClose": 149.67,
-      "change": 5.68001,
-      "changePercent": 3.79502,
+      "previousClose": 149.67001,
+      "change": 5.6799927,
+      "changePercent": 3.7950106,
       "priceAsOf": null,
       "marketCap": 7248090624,
       "trailingPE": 161.82292,
@@ -123297,7 +123049,7 @@
       "totalDebt": 487811008,
       "totalCash": 670260992,
       "freeCashflow": null,
-      "pegRatio": 3.08,
+      "pegRatio": 3.2,
       "priceToBook": 10.480335,
       "beta": 1.586,
       "dividendYield": null,
@@ -123312,10 +123064,6 @@
       "insiderNetTxnCount": 4,
       "insiderNetShares": 1016,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 90.11
-        },
         {
           "d": "2024-08-09",
           "c": 92.95
@@ -125328,13 +125076,13 @@
       "priceAsOf": null,
       "marketCap": 15335941120,
       "trailingPE": 115.03731,
-      "forwardPE": 30.999786,
+      "forwardPE": 26.9746,
       "fiftyTwoWeekHigh": 386.46,
       "fiftyTwoWeekLow": 101,
-      "targetMean": 375.8,
+      "targetMean": 383.3,
       "targetHigh": 450,
       "targetLow": 330,
-      "targetMedian": 367.5,
+      "targetMedian": 386.5,
       "recommendationMean": 1.2,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 10,
@@ -125348,7 +125096,7 @@
       "totalDebt": 1471730944,
       "totalCash": 1882150016,
       "freeCashflow": 198759744,
-      "pegRatio": 1.28,
+      "pegRatio": 1.43,
       "priceToBook": 7.1926837,
       "beta": 1.587,
       "dividendYield": null,
@@ -125363,10 +125111,6 @@
       "insiderNetTxnCount": 12,
       "insiderNetShares": 38195,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 177.81
-        },
         {
           "d": "2024-08-09",
           "c": 192.94
@@ -127373,9 +127117,9 @@
       "symbol": "MXL",
       "currency": "USD",
       "price": 74.98,
-      "previousClose": 70.2,
-      "change": 4.78001,
-      "changePercent": 6.80913,
+      "previousClose": 70.200005,
+      "change": 4.779999,
+      "changePercent": 6.8091145,
       "priceAsOf": null,
       "marketCap": 6800175616,
       "trailingPE": null,
@@ -127386,8 +127130,8 @@
       "targetHigh": 125,
       "targetLow": 40,
       "targetMedian": 100,
-      "recommendationMean": 1.81818,
-      "recommendationKey": "buy",
+      "recommendationMean": null,
+      "recommendationKey": "none",
       "numberOfAnalystOpinions": 11,
       "profitMargin": -0.18238,
       "grossMargin": 0.57477003,
@@ -127414,10 +127158,6 @@
       "insiderNetTxnCount": -6,
       "insiderNetShares": 9221,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 11.79
-        },
         {
           "d": "2024-08-09",
           "c": 11.48
@@ -129437,8 +129177,8 @@
       "targetHigh": 30,
       "targetLow": 30,
       "targetMedian": 30,
-      "recommendationMean": 3.5,
-      "recommendationKey": "hold",
+      "recommendationMean": null,
+      "recommendationKey": "none",
       "numberOfAnalystOpinions": 1,
       "profitMargin": -0.72926,
       "grossMargin": -0.17403999,
@@ -130423,10 +130163,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 122.5
-        },
         {
           "d": "2024-08-12",
           "c": 126.5
@@ -132416,7 +132152,7 @@
       "change": 65,
       "changePercent": 2.443609,
       "priceAsOf": null,
-      "marketCap": null,
+      "marketCap": 203522080768,
       "trailingPE": 100,
       "forwardPE": 52.058918,
       "fiftyTwoWeekHigh": 4785,
@@ -132453,10 +132189,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 2235
-        },
         {
           "d": "2024-08-12",
           "c": 2230
@@ -134437,10 +134169,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 482
-        },
-        {
           "d": "2024-08-12",
           "c": 490.5
         },
@@ -136379,8 +136107,8 @@
       "currency": "USD",
       "price": 81.17,
       "previousClose": 78.33,
-      "change": 2.84,
-      "changePercent": 3.62568,
+      "change": 2.8399963,
+      "changePercent": 3.6256816,
       "priceAsOf": null,
       "marketCap": 31600431104,
       "trailingPE": 53.052288,
@@ -136404,7 +136132,7 @@
       "totalDebt": 4709000192,
       "totalCash": 3864499968,
       "freeCashflow": 1656649984,
-      "pegRatio": 0.24,
+      "pegRatio": 0.25,
       "priceToBook": 4.3773932,
       "beta": 2.016,
       "dividendYield": null,
@@ -136419,10 +136147,6 @@
       "insiderNetTxnCount": 6,
       "insiderNetShares": -43404,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 72.23
-        },
         {
           "d": "2024-08-09",
           "c": 71.3
@@ -138455,7 +138179,7 @@
       "totalDebt": 7240999936,
       "totalCash": 1656000000,
       "freeCashflow": 1743874944,
-      "pegRatio": 0.54,
+      "pegRatio": 0.55,
       "priceToBook": 4.646011,
       "beta": 1.945,
       "dividendYield": 0.0056,
@@ -138470,10 +138194,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 30.165
-        },
         {
           "d": "2024-08-12",
           "c": 30.28
@@ -140467,10 +140187,6 @@
           "c": 59.47
         },
         {
-          "d": "2026-07-31",
-          "c": 61.67
-        },
-        {
           "d": "2026-08-03",
           "c": 61.47
         },
@@ -140497,10 +140213,10 @@
       "currency": "USD",
       "price": 101.52,
       "previousClose": 97.68,
-      "change": 3.84,
+      "change": 3.8399963,
       "changePercent": 3.9312,
       "priceAsOf": null,
-      "marketCap": 11011020800,
+      "marketCap": 10978064384,
       "trailingPE": 46.568806,
       "forwardPE": 27.462553,
       "fiftyTwoWeekHigh": 174.1,
@@ -140523,7 +140239,7 @@
       "totalCash": 824947968,
       "freeCashflow": 202302368,
       "pegRatio": 3.8,
-      "priceToBook": 7.507765,
+      "priceToBook": 7.8795404,
       "beta": 1.887,
       "dividendYield": null,
       "enterpriseValue": 10207877120,
@@ -140537,10 +140253,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -25170,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 43.38
-        },
         {
           "d": "2024-08-09",
           "c": 42.84
@@ -142589,10 +142301,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 217.5
-        },
-        {
           "d": "2024-08-12",
           "c": 227.5
         },
@@ -144543,8 +144251,8 @@
       "targetHigh": 214,
       "targetLow": 166,
       "targetMedian": 180,
-      "recommendationMean": null,
-      "recommendationKey": "none",
+      "recommendationMean": 1.42857,
+      "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 7,
       "profitMargin": 0.1479,
       "grossMargin": 0.25877002,
@@ -144571,10 +144279,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 177.5
-        },
         {
           "d": "2024-08-12",
           "c": 181.5
@@ -146555,10 +146259,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 117.3477
-        },
-        {
           "d": "2024-08-12",
           "c": 125.8307
         },
@@ -148509,7 +148209,7 @@
       "targetHigh": 950.4133,
       "targetLow": 727.2727,
       "targetMedian": 842.7273,
-      "recommendationMean": 1.33333,
+      "recommendationMean": 1.42857,
       "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 6,
       "profitMargin": 0.1857,
@@ -148537,10 +148237,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 522.314
-        },
         {
           "d": "2024-08-12",
           "c": 567.7686
@@ -150521,10 +150217,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 802
-        },
-        {
           "d": "2024-08-12",
           "c": 803
         },
@@ -152504,10 +152196,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 198.5
-        },
-        {
           "d": "2024-08-12",
           "c": 201
         },
@@ -154486,10 +154174,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 16.2
-        },
         {
           "d": "2024-08-12",
           "c": 16.15
@@ -156517,10 +156201,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 439.5
-        },
-        {
           "d": "2024-08-12",
           "c": 446.5
         },
@@ -158464,7 +158144,7 @@
       "priceAsOf": null,
       "marketCap": 141388759040,
       "trailingPE": 95.34314,
-      "forwardPE": 35.084114,
+      "forwardPE": 19.784084,
       "fiftyTwoWeekHigh": 424.5,
       "fiftyTwoWeekLow": 92.1,
       "targetMean": 339.16666,
@@ -158499,10 +158179,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 74.2
-        },
         {
           "d": "2024-08-12",
           "c": 76.6
@@ -160529,10 +160205,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 208
-        },
         {
           "d": "2024-08-12",
           "c": 207
@@ -162607,10 +162279,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 137.5
-        },
-        {
           "d": "2024-08-12",
           "c": 142
         },
@@ -164651,13 +164319,13 @@
       "forwardPE": 33.096783,
       "fiftyTwoWeekHigh": 11490,
       "fiftyTwoWeekLow": 1085,
-      "targetMean": 11512,
+      "targetMean": 11436.818,
       "targetHigh": 14800,
-      "targetLow": 8315,
-      "targetMedian": 11750,
-      "recommendationMean": 1.4,
+      "targetLow": 9000,
+      "targetMedian": 11500,
+      "recommendationMean": 1.36364,
       "recommendationKey": "strong_buy",
-      "numberOfAnalystOpinions": 10,
+      "numberOfAnalystOpinions": 11,
       "profitMargin": 0.20592,
       "grossMargin": 0.43532002,
       "operatingMargin": 0.2606,
@@ -164683,10 +164351,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 958
-        },
         {
           "d": "2024-08-12",
           "c": 983
@@ -166666,10 +166330,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 306.5
-        },
         {
           "d": "2024-08-12",
           "c": 321
@@ -168791,10 +168451,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 505
-        },
-        {
           "d": "2024-08-12",
           "c": 499
         },
@@ -170736,7 +170392,7 @@
       "change": 0,
       "changePercent": 0,
       "priceAsOf": null,
-      "marketCap": 237258326016,
+      "marketCap": 230441779200,
       "trailingPE": 16.862745,
       "forwardPE": 10.157963,
       "fiftyTwoWeekHigh": 402,
@@ -170773,10 +170429,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 231.5
-        },
         {
           "d": "2024-08-12",
           "c": 236
@@ -172757,10 +172409,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 36.9091
-        },
-        {
           "d": "2024-08-12",
           "c": 39.0909
         },
@@ -174740,10 +174388,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 339.5
-        },
-        {
           "d": "2024-08-12",
           "c": 345.5
         },
@@ -176685,7 +176329,7 @@
       "change": 6,
       "changePercent": 1.2820513,
       "priceAsOf": null,
-      "marketCap": 68751990784,
+      "marketCap": 69150154752,
       "trailingPE": 24.33265,
       "forwardPE": 15.752758,
       "fiftyTwoWeekHigh": 522,
@@ -176722,10 +176366,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 286
-        },
         {
           "d": "2024-08-12",
           "c": 293
@@ -178706,10 +178346,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 114
-        },
-        {
           "d": "2024-08-12",
           "c": 117
         },
@@ -180688,10 +180324,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 50.3
-        },
         {
           "d": "2024-08-12",
           "c": 50.2
@@ -182672,10 +182304,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 93.6
-        },
-        {
           "d": "2024-08-12",
           "c": 93.7
         },
@@ -184654,10 +184282,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 93.5
-        },
         {
           "d": "2024-08-12",
           "c": 94.8
@@ -186685,10 +186309,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 119
-        },
-        {
           "d": "2024-08-12",
           "c": 121
         },
@@ -188653,7 +188273,7 @@
       "totalCash": 134854139904,
       "freeCashflow": 6754114048,
       "pegRatio": 3.62,
-      "priceToBook": 3.1710126,
+      "priceToBook": 2.9946847,
       "beta": 1.046,
       "dividendYield": 0.021300001,
       "enterpriseValue": 440868241408,
@@ -188667,10 +188287,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 2755
-        },
         {
           "d": "2024-08-12",
           "c": 2750
@@ -190650,10 +190266,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 497
-        },
         {
           "d": "2024-08-12",
           "c": 508
@@ -192728,10 +192340,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 122.5
-        },
-        {
           "d": "2024-08-12",
           "c": 127
         },
@@ -194710,10 +194318,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 342.5
-        },
         {
           "d": "2024-08-12",
           "c": 376.5
@@ -196741,10 +196345,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 67.8
-        },
-        {
           "d": "2024-08-12",
           "c": 68.8
         },
@@ -198771,10 +198371,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 21.85
-        },
-        {
           "d": "2024-08-12",
           "c": 22.15
         },
@@ -200753,10 +200349,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 16.3636
-        },
         {
           "d": "2024-08-12",
           "c": 16.8182
@@ -202737,10 +202329,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 180
-        },
-        {
           "d": "2024-08-12",
           "c": 184.5
         },
@@ -204679,15 +204267,15 @@
       "currency": "USD",
       "price": 499.99,
       "previousClose": 499.86,
-      "change": 0.130005,
-      "changePercent": 0.0260083,
+      "change": 0.13000488,
+      "changePercent": 0.02600826,
       "priceAsOf": null,
       "marketCap": 3712698548224,
       "trailingPE": 27.854595,
       "forwardPE": 21.299555,
       "fiftyTwoWeekHigh": 553.72,
       "fiftyTwoWeekLow": 349.2,
-      "targetMean": 563.34906,
+      "targetMean": 563.8413,
       "targetHigh": 870,
       "targetLow": 400,
       "targetMedian": 550,
@@ -204704,7 +204292,7 @@
       "totalDebt": 128812998656,
       "totalCash": 76842999808,
       "freeCashflow": 16545500160,
-      "pegRatio": 1.59,
+      "pegRatio": 1.63,
       "priceToBook": 8.394023,
       "beta": 1.099,
       "dividendYield": 0.0073,
@@ -204719,10 +204307,6 @@
       "insiderNetTxnCount": -1,
       "insiderNetShares": -40426,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 402.69
-        },
         {
           "d": "2024-08-09",
           "c": 406.02
@@ -206730,8 +206314,8 @@
       "currency": "USD",
       "price": 354.3,
       "previousClose": 357.75,
-      "change": -3.45001,
-      "changePercent": -0.964364,
+      "change": -3.4500122,
+      "changePercent": -0.96436405,
       "priceAsOf": null,
       "marketCap": 4333065732096,
       "trailingPE": 17.759398,
@@ -206755,7 +206339,7 @@
       "totalDebt": 120790999040,
       "totalCash": 242473992192,
       "freeCashflow": 22665000960,
-      "pegRatio": 0.98,
+      "pegRatio": 0.96,
       "priceToBook": 6.961254,
       "beta": 1.237,
       "dividendYield": 0.0025,
@@ -206770,10 +206354,6 @@
       "insiderNetTxnCount": -1,
       "insiderNetShares": -600,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 162.03
-        },
         {
           "d": "2024-08-09",
           "c": 163.67
@@ -208781,21 +208361,21 @@
       "currency": "USD",
       "price": 274.48,
       "previousClose": 272.26,
-      "change": 2.22,
-      "changePercent": 0.815398,
+      "change": 2.2200012,
+      "changePercent": 0.8153975,
       "priceAsOf": null,
       "marketCap": 2960627335168,
       "trailingPE": 22.08206,
       "forwardPE": 26.569765,
       "fiftyTwoWeekHigh": 287.2,
       "fiftyTwoWeekLow": 196,
-      "targetMean": 325.81232,
+      "targetMean": 324.94067,
       "targetHigh": 400,
       "targetLow": 230,
       "targetMedian": 325,
-      "recommendationMean": 1.32787,
+      "recommendationMean": 1.31667,
       "recommendationKey": "strong_buy",
-      "numberOfAnalystOpinions": 60,
+      "numberOfAnalystOpinions": 59,
       "profitMargin": 0.1744,
       "grossMargin": 0.5077,
       "operatingMargin": 0.13689,
@@ -208806,7 +208386,7 @@
       "totalDebt": 251635007488,
       "totalCash": 122988003328,
       "freeCashflow": 3219124992,
-      "pegRatio": 1.45,
+      "pegRatio": 1.46,
       "priceToBook": 5.365549,
       "beta": 1.454,
       "dividendYield": null,
@@ -208821,10 +208401,6 @@
       "insiderNetTxnCount": -27,
       "insiderNetShares": -1480009,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 165.8
-        },
         {
           "d": "2024-08-09",
           "c": 166.94
@@ -210831,9 +210407,9 @@
       "symbol": "META",
       "currency": "USD",
       "price": 592.1,
-      "previousClose": 589.9,
-      "change": 2.19995,
-      "changePercent": 0.372936,
+      "previousClose": 589.89996,
+      "change": 2.2000122,
+      "changePercent": 0.37294665,
       "priceAsOf": null,
       "marketCap": 1508378279936,
       "trailingPE": 22.318129,
@@ -210872,10 +210448,6 @@
       "insiderNetTxnCount": -36,
       "insiderNetShares": -209374,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 509.63
-        },
         {
           "d": "2024-08-09",
           "c": 517.77
@@ -212908,7 +212480,7 @@
       "totalDebt": 167431995392,
       "totalCash": 31893999616,
       "freeCashflow": -24536750080,
-      "pegRatio": 0.82,
+      "pegRatio": 0.83,
       "priceToBook": 11.27454,
       "beta": 1.718,
       "dividendYield": 0.0136,
@@ -212923,10 +212495,6 @@
       "insiderNetTxnCount": -1,
       "insiderNetShares": -15000,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 128.96
-        },
         {
           "d": "2024-08-09",
           "c": 132.06
@@ -214959,7 +214527,7 @@
       "totalDebt": 31924000768,
       "totalCash": 11580999680,
       "freeCashflow": 5434124800,
-      "pegRatio": 0.76,
+      "pegRatio": 0.74,
       "priceToBook": null,
       "beta": 1.401,
       "dividendYield": 0.0056,
@@ -214974,10 +214542,6 @@
       "insiderNetTxnCount": -79,
       "insiderNetShares": -2658447,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 91.46
-        },
         {
           "d": "2024-08-09",
           "c": 92.55
@@ -217026,10 +216590,6 @@
       "insiderNetShares": 574574,
       "history": [
         {
-          "d": "2024-08-08",
-          "c": 17.31
-        },
-        {
           "d": "2024-08-09",
           "c": 17.34
         },
@@ -219035,11 +218595,11 @@
       "symbol": "NTAP",
       "currency": "USD",
       "price": 189.52,
-      "previousClose": 191.48,
-      "change": -1.95999,
-      "changePercent": -1.0236,
+      "previousClose": 191.48001,
+      "change": -1.9600067,
+      "changePercent": -1.023609,
       "priceAsOf": null,
-      "marketCap": 37190320128,
+      "marketCap": 37130743808,
       "trailingPE": 29.84567,
       "forwardPE": 19.263453,
       "fiftyTwoWeekHigh": 195.7,
@@ -219061,7 +218621,7 @@
       "totalDebt": 2732999936,
       "totalCash": 3584000000,
       "freeCashflow": 1295250048,
-      "pegRatio": 2.15,
+      "pegRatio": 2.13,
       "priceToBook": 27.49456,
       "beta": 1.433,
       "dividendYield": 0.011,
@@ -219073,13 +218633,9 @@
       "shortPercentOfFloat": 0.0758,
       "shortRatio": 3.93,
       "sharesShort": 12870550,
-      "insiderNetTxnCount": -6,
-      "insiderNetShares": 202011,
+      "insiderNetTxnCount": -5,
+      "insiderNetShares": 203011,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 119.22
-        },
         {
           "d": "2024-08-09",
           "c": 122.49
@@ -221134,15 +220690,15 @@
       "currency": "USD",
       "price": 434.3,
       "previousClose": 451.52,
-      "change": -17.22,
-      "changePercent": -3.81378,
+      "change": -17.220001,
+      "changePercent": -3.8137848,
       "priceAsOf": null,
-      "marketCap": null,
+      "marketCap": 149695447040,
       "trailingPE": 17.88715,
       "forwardPE": 13.643336,
       "fiftyTwoWeekHigh": 799.87,
       "fiftyTwoWeekLow": 73.14,
-      "targetMean": 665.25,
+      "targetMean": 662.125,
       "targetHigh": 1050,
       "targetLow": 420,
       "targetMedian": 640,
@@ -221159,8 +220715,8 @@
       "totalDebt": 1052000000,
       "totalCash": 1579000064,
       "freeCashflow": 2318500096,
-      "pegRatio": 0.4,
-      "priceToBook": null,
+      "pegRatio": 0.85,
+      "priceToBook": 20.765,
       "beta": 2.217,
       "dividendYield": 0.0014,
       "enterpriseValue": 151477993472,
@@ -221174,10 +220730,6 @@
       "insiderNetTxnCount": -20,
       "insiderNetShares": -92000,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 44.5805
-        },
         {
           "d": "2024-08-09",
           "c": 45.1096
@@ -223185,10 +222737,10 @@
       "currency": "USD",
       "price": 812.76,
       "previousClose": 852.95,
-      "change": -40.19,
-      "changePercent": -4.71188,
+      "change": -40.190002,
+      "changePercent": -4.7118826,
       "priceAsOf": null,
-      "marketCap": 184207589376,
+      "marketCap": 184496521216,
       "trailingPE": 58.471943,
       "forwardPE": 14.678336,
       "fiftyTwoWeekHigh": 1145,
@@ -223210,7 +222762,7 @@
       "totalDebt": 3897999872,
       "totalCash": 1704000000,
       "freeCashflow": 1943750016,
-      "pegRatio": 0.48,
+      "pegRatio": 0.46,
       "priceToBook": 166.54918,
       "beta": 2.102,
       "dividendYield": 0.0036000002,
@@ -223225,10 +222777,6 @@
       "insiderNetTxnCount": -29,
       "insiderNetShares": -190000,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 95.45
-        },
         {
           "d": "2024-08-09",
           "c": 96.28
@@ -225236,19 +224784,19 @@
       "currency": "USD",
       "price": 1212.21,
       "previousClose": 1258.58,
-      "change": -46.37,
-      "changePercent": -3.68431,
+      "change": -46.369995,
+      "changePercent": -3.6843107,
       "priceAsOf": null,
       "marketCap": 176982654976,
       "trailingPE": 16.447897,
-      "forwardPE": 4.6415467,
+      "forwardPE": 4.641548,
       "fiftyTwoWeekHigh": 2354.39,
       "fiftyTwoWeekLow": 42.82,
-      "targetMean": 2116.6365,
+      "targetMean": 2106.6365,
       "targetHigh": 3169,
       "targetLow": 1000,
       "targetMedian": 2050,
-      "recommendationMean": 1.6087,
+      "recommendationMean": 1.56522,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 22,
       "profitMargin": 0.56465,
@@ -226771,7 +226319,7 @@
       "currency": "USD",
       "price": 1042.62,
       "previousClose": 1052.86,
-      "change": -10.24,
+      "change": -10.23999,
       "changePercent": -0.972588,
       "priceAsOf": null,
       "marketCap": 102877077504,
@@ -226796,7 +226344,7 @@
       "totalDebt": 23356000256,
       "totalCash": 979000000,
       "freeCashflow": 3776000000,
-      "pegRatio": 3.39,
+      "pegRatio": 3.36,
       "priceToBook": 7.153138,
       "beta": 0.972,
       "dividendYield": 0.0198,
@@ -226811,10 +226359,6 @@
       "insiderNetTxnCount": -35,
       "insiderNetShares": -44911,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 809.48
-        },
         {
           "d": "2024-08-09",
           "c": 818.88
@@ -228830,10 +228374,10 @@
       "forwardPE": 66.07344,
       "fiftyTwoWeekHigh": 208.14,
       "fiftyTwoWeekLow": 146.23,
-      "targetMean": 221.67741,
+      "targetMean": 221.87097,
       "targetHigh": 250,
       "targetLow": 190,
-      "targetMedian": 222,
+      "targetMedian": 223,
       "recommendationMean": 1.51515,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 31,
@@ -228847,7 +228391,7 @@
       "totalDebt": 20074991616,
       "totalCash": 1907729024,
       "freeCashflow": 3768482048,
-      "pegRatio": 13.94,
+      "pegRatio": 14.03,
       "priceToBook": 2.6854007,
       "beta": 1.042,
       "dividendYield": 0.0252,
@@ -228862,10 +228406,6 @@
       "insiderNetTxnCount": 2,
       "insiderNetShares": 1915,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 149.66
-        },
         {
           "d": "2024-08-09",
           "c": 150.12
@@ -230876,13 +230416,13 @@
       "change": 1.34999,
       "changePercent": 0.86036,
       "priceAsOf": null,
-      "marketCap": 88277426176,
+      "marketCap": 88641421312,
       "trailingPE": 34.630196,
       "forwardPE": 21.881964,
       "fiftyTwoWeekHigh": 165.15,
       "fiftyTwoWeekLow": 122.64,
-      "targetMean": 169.81444,
-      "targetHigh": 203,
+      "targetMean": 170.0737,
+      "targetHigh": 205,
       "targetLow": 104,
       "targetMedian": 175,
       "recommendationMean": 1.93103,
@@ -230898,7 +230438,7 @@
       "totalDebt": 13802000384,
       "totalCash": 2180000000,
       "freeCashflow": 3706249984,
-      "pegRatio": 1.82,
+      "pegRatio": 1.84,
       "priceToBook": 4.3317366,
       "beta": 1.235,
       "dividendYield": 0.0139999995,
@@ -230910,13 +230450,9 @@
       "shortPercentOfFloat": 0.0211,
       "shortRatio": 4.21,
       "sharesShort": 11776220,
-      "insiderNetTxnCount": -2,
-      "insiderNetShares": -18054,
+      "insiderNetTxnCount": -1,
+      "insiderNetShares": -16578,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 104.61
-        },
         {
           "d": "2024-08-09",
           "c": 103.69
@@ -232949,7 +232485,7 @@
       "totalDebt": 548028032,
       "totalCash": 924411008,
       "freeCashflow": 978281600,
-      "pegRatio": 0.4,
+      "pegRatio": 0.41,
       "priceToBook": 8.860184,
       "beta": 1.147,
       "dividendYield": 0.002,
@@ -232964,10 +232500,6 @@
       "insiderNetTxnCount": 7,
       "insiderNetShares": -49791,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 357.02
-        },
         {
           "d": "2024-08-09",
           "c": 355.77
@@ -234980,15 +234512,15 @@
       "priceAsOf": null,
       "marketCap": 101009711104,
       "trailingPE": 76.95991,
-      "forwardPE": 35.007843,
+      "forwardPE": 34.75863,
       "fiftyTwoWeekHigh": 788.75,
       "fiftyTwoWeekLow": 363.01,
-      "targetMean": 766.9707,
+      "targetMean": 765.5779,
       "targetHigh": 976,
       "targetLow": 410,
       "targetMedian": 795,
-      "recommendationMean": 1.56667,
-      "recommendationKey": "buy",
+      "recommendationMean": 1.5,
+      "recommendationKey": "strong_buy",
       "numberOfAnalystOpinions": 28,
       "profitMargin": 0.04032,
       "grossMargin": 0.15456,
@@ -235000,7 +234532,7 @@
       "totalDebt": 6603134976,
       "totalCash": 506431008,
       "freeCashflow": 1955491328,
-      "pegRatio": 1.84,
+      "pegRatio": 1.85,
       "priceToBook": 10.475552,
       "beta": 1.219,
       "dividendYield": 0.0007,
@@ -235015,10 +234547,6 @@
       "insiderNetTxnCount": 4,
       "insiderNetShares": -2423,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 262.8
-        },
         {
           "d": "2024-08-09",
           "c": 259.62
@@ -237051,8 +236579,8 @@
       "totalDebt": 3235450880,
       "totalCash": 315640992,
       "freeCashflow": -57898876,
-      "pegRatio": 1.03,
-      "priceToBook": 6.1170607,
+      "pegRatio": 1.09,
+      "priceToBook": 6.420795,
       "beta": 1.837,
       "dividendYield": null,
       "enterpriseValue": 24643219456,
@@ -237066,10 +236594,6 @@
       "insiderNetTxnCount": 14,
       "insiderNetShares": 54252,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 108.32
-        },
         {
           "d": "2024-08-09",
           "c": 106.65
@@ -239082,16 +238606,16 @@
       "priceAsOf": null,
       "marketCap": 263755481088,
       "trailingPE": 28.408491,
-      "forwardPE": 39.869144,
+      "forwardPE": 39.780243,
       "fiftyTwoWeekHigh": 1195.94,
       "fiftyTwoWeekLow": 530.16,
-      "targetMean": 1231.4803,
+      "targetMean": 1238.25,
       "targetHigh": 1450,
-      "targetLow": 836,
+      "targetLow": 940,
       "targetMedian": 1250,
       "recommendationMean": 1.57895,
       "recommendationKey": "buy",
-      "numberOfAnalystOpinions": 34,
+      "numberOfAnalystOpinions": 33,
       "profitMargin": 0.23035,
       "grossMargin": 0.2057,
       "operatingMargin": 0.07466,
@@ -239102,7 +238626,7 @@
       "totalDebt": 3720000000,
       "totalCash": 12720000000,
       "freeCashflow": 15722125312,
-      "pegRatio": 1.7,
+      "pegRatio": 1.68,
       "priceToBook": 22.05858,
       "beta": 1.033,
       "dividendYield": 0.002,
@@ -239117,10 +238641,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": 32044,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 177.21
-        },
         {
           "d": "2024-08-09",
           "c": 179.11
@@ -241178,7 +240698,7 @@
       "change": 6.25998,
       "changePercent": 1.23293,
       "priceAsOf": null,
-      "marketCap": 27155412992,
+      "marketCap": 27160143872,
       "trailingPE": 30.395624,
       "forwardPE": 22.473291,
       "fiftyTwoWeekHigh": 565.4999,
@@ -241200,7 +240720,7 @@
       "totalDebt": 5556599808,
       "totalCash": 394700000,
       "freeCashflow": 495812512,
-      "pegRatio": 2.35,
+      "pegRatio": 2.38,
       "priceToBook": 6.941777,
       "beta": 0.899,
       "dividendYield": 0.0111,
@@ -241212,13 +240732,9 @@
       "shortPercentOfFloat": 0.059699997,
       "shortRatio": 4.77,
       "sharesShort": 2739024,
-      "insiderNetTxnCount": 22,
-      "insiderNetShares": 34221,
+      "insiderNetTxnCount": 16,
+      "insiderNetShares": 14021,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 373.78
-        },
         {
           "d": "2024-08-09",
           "c": 377
@@ -243251,7 +242767,7 @@
       "totalDebt": 45146001408,
       "totalCash": 5944999936,
       "freeCashflow": 5048999936,
-      "pegRatio": 2.04,
+      "pegRatio": 1.88,
       "priceToBook": 19.96042,
       "beta": 1.605,
       "dividendYield": 0.0077,
@@ -243263,13 +242779,9 @@
       "shortPercentOfFloat": 0.0195,
       "shortRatio": 2.12,
       "sharesShort": 8054245,
-      "insiderNetTxnCount": 24,
-      "insiderNetShares": 131267,
+      "insiderNetTxnCount": 14,
+      "insiderNetShares": 43064,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 336.16
-        },
         {
           "d": "2024-08-09",
           "c": 338.26
@@ -245280,7 +244792,7 @@
       "change": 0.280029,
       "changePercent": 0.0434842,
       "priceAsOf": null,
-      "marketCap": 88691720192,
+      "marketCap": 88900837376,
       "trailingPE": 32.887188,
       "forwardPE": 18.634378,
       "fiftyTwoWeekHigh": 737.76,
@@ -245317,10 +244829,6 @@
       "insiderNetTxnCount": 19,
       "insiderNetShares": 77990,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 297.24
-        },
         {
           "d": "2024-08-09",
           "c": 293.97
@@ -247331,7 +246839,7 @@
       "change": 1.04001,
       "changePercent": 0.492475,
       "priceAsOf": null,
-      "marketCap": 12522330112,
+      "marketCap": 12522176512,
       "trailingPE": 48.78621,
       "forwardPE": 17.953966,
       "fiftyTwoWeekHigh": 296.44,
@@ -247353,7 +246861,7 @@
       "totalDebt": 1410317952,
       "totalCash": 271264000,
       "freeCashflow": 289056512,
-      "pegRatio": 0.9,
+      "pegRatio": 0.88,
       "priceToBook": 4.351535,
       "beta": 1.925,
       "dividendYield": null,
@@ -247368,10 +246876,6 @@
       "insiderNetTxnCount": 14,
       "insiderNetShares": 121039,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 141.53
-        },
         {
           "d": "2024-08-09",
           "c": 144.33
@@ -249382,15 +248886,15 @@
       "change": -0.759979,
       "changePercent": -0.172019,
       "priceAsOf": null,
-      "marketCap": 49076264960,
+      "marketCap": 48976908288,
       "trailingPE": 41.334583,
-      "forwardPE": 29.776543,
+      "forwardPE": 29.73639,
       "fiftyTwoWeekHigh": 497.36,
       "fiftyTwoWeekLow": 328.7,
-      "targetMean": 476.66666,
+      "targetMean": 477.66666,
       "targetHigh": 550,
       "targetLow": 282,
-      "targetMedian": 494.5,
+      "targetMedian": 500,
       "recommendationMean": 2.25,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 24,
@@ -249419,10 +248923,6 @@
       "insiderNetTxnCount": -8,
       "insiderNetShares": -7658,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 259.14
-        },
         {
           "d": "2024-08-09",
           "c": 258.15
@@ -251430,18 +250930,18 @@
       "currency": "USD",
       "price": 13.195,
       "previousClose": 13.21,
-      "change": -0.0150003,
-      "changePercent": -0.113553,
+      "change": -0.015000343,
+      "changePercent": -0.113552935,
       "priceAsOf": null,
       "marketCap": 2999779840,
       "trailingPE": null,
       "forwardPE": 56.579906,
       "fiftyTwoWeekHigh": 33.51,
       "fiftyTwoWeekLow": 6.602,
-      "targetMean": 17.5,
-      "targetHigh": 25,
+      "targetMean": 16.83333,
+      "targetHigh": 24,
       "targetLow": 9,
-      "targetMedian": 16.5,
+      "targetMedian": 16,
       "recommendationMean": 2.66667,
       "recommendationKey": "hold",
       "numberOfAnalystOpinions": 18,
@@ -251470,10 +250970,6 @@
       "insiderNetTxnCount": -7,
       "insiderNetShares": -23078948,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 15.92
-        },
         {
           "d": "2024-08-09",
           "c": 16.25
@@ -253506,7 +253002,7 @@
       "totalDebt": 1580579968,
       "totalCash": 1202834048,
       "freeCashflow": 700927872,
-      "pegRatio": 0.7,
+      "pegRatio": 0.71,
       "priceToBook": 20.189465,
       "beta": 1.315,
       "dividendYield": null,
@@ -253521,10 +253017,6 @@
       "insiderNetTxnCount": -24,
       "insiderNetShares": -84500,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 48.58
-        },
         {
           "d": "2024-08-09",
           "c": 48.81
@@ -255540,10 +255032,10 @@
       "forwardPE": 179.95757,
       "fiftyTwoWeekHigh": 324.73,
       "fiftyTwoWeekLow": 158.83,
-      "targetMean": 272.3584,
-      "targetHigh": 380,
-      "targetLow": 136,
-      "targetMedian": 290,
+      "targetMean": 327.4229,
+      "targetHigh": 400,
+      "targetLow": 160,
+      "targetMedian": 350,
       "recommendationMean": 1.88235,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 31,
@@ -255572,10 +255064,6 @@
       "insiderNetTxnCount": -32,
       "insiderNetShares": -1706451,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 76.82
-        },
         {
           "d": "2024-08-09",
           "c": 77.71
@@ -257583,10 +257071,10 @@
       "currency": "USD",
       "price": 389.93,
       "previousClose": 377.31,
-      "change": 12.62,
-      "changePercent": 3.34473,
+      "change": 12.619995,
+      "changePercent": 3.3447285,
       "priceAsOf": null,
-      "marketCap": null,
+      "marketCap": 189929848832,
       "trailingPE": 58.11177,
       "forwardPE": 25.887691,
       "fiftyTwoWeekHigh": 445.91,
@@ -257608,7 +257096,7 @@
       "totalDebt": 8708730880,
       "totalCash": 3439308032,
       "freeCashflow": 3868954624,
-      "pegRatio": 0.69,
+      "pegRatio": 0.71,
       "priceToBook": 5.628888,
       "beta": 1.212,
       "dividendYield": 0.0113,
@@ -257623,10 +257111,6 @@
       "insiderNetTxnCount": 15,
       "insiderNetShares": 112158,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 213.64
-        },
         {
           "d": "2024-08-09",
           "c": 211.31
@@ -259659,7 +259143,7 @@
       "totalDebt": 4232000000,
       "totalCash": 6032000000,
       "freeCashflow": 91000000,
-      "pegRatio": 0.39,
+      "pegRatio": 0.41,
       "priceToBook": 2.7967496,
       "beta": 1.521,
       "dividendYield": 0.0064,
@@ -259674,10 +259158,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 29.42
-        },
         {
           "d": "2024-08-09",
           "c": 29.33
@@ -261685,8 +261165,8 @@
       "currency": "USD",
       "price": 86.78,
       "previousClose": 83.79,
-      "change": 2.99,
-      "changePercent": 3.56844,
+      "change": 2.9899979,
+      "changePercent": 3.568442,
       "priceAsOf": null,
       "marketCap": 3806881024,
       "trailingPE": null,
@@ -261725,10 +261205,6 @@
       "insiderNetTxnCount": -4,
       "insiderNetShares": 12538,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 43.13
-        },
         {
           "d": "2024-08-09",
           "c": 43.45
@@ -263736,10 +263212,10 @@
       "currency": "USD",
       "price": 117.39,
       "previousClose": 115.21,
-      "change": 2.18,
-      "changePercent": 1.8922,
+      "change": 2.1800003,
+      "changePercent": 1.8921971,
       "priceAsOf": null,
-      "marketCap": 9170591744,
+      "marketCap": 9151110144,
       "trailingPE": 80.95862,
       "forwardPE": 33.781296,
       "fiftyTwoWeekHigh": 160.27,
@@ -263773,13 +263249,9 @@
       "shortPercentOfFloat": 0.0507,
       "shortRatio": 1.35,
       "sharesShort": 2786071,
-      "insiderNetTxnCount": -13,
-      "insiderNetShares": -100808,
+      "insiderNetTxnCount": -10,
+      "insiderNetShares": -83543,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 44.54
-        },
         {
           "d": "2024-08-09",
           "c": 43.72
@@ -265786,9 +265258,9 @@
       "symbol": "TER",
       "currency": "USD",
       "price": 379.31,
-      "previousClose": 384.89,
-      "change": -5.58002,
-      "changePercent": -1.44977,
+      "previousClose": 384.88998,
+      "change": -5.5799866,
+      "changePercent": -1.4497614,
       "priceAsOf": null,
       "marketCap": 59301609472,
       "trailingPE": 52.10302,
@@ -265812,8 +265284,8 @@
       "totalDebt": 100127000,
       "totalCash": 354828992,
       "freeCashflow": 437381248,
-      "pegRatio": 0.98,
-      "priceToBook": 18.887117,
+      "pegRatio": 0.97,
+      "priceToBook": 17.267265,
       "beta": 1.793,
       "dividendYield": 0.0014,
       "enterpriseValue": 59083059200,
@@ -265827,10 +265299,6 @@
       "insiderNetTxnCount": -1,
       "insiderNetShares": -12006,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 122.88
-        },
         {
           "d": "2024-08-09",
           "c": 121.72
@@ -267837,17 +267305,17 @@
       "symbol": "KLIC",
       "currency": "USD",
       "price": 91.31,
-      "previousClose": 90.66,
-      "change": 0.649994,
-      "changePercent": 0.716958,
+      "previousClose": 90.659996,
+      "change": 0.6500015,
+      "changePercent": 0.7169662,
       "priceAsOf": null,
       "marketCap": 4778171392,
       "trailingPE": 41.88532,
       "forwardPE": 15.467541,
       "fiftyTwoWeekHigh": 135.8,
       "fiftyTwoWeekLow": 34.9,
-      "targetMean": 103.33333,
-      "targetHigh": 105,
+      "targetMean": 106.66667,
+      "targetHigh": 115,
       "targetLow": 100,
       "targetMedian": 105,
       "recommendationMean": 2.66667,
@@ -267875,13 +267343,9 @@
       "shortPercentOfFloat": 0.060900003,
       "shortRatio": 1.85,
       "sharesShort": 2574183,
-      "insiderNetTxnCount": 4,
-      "insiderNetShares": -127164,
+      "insiderNetTxnCount": 5,
+      "insiderNetShares": -120066,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 40.86
-        },
         {
           "d": "2024-08-09",
           "c": 40.46
@@ -269892,7 +269356,7 @@
       "change": 8.5,
       "changePercent": 5.40781,
       "priceAsOf": null,
-      "marketCap": 142714814464,
+      "marketCap": 142424784896,
       "trailingPE": 76.35023,
       "forwardPE": 38.34759,
       "fiftyTwoWeekHigh": 271.78,
@@ -269914,7 +269378,7 @@
       "totalDebt": 9379000320,
       "totalCash": 2504000000,
       "freeCashflow": 734499968,
-      "pegRatio": 1.2,
+      "pegRatio": 1.27,
       "priceToBook": 11.951237,
       "beta": 1.148,
       "dividendYield": 0.0068,
@@ -269926,13 +269390,9 @@
       "shortPercentOfFloat": 0.0252,
       "shortRatio": 1.14,
       "sharesShort": 19125152,
-      "insiderNetTxnCount": -13,
-      "insiderNetShares": -184751,
+      "insiderNetTxnCount": -12,
+      "insiderNetShares": -169385,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 38.61
-        },
         {
           "d": "2024-08-09",
           "c": 38.45
@@ -271952,8 +271412,8 @@
       "targetHigh": 500,
       "targetLow": 110,
       "targetMedian": 300,
-      "recommendationMean": 1.4902,
-      "recommendationKey": "strong_buy",
+      "recommendationMean": 1.5098,
+      "recommendationKey": "buy",
       "numberOfAnalystOpinions": 48,
       "profitMargin": -0.23786,
       "grossMargin": 0.67144996,
@@ -271965,7 +271425,7 @@
       "totalDebt": 2772094976,
       "totalCash": 2954998016,
       "freeCashflow": 1739497728,
-      "pegRatio": 8,
+      "pegRatio": 8.35,
       "priceToBook": 59.05825,
       "beta": 1.315,
       "dividendYield": null,
@@ -271980,10 +271440,6 @@
       "insiderNetTxnCount": -13,
       "insiderNetShares": 236478,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 121.6
-        },
         {
           "d": "2024-08-09",
           "c": 124.41
@@ -273991,7 +273447,7 @@
       "currency": "USD",
       "price": 398.8,
       "previousClose": 370,
-      "change": 28.8,
+      "change": 28.799988,
       "changePercent": 7.78378,
       "priceAsOf": null,
       "marketCap": 32076251136,
@@ -274031,10 +273487,6 @@
       "insiderNetTxnCount": -2,
       "insiderNetShares": -58376,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 234.48
-        },
         {
           "d": "2024-08-09",
           "c": 234.9
@@ -276042,15 +275494,15 @@
       "currency": "USD",
       "price": 233.93,
       "previousClose": 229.29,
-      "change": 4.64,
-      "changePercent": 2.02364,
+      "change": 4.6399994,
+      "changePercent": 2.023638,
       "priceAsOf": null,
       "marketCap": 83998416896,
       "trailingPE": 477.40814,
       "forwardPE": 79.31712,
       "fiftyTwoWeekHigh": 292.72,
       "fiftyTwoWeekLow": 98.01,
-      "targetMean": 279.47534,
+      "targetMean": 282.162,
       "targetHigh": 330,
       "targetLow": 158,
       "targetMedian": 295,
@@ -276067,7 +275519,7 @@
       "totalDebt": 1277800960,
       "totalCash": 4985438208,
       "freeCashflow": 1051412352,
-      "pegRatio": 1.77,
+      "pegRatio": 1.46,
       "priceToBook": 20.871698,
       "beta": 1.509,
       "dividendYield": null,
@@ -276082,10 +275534,6 @@
       "insiderNetTxnCount": -56,
       "insiderNetShares": -2056222,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 114.06
-        },
         {
           "d": "2024-08-09",
           "c": 112.28
@@ -278093,8 +277541,8 @@
       "currency": "USD",
       "price": 172.01,
       "previousClose": 155.92,
-      "change": 16.09,
-      "changePercent": 10.3194,
+      "change": 16.089996,
+      "changePercent": 10.319392,
       "priceAsOf": null,
       "marketCap": 413350068224,
       "trailingPE": 147.01709,
@@ -278118,7 +277566,7 @@
       "totalDebt": 211400000,
       "totalCash": 9409098752,
       "freeCashflow": 2159104512,
-      "pegRatio": 2.29,
+      "pegRatio": 2.37,
       "priceToBook": 42.23177,
       "beta": 1.563,
       "dividendYield": null,
@@ -278133,10 +277581,6 @@
       "insiderNetTxnCount": -15,
       "insiderNetShares": -4175008,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 29.28
-        },
         {
           "d": "2024-08-09",
           "c": 30.01
@@ -280144,8 +279588,8 @@
       "currency": "USD",
       "price": 214.42,
       "previousClose": 207.39,
-      "change": 7.03,
-      "changePercent": 3.38975,
+      "change": 7.029999,
+      "changePercent": 3.389748,
       "priceAsOf": null,
       "marketCap": 218335150080,
       "trailingPE": null,
@@ -280169,7 +279613,7 @@
       "totalDebt": 821342976,
       "totalCash": 4552800768,
       "freeCashflow": 1926365056,
-      "pegRatio": 6.82,
+      "pegRatio": 6.97,
       "priceToBook": 47.114918,
       "beta": 1.234,
       "dividendYield": null,
@@ -280184,10 +279628,6 @@
       "insiderNetTxnCount": -66,
       "insiderNetShares": -255023,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 60.13
-        },
         {
           "d": "2024-08-09",
           "c": 60.225
@@ -282195,8 +281635,8 @@
       "currency": "USD",
       "price": 363.86,
       "previousClose": 359.49,
-      "change": 4.37,
-      "changePercent": 1.21561,
+      "change": 4.369995,
+      "changePercent": 1.2156097,
       "priceAsOf": null,
       "marketCap": 296545878016,
       "trailingPE": 313.67242,
@@ -282220,7 +281660,7 @@
       "totalDebt": 2130000000,
       "totalCash": 3111000064,
       "freeCashflow": 3579375104,
-      "pegRatio": 3.98,
+      "pegRatio": 4.03,
       "priceToBook": 10.691701,
       "beta": 0.893,
       "dividendYield": null,
@@ -282235,10 +281675,6 @@
       "insiderNetTxnCount": -12,
       "insiderNetShares": -61266,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 158.685
-        },
         {
           "d": "2024-08-09",
           "c": 165.74
@@ -284245,9 +283681,9 @@
       "symbol": "ZS",
       "currency": "USD",
       "price": 168.68,
-      "previousClose": 162.6,
-      "change": 6.07999,
-      "changePercent": 3.73923,
+      "previousClose": 162.59999,
+      "change": 6.080002,
+      "changePercent": 3.739239,
       "priceAsOf": null,
       "marketCap": 27277160448,
       "trailingPE": null,
@@ -284271,7 +283707,7 @@
       "totalDebt": 1868162944,
       "totalCash": 3539107072,
       "freeCashflow": 1108818560,
-      "pegRatio": 1.77,
+      "pegRatio": 1.84,
       "priceToBook": 11.525794,
       "beta": 0.917,
       "dividendYield": null,
@@ -284286,10 +283722,6 @@
       "insiderNetTxnCount": -17,
       "insiderNetShares": -35730,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 171.71
-        },
         {
           "d": "2024-08-09",
           "c": 174.36
@@ -286296,11 +285728,11 @@
       "symbol": "OKTA",
       "currency": "USD",
       "price": 148.32,
-      "previousClose": 143.51,
-      "change": 4.81001,
-      "changePercent": 3.35169,
+      "previousClose": 143.51001,
+      "change": 4.8099976,
+      "changePercent": 3.351681,
       "priceAsOf": null,
-      "marketCap": 25779109888,
+      "marketCap": 26007386112,
       "trailingPE": 107.478264,
       "forwardPE": 34.6339,
       "fiftyTwoWeekHigh": 157,
@@ -286322,7 +285754,7 @@
       "totalDebt": 411000000,
       "totalCash": 2588999936,
       "freeCashflow": 977750016,
-      "pegRatio": 1.36,
+      "pegRatio": 1.41,
       "priceToBook": 3.7697294,
       "beta": 0.762,
       "dividendYield": null,
@@ -286337,10 +285769,6 @@
       "insiderNetTxnCount": -4,
       "insiderNetShares": 123681,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 88.65
-        },
         {
           "d": "2024-08-09",
           "c": 90.36
@@ -288395,15 +287823,15 @@
       "currency": "USD",
       "price": 328.58,
       "previousClose": 319.53,
-      "change": 9.04999,
-      "changePercent": 2.83228,
+      "change": 9.049988,
+      "changePercent": 2.832281,
       "priceAsOf": null,
       "marketCap": 1297742299136,
       "trailingPE": 304.24072,
       "forwardPE": 148.06036,
       "fiftyTwoWeekHigh": 498.83,
       "fiftyTwoWeekLow": 297.38,
-      "targetMean": 397.87274,
+      "targetMean": 396.62274,
       "targetHigh": 600,
       "targetLow": 125,
       "targetMedian": 415,
@@ -288420,7 +287848,7 @@
       "totalDebt": 16080000000,
       "totalCash": 43524001792,
       "freeCashflow": 4835999744,
-      "pegRatio": 4.71,
+      "pegRatio": 4.81,
       "priceToBook": 14.9388485,
       "beta": 1.827,
       "dividendYield": null,
@@ -288435,10 +287863,6 @@
       "insiderNetTxnCount": 0,
       "insiderNetShares": 304018760,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 198.84
-        },
         {
           "d": "2024-08-09",
           "c": 200
@@ -290446,8 +289870,8 @@
       "currency": "USD",
       "price": 40.18,
       "previousClose": 39.6,
-      "change": 0.580002,
-      "changePercent": 1.46465,
+      "change": 0.58000183,
+      "changePercent": 1.4646511,
       "priceAsOf": null,
       "marketCap": 24323557376,
       "trailingPE": 1004.5,
@@ -290461,23 +289885,23 @@
       "recommendationMean": 2.22222,
       "recommendationKey": "buy",
       "numberOfAnalystOpinions": 15,
-      "profitMargin": -0.0029300002,
-      "grossMargin": 0.2041,
-      "operatingMargin": 0.010880001,
-      "revenueGrowthYoY": 0.231,
+      "profitMargin": 0.0031,
+      "grossMargin": 0.21268,
+      "operatingMargin": 0.045939997,
+      "revenueGrowthYoY": 0.217,
       "earningsGrowthYoY": null,
-      "returnOnEquity": -0.05732,
-      "returnOnAssets": -0.00648,
-      "totalDebt": 27925000,
-      "totalCash": 2009435008,
-      "freeCashflow": 331211488,
-      "pegRatio": 2.88,
+      "returnOnEquity": 0.043920003,
+      "returnOnAssets": 0.00321,
+      "totalDebt": 25827000,
+      "totalCash": 1746445952,
+      "freeCashflow": 547580608,
+      "pegRatio": 7.44,
       "priceToBook": 7.437986,
       "beta": 1.963,
       "dividendYield": null,
-      "enterpriseValue": 3471526144,
-      "enterpriseToRevenue": 1.379,
-      "enterpriseToEbitda": 153.316,
+      "enterpriseValue": 3922890496,
+      "enterpriseToRevenue": 1.483,
+      "enterpriseToEbitda": 69.391,
       "heldPercentInsiders": 0.13614,
       "heldPercentInstitutions": 0.74117994,
       "shortPercentOfFloat": 0.29790002,
@@ -290486,10 +289910,6 @@
       "insiderNetTxnCount": -30,
       "insiderNetShares": -5889014,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 22.24
-        },
         {
           "d": "2024-08-09",
           "c": 21.9
@@ -292500,7 +291920,7 @@
       "price": 543.27,
       "previousClose": 532.52,
       "change": 10.75,
-      "changePercent": 2.0187,
+      "changePercent": 2.0187035,
       "priceAsOf": null,
       "marketCap": null,
       "trailingPE": 43.579876,
@@ -292539,10 +291959,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 213.04
-        },
         {
           "d": "2024-08-09",
           "c": 211.78
@@ -294549,9 +293965,9 @@
       "symbol": "SMH",
       "currency": "USD",
       "price": 582.7,
-      "previousClose": 571.48,
-      "change": 11.22,
-      "changePercent": 1.96333,
+      "previousClose": 571.48004,
+      "change": 11.219971,
+      "changePercent": 1.963318,
       "priceAsOf": null,
       "marketCap": null,
       "trailingPE": 41.33748,
@@ -294590,10 +294006,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-08",
-          "c": 224.91
-        },
         {
           "d": "2024-08-09",
           "c": 224.85
@@ -296642,10 +296054,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-08",
-          "c": 5319.3101
-        },
-        {
           "d": "2024-08-09",
           "c": 5344.1602
         },
@@ -298693,10 +298101,6 @@
       "insiderNetShares": null,
       "history": [
         {
-          "d": "2024-08-09",
-          "c": 43.9625
-        },
-        {
           "d": "2024-08-12",
           "c": 44.5125
         },
@@ -300679,10 +300083,6 @@
       "insiderNetTxnCount": null,
       "insiderNetShares": null,
       "history": [
-        {
-          "d": "2024-08-09",
-          "c": 21469
-        },
         {
           "d": "2024-08-12",
           "c": 21773.2598
